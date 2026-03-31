@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bash — přejmenování souborů — info.kofis.eu</title>
+<link rel="stylesheet" href="../shared.css">
+<style>
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.subtitle {
+  color: #7f8fa6;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #82c4e6;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2a2a4a;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #c4d4a0;
+  margin: 20px 0 8px;
+}
+p { margin: 8px 0; }
+a { color: #4a6fa5; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol {
+  margin: 8px 0 8px 24px;
+}
+li { margin: 4px 0; }
+strong { color: #fff; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a4a;
+}
+th {
+  color: #7f8fa6;
+  font-weight: 500;
+  background: #16213e;
+}
+td { color: #e0e0e0; }
+code {
+  background: #16213e;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #c4d4a0;
+}
+pre {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: #e0e0e0;
+}
+.info-card {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.info-card li {
+  list-style: none;
+  margin: 4px 0;
+}
+.info-card ul {
+  margin-left: 0;
+}
+.hl { color: #e6c07b; }
+.cm { color: #7f8fa6; }
+.footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #2a2a4a;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+.footer a { color: #4a6fa5; }
+@media (max-width: 600px) {
+  .container { padding: 20px 12px; }
+  table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../">info</a><span class="sep">/</span><span class="current">bash-rename</span></nav>
+<div class="container">
+
+<h1>Bash — přejmenování souborů</h1>
+<div class="subtitle">parameter expansion, rename, mv a praktické příklady</div>
+
+<h2>1. Parameter expansion — ořezávání řetězců</h2>
+
+<p>Bash umí přímo v proměnné odstraňovat části řetězce bez externích příkazů.
+Klíčová syntaxe, která stojí za konstrukcí <code>dir="${f%.cbz}"</code>:</p>
+
+<table>
+<tr><th>Syntaxe</th><th>Co dělá</th><th>Příklad pro <code>f="Saga.vol1.cbz"</code></th></tr>
+<tr><td><code>${f%.*}</code></td><td>Odstraní <strong>nejkratší</strong> shodu od konce</td><td><code>Saga.vol1</code></td></tr>
+<tr><td><code>${f%%.*}</code></td><td>Odstraní <strong>nejdelší</strong> shodu od konce</td><td><code>Saga</code></td></tr>
+<tr><td><code>${f#*.}</code></td><td>Odstraní <strong>nejkratší</strong> shodu od začátku</td><td><code>vol1.cbz</code></td></tr>
+<tr><td><code>${f##*.}</code></td><td>Odstraní <strong>nejdelší</strong> shodu od začátku</td><td><code>cbz</code></td></tr>
+</table>
+
+<p>Mnemotechnická pomůcka: <code>#</code> je vlevo na klávesnici → maže od začátku,
+<code>%</code> je vpravo → maže od konce. Zdvojení (<code>##</code>, <code>%%</code>) = greedy.</p>
+
+<h3>Přesný pattern místo wildcards</h3>
+
+<p>Místo <code>${f%.*}</code> (odstraní cokoliv od poslední tečky) lze zadat přesnou příponu:</p>
+
+<pre><code><span class="cm"># Odstraní přesně .cbz — bezpečnější, netkne se jiných přípon</span>
+dir="${f<span class="hl">%.cbz</span>}"
+
+<span class="cm"># Odstraní cokoliv od poslední tečky — .cbz, .zip, .pdf...</span>
+dir="${f<span class="hl">%.*</span>}"</code></pre>
+
+<h2>2. Další parameter expansion triky</h2>
+
+<h3>Nahrazování v řetězci</h3>
+
+<pre><code>f="Muj Soubor (kopie).cbz"
+
+<span class="cm"># Nahradit první výskyt</span>
+echo "${f/ /_}"          <span class="cm"># Muj_Soubor (kopie).cbz</span>
+
+<span class="cm"># Nahradit všechny výskyty</span>
+echo "${f// /_}"         <span class="cm"># Muj_Soubor_(kopie).cbz</span>
+
+<span class="cm"># Odstranit znaky (nahradit za nic)</span>
+echo "${f//[()]/}"       <span class="cm"># Muj Soubor kopie.cbz</span></code></pre>
+
+<h3>Změna velikosti písmen (bash 4+)</h3>
+
+<pre><code>f="Saga.CBZ"
+
+echo "${f,,}"            <span class="cm"># saga.cbz     (vše na malá)</span>
+echo "${f^^}"            <span class="cm"># SAGA.CBZ     (vše na velká)</span>
+echo "${f,}"             <span class="cm"># saga.CBZ     (první na malé)</span>
+echo "${f^}"             <span class="cm"># Saga.CBZ     (první na velké)</span></code></pre>
+
+<h3>Podřetězec</h3>
+
+<pre><code>f="2024-03-15_backup.tar.gz"
+
+echo "${f:0:10}"         <span class="cm"># 2024-03-15   (prvních 10 znaků)</span>
+echo "${f:11}"           <span class="cm"># backup.tar.gz (od 11. znaku)</span>
+echo "${f: -6}"          <span class="cm"># tar.gz       (posledních 6, pozor na mezeru!)</span></code></pre>
+
+<h2>3. Praktické příklady</h2>
+
+<h3>CBZ do adresáře (původní skript)</h3>
+
+<pre><code><span class="cm">#!/bin/bash</span>
+for f in *.cbz; do
+  [ -f "$f" ] || continue
+  dir="${f%.cbz}"
+  mkdir -p "$dir"
+  mv "$f" "$dir/"
+done</code></pre>
+
+<h3>Hromadná změna přípony</h3>
+
+<pre><code><span class="cm"># .jpeg → .jpg</span>
+for f in *.jpeg; do
+  mv "$f" "${f%.jpeg}.jpg"
+done</code></pre>
+
+<h3>Mezery na podtržítka</h3>
+
+<pre><code>for f in *\ *; do
+  mv "$f" "${f// /_}"
+done</code></pre>
+
+<h3>Přidat prefix/suffix</h3>
+
+<pre><code><span class="cm"># Přidat datum jako prefix</span>
+for f in *.jpg; do
+  mv "$f" "2024_${f}"
+done
+
+<span class="cm"># Přidat _backup před příponu</span>
+for f in *.conf; do
+  mv "$f" "${f%.conf}_backup.conf"
+done</code></pre>
+
+<h3>Lowercase celého jména</h3>
+
+<pre><code>for f in *; do
+  lower="${f,,}"
+  [ "$f" != "$lower" ] &amp;&amp; mv "$f" "$lower"
+done</code></pre>
+
+<h2>4. Příkaz rename</h2>
+
+<p>Pro složitější přejmenování existuje <code>rename</code> (Perl varianta, v Debianu <code>apt install rename</code>):</p>
+
+<pre><code><span class="cm"># .jpeg → .jpg</span>
+rename 's/\.jpeg$/.jpg/' *.jpeg
+
+<span class="cm"># Mezery na podtržítka</span>
+rename 'y/ /_/' *
+
+<span class="cm"># Lowercase</span>
+rename 'y/A-Z/a-z/' *
+
+<span class="cm"># Odstraní prefix "IMG_"</span>
+rename 's/^IMG_//' IMG_*
+
+<span class="cm"># Číslování: foto1.jpg, foto2.jpg...</span>
+i=1; for f in *.jpg; do mv "$f" "foto$((i++)).jpg"; done</code></pre>
+
+<h2>5. Bezpečnostní tipy</h2>
+
+<ul>
+  <li><strong>Vždy uvozovky</strong> kolem proměnných: <code>"$f"</code>, ne <code>$f</code> — soubory s mezerami jinak rozbijí skript</li>
+  <li><strong>Testuj s echo</strong> nejdřív: <code>echo mv "$f" "${f%.cbz}"</code> — uvidíš co by se stalo</li>
+  <li><strong>Guard na glob</strong>: <code>[ -f "$f" ] || continue</code> — pokud žádný soubor neexistuje, glob se neexpanduje a <code>*.cbz</code> zůstane jako literál</li>
+  <li><strong>Pozor na přepsání</strong>: <code>mv -n</code> (no-clobber) nepřepíše existující soubor</li>
+  <li><strong>Samba + symlinky</strong>: skript pouštěj přímo na serveru, ne přes <code>/Volumes/Share/</code></li>
+</ul>
+
+<h2>6. Přehled syntaxe</h2>
+
+<table>
+<tr><th>Operace</th><th>Syntaxe</th><th>Popis</th></tr>
+<tr><td>Odříznout příponu</td><td><code>${var%pattern}</code></td><td>Nejkratší shoda od konce</td></tr>
+<tr><td>Odříznout vše od tečky</td><td><code>${var%%.*}</code></td><td>Nejdelší shoda od konce</td></tr>
+<tr><td>Odříznout prefix</td><td><code>${var#pattern}</code></td><td>Nejkratší shoda od začátku</td></tr>
+<tr><td>Odříznout po poslední /</td><td><code>${var##*/}</code></td><td>Basename (nejdelší shoda)</td></tr>
+<tr><td>Nahradit první</td><td><code>${var/old/new}</code></td><td>První výskyt</td></tr>
+<tr><td>Nahradit vše</td><td><code>${var//old/new}</code></td><td>Všechny výskyty</td></tr>
+<tr><td>Lowercase</td><td><code>${var,,}</code></td><td>Celý řetězec (bash 4+)</td></tr>
+<tr><td>Uppercase</td><td><code>${var^^}</code></td><td>Celý řetězec (bash 4+)</td></tr>
+<tr><td>Podřetězec</td><td><code>${var:offset:length}</code></td><td>Výřez od pozice</td></tr>
+<tr><td>Výchozí hodnota</td><td><code>${var:-default}</code></td><td>Použije default pokud var prázdné</td></tr>
+<tr><td>Délka</td><td><code>${#var}</code></td><td>Počet znaků</td></tr>
+</table>
+
+<nav class="site-footer"><a href="../">info.kofis.eu</a></nav>
+
+</div>
+</body>
+</html>
