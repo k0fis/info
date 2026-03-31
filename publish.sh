@@ -76,20 +76,59 @@ echo "[3/4] Zaznam v index.html DATA poli..."
 if grep -q "\"$SLUG/\"" "$SCRIPT_DIR/index.html"; then
   echo "  -> Clanek '$SLUG' uz je v DATA poli, preskakuji."
 else
+  # Zkusit vytahnout title z <h1> v clanku
+  DEFAULT_TITLE=$(sed -n 's|.*<h1>\(.*\)</h1>.*|\1|p' "$TARGET_DIR/index.html" | head -1 | sed 's/&mdash;/—/g; s/&amp;/\&/g')
+
   echo ""
-  echo "Clanek neni v index.html. Pridej ho rucne do DATA pole:"
+  echo "  Pridavam clanek do DATA pole v index.html."
+  echo "  (Enter = pouzit vychozi hodnotu v zavorkach)"
   echo ""
-  echo "  {"
-  echo "    title: \"...\","
-  echo "    desc: \"...\","
-  echo "    tags: \"...\","
-  echo "    url: \"$SLUG/\","
-  echo "    icon: \"HW\","
-  echo "    meta: \"...\","
-  echo "    created: \"$(date +%Y-%m-%d)\""
-  echo "  }"
-  echo ""
-  echo "Nebo spust: vi $SCRIPT_DIR/index.html"
+
+  read -p "  Title [$DEFAULT_TITLE]: " -r INPUT_TITLE
+  TITLE="${INPUT_TITLE:-$DEFAULT_TITLE}"
+
+  read -p "  Desc: " -r DESC
+
+  read -p "  Tags: " -r TAGS
+
+  read -p "  Icon [HW] (CBZ/SRV/AI/HW): " -r INPUT_ICON
+  ICON="${INPUT_ICON:-HW}"
+
+  read -p "  Meta: " -r META
+
+  CREATED=$(date +%Y-%m-%d)
+
+  # Escapovat uvozovky v hodnotach
+  TITLE=$(echo "$TITLE" | sed 's/"/\\"/g')
+  DESC=$(echo "$DESC" | sed 's/"/\\"/g')
+  TAGS=$(echo "$TAGS" | sed 's/"/\\"/g')
+  META=$(echo "$META" | sed 's/"/\\"/g')
+
+  # Vlozit novy zaznam pred ];  pomoci python (spolehlivejsi nez sed)
+  python3 -c "
+import sys
+
+path = sys.argv[1]
+with open(path, 'r') as f:
+    content = f.read()
+
+entry = '''  {
+    title: \"$TITLE\",
+    desc: \"$DESC\",
+    tags: \"$TAGS\",
+    url: \"$SLUG/\",
+    icon: \"$ICON\",
+    meta: \"$META\",
+    created: \"$CREATED\"
+  }'''
+
+content = content.replace('\n];\n', ',\n' + entry + '\n];\n', 1)
+
+with open(path, 'w') as f:
+    f.write(content)
+" "$SCRIPT_DIR/index.html"
+
+  echo "  -> Pridano do DATA pole."
 fi
 
 # --- 4. Git ---
