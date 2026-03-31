@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSCode / VSCodium — IntelliJ IDEA theme — info.kofis.eu</title>
+<link rel="stylesheet" href="../shared.css">
+<style>
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.subtitle {
+  color: #7f8fa6;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #82c4e6;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2a2a4a;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #c4d4a0;
+  margin: 20px 0 8px;
+}
+p { margin: 8px 0; }
+a { color: #4a6fa5; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol {
+  margin: 8px 0 8px 24px;
+}
+li { margin: 4px 0; }
+strong { color: #fff; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a4a;
+}
+th {
+  color: #7f8fa6;
+  font-weight: 500;
+  background: #16213e;
+}
+td { color: #e0e0e0; }
+code {
+  background: #16213e;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #c4d4a0;
+}
+pre {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: #e0e0e0;
+}
+.info-card {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.info-card li {
+  list-style: none;
+  margin: 4px 0;
+}
+.info-card ul {
+  margin-left: 0;
+}
+@media (max-width: 600px) {
+  .container { padding: 20px 12px; }
+  table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../">info</a><span class="sep">/</span><span class="current">vscode-intellij</span></nav>
+<div class="container">
+
+<h1>VSCode / VSCodium &mdash; IntelliJ IDEA theme</h1>
+<div class="subtitle">JetBrains Mono font + IntelliJ IDEA Islands Theme &mdash; aby editor nevypadal jako VSCode</div>
+
+<div class="info-card">
+<ul>
+  <li><strong>Theme:</strong> <a href="https://marketplace.visualstudio.com/items?itemName=OleksandrHavrysh.vscode-intellij-theme">IntelliJ IDEA Islands Theme</a> (OleksandrHavrysh)</li>
+  <li><strong>Font:</strong> <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a> v2.304</li>
+  <li><strong>Editor:</strong> VSCode i VSCodium (automaticka detekce)</li>
+  <li><strong>OS:</strong> macOS</li>
+  <li><strong>Skript:</strong> <a href="setup-intellij-theme.sh">setup-intellij-theme.sh</a></li>
+</ul>
+</div>
+
+<h2>Rychly start</h2>
+
+<p>Jednim prikazem &mdash; skript detekuje jestli mas <code>code</code> nebo <code>codium</code> a nastavi oba:</p>
+
+<pre><code># Stahnout skript a spustit:
+curl -fsSL https://info.kofis.eu/vscode-intellij-theme/setup-intellij-theme.sh | bash</code></pre>
+
+<p>Skript provede:</p>
+<ol>
+  <li>Stahnuti a instalaci fontu <strong>JetBrains Mono</strong> do <code>~/Library/Fonts/</code></li>
+  <li>Instalaci extensiony <strong>IntelliJ IDEA Islands Theme</strong></li>
+  <li>Nastaveni theme a fontu v <code>settings.json</code></li>
+</ol>
+
+<h2>Co skript nastavi</h2>
+
+<table>
+  <tr><th>Klic</th><th>Hodnota</th></tr>
+  <tr><td><code>workbench.colorTheme</code></td><td>IntelliJ IDEA Islands Dark</td></tr>
+  <tr><td><code>editor.fontFamily</code></td><td>JetBrains Mono, monospace</td></tr>
+  <tr><td><code>editor.fontSize</code></td><td>13</td></tr>
+  <tr><td><code>editor.fontLigatures</code></td><td>true</td></tr>
+</table>
+
+<h2>Varianty theme</h2>
+
+<p>Extension obsahuje 3 barevne schema (<code>Cmd+K Cmd+T</code> pro zmenu):</p>
+
+<table>
+  <tr><th>Theme</th><th>Popis</th></tr>
+  <tr><td><strong>IntelliJ IDEA Islands Dark</strong></td><td>Vychozi dark theme, odpovida IntelliJ 2024+</td></tr>
+  <tr><td><strong>IntelliJ IDEA Islands Light</strong></td><td>Svetla varianta</td></tr>
+  <tr><td><strong>IntelliJ IDEA Classic Dark</strong></td><td>Klasicky Darcula-like vzhled</td></tr>
+</table>
+
+<h2>VSCode vs VSCodium</h2>
+
+<table>
+  <tr><th></th><th>VSCode</th><th>VSCodium</th></tr>
+  <tr><td><strong>CLI prikaz</strong></td><td><code>code</code></td><td><code>codium</code></td></tr>
+  <tr><td><strong>Marketplace</strong></td><td>MS Marketplace</td><td>Open VSX</td></tr>
+  <tr><td><strong>Settings</strong></td><td><code>~/Library/Application Support/Code/User/</code></td><td><code>~/Library/Application Support/VSCodium/User/</code></td></tr>
+  <tr><td><strong>Instalace extensi</strong></td><td><code>code --install-extension ID</code></td><td><code>codium --install-extension soubor.vsix</code></td></tr>
+  <tr><td><strong>Telemetrie</strong></td><td>Zapnuta (lze vypnout)</td><td>Vypnuta</td></tr>
+</table>
+
+<p><strong>VSCodium</strong> je open-source build VSCode bez MS telemetrie. Pouziva <a href="https://open-vsx.org/">Open VSX</a> registry misto MS Marketplace. Pokud extension neni na Open VSX, skript ji stahne jako .vsix primo z marketplace.</p>
+
+<h3>Instalace VSCodium na macOS</h3>
+<pre><code>brew install --cask vscodium</code></pre>
+
+<h2>Rucni instalace</h2>
+
+<h3>1. JetBrains Mono font</h3>
+<pre><code># Stahnout z https://www.jetbrains.com/lp/mono/
+# nebo:
+curl -fsSL -o /tmp/JBMono.zip \
+  "https://github.com/JetBrains/JetBrainsMono/releases/download/v2.304/JetBrainsMono-2.304.zip"
+unzip -qo /tmp/JBMono.zip -d /tmp/JBMono
+cp /tmp/JBMono/fonts/ttf/JetBrainsMono-*.ttf ~/Library/Fonts/</code></pre>
+
+<h3>2. Theme extension</h3>
+<pre><code># VSCode
+code --install-extension OleksandrHavrysh.vscode-intellij-theme
+
+# VSCodium (pokud je na Open VSX)
+codium --install-extension OleksandrHavrysh.vscode-intellij-theme
+
+# VSCodium (rucne pres VSIX)
+# Stahnout .vsix z marketplace stranky, pak:
+codium --install-extension cesta/k/theme.vsix</code></pre>
+
+<h3>3. Settings</h3>
+<p>Otevrit <code>Cmd+,</code> &rarr; Open Settings (JSON) a pridat:</p>
+<pre><code>{
+  "workbench.colorTheme": "IntelliJ IDEA Islands Dark",
+  "editor.fontFamily": "JetBrains Mono, monospace",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true
+}</code></pre>
+
+<nav class="site-footer">
+<a href="../">info.kofis.eu</a>
+</nav>
+
+</div>
+</body>
+</html>
