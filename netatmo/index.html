@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netatmo Weather API — Collecting and Displaying Your Own Data — info.kofis.eu</title>
+<link rel="stylesheet" href="../shared.css">
+<style>
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.layout {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 32px;
+}
+.container {
+  flex: 1;
+  min-width: 0;
+}
+/* TOC sidebar */
+.toc {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+.toc-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7f8fa6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.toc a {
+  display: block;
+  padding: 4px 0 4px 10px;
+  font-size: 12px;
+  color: #556;
+  text-decoration: none;
+  border-left: 2px solid #2a2a4a;
+  transition: all 0.15s;
+}
+.toc a:hover, .toc a.active {
+  color: #82c4e6;
+  border-left-color: #4a7a9a;
+}
+.toc a.toc-h3 {
+  padding-left: 22px;
+  font-size: 11px;
+}
+/* Content styles */
+#content h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+#content h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #82c4e6;
+  margin: 36px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2a2a4a;
+  scroll-margin-top: 20px;
+}
+#content h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #c4d4a0;
+  margin: 24px 0 8px;
+  scroll-margin-top: 20px;
+}
+#content h4 {
+  font-size: 1em;
+  font-weight: 500;
+  color: #82e6a0;
+  margin: 16px 0 6px;
+}
+#content p { margin: 8px 0; }
+#content a { color: #4a6fa5; text-decoration: none; }
+#content a:hover { text-decoration: underline; }
+#content ul, #content ol {
+  margin: 8px 0 8px 24px;
+}
+#content li { margin: 4px 0; }
+#content li ul, #content li ol {
+  margin: 2px 0 2px 20px;
+}
+#content strong { color: #fff; }
+#content hr {
+  border: none;
+  border-top: 1px solid #2a2a4a;
+  margin: 32px 0;
+}
+#content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+#content th, #content td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a4a;
+}
+#content th {
+  color: #7f8fa6;
+  font-weight: 500;
+  background: #16213e;
+}
+#content td { color: #e0e0e0; }
+#content code {
+  background: #16213e;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #c4d4a0;
+}
+#content pre {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#content pre code {
+  background: none;
+  padding: 0;
+  color: #e0e0e0;
+}
+#content blockquote {
+  border-left: 3px solid #4a7a9a;
+  padding: 4px 16px;
+  margin: 12px 0;
+  color: #7f8fa6;
+}
+.footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #2a2a4a;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+.footer a { color: #4a6fa5; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.loading {
+  color: #556;
+  padding: 60px 0;
+  text-align: center;
+}
+.error {
+  color: #e66;
+  padding: 40px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 0;
+  }
+  .toc {
+    width: 100%;
+    position: static;
+    max-height: none;
+    border-bottom: 1px solid #2a2a4a;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  #content table { font-size: 12px; }
+  #content th, #content td { padding: 6px 8px; }
+}
+.toc::-webkit-scrollbar { width: 4px; }
+.toc::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 2px; }
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../">info</a><span class="sep">/</span><span class="current">netatmo</span></nav>
+<div class="layout">
+  <nav class="toc" id="toc">
+    <div class="toc-title">Contents</div>
+  </nav>
+  <div class="container">
+    <div id="content" class="loading">Loading article...</div>
+    <nav class="site-footer"><a href="../">info.kofis.eu</a></nav>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+<script>
+fetch('netatmo.md')
+  .then(r => {
+    if (!r.ok) throw new Error(r.status);
+    return r.text();
+  })
+  .then(md => {
+    const el = document.getElementById('content');
+    el.className = '';
+    el.innerHTML = marked.parse(md);
+
+    // Generate IDs for headings and build TOC
+    const toc = document.getElementById('toc');
+    const headings = el.querySelectorAll('h2, h3');
+    const slugs = {};
+    headings.forEach(h => {
+      let slug = h.textContent.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (slugs[slug]) { slug += '-' + (++slugs[slug]); } else { slugs[slug] = 1; }
+      h.id = slug;
+
+      const a = document.createElement('a');
+      a.href = '#' + slug;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H3') a.className = 'toc-h3';
+      toc.appendChild(a);
+    });
+
+    // Active TOC highlight on scroll
+    const tocLinks = toc.querySelectorAll('a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = toc.querySelector('a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20px 0px -70% 0px' });
+    headings.forEach(h => observer.observe(h));
+  })
+  .catch(err => {
+    document.getElementById('content').className = 'error';
+    document.getElementById('content').textContent = 'Error loading article: ' + err.message;
+  });
+</script>
+</body>
+</html>
