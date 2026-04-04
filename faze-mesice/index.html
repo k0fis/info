@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faze Mesice — vypocet, historie a vizualizace — info.kofis.eu</title>
+<link rel="stylesheet" href="../shared.css">
+<style>
+body {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.layout {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 32px;
+}
+.container {
+  flex: 1;
+  min-width: 0;
+}
+/* TOC sidebar */
+.toc {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+.toc-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7f8fa6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.toc a {
+  display: block;
+  padding: 4px 0 4px 10px;
+  font-size: 12px;
+  color: #556;
+  text-decoration: none;
+  border-left: 2px solid #2a2a4a;
+  transition: all 0.15s;
+}
+.toc a:hover, .toc a.active {
+  color: #82c4e6;
+  border-left-color: #4a7a9a;
+}
+.toc a.toc-h3 {
+  padding-left: 22px;
+  font-size: 11px;
+}
+/* Moon hero */
+.moon-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.moon-hero svg { flex-shrink: 0; }
+.moon-hero-info { display: flex; flex-direction: column; gap: 4px; }
+.moon-hero-phase { font-size: 20px; color: #e8e0c8; font-weight: 400; }
+.moon-hero-detail { font-size: 14px; color: #7f8fa6; }
+.moon-hero-sub { font-size: 12px; color: #556; }
+/* Content styles */
+#content h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+#content h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #82c4e6;
+  margin: 36px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2a2a4a;
+  scroll-margin-top: 20px;
+}
+#content h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #c4d4a0;
+  margin: 24px 0 8px;
+  scroll-margin-top: 20px;
+}
+#content h4 {
+  font-size: 1em;
+  font-weight: 500;
+  color: #82e6a0;
+  margin: 16px 0 6px;
+}
+#content p { margin: 8px 0; }
+#content a { color: #4a6fa5; text-decoration: none; }
+#content a:hover { text-decoration: underline; }
+#content ul, #content ol {
+  margin: 8px 0 8px 24px;
+}
+#content li { margin: 4px 0; }
+#content li ul, #content li ol {
+  margin: 2px 0 2px 20px;
+}
+#content strong { color: #fff; }
+#content em { color: #c4d4a0; font-style: italic; }
+#content hr {
+  border: none;
+  border-top: 1px solid #2a2a4a;
+  margin: 32px 0;
+}
+#content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+#content th, #content td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a4a;
+}
+#content th {
+  color: #7f8fa6;
+  font-weight: 500;
+  background: #16213e;
+}
+#content td { color: #e0e0e0; }
+#content code {
+  background: #16213e;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #c4d4a0;
+}
+#content pre {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#content pre code {
+  background: none;
+  padding: 0;
+  color: #e0e0e0;
+}
+#content blockquote {
+  border-left: 3px solid #4a7a9a;
+  padding: 4px 16px;
+  margin: 12px 0;
+  color: #7f8fa6;
+}
+.loading {
+  color: #556;
+  padding: 60px 0;
+  text-align: center;
+}
+.error {
+  color: #e66;
+  padding: 40px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 0;
+  }
+  .toc {
+    width: 100%;
+    position: static;
+    max-height: none;
+    border-bottom: 1px solid #2a2a4a;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  .moon-hero { flex-direction: column; text-align: center; }
+  #content table { font-size: 12px; }
+  #content th, #content td { padding: 6px 8px; }
+}
+.toc::-webkit-scrollbar { width: 4px; }
+.toc::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 2px; }
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="../">info</a><span class="sep">/</span><span class="current">faze-mesice</span></nav>
+<div class="layout">
+  <nav class="toc" id="toc">
+    <div class="toc-title">Obsah</div>
+  </nav>
+  <div class="container">
+    <!-- Live moon phase hero -->
+    <div class="moon-hero" id="moon-hero"></div>
+
+    <div id="content" class="loading">Nacitam clanek...</div>
+    <nav class="site-footer"><a href="../">info.kofis.eu</a></nav>
+  </div>
+</div>
+
+<script>
+// === LIVE MOON PHASE ===
+(function() {
+  var SYNODIC = 29.53059;
+  var MOON_EPOCH = new Date(Date.UTC(2024, 0, 11, 11, 57)).getTime() / 86400000;
+  var PHASES = [
+    'Nov', 'Dorustaici srpek', 'Prvni cvrt', 'Dorustaici mesic',
+    'Uplnek', 'Couvajici mesic', 'Posledni cvrt', 'Couvajici srpek'
+  ];
+
+  var now = new Date();
+  var age = (((now.getTime() / 86400000 - MOON_EPOCH) % SYNODIC) + SYNODIC) % SYNODIC;
+  var phase = age / SYNODIC;
+  var idx = Math.round(phase * 8) % 8;
+  var illum = (1 - Math.cos(2 * Math.PI * phase)) / 2;
+  var fullAge = SYNODIC / 2;
+  var daysToFull = Math.round(((fullAge - age) % SYNODIC + SYNODIC) % SYNODIC);
+  var daysToNew = Math.round((SYNODIC - age) % SYNODIC);
+  if (daysToFull > SYNODIC - 0.5) daysToFull = 0;
+  if (daysToNew > SYNODIC - 0.5) daysToNew = 0;
+
+  // SVG moon
+  var R = 32, cx = 40, cy = 40, size = 80;
+  var svg = '<svg width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '">';
+  svg += '<defs><filter id="mg"><feGaussianBlur stdDeviation="2.5" result="b"/>';
+  svg += '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + R + '" fill="#e8e0c8" filter="url(#mg)"/>';
+
+  // Shadow path
+  var shadow = '';
+  if (phase < 0.01 || phase > 0.99) {
+    shadow = 'M' + cx + ',' + (cy-R) + 'A' + R + ',' + R + ' 0 1,0 ' + cx + ',' + (cy+R) +
+             'A' + R + ',' + R + ' 0 1,0 ' + cx + ',' + (cy-R) + 'Z';
+  } else if (Math.abs(phase - 0.5) >= 0.01) {
+    var rx = (Math.abs(Math.cos(2 * Math.PI * phase)) * R).toFixed(1);
+    var top = cx + ',' + (cy - R);
+    var bot = cx + ',' + (cy + R);
+    if (phase < 0.5) {
+      var ts = (phase < 0.25) ? '0' : '1';
+      shadow = 'M' + top + 'A' + R + ',' + R + ' 0 0,0 ' + bot + 'A' + rx + ',' + R + ' 0 0,' + ts + ' ' + top + 'Z';
+    } else {
+      var ts = (phase < 0.75) ? '1' : '0';
+      shadow = 'M' + top + 'A' + R + ',' + R + ' 0 0,1 ' + bot + 'A' + rx + ',' + R + ' 0 0,' + ts + ' ' + top + 'Z';
+    }
+  }
+  if (shadow) svg += '<path d="' + shadow + '" fill="#1a1a2e" opacity="0.92"/>';
+  svg += '</svg>';
+
+  // Text
+  var dniStr = function(n) { return n === 1 ? 'den' : (n < 5 ? 'dny' : 'dni'); };
+  var detail = '';
+  if (daysToFull === 0) detail = 'Dnes je uplnek';
+  else if (daysToNew === 0) detail = 'Dnes je nov';
+  else if (daysToFull <= daysToNew) detail = 'Uplnek za ' + daysToFull + ' ' + dniStr(daysToFull);
+  else detail = 'Nov za ' + daysToNew + ' ' + dniStr(daysToNew);
+
+  var hero = document.getElementById('moon-hero');
+  hero.innerHTML = svg +
+    '<div class="moon-hero-info">' +
+    '<span class="moon-hero-phase">' + PHASES[idx] + '</span>' +
+    '<span class="moon-hero-detail">' + detail + ' &middot; ' + Math.round(illum * 100) + ' % osvetlen&iacute;</span>' +
+    '<span class="moon-hero-sub">Stari Mesice: ' + age.toFixed(1) + ' dne z ' + SYNODIC.toFixed(2) + ' &middot; den ' + Math.ceil(age) + ' lunarniho cyklu</span>' +
+    '</div>';
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+<script>
+fetch('faze-mesice.md')
+  .then(r => {
+    if (!r.ok) throw new Error(r.status);
+    return r.text();
+  })
+  .then(md => {
+    const el = document.getElementById('content');
+    el.className = '';
+    el.innerHTML = marked.parse(md);
+
+    const toc = document.getElementById('toc');
+    const headings = el.querySelectorAll('h2, h3');
+    const slugs = {};
+    headings.forEach(h => {
+      let slug = h.textContent.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (slugs[slug]) { slug += '-' + (++slugs[slug]); } else { slugs[slug] = 1; }
+      h.id = slug;
+
+      const a = document.createElement('a');
+      a.href = '#' + slug;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H3') a.className = 'toc-h3';
+      toc.appendChild(a);
+    });
+
+    const tocLinks = toc.querySelectorAll('a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = toc.querySelector('a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20px 0px -70% 0px' });
+    headings.forEach(h => observer.observe(h));
+  })
+  .catch(err => {
+    document.getElementById('content').className = 'error';
+    document.getElementById('content').textContent = 'Chyba pri nacitani clanku: ' + err.message;
+  });
+</script>
+</body>
+</html>
