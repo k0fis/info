@@ -16,22 +16,31 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE_BASE="/Volumes/Share/archiv/info"
+SOURCE_BASE="/Volumes/Share/archiv/articles"
+SOURCE_BASE_INFO="/Volumes/Share/archiv/info"
 
 SLUG="$1"
 
 if [ -z "$SLUG" ]; then
   echo "Pouziti: $0 <slug>"
   echo ""
-  echo "Dostupne clanky na k-serveru:"
+  echo "Dostupne clanky:"
   for d in "$SOURCE_BASE"/*/; do
     name=$(basename "$d")
-    [ -f "$d/index.html" ] && echo "  $name"
+    [ -f "$d/index.html" ] && echo "  $name (articles)"
+  done
+  for d in "$SOURCE_BASE_INFO"/*/; do
+    name=$(basename "$d")
+    [ -f "$d/index.html" ] && echo "  $name (info)"
   done
   exit 1
 fi
 
+# Hledej v articles/ nejdriv, pak v info/
 SOURCE_DIR="$SOURCE_BASE/$SLUG"
+if [ ! -d "$SOURCE_DIR" ]; then
+  SOURCE_DIR="$SOURCE_BASE_INFO/$SLUG"
+fi
 TARGET_DIR="$SCRIPT_DIR/$SLUG"
 
 if [ ! -d "$SOURCE_DIR" ]; then
