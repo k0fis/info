@@ -47,34 +47,34 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
 </header>
 <div id="map"></div>
-<div class="filters"><button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
-<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
-<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
-<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
-<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
-<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
-<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
-<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
-<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
-<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
-<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
+<div class="filters"><button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
 <button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
 <button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
-<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
-<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
+<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
+<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
+<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
+<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
 <button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
+<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
+<button class="tag-btn" onclick="toggleFilter('more')">more</button>
+<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
+<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
+<button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
 <button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
 <button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
+<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
+<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
+<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
+<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
+<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
 <button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
 <button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
-<button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
-<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
-<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
-<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
-<button class="tag-btn" onclick="toggleFilter('more')">more</button>
-<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
-<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
-<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button></div>
+<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
+<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button></div>
 <div class="cards" id="cards"><div class="card" data-tags="travel vylety">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum letecké a pozemní techniky Vyškov</p>
@@ -306,7 +306,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <div class="tags"></div>
 </div>
 <div class="card" data-tags="travel vylety spanelsko more mesto">
-  <h3><a href="malaga-nerja/">Málaga a Nerja — Costa del Sol</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=36.7213&x=4.4214&z=14" target="_blank">📍</a></h3>
+  <h3><a href="malaga-nerja/">Málaga a Nerja — Costa del Sol</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=36.7213&x=-4.4214&z=14" target="_blank">📍</a></h3>
   <p class="desc">Costa del Sol — Málaga jako základna pro výlety po andaluském pobřeží. Nerja s jeskyněmi a Balcón de Europa 50 km východně.</p>
   <div class="tags"><span class="tag" data-tag="spanelsko">#spanelsko</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="mesto">#mesto</span> </div>
 </div>
@@ -518,7 +518,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.1919,lng:16.6090,title:"Labyrint pod Zelným trhem — podzemní Brno",slug:"labyrint-zelny-trh",tags:"travel, vylety, brno, pamatky, deti"},
 {lat:49.8619,lng:18.2803,title:"Landek Park Ostrava",slug:"landek-park",tags:"travel, vylety"},
 {lat:49.3743,lng:16.7382,title:"Propast Macocha",slug:"macocha",tags:"travel, vylety"},
-{lat:36.7213,lng:4.4214,title:"Málaga a Nerja — Costa del Sol",slug:"malaga-nerja",tags:"travel, vylety, spanelsko, more, mesto"},
+{lat:36.7213,lng:-4.4214,title:"Málaga a Nerja — Costa del Sol",slug:"malaga-nerja",tags:"travel, vylety, spanelsko, more, mesto"},
 {lat:49.1877,lng:16.5932,title:"Mamut muzeum Brno",slug:"mamut-muzeum-brno",tags:"travel, vylety"},
 {lat:49.1072,lng:17.3947,title:"Modrá — tunel pod vodou",slug:"modra-tunel",tags:"travel, vylety"},
 {lat:49.36042,lng:16.64423,title:"Moravský kras",slug:"moravsky-kras",tags:"travel, vylety"},

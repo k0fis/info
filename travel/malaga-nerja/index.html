@@ -48,25 +48,62 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <div class="meta"><p class="meta-item">📍 Málaga, Andalusie, Španělsko</p><p class="meta-item">🌐 <a href="https://www.malagaturismo.com" target="_blank">www.malagaturismo.com</a></p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([36.7213, 4.4214], 13);
+const dmap = L.map('detail-map').setView([36.7213, -4.4214], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([36.7213, 4.4214]).addTo(dmap);
+L.marker([36.7213, -4.4214]).addTo(dmap);
 </script>
 <div class="content"><p>Costa del Sol — Málaga jako základna pro výlety po andaluském pobřeží. Nerja s jeskyněmi a Balcón de Europa 50 km východně.</p>
 <h2>Málaga</h2>
 <p>Druhé největší město Andalusie, rodiště Picassa, živá atmosféra a výborné jídlo.</p>
 <h3>Co vidět</h3>
-<p>| Místo | Popis | Tip |
-|-------|-------|-----|
-| <strong>Alcazaba</strong> | Maurská pevnost z 11. stol., výhled na přístav | Kombinovaná vstupenka s Gibralfaro |
-| <strong>Castillo de Gibralfaro</strong> | Hrad nad městem, nejlepší výhledy | Jít pěšky nahoru, dolů taxi/bus |
-| <strong>Museo Picasso</strong> | Rodné město Picassa, 285 děl | Neděle po 17h zdarma |
-| <strong>Centro histórico</strong> | Calle Larios, katedrála (La Manquita), tapas bary | Večer nejživější |
-| <strong>Mercado de Atarazanas</strong> | Tržnice — čerstvé ryby, olivy, jamón | Dopoledne, zavírá v 15h |
-| <strong>Playa de la Malagueta</strong> | Městská pláž, 1.2 km | Přeplněná v létě, lepší mimo sezónu |
-| <strong>Muelle Uno</strong> | Přístav, promenáda, Centre Pompidou | Západ slunce |</p>
+<table>
+<thead>
+<tr>
+<th>Místo</th>
+<th>Popis</th>
+<th>Tip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alcazaba</strong></td>
+<td>Maurská pevnost z 11. stol., výhled na přístav</td>
+<td>Kombinovaná vstupenka s Gibralfaro</td>
+</tr>
+<tr>
+<td><strong>Castillo de Gibralfaro</strong></td>
+<td>Hrad nad městem, nejlepší výhledy</td>
+<td>Jít pěšky nahoru, dolů taxi/bus</td>
+</tr>
+<tr>
+<td><strong>Museo Picasso</strong></td>
+<td>Rodné město Picassa, 285 děl</td>
+<td>Neděle po 17h zdarma</td>
+</tr>
+<tr>
+<td><strong>Centro histórico</strong></td>
+<td>Calle Larios, katedrála (La Manquita), tapas bary</td>
+<td>Večer nejživější</td>
+</tr>
+<tr>
+<td><strong>Mercado de Atarazanas</strong></td>
+<td>Tržnice — čerstvé ryby, olivy, jamón</td>
+<td>Dopoledne, zavírá v 15h</td>
+</tr>
+<tr>
+<td><strong>Playa de la Malagueta</strong></td>
+<td>Městská pláž, 1.2 km</td>
+<td>Přeplněná v létě, lepší mimo sezónu</td>
+</tr>
+<tr>
+<td><strong>Muelle Uno</strong></td>
+<td>Přístav, promenáda, Centre Pompidou</td>
+<td>Západ slunce</td>
+</tr>
+</tbody>
+</table>
 <h3>Praktické</h3>
 <ul>
 <li><strong>Letiště:</strong> AGP, 8 km od centra (bus C1 / vlak do centra za 20 min)</li>
@@ -78,23 +115,75 @@ L.marker([36.7213, 4.4214]).addTo(dmap);
 <h2>Nerja (50 km od Málagy)</h2>
 <p>Malebné přímořské městečko — &quot;balkón Evropy&quot;. Klidnější než Málaga, krásné pláže a unikátní jeskyně.</p>
 <h3>Co vidět</h3>
-<p>| Místo | Popis |
-|-------|-------|
-| <strong>Balcón de Europa</strong> | Vyhlídková terasa nad mořem — ikona Nerji |
-| <strong>Cuevas de Nerja</strong> | Prehistorické jeskyně (objev 1959), stalaktity, koncertní sál |
-| <strong>Playa Burriana</strong> | Nejlepší pláž, Blue Flag, chiringuitos |
-| <strong>Playa Carabeo</strong> | Malá ukrytá pláž, strmý přístup, romantická |
-| <strong>Río Chillar</strong> | Túra řečištěm (river walk), voda po kolena, osvěžující |
-| <strong>Frigiliana</strong> | Bílá vesnička 7 km od Nerji — nejkrásnější v Andalusii |</p>
+<table>
+<thead>
+<tr>
+<th>Místo</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Balcón de Europa</strong></td>
+<td>Vyhlídková terasa nad mořem — ikona Nerji</td>
+</tr>
+<tr>
+<td><strong>Cuevas de Nerja</strong></td>
+<td>Prehistorické jeskyně (objev 1959), stalaktity, koncertní sál</td>
+</tr>
+<tr>
+<td><strong>Playa Burriana</strong></td>
+<td>Nejlepší pláž, Blue Flag, chiringuitos</td>
+</tr>
+<tr>
+<td><strong>Playa Carabeo</strong></td>
+<td>Malá ukrytá pláž, strmý přístup, romantická</td>
+</tr>
+<tr>
+<td><strong>Río Chillar</strong></td>
+<td>Túra řečištěm (river walk), voda po kolena, osvěžující</td>
+</tr>
+<tr>
+<td><strong>Frigiliana</strong></td>
+<td>Bílá vesnička 7 km od Nerji — nejkrásnější v Andalusii</td>
+</tr>
+</tbody>
+</table>
 <h3>Cuevas de Nerja — praktické info</h3>
-<p>| | |
-|---|---|
-| <strong>Adresa</strong> | Ctra. de Maro, 29787 Nerja |
-| <strong>Geo</strong> | 36.7617,-3.8445 |
-| <strong>Otevřeno</strong> | Denně 9:00–16:00 (léto do 18:00) |
-| <strong>Vstupné</strong> | Dospělí ~14€, děti 6–12 let ~9€ |
-| <strong>Web</strong> | <a href="https://www.cuevadenerja.es">cuevadenerja.es</a> |
-| <strong>Tip</strong> | Kupovat online předem — v sezóně vyprodáno |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adresa</strong></td>
+<td>Ctra. de Maro, 29787 Nerja</td>
+</tr>
+<tr>
+<td><strong>Geo</strong></td>
+<td>36.7617,-3.8445</td>
+</tr>
+<tr>
+<td><strong>Otevřeno</strong></td>
+<td>Denně 9:00–16:00 (léto do 18:00)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí ~14€, děti 6–12 let ~9€</td>
+</tr>
+<tr>
+<td><strong>Web</strong></td>
+<td><a href="https://www.cuevadenerja.es">cuevadenerja.es</a></td>
+</tr>
+<tr>
+<td><strong>Tip</strong></td>
+<td>Kupovat online předem — v sezóně vyprodáno</td>
+</tr>
+</tbody>
+</table>
 <h3>Río Chillar — tip na výlet</h3>
 <p>Procházka korytem řeky (cca 8 km tam a zpět). Voda po kolena, místy po pás. Ideální v létě na ochlazení.</p>
 <ul>
@@ -105,12 +194,32 @@ L.marker([36.7213, 4.4214]).addTo(dmap);
 </ul>
 <hr>
 <h2>Praktické info pro celý region</h2>
-<p>| | |
-|---|---|
-| <strong>Doprava</strong> | Autobus ALSA Málaga↔Nerja (1h, ~5€), autem A-7 / AP-7 |
-| <strong>Ubytování</strong> | Airbnb v Nerji výhodnější než hotely, Málaga má vše |
-| <strong>Sezóna</strong> | Říjen–květen ideální (méně turistů, 20–25°C), léto 35°C+ |
-| <strong>Jazyk</strong> | Španělsky (angličtina v turistických zónách) |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Doprava</strong></td>
+<td>Autobus ALSA Málaga↔Nerja (1h, ~5€), autem A-7 / AP-7</td>
+</tr>
+<tr>
+<td><strong>Ubytování</strong></td>
+<td>Airbnb v Nerji výhodnější než hotely, Málaga má vše</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>Říjen–květen ideální (méně turistů, 20–25°C), léto 35°C+</td>
+</tr>
+<tr>
+<td><strong>Jazyk</strong></td>
+<td>Španělsky (angličtina v turistických zónách)</td>
+</tr>
+</tbody>
+</table>
 <p>→ Viz také: [[archiv-cesta-do-malagy]]</p>
 </div>
 <footer>
