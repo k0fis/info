@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Sárvár (termální lázně) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Sárvár (termální lázně)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> </div>
+<div class="meta"><p class="meta-item">📍 Vadkert körút 1, 9600 Sárvár, Maďarsko</p><p class="meta-item">🌐 <a href="https://sarvarfurdo.hu/en" target="_blank">sarvarfurdo.hu/en</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.2536, 16.9361], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.2536, 16.9361]).addTo(dmap);
+</script>
+<div class="content"><h2>Sárvár Spa and Wellness Centre</h2>
+<p>Moderní termální komplex v západním Maďarsku se dvěma unikátními vrty — jeden dosahuje <strong>83 °C z hloubky 2 000 m</strong>. Certifikovaná léčivá voda na revmatoidní artritidu, kloubní degeneraci a kožní problémy. Otevřeno 364 dní v roce (zavřeno jen 24. 12.).</p>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Otevírací doba</strong> | Denně 9:00–21:00 (léčivá část); rodinná část se liší |
+| <strong>Vstupné (mimo sezónu)</strong> | Dospělý celodenní 6 600 HUF (~430 Kč) |
+| <strong>Vstupné (víkend/sezóna)</strong> | Dospělý 8 700 HUF (~570 Kč) |
+| <strong>Večerní (od 16h / od 18h)</strong> | 4 400 / 2 400 HUF (mimo sezónu) |
+| <strong>Dítě 3–14</strong> | 3 600 HUF (mimo sezónu) / 4 400 HUF (sezóna) |
+| <strong>Sauna příplatek</strong> | 3 200 HUF |
+| <strong>Parkování</strong> | Zdarma |
+| <strong>Hlavní sezóna</strong> | Pá–Ne + léto (červen–srpen) |</p>
+<h3>Bazény (12+)</h3>
+<p><strong>Léčivá část (Healing Spa):</strong></p>
+<ul>
+<li>Vnitřní termální bazény 32–36 °C</li>
+<li>Polokryté termální bazény</li>
+<li>Léčivý zážitkový bazén s tryskami</li>
+<li>Obří jacuzzi</li>
+</ul>
+<p><strong>Rodinná část (Family Spa):</strong></p>
+<ul>
+<li>Vlnový bazén, 25m plavecký bazén</li>
+<li>Vodní tobogány (velké tubusy)</li>
+<li>Dětské brouzdaliště a splash zóny</li>
+<li>Venkovní bazény (léto)</li>
+</ul>
+<h3>Voda — dva prameny</h3>
+<p>| Vrt | Teplota zdroje | Složení | Léčí |
+|-----|----------------|---------|------|
+| Vrt č. 1 | 83 °C | Chlorid sodný + jód + brom | Revma, klouby, kůže |
+| Vrt č. 2 | 43 °C | Alkalická + fluorid + kyselina křemičitá | Pohybový aparát |</p>
+<h3>Sauna World</h3>
+<p>Textile-free (bez plavek). Finská sauna (80–90 °C), bio sauna, parní kabina, infra kabina, ledová sprcha, solná místnost, vyhřívaná lehátka. Pravidelné aufguss ceremonie. Děti do 12 let nemají přístup.</p>
+<h3>Jak se dostat</h3>
+<ul>
+<li>Z Brna: cca <strong>2,5 hod</strong> (přes Vídeň nebo Bratislavu–Győr)</li>
+<li>Z Budapešti: 2 hod (M1 + Route 86)</li>
+<li>Vlak: přímý z Budapest Keleti (2,5–3 hod)</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Nádasdy Castle</strong> — renesanční zámek s muzeem, přímo ve městě</li>
+<li><strong>Arboretum a park</strong> — krásný lesní park</li>
+<li><strong>Csónakázó Lake</strong> — jezero na procházky</li>
+<li><strong>Bükfürdő</strong> (30 km) — [[hu-buk|další velké termály]]</li>
+<li><strong>Thermal Camping Sárvár</strong> — kemp přímo u lázní</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://sarvarfurdo.hu/en">Sárvár Spa (oficiální)</a></li>
+<li><a href="https://sarvarfurdo.hu/en/prices">Ceník 2026</a></li>
+<li><a href="https://sarvarfurdo.hu/en/opening-hours">Otevírací doba</a></li>
+<li><a href="https://hungaryunlocked.com/sarvar-thermal-spa-hungary-guide/">Hungary Unlocked — Sárvár guide</a></li>
+<li><a href="https://thermalcamping.com/en/">Thermal Camping Sárvár</a></li>
+<li><a href="https://sarvar.hu/en/">Město Sárvár</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABN0lEQVR42tzUMa7cIBQF0GtR0P3ZAPLbxhSRvCXcufrmV9MNW0JKwTaI2ADuKJBvNFFmNJVF3OW/7nSPx9XFtxtNbixmkUiWM3aY29rWpIEu+2alpEVFqZ2es883o7ttDUjGk3awxppV4mv/Y5Nb9mbJb/c5MoChWcW3Lzi09j93Y5NmHGI5YXxOdyAtwhE91p5buySkaZzQYzd5FlUl7H/vc2x8Yk0XITBUnPGHuosTGo2pdFgzzJkJDWOX8aG+khUncdfosP4i6Q1YGc8Y9geUkxvwiz3W98earCri2mNcAoS8Ccc+22nLbFrIesrAQI+VQV55P/KfPnFmYZSIHjvMZEMOErr86BMPrbhfT3puq3JSGUqnszOQkK5ddrCqqJoDn+879qNPSlr4zN8/+v+e3wEAAP//fV9YpfPH5ZIAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

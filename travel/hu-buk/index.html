@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Bükfürdő (termální lázně) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Bükfürdő (termální lázně)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> </div>
+<div class="meta"><p class="meta-item">📍 Termál krt. 2/a, 9740 Bük, Maďarsko</p><p class="meta-item">🌐 <a href="https://bukfurdo.hu/en" target="_blank">bukfurdo.hu/en</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.3864, 16.7456], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.3864, 16.7456]).addTo(dmap);
+</script>
+<div class="content"><h2>Bükfürdő Thermal &amp; Spa</h2>
+<p>Druhé největší termální lázně v Maďarsku (14 ha, 34 bazénů). Jedna z <strong>nejsilnějších léčivých vod ve střední Evropě</strong> — alkalicko-hydrogenuhličitanová, protizánětlivá, posiluje kosti a svaly. Zdroj 58 °C z hloubky.</p>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Otevírací doba</strong> | Po–Čt 9:00–18:00, Pá 9:00–19:00, So 9:00–20:00, Ne 9:00–19:00 |
+| <strong>Vstupné (všední den)</strong> | Dospělý 6 550 HUF (~430 Kč), dítě 3–14 let 3 200 HUF |
+| <strong>Vstupné (víkend)</strong> | Dospělý 7 650 HUF (~500 Kč), dítě 3 500 HUF |
+| <strong>Rodina (2+1, všední)</strong> | 13 400 HUF (~880 Kč) |
+| <strong>Se saunou</strong> | 9 750 HUF (všední) / 11 250 HUF (víkend) |
+| <strong>Parkování</strong> | Zdarma |
+| <strong>Platba</strong> | Karty, HUF hotově (EUR přijímají s nevýhodným kurzem) |</p>
+<h3>Bazény a voda</h3>
+<ul>
+<li><strong>Léčivé bazény</strong> (4×): 32–38 °C, nefiltrovaná termální voda</li>
+<li><strong>Termální bazény</strong>: filtrovaná, 34–36 °C</li>
+<li><strong>Zábavní bazény</strong>: tobogány, vlnový bazén, divoká řeka</li>
+<li><strong>Dětská zóna</strong>: mělké bazény s hracími prvky</li>
+<li>Voda léčí: klouby, osteoporóza, kožní problémy, oběhové potíže</li>
+</ul>
+<h3>Sauna World (Szaunavilág)</h3>
+<p>⚠️ <strong>Bez plavek</strong> (textile-free), ručník povinný.</p>
+<ul>
+<li>Finská sauna (85–90 °C), parní kabiny, tepidárium (38 °C), ledová místnost</li>
+<li>Aufguss ceremonie: 1 000–1 500 HUF</li>
+<li>Děti do 14 let zakázáno, 14–18 s doprovodem</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Nejlepší čas: všední den dopoledne (před 10:00)</li>
+<li>Děti do 14 let nemohou do léčivých bazénů (příliš silná mineralizace) ani do sauny</li>
+<li>Vzít vlastní pantofle (nebo pronájem 500 HUF)</li>
+<li>Restaurace v areálu</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li>Z Brna: cca <strong>2,5 hod</strong> (přes Vídeň a Sopron, nebo přes Bratislavu a Győr)</li>
+<li>Z Budapešti: 220 km (~2,5 hod)</li>
+<li>Kousek od hranic s Rakouskem (Oberpullendorf 30 km)</li>
+</ul>
+<h3>Okolí</h3>
+<ul>
+<li><strong>Sárvár</strong> (30 km) — [[hu-sarvar|další termální lázně]]</li>
+<li><strong>Kőszeg</strong> (25 km) — malebné historické městečko, „šperkovnice Maďarska&quot;</li>
+<li><strong>Sopron</strong> (50 km) — město s romanticko-gotickým centrem, blízko hranic</li>
+<li><strong>Thermal Camping Bükfürdő</strong> — přímo u areálu, stany/karavany/mobilní domy</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://bukfurdo.hu/en">Bükfürdő Thermal &amp; Spa (oficiální)</a></li>
+<li><a href="https://hungaryunlocked.com/bukfurdo-thermal-spa/">Hungary Unlocked — Bükfürdő guide</a></li>
+<li><a href="https://www.visitbuk.hu/en">Visit Bük</a></li>
+<li><a href="https://www.buk.hu/en/">Město Bük (oficiální)</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABPklEQVR42tzUMY7rIBAG4D+imC6+wChcI4UlX8nuXAVSvc6+kqUUXIOICzidC5R5YneTTUVYut2p/FWGGf7BnysSWbUwOH3U2KLXAhMcUOQ59jD6nzi9lVqvHp7KrQRQrtIWQ2yUMD3Pn7fILcw8BvfsT9Yf1XtSy8sQMqbz5RZmvanNVxnmco7GU5DrshaYbHsCouHuKijx1O4BD+7uXZEtTmi0KNm5tcLoO8smkt4evcqbJgxhjgRcP+fxxtjJOVglwe0cCkxTe9LijdpANcYQ93qORj3m8cY0tYOsPOIIKjGa2ETDhnEocsoDA2OQ+xEVTh3yPY9qOXRrgdMaYcAodyCU2GIQq7ewfOc165Rvq0TJHZUeIvyY9h3K3HPK08v/s0770YroBY/75S1ykzX14+v9/dC/u/4HAAD//4TiJeuyh0dhAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

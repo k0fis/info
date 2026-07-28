@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morskie Oko — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Morskie Oko</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">hory</span> <span class="tag">priroda</span> </div>
+<div class="meta"><p class="meta-item">📍 Palenica Białczańska, Polsko</p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.2015, 20.0713], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.2015, 20.0713]).addTo(dmap);
+</script>
+<div class="content"><h1>Morskie Oko — nejkrásnější horské jezero v Tatrách</h1>
+<p>Největší a nejznámější horské jezero v polských Tatrách (1395 m n. m.). Průzračná voda obklopená strmými skalními stěnami. Přístup pěšky nebo koňským povozem z Palenicy Białczańské.</p>
+<p>Jedním z nejpopulárnějších výletních cílů v okolí Zakopaného je ledovcové jezero Morskie Oko a stezka, která k němu vede. Trasa prochází údolím Dolina Rybiego Potoku, kde vás obklopí štíty přesahující 2 000 m n. m. Zajímavostí je, že největší tatranské jezero bývalo až do roku 1902 předmětem sporu s Uherskem o to, komu patří. Dříve se nazývalo Rybí jezero.</p>
+<p>Ze Zakopaného se k výchozímu bodu Palenica Białczańska dostanete autem nebo autobusem z hlavního autobusového nádraží. Odtud vás čeká asi 2–3hodinová túra po asfaltové lesní cestě až k jezeru s dechberoucím výhledem. Pokud nechcete jít pěšky, v létě můžete využít koňský povoz, v zimě koňské sáně. Ty vás zavezou až na Włosienicu, zhruba 1,5 km před jezerem – poslední úsek je nutné dojít pěšky.</p>
+<p>Pokud patříte mezi zkušené turisty, můžete se vydat až na vrchol Rysy (2 499 m n. m.), což je nejvyšší bod Polska. Je ale dobré vědět, že výstup na vrchol je snazší ze slovenské strany.</p>
+<p>Za dobré viditelnosti se vám z vrcholu otevře dechberoucí výhled – při opravdu jasném počasí je dokonce možné dohlédnout až ke Kékesu, nejvyšší hoře Maďarska.</p>
+<h2>Praktické info</h2>
+<ul>
+<li><strong>Přístup:</strong> z parkoviště Palenica Białczańska — 9 km po asfaltce (~2 h tam)</li>
+<li><strong>Koňský povoz:</strong> ~70 PLN/os jedním směrem (posledních 2 km pěšky vždy)</li>
+<li><strong>Vstupné do TPN:</strong> ~10 PLN/os</li>
+<li><strong>Parkování:</strong> placené u Palenicy (přijít brzy! — v sezóně plné od 7:00)</li>
+</ul>
+<h2>Co uvidíte</h2>
+<ul>
+<li>Jezero v ledovcovém karu s průzračnou vodou</li>
+<li>Schronisko nad Morskim Okiem (horská chata s jídlem)</li>
+<li>Nad jezerem: Czarny Staw — divočejší jezero (dalších 30 min výš)</li>
+<li>Rysy — nejvyšší hora PL (2499 m), výchozí bod odtud</li>
+</ul>
+<h2>Okolí</h2>
+<ul>
+<li>[[zakopane-termy|Zakopané]] — 25 km</li>
+<li>[[kasprowy-wierch|Kasprowy Wierch]] — 15 km vzdušnou čarou</li>
+<li>[[terma-bania|Terma Bania]] — 15 km (na cestě zpět)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Jet v 6:00 ráno</strong> — parkoviště plné od 7–8 v sezóně</li>
+<li>Na Czarny Staw jít určitě — méně lidí, dramatičtější scenérie</li>
+<li>Koupání zakázáno (národní park)</li>
+<li>Alternativa: minibusy z Zakopaného na Palenicu</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUMY7jIBQG4N+ioPQFkLlGipV8Jdy5CqRKF18JKQXXYOULkM4F8r/yZiZK5XnjbuZRfcWT4PEDfl1p8kHm0SayHHHAUH32WQMiT9UZX6GSXYQe5lC10WI743llOugAZwlt02v/+yYf82TG+W0+ewbQkPBvV7BrPd1XwHimJpUjLupm2jxadhB5hWfIY+67HgKjjU1u62jj+r//K+vQ85mGZsEBY+ANII1GXwTWl3uBM6joRAbUpcLAplVDYvfHqWADF6ZDPveXmeoK/KXE+obz1q0SThI/58+rZSezU6sqVVtyOWSgqR6e0b7yvuftfWQYMNkEiQMGFi5ztLFIPFWnuK21P+iBRS12YZS6thmM+SRygDMtRhX5eb59b//vNAd+5O+7/tn1LwAA//+XrVUL5ajkWwAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

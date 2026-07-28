@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Tapolca (jeskyní jezero) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Tapolca (jeskyní jezero)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">balaton</span> <span class="tag">jeskyne</span> </div>
+<div class="meta"><p class="meta-item">📍 Kisfaludy Sándor u. 3, 8300 Tapolca, Maďarsko</p><p class="meta-item">🌐 <a href="https://tavasbarlang.hu" target="_blank">tavasbarlang.hu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.8828, 17.4081], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.8828, 17.4081]).addTo(dmap);
+</script>
+<div class="content"><h2>Tavasbarlang — Tapolca Lake Cave</h2>
+<p>Unikátní podzemní krasové jezero v centru města Tapolca, 20 km od Hévízu. Návštěvníci se proplétají <strong>loďkou skrz jeskyní systém</strong> dlouhý 3 km. Objeveno v roce 1903 při kopání studny, veřejnosti přístupné od 1912, projížďky na loďkách od 1937.</p>
+<h3>Co dělá místo výjimečným</h3>
+<ul>
+<li><strong>Podzemní jezero</strong> vzniklé rozpouštěním vápence mísením studené krasové a teplé termální vody</li>
+<li>Stálá teplota vzduchu v jeskyni <strong>20 °C</strong> celoročně</li>
+<li><strong>Jeskyní vzduch</strong> — používá se k léčbě respiračních onemocnění</li>
+<li>Aragonitové krystaly a jeskynní korály</li>
+<li>Chráněný přírodní areál od roku 1942</li>
+<li>Ve vodě žijí střevličky (Common minnow)</li>
+</ul>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Aktivita</strong> | Projížďka na loďce podzemním jezerem |
+| <strong>Délka prohlídky</strong> | cca 20–30 min |
+| <strong>Vhodné pro děti</strong> | Ano (od cca 3 let) |
+| <strong>Teplota v jeskyni</strong> | 20 °C (vzít svetr) |
+| <strong>Tip</strong> | V létě fronty — jet ráno nebo mimo sezónu |</p>
+<p><em>Pozn.: Aktuální ceny a otevírací dobu ověřit na <a href="https://tavasbarlang.hu">tavasbarlang.hu</a> — web má self-signed certifikát.</em></p>
+<h3>Okolí v Tapolce</h3>
+<ul>
+<li><strong>Malom-tó (Mlýnské jezero)</strong> — malebné jezírko v centru města</li>
+<li><strong>Church Hill</strong> — gotický kostel z 13. stol.</li>
+<li><strong>Školní muzeum</strong></li>
+<li>Centrum města je kompaktní, pěkné na procházku</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li>Z Hévízu: 20 km (~20 min)</li>
+<li>Z Brna: cca <strong>3 hod</strong> (přes Bratislavu, Győr, kolem severního Balatonu)</li>
+<li>Leží na severním břehu Balatonu, ideální kombinace s Hévízem</li>
+</ul>
+<h3>Okolí — kam dál</h3>
+<ul>
+<li><strong>Hévíz</strong> (20 km) — [[hu-heviz|termální jezero]]</li>
+<li><strong>Badacsony</strong> (15 km) — vulkanický kopec, vinařství, výhledy na Balaton</li>
+<li><strong>Balaton severní břeh</strong> — pláže, cyklistika</li>
+<li><strong>Sümeg</strong> (20 km) — gotický hrad, rytířské turnaje</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://tavasbarlang.hu">Tavasbarlang (oficiální)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tapolca">Wikipedia — Tapolca</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNklEQVR42tzUIa7jMBAG4L8yMOtewKqvUVApV3JY0MZFZZsrmfkaXs0FXGZg5X+K2teyxA17b9hHkl8znsGvK01m4zDYSOY99nA2i1cRaPJU+wRbGG1pNVm10e2uDsNue/RpVJR3/nWTd5nMIO/+rBrAoY5mkPAawar1xKx80iqy7DLDH/FpsDw98244469xvKmYHv/f8nw5qmy98H9sMcbglFcEDmWP9b+lP2kg50feDQOXMTkWdM/vbXjJC4i3cdYtBrq70N7Md94Pra8BcBhrN59zi313F6+WfTqjxdd6tLSl6qQb3SenKJy7vMPL+yXryGDZ4uWeKE/aaAta7NFXSLHh9NrHVU+1F2+04vzoxw5Xl3TFgbnVI4uQRIs9nHEsEhibvNwTCk33nO+H/tn1FQAA//8AJl/Z/2ZeYwAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

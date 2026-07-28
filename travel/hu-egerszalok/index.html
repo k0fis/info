@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Egerszalók (Salt Hill — „maďarské Pamukkale&#34;) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Egerszalók (Salt Hill — „maďarské Pamukkale&#34;)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">priroda</span> </div>
+<div class="meta"><p class="meta-item">📍 Egerszalók 3394, Maďarsko</p><p class="meta-item">🌐 <a href="https://www.salirisfurdo.hu/en" target="_blank">www.salirisfurdo.hu/en</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.8636, 20.3264], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.8636, 20.3264]).addTo(dmap);
+</script>
+<div class="content"><h2>Egerszalók Salt Hill (Sódomb)</h2>
+<p><strong>Jedno ze tří míst na světě</strong> s přirozenými travertinovými terasami — vedle tureckého Pamukkale a Mammoth Hot Springs v Yellowstonu. Oslnivě bílé vápencové formace tvořené minerální termální vodou, která vytéká z hloubky <strong>410 metrů</strong> při teplotě <strong>65–68 °C</strong>. Voda je stará přibližně 27 000 let.</p>
+<p>Termální pramen vyvěrá od roku 1961 (vrtný průzkum) a od té doby nepřetržitě buduje bílé terasovité útvary na ploše cca 1 200 m². Koupat se v terasách nelze (chráněný geologický útvar), ale <strong>prohlídka zblízka je možná</strong> z chodníku u parkoviště Nostalgia lázní.</p>
+<h3>Saliris Resort — termální lázně</h3>
+<p>Čtyřhvězdičkový spa komplex přímo u Salt Hill. Koupete se v léčivé vodě s výhledem na travertinové terasy.</p>
+<h4>Praktické informace</h4>
+<p>| | |
+|---|---|
+| <strong>Otevírací doba</strong> | Ne–Čt 10:00–20:00, Pá–So 10:00–21:00 |
+| <strong>Sauny</strong> | 11:00–19:30 |
+| <strong>Vstupné celodenní (všední)</strong> | Dospělý 9 700 HUF (~635 Kč), dítě 3–14 let 7 500 HUF |
+| <strong>Vstupné celodenní (víkend)</strong> | Dospělý 10 800 HUF (~710 Kč), dítě 8 400 HUF |
+| <strong>3 hodiny</strong> | 7 700 / 8 600 HUF (všední/víkend) |
+| <strong>Odpoledne (od 17h)</strong> | 3 900 / 4 300 HUF |
+| <strong>Sauna příplatek</strong> | 3 900 HUF (všední) / 3 500 HUF (víkend) |
+| <strong>Nostalgia Spa (budget)</strong> | 2 200 HUF celodenní |
+| <strong>Parkování</strong> | 900 HUF |
+| <strong>Léčivá voda od</strong> | 1992 (certifikace) |</p>
+<h4>Bazény</h4>
+<p><strong>17 bazénů</strong> s teplotou od 14 °C po 42 °C:</p>
+<ul>
+<li>Vnitřní bazény (celoročně)</li>
+<li>Venkovní bazény (sezónní)</li>
+<li>Termální léčivé bazény</li>
+<li>Studené bazény (14 °C) pro otužilce</li>
+<li>Zdroj: 65–68 °C z hloubky 410 m, ochlazeno na koupací teplotu</li>
+</ul>
+<h4>Sauna</h4>
+<ul>
+<li>Ruské srubové sauny s tradičními „banja&quot; ceremoniemi</li>
+<li>Finská sauna, parní lázně</li>
+<li>Odpočívárny, ledové sprchy</li>
+</ul>
+<h3>Salt Hill — prohlídka</h3>
+<p>| | |
+|---|---|
+| <strong>Vstup k terasám</strong> | Zdarma (chodník od parkoviště Nostalgia Spa) |
+| <strong>Koupání v terasách</strong> | ❌ Zakázáno (chráněný útvar) |
+| <strong>Focení</strong> | ✅ Bez omezení |
+| <strong>Nejhezčí</strong> | Za slunce — bílé terasy kontrastují se zelenou krajinou |</p>
+<h3>Proč je to výjimečné</h3>
+<ul>
+<li>Jedna ze <strong>3 takových formací na planetě</strong> (Pamukkale, Yellowstone, Egerszalók)</li>
+<li>Na rozdíl od Pamukkale — terasy nejsou opotřebované turisty (chodí se jen po chodníku)</li>
+<li>Koupání v léčivé termální vodě <strong>s výhledem</strong> na geologický zázrak</li>
+<li>Formace stále aktivní — voda nepřetržitě buduje nové útvary</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li>Z Egeru: <strong>8 km</strong> (~10 min autem, autobus)</li>
+<li>Z Brna: cca <strong>3,5 hod</strong> (přes Bratislavu, M3)</li>
+<li>Z Budapešti: 130 km, ~1,5 hod (M3), vlak InterCity do Egeru + taxi/bus</li>
+<li><strong>Ideální kombinovat s [[eger|Eger]]</strong> (víno, hrad, město)</li>
+</ul>
+<h3>Okolí</h3>
+<ul>
+<li><strong>Eger</strong> (8 km) — [[eger|hrad, termy, Údolí krásnožen]]</li>
+<li><strong>Bükk National Park</strong> (20 km) — lesní turistika, jeskyně</li>
+<li><strong>Szilvásvárad</strong> (30 km) — lipicánský hřebčín, vodopády Szalajka-völgy</li>
+<li><strong>Noszvaj</strong> (12 km) — zámek De la Motte, vinné sklepy</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.salirisfurdo.hu/en/bath">Saliris Spa (oficiální)</a></li>
+<li><a href="https://hungaryunlocked.com/saliris-resort-egerszalok-thermal-bath-guide/">Hungary Unlocked — Saliris guide</a></li>
+<li><a href="https://visithungary.com/articles/the-salt-hills-of-egerszalok-">Visit Hungary — Salt Hills</a></li>
+<li><a href="https://egerszalok.eu/en/discovery">Egerszalók turistická stránka</a></li>
+<li><a href="https://visiteger.com/en/sights/the-surroundings-of-eger/egerszalok-1">Visit Eger — Egerszalók</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMklEQVR42tzUMc6jMBAF4IdcuFsuYMXXSLESV4KOKjgVXXwlpC18Da/mAtC5sHgrlt2kCw7d/0/FV2A9eWaMb1eanNHm3obt44QdWuUkqQAU2edOCDDYVOpck0aXWxz603boxKtRXvnfm1zEm15e9/PWAKoMA5meLXhr7TmbmlSB6Ywx8E4fe8vL37yHvv28GViqEPcAR25R5VYl4e9QZDRLHDgCVTrlH+phfezJdc97YH3nIo4Jzf7/kTH8cmhNb8OqS6zvuaPnaPD/vE/NhxnikJv1Ohd5GmTfpyuKTGdqm7KOusieM2oZhWszn/A2v+LiwMmyxNt7ojxpg00osUNHZ5OdLnou8b7fWj3znjCjzqhYbLfNO4kSb9NUqyQTQ5HJJULRNP/6+6G/dv0JAAD//8neZfZy1xOxAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

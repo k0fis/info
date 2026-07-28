@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kasprowy Wierch — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Kasprowy Wierch</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">hory</span> </div>
+<div class="meta"><p class="meta-item">📍 Zakopane, Polsko</p><p class="meta-item">🌐 <a href="https://www.pkl.pl" target="_blank">www.pkl.pl</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.2319, 19.9817], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.2319, 19.9817]).addTo(dmap);
+</script>
+<div class="content"><h1>Kasprowy Wierch — lanovka na 1987 m n. m.</h1>
+<p>Vrchol v Západních Tatrách (1987 m) s kabinkovou lanovkou z Kuźnic. V zimě lyžařský areál, v létě výchozí bod pro horské túry. Lanovka z roku 1936.</p>
+<p>Vrchol Kasprowy Wierch se nachází v hlavním hřebeni Západních Tater, v místě, kde se stýkají tři velká údolí. Spodní stanice se nachází v Kuźnicích (1 027 m), mezistanice leží na skalách Myślenických věží (1 360 m). Na samotném vrcholu stojí meteorologická observatoř – nejvýše položená budova v Polsku.</p>
+<p>Vstupenky na lanovku určitě zakupit předem prostřednictvím oficiálního rezervačního systému PKL, který lanovku provozuje. https://www.pkl.pl/</p>
+<p>S obousměrnou jízdenkou můžete na vrcholu strávit 1 hodinu 40 minut a užívat si úchvatné panoramatické výhledy. Za dobrého počasí se vyplatí vystoupat i na vyhlídkový vrchol Beskid (2 012 m). Z Kasprowego Wierchu vedou dvě hlavní sjezdovky: směrem do údolí Gąsienicowa jezdí během sezóny čtyřsedačková lanovka, zatímco ke sjezdovce do údolí Goryczkowa patří dvojitá sedačka.</p>
+<h2>Praktické info</h2>
+<ul>
+<li><strong>Lanovka:</strong> Kuźnice → Kasprowy Wierch, ~20 min</li>
+<li><strong>Web:</strong> https://www.pkl.pl</li>
+<li><strong>Cena:</strong> cca 80–100 PLN zpáteční, nutná online rezervace!</li>
+<li><strong>Provoz:</strong> celoročně (výjimka: údržba, silný vítr)</li>
+</ul>
+<h2>Co nahoře</h2>
+<ul>
+<li>Panoramatický výhled na Tatry (PL i SK strana)</li>
+<li>Restaurace na vrcholu</li>
+<li>Túry na Świnicę, Giewont, Halę Gąsienicową</li>
+<li>V zimě: sjezdovky a skialpové trasy</li>
+</ul>
+<h2>Okolí</h2>
+<ul>
+<li>[[zakopane-termy|Zakopané]] — 5 km (lanovka z Kuźnic)</li>
+<li>[[gubalowka|Gubałówka]] — 3 km</li>
+<li>[[morskie-oko|Morskie Oko]] — 25 km</li>
+<li>[[dolina-koscieliska|Dolina Kościeliska]] — 10 km</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Rezervace online povinná</strong> v hlavní sezóně</li>
+<li>Počasí se mění rychle — vzít bundu i v létě</li>
+<li>Kombinovat s túrou dolů pěšky (Hala Gąsienicowa → Kuźnice, ~3 h)</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABaElEQVR42tTUQarkIBAG4BIX7vQCQq5RO69kXyCdXCBeyV1dQ8gFkp0LyT9k3rw3MAzdte3afYGA9fMrffwEYEWfLqpAV9iTXXLCKtyINU77RmzPWvdL6XK5aNDV3oj2g1hpsuWsWCv9nPelA7A9JD6Ef/J46ftTkUap/o34lX3CuqV9lY5LZY7kXQy9j5n/Y0r2yDQenfZSFQ7S8lOigdjf+bwz8XTNRJkxHaSwd5QNhpHeHl1hA7uYTt6l/awK+zTIp/hEajMpTA44YTeH6WCFvYtzZltqHc+usMF+rnVfXJpKVThgzERAlekihY1M55FiQLKHxp6jz9wyS/vuyxtPV6g4hdqjakxtNmiZYb/6+a/dVE6598XZFb5XPlz0zLZoHIBlvvvc//T5je/7XWT41O33e/baad98apkTvvJ87/t/I84urPNmxG5cx0wak11CjU+Q3TQOQFlhi/RhqsKfNb8CAAD//8h+UA+BoJhIAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

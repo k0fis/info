@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cesta do Malagy — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Cesta do Malagy</h1>
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
+<div class="meta"></div>
+
+<div class="content"><p>Cesta do malagy</p>
+<p>Chtěl jsem vstávat ve 2, vstal jsem 2:2o
+Myšák řídí jak čert, prší a kloužou se na berlingu pré “trošku” sjetý gumy. Je to guma. Pak už jsem měl strach - takže mě to probralo.</p>
+<p>Na slovnskym letišťu v 5 ráno je prazdno, par utecencu chrape po lavickách.</p>
+<p>Zapomnel hsem si vzit debilni bezpecnostni pytlik na tekutiny a gely￼. Kupu ju si za e dva. Povoleny je jenom jeden, taky se mi moc nedarilo vymenit 2€ na 1€
+Policajti s příslovečnou slovenskou vstřícností mi řekli, že nic němajü. Na jediným skoro otevřeným baru mi teda rozměnili. Tak mám pytlík plný, prázdný a kuličku - ve které byly takový pytlíky zabalený.</p>
+<p>Vzpomínám na letiště v Turecku - kde jsem zapomněl vyhodit pet flašku a “pronesl” jsem přes rentgen litr vody.</p>
+<p>Zbývá mi 2o min do otevření security brány a vstup do “neveřejné” části.</p>
+<p>Přemýšlím, co mi za tekutinu / gel vyhodí - že to překračuje mez. Lituju, že jsem si nevzal víc vymačkanou indulonu.</p>
+<p>Už to neřeším, a jdu na security check. Na anglický pozdrav - asi vypadám jako utečenec - odpovídán česky, a myslím že je to znát. Ani počítač nemusím vytahovat z batohu. Natož kontrola gelů. No ale ženská přede mnou se i vyzouvala z kozaček a nechala je projet rentgenem.</p>
+<p>Duty free mě nechávají  chladnými a jdu se podívat do salónku - abych zjistil, že je to tady dost chudé. Inu rázovitý lid. Když čekám to nejhorší - tak se nestane nic, no a když se těším na snídani - tak taky skoro nic. No něco se našlo.</p>
+<p>Taky zkouším nabíječku telefonu a taky nic. Mám asi smůlu. Čínská nabíječka za dolar zklamala, a nebo nemají zapnutý zásuvky.</p>
+<p>Při letu jsme vlevo nechali alpy. Vypadali pěkně zasněženě, ale na fotku to moc nebylo. Přece jenom byly dost daleko.</p>
+<p>Letiště v Eindhovenu je takový dost nudný, a taky předražený - nejspíš jako všechny letiště. Security controll proběhla s prohmatáváním. Nebylo to příjemný mě a kontrolorovi snad taky ne. Jinak pohoda.</p>
+<p>Ale aspoň mají veřejně dostupný zásuvky. Škoda, že ne usb. China nabíječku jsem definitivně odepsal. Byla tam hnusná vlhkost, a to přestalo pršet. Před letadlem škaredě foukalo, jako by v Holandsku neměli vůbec jaro :-)</p>
+<p>Ipone mel henom 6o% tak jsem vytáhl notebook a nabyl ho z5 aspoň na 9o%.</p>
+<p>Dlouhý čekání  před gate 1. Lítání asi ještě dost dlouho nebude pro Kubíka. Nemá trpělivost na čekání ve frontě. Já ju taky nemám.</p>
+<p>Po h letu už nevím jak mám zkroutit nohu. U levé je to jasný : je zabetonovaná batohem.</p>
+<p>U těchhle letů mají přednost cestující s příručním kufrem. Jednak je to za příplatek a druhak je tady dost málo místa. Furt hlásí, že si máme koupit losy, za 2o€ maškaru nebo 3x lips sticket.  Peklo.</p>
+<p>Rozhlas je ohulené tak, aby přeřval motory i sluchátka. Jediný co přeřve rozhlas je jedno děcko vzadu. Podle mě se bojí toho skřehotání z repráku.</p>
+<p>Ještě mě čeká hodina letu.</p>
+<p>Už krajina dole vypadá jinak, není zelená, spíš jako polopoušť.</p>
+<p>Dost bylo oblačnosti, ale sem tam se roztrhala a byly vidět velký řeky.</p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUsa0kIQwGYI8IyKABpGnDGS3NNjA7NAAtOaMNpGngTeYA7X/ae3fvpNPTrtPn7CNA1m8D/fiKQKk+7SSAGhzIHUTzBh7EFuezoY8Fcj6sPmhsXs2uwaOIGE2uHewq0Ve/Lx2Beuvp1vkrj5d+XrFTivgX8UuHjHLBta54WEx50k3Xpjrv+o0DuVKAot41MXjpabl0vSAOFkc4XD2Rh/tggxehW+WxkY7f/b1zyECTuXR/FrGYUiw67ugzkMFLdw16Vo/1YIMjUqxMUWTuFoeMuvuxZV6bGPxcss3PqH39nO8bR12vg2j3/Cfvd0aKrc/AMjaLg8fVxF2dx10s5nmvlDb29Dm//024LnXVZxxk8PMo8FqZXWWDI3DshKJ6NjH4+b4BPLK6v//Za+ezUp5Lz/ggo/c87uJdU6MDo6jMjSwmd8TnPvvzYXEEWsFZOtIiBv+s+hUAAP//HHNX2SKzRYQAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

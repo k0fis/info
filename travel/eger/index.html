@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Eger — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Eger</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">vino</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Eger, Maďarsko</p><p class="meta-item">🌐 <a href="https://visiteger.com/cz" target="_blank">visiteger.com/cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.9025, 20.3772], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.9025, 20.3772]).addTo(dmap);
+</script>
+<div class="content"><h2>Eger — barokní město, hrad, termy a víno</h2>
+<p>Nádherné barokní město v severním Maďarsku, proslulé hradem (obrana proti Turkům 1552), termálními lázněmi, tureckou architekturou a vinnou oblastí. Jedno z nejkrásnějších měst Maďarska. Cca <strong>3,5 hod z Brna</strong>.</p>
+<h3>Co vidět a dělat</h3>
+<h4>🏰 Egri Vár (hrad)</h4>
+<ul>
+<li>Středověká pevnost — slavná obrana Istvánem Dobóem proti Turkům (1552)</li>
+<li>Muzeum, kasematy, výhledy na město</li>
+<li>Příběh zvěčněn v románu „Hvězdy Egeru&quot; (Gárdonyi Géza)</li>
+</ul>
+<h4>🕌 Minaret</h4>
+<ul>
+<li>Osmanský minaret z 17. století — nejseverněji položený v Evropě</li>
+<li>Lze vystoupat na ochoz (úzké schodiště, 97 stupňů)</li>
+</ul>
+<h4>⛪ Bazilika (katedrála)</h4>
+<ul>
+<li>Druhý největší kostel v Maďarsku (klasicistní)</li>
+<li>17 kostelů ve městě celkem</li>
+</ul>
+<h4>🍷 Szépasszonyvölgy — Údolí krásnožen</h4>
+<ul>
+<li>Desítky vinných sklepů vytesaných ve skále</li>
+<li>Degustace <strong>Bikavér</strong> (Býčí krev) — slavná červená cuvée</li>
+<li>Typická atmosféra: sedíte venku u sklepa, ochutnáváte z demižónu</li>
+<li>Otevřeno obvykle odpoledne/večer</li>
+<li>Uber/taxi zpět do města (pár km)</li>
+</ul>
+<h3>Termální lázně</h3>
+<h4>Eger Thermal Bath (Termálfürdő)</h4>
+<ul>
+<li>Hlavní městské termální koupaliště</li>
+<li>Venkovní i vnitřní bazény, plavecký bazén (olympijský)</li>
+<li>Termální voda na klouby a pohybový aparát</li>
+<li>Web: <a href="https://frfrfrfr.hu/en/egri-termalfurdo">frfrfrfr.hu/en/egri-termalfurdo</a></li>
+</ul>
+<h4>Turecké lázně (Török Fürdő)</h4>
+<ul>
+<li>Historické lázně z doby Abdi Paši (16. stol.)</li>
+<li>Autentická osmanská architektura — kupole, hvězdicové otvory</li>
+<li>Menší, intimnější zážitek</li>
+</ul>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Vzdálenost z Brna</strong> | ~3,5 hod (přes Bratislavu, Budapešť, M3) |
+| <strong>Z Budapešti</strong> | ~1,5 hod (M3 sever) |
+| <strong>Charakter</strong> | Kompaktní historické centrum, vše pěšky |
+| <strong>Parkování</strong> | Placené v centru, levnější na okraji |
+| <strong>Ubytování</strong> | Spousta penzionů a hotelů, cenově příznivé |
+| <strong>Jídlo</strong> | Maďarská kuchyně — guláš, pörkölt, langáše |</p>
+<h3>Tipy</h3>
+<ul>
+<li>Ideální na <strong>2–3 dny</strong> (město + víno + lázně + okolí)</li>
+<li>Údolí krásnožen nejlepší odpoledne/večer — neplánovat auto zpět</li>
+<li>Hrad zvládnout dopoledne (výhledy, muzeum)</li>
+<li>Kombinovat s Tokaj (1 hod východně) — další slavná vinařská oblast</li>
+<li>Eger je výrazně levnější než Budapešť</li>
+</ul>
+<h3>Okolí</h3>
+<ul>
+<li><strong>Tokaj</strong> (100 km) — UNESCO vinařská oblast, aszú (sladká vína)</li>
+<li><strong>Bükk National Park</strong> (20 km) — lesy, jeskyně, turistika</li>
+<li><strong>Egerszalók</strong> (8 km) — [[hu-egerszalok|Salt Hill — „maďarské Pamukkale&quot;, travertinové terasy + termální lázně]]</li>
+<li><strong>Noszvaj</strong> (10 km) — De la Motte zámek, vinné sklepy</li>
+<li><strong>Szilvásvárad</strong> (30 km) — lipicánský hřebčín, vodopády, úzkokolejka</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://visiteger.com/cz">Visit Eger</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eger">Wikipedia — Eger</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUPY6kMBAF4IccOPQFrPY1yHwlyMhwRtZcCYnA16DlC0DmoMRb0bvLZIybbKYivgCBXv3g15UmVwsO74c7DmilUUFFoMijtNLYjtHlUi/GDa7cjVsZrL7pgAa99Onr/69Nbmm0XYpnPpcGUKV1QZrOFlz6yI/BDYoV7xjwTxcsLB6+xO/8DbSKC0qMdg6OLqf4mkqst3mHkc7F5W9+n/qpnioIGHdd5N2TIzN8lVHiUQDDYOu9Xku8zZsYqy3+vf+px3mUXg2id7+WeJN2AWnxmoo8SkW6IP7s3zeeV0Ax8fz+Rz7mV0waOLn/E33p9xkx5LG/RQ5oVFg6Nz10kY/9ZsqOjOtN215lqatcbKOyIokSBzS2dwGe5/25NLlJz8F61Ljhn11/AgAA//8tPlRw2tj6uQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

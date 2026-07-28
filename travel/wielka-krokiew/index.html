@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wielka Krokiew — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Wielka Krokiew</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">sport</span> </div>
+<div class="meta"><p class="meta-item">📍 ul. Bronisława Czecha 1, Zakopane, Polsko</p><p class="meta-item">🌐 <a href="https://www.pkl.pl" target="_blank">www.pkl.pl</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.2720, 19.9510], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.2720, 19.9510]).addTo(dmap);
+</script>
+<div class="content"><h1>Wielka Krokiew — skokanský můstek Zakopane</h1>
+<p>Legendární skokanský můstek (HS 134) přímo v Zakopaném. Závody Světového poháru v zimě. V létě zipline z můstku a prohlídky.</p>
+<h2>Praktické info</h2>
+<ul>
+<li><strong>Adresa:</strong> ul. Bronisława Czecha 1, Zakopane</li>
+<li><strong>Zipline:</strong> v létě, cca 40–60 PLN</li>
+<li><strong>Závody SP:</strong> obvykle leden/únor</li>
+</ul>
+<h2>Co uvidíte</h2>
+<ul>
+<li>Můstek HS 134 z blízka</li>
+<li>Zipline z nájezdové věže (v létě)</li>
+<li>Výhled na město a Tatry</li>
+<li>V zimě: atmosféra závodů SP</li>
+</ul>
+<h2>Okolí</h2>
+<ul>
+<li>[[zakopane-termy|Zakopané / Krupówki]] — 1 km</li>
+<li>[[kasprowy-wierch|Kasprowy Wierch (Kuźnice)]] — 2 km</li>
+<li>[[gubalowka|Gubałówka]] — 2 km</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>V létě zipline = adrenalin za pár minut</li>
+<li>Na závody SP lístky měsíce dopředu</li>
+<li>Pěšky z centra 15 min</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXklEQVR42tTUsa2mMAwHcEcp0pEFImUNd1kpLMAHC4SV0nmNSFkAOhcIn+DdvWuewO1z93Nl/R0Hfn15kaVAmLCKsMID2EXqMTI2QI1TL+CCkdpPpdcNWkbWuyRZCJQGWyawBfh73kd7kTJSGAm/83j01Zpd8FL/R/zkIckyp7gSy6lzGADjWvmY8Ce7WK6dEfS1KgyuTYbjXql/zf9iw30v174kbqiwr+DX2jJg86ywIVs+chhy/Y7ozV4amNpyol5AYVNjGbDPTuKMCg8JTHHguf7L+9le7H66lhFlrRpXMBseXije+33z4OJmCCZMcWeNEcaFDiPcMqps5wns6UDufN8dcsbwYQof/skQZRdbXJKvPF98t1wsgLZo7EXm60aI+998n33ft5MT2IrK1/+Bh5Eku9Jl5JbB2Rl1XheSheuRQWOw84ev92xPjb3IulNfSMJYFf5d9ScAAP//FYtO2w4Uh98AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tipy na výlety — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Tipy na výlety</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
+<div class="meta"></div>
+
+<div class="content"><h2>CZ - Ostravsko</h2>
+<ul>
+<li>[x] [[muzeum_tatra|Tatra - muzeum]]</li>
+<li>[ ] [[heipark-tosovice|Heipark Tošovice]]</li>
+<li>[ ] [[landek-park|Landek Park Ostrava]]</li>
+<li>[ ] [[technotrasa|Technotrasa]]</li>
+</ul>
+<h2>CZ - Jeseniky</h2>
+<ul>
+<li>[ ] [[kouty|Kouty]]</li>
+<li>[ ] [[zlatokopecky-skanzen|Zlatokopecký skanzen]]</li>
+<li>[ ] [[kralicak|Kraličák / Staré Město]]</li>
+<li>[ ] [[kubickuv-lom|Kubičkův lom]]</li>
+<li>[ ] [[brusna|Rozhledna Brusná - Bludov]]</li>
+</ul>
+<h2>CZ - Olomouc a okoli</h2>
+<ul>
+<li>[ ] [[bunkr-praslavice|Bunkr Přáslavice]]</li>
+<li>[ ] [[pevnost-poznani|Olomouc - Pevnost poznání]]</li>
+</ul>
+<h2>CZ Jihovyhodni Morava</h2>
+<ul>
+<li>[ ] [[kovozoo|Kovo-zoo Staré Město]]</li>
+<li>[ ] [[modra-tunel|Modrá — tunel pod vodou]]</li>
+<li>[ ] [[rozhledna-tucin|Rozhledna Tučín]]</li>
+<li>[ ] [[zoo-lesna|Zoo Lešná]]</li>
+</ul>
+<h2>CZ - Moravský Kras</h2>
+<ul>
+<li>[ ] [[moravsky-kras|Moravský kras]]</li>
+<li>[ ] [[macocha|Propast Macocha]] — Velká Dohoda, kemp Baldovec</li>
+<li>[ ] [[velke-opatovice|Velké Opatovice]]</li>
+<li>[ ] [[hrad-pernstejn|Pernštejn]]</li>
+</ul>
+<h2>CZ - Brno</h2>
+<ul>
+<li>[ ] [[vida-brno|VIDA! Brno]]</li>
+<li>[ ] [[hvezdarna-brno|Hvězdárna Brno]]</li>
+<li>[x] [[mamut-muzeum-brno|Mamut Brno]]</li>
+<li>[ ] [[brno-parnik|Brno parník]]</li>
+<li>[ ] [[hrad-veveri|Hrad Veveří]]</li>
+<li>[ ] [[dolni-kounice|Dolní Kounice]] klášter</li>
+</ul>
+<h2>CZ - Vyskov</h2>
+<ul>
+<li>[ ] [[dinopark-vyskov|DinoPark Vyškov]]</li>
+<li>[x] [[air-museum-vyskov|Muzeum letecké a pozemní techniky]]</li>
+</ul>
+<h2>CZ</h2>
+<ul>
+<li>[ ] [[tankodrom-milovice|Tankodrom Milovice]]</li>
+</ul>
+<h2>AT</h2>
+<ul>
+<li>[ ] [[therme-laa|Therme Laa]]</li>
+</ul>
+<h2>AT — Burgenland</h2>
+<ul>
+<li>[ ] [[familypark|Familypark St. Margarethen]]</li>
+<li>[ ] [[draisinentour|Drezína Markt Sankt Martin]]</li>
+</ul>
+<h2>AT — Vídeň</h2>
+<ul>
+<li>[ ] [[haus-des-meeres|Haus des Meeres — akvárium]]</li>
+<li>[ ] [[donauturm|Donauturm]]</li>
+</ul>
+<h2>AT - Lyže</h2>
+<ul>
+<li>[ ] [[wildkogel-arena|Wildkogel Arena — lyžování pro děcka]]</li>
+</ul>
+<h2>HU — Termální lázně</h2>
+<ul>
+<li>[ ] [[hu-buk|Bükfürdő — 2. největší termy v HU, 34 bazénů]]</li>
+<li>[ ] [[hu-sarvar|Sárvár — dva prameny (83 °C!), rodinné lázně]]</li>
+<li>[ ] [[hu-heviz|Hévíz — největší termální jezero na světě]]</li>
+<li>[ ] [[hu-harkany|Harkány — sirná voda, park, psoriáza]]</li>
+</ul>
+<h2>HU — Města a zážitky</h2>
+<ul>
+<li>[ ] [[eger|Eger — hrad, termy, Údolí krásnožen (víno)]]</li>
+<li>[ ] [[hu-egerszalok|Egerszalók — Salt Hill (maďarské Pamukkale)]]</li>
+<li>[ ] [[hu-tapolca|Tapolca — podzemní jeskyní jezero, projížďka na loďce]]</li>
+<li>[ ] [[ostrihom|Ostrihom — Grand Hotel ESZTERGOM]]</li>
+<li>[ ] [[visit-hungary|Visit Hungary]]</li>
+</ul>
+<h2>PL — Krakov a okolí</h2>
+<ul>
+<li>[ ] [[krakov|Krakov — královské město, UNESCO]]</li>
+<li>[ ] [[wieliczka|Wieliczka — solné doly (UNESCO, 14 km od Krakova)]]</li>
+<li>[ ] [[energylandia|EnergyLandia — největší zábavní park v Polsku (50 km)]]</li>
+</ul>
+<h2>PL — Zakopané a okolí</h2>
+<ul>
+<li>[ ] [[zakopane-termy|Zakopané — město pod Tatrami]]</li>
+<li>[ ] [[chocholowskie-termy|Chocholowské termy]] — největší na Podhalí (52 bazénů)</li>
+<li>[ ] [[terma-bania|Terma Bania — Białka Tatrzańska]]</li>
+<li>[ ] [[goracy-potok|Gorący Potok — Szaflary]]</li>
+<li>[ ] [[gubalowka|Gubałówka — panoramatická lanovka, výhled na Tatry]]</li>
+<li>[ ] [[dolina-koscieliska|Dolina Kościeliska — údolí s jeskyněmi]]</li>
+<li>[ ] [[dolina-chocholowska|Dolina Chochołowska — krokusy, nejdelší údolí]]</li>
+<li>[ ] [[termy-zakopianskie|Termy Zakopianskie — termály přímo ve městě]]</li>
+<li>[ ] [[kasprowy-wierch|Kasprowy Wierch — lanovka na 1987 m]]</li>
+<li>[ ] [[morskie-oko|Morskie Oko — nejkrásnější jezero v Tatrách]]</li>
+<li>[ ] [[dunajec-plte|Dunajec — pltě kaňonem (Pieniny)]]</li>
+<li>[ ] [[wielka-krokiew|Wielka Krokiew — skokanský můstek, zipline]]</li>
+<li>[ ] [[niedzica-hrad|Hrad Niedzica — gotický hrad nad přehradou]]</li>
+</ul>
+<h2>PL — Varšava</h2>
+<ul>
+<li>[ ] [[suntago|Suntago — největší krytý aquapark v Evropě]]</li>
+</ul>
+<h2>PL — Góry Sowie (projekt Riese)</h2>
+<ul>
+<li>[ ] [[osowka|Osówka — podzemní město]]</li>
+<li>[ ] [[ksiaz|Zamek Książ]]</li>
+<li>[ ] [[sztolnie-walimskie|Sztolnie Walimskie — 8100 m tunelů]]</li>
+<li>[ ] [[hrad-grodno|Hrad Grodno]]</li>
+<li>[ ] [[wlodarz|Włodarz — největší objekt Riese (30 000 m²)]]</li>
+<li>[ ] [[jugowice-riese|Jugowice (Säuferhöhen)]]</li>
+<li>[ ] [[rzeczka-riese|Rzeczka — nedokončené tunely]]</li>
+<li>[ ] [[sobon-sokolec-riese|Soboń/Sokolec — zbytky vstupů]]</li>
+<li>[ ] [[prehrada-zagorze-slaskie|Přehrada Zagórze Śląskie]]</li>
+</ul>
+<h2>Slovinsko</h2>
+<ul>
+<li>[ ] [[objevuj-slovinsko|Objevuj Slovinsko s dětmi]]</li>
+</ul>
+<h2>italie</h2>
+<ul>
+<li>[[it-saturnie|Saturnie termalni prameny]]</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYElEQVR42tTUsY3lIBAG4EEEZNCAJdogc0t2A++ZBqAlMtpAcgPebAKL/8T67l2ysiddsg/J8vBrZujXHwfETtMrFIAFtqRjLm3l0ChIPO+5m1Oh7F3o9C5tCSx2TjNiJaFJ50Q6EX/qvbUD0lqntYZPHrceV4eZHMr/iO9sZ0TA58roEiueVIbPhc9X+MEOe+7jvWbPRWAKk3Xsv0rRkHnfrJkU4L9YYIVGltpCoa0SOwYOc6pqmioCE01r5rbM9crnyQoese6bgd+CwJbONRdyXK58n0wGMYW2hNknEtgS2SWcDtV/5/tkV/T47hVmfQSJ0d6dTgU0K7ENvq+suyFc/3+yaWun6c0zOf7JhGPUZIC/ed77+8r4REFnFtgBm2LEyv/6+95jvjeDTqyv+Xry2B8jnxmH1D20hcyVv8SJEEf/kMSkt3cd/fyp99ZjP9G8x8rTWgT+XedPAAAA//+xTltoavlYkgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

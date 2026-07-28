@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itálie — Saturnia (termální prameny) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Itálie — Saturnia (termální prameny)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">termy</span> </div>
+<div class="meta"><p class="meta-item">📍 Cascate del Mulino, Strada Provinciale della Follonata, 58014 Saturnia GR, Itálie</p><p class="meta-item">🌐 <a href="https://www.termedisaturnia.it" target="_blank">www.termedisaturnia.it</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([42.6508, 11.5128], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([42.6508, 11.5128]).addTo(dmap);
+</script>
+<div class="content"><h2>Cascate del Mulino — přírodní termální prameny</h2>
+<p>Nejslavnější přírodní termální lázně v Toskánsku. Síranová voda o teplotě <strong>37 °C</strong> vytéká z hlubin Monte Amiata a stéká přes přírodní travertinové terasy do tyrkysových bazénků. Koupání je <strong>zcela zdarma</strong>, přístupné <strong>24/7 celoročně</strong>.</p>
+<p>Pramen chrlí cca 800 litrů/s vody bohaté na vápník, hořčík a síru — údajně léčivé účinky na kůži, revmatismus a artritidu. Voda zde vytéká přes 3000 let.</p>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Vstupné</strong> | Zdarma (365 dní v roce, non-stop) |
+| <strong>Teplota vody</strong> | 37 °C celoročně |
+| <strong>Parkování</strong> | Placené, €2,50/hod, cca 200 m od pramenů (hlídané) |
+| <strong>Obytňáky</strong> | Nejsou povoleny na hlavním parkovišti — kemp 2 km (od €16/den) |
+| <strong>Zázemí</strong> | U parkoviště: sprchy, WC, skříňky (~€5), bar |
+| <strong>U pramenů</strong> | Bez zázemí — žádné převlékárny, WC ani občerstvení |
+| <strong>GPS (parkoviště)</strong> | <a href="https://goo.gl/maps/rpVoz4mVvu9x1JV18">42.6508, 11.5128</a> |</p>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Boty do vody</strong> — travertinové terasy jsou kluzké, dno kamenité</li>
+<li><strong>Starší/tmavé plavky</strong> — síra zanechává skvrny na světlém oblečení</li>
+<li><strong>Ručník a převlečení</strong> — převlékat se musíte u auta</li>
+<li><strong>Svačina a pití</strong> — u pramenů nic nekoupíte</li>
+<li><strong>Baterka</strong> (při večerní/noční návštěvě) — žádné osvětlení</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: podzim a zima — méně turistů, kontrast teplé vody a chladného vzduchu je magický</li>
+<li><strong>Nejlepší denní doba</strong>: brzy ráno nebo večer (přes den plno)</li>
+<li><strong>Tip</strong>: za úplňku v noci — téměř prázdné, pára ve svitu měsíce</li>
+<li><strong>Léto</strong>: příjemné, ale velmi přeplněné</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Navigovat na <strong>&quot;Cascate del Mulino&quot;</strong>, NE na &quot;Terme di Saturnia&quot; (to je placený resort) ani na &quot;Saturnia&quot; (město)</li>
+<li><strong>Insider tip</strong>: jít proti proudu potoka směrem k silnici — menší přírodní tůně, často téměř bez lidí (<a href="https://goo.gl/maps/yy1shYzQQex3PQkH9">mapa</a>)</li>
+<li>Ve vodě se vyskytují drobní červení červíci (larvy pakomárů) — neškodní</li>
+<li>Saturnia je jedno z nejstarších měst Itálie — podle legendy zde žil bůh Saturn</li>
+</ul>
+<h3>Jak se dostat</h3>
+<p>Z Moravy typicky přes Vídeň → Graz → Ljubljana → Benátky → Florencii (nebo Orvieto). Saturnia leží v jižním Toskánsku, cca:</p>
+<ul>
+<li>115 km od Říma</li>
+<li>180 km od Florencie</li>
+<li>56 km od Grosseta</li>
+<li>37 km od Orbetella (pobřeží)</li>
+</ul>
+<hr>
+<h2>Terme di Saturnia (placená alternativa)</h2>
+<p>Komerční termální lázně a spa napájené stejnou síranovou vodou. Bazény, wellness, masáže.</p>
+<ul>
+<li><strong>Vstupné</strong>: od €19 (<a href="https://www.termedisaturnia.it/de/thermalbad/preisliste/">ceník</a>)</li>
+<li><strong>Web</strong>: <a href="https://www.termedisaturnia.it">termedisaturnia.it</a></li>
+</ul>
+<hr>
+<h2>Ubytování</h2>
+<ul>
+<li><strong>B&amp;B Villa Giulia</strong> — přímo v Saturnii, 1,5 km od pramenů, snídaně v ceně, zahrada</li>
+</ul>
+<hr>
+<h2>Okolí — co navštívit</h2>
+<ul>
+<li><strong>Montemerano</strong> (6 km) — jedno z „Nejkrásnějších měst Itálie&quot;, středověké hradby, kostel San Giorgio (14. stol.)</li>
+<li><strong>Pitigliano</strong> (~25 km) — město na tufových skalách, bývalá židovská čtvrť</li>
+<li><strong>Sorano</strong> (~30 km) — etruská skalní města</li>
+<li><strong>Bagni San Filippo</strong> (~50 km) — další přírodní termální prameny v Toskánsku (menší, v lese)</li>
+<li><strong>Monte Amiata</strong> — sopka s výhledy, pěší turistika</li>
+<li><strong>Orbetello / Argentario</strong> (~37 km) — pobřeží, pláže</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://roads-and-rivers.com/en/saturnia-hot-springs-italy/">Roads &amp; Rivers — Saturnia guide (2026)</a></li>
+<li><a href="https://goo.gl/maps/rpVoz4mVvu9x1JV18">Google Maps — parkoviště</a></li>
+<li><a href="https://goo.gl/maps/yy1shYzQQex3PQkH9">Google Maps — klidnější místo proti proudu</a></li>
+<li><a href="https://goo.gl/maps/P9hmqjCBYddxmWb99">Google Maps — kemp pro obytňáky</a></li>
+<li><a href="https://www.termedisaturnia.it">Terme di Saturnia (placený resort)</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOklEQVR42tzUMc6jMBAF4IdcTJkLWOEaKVbiSqZLZ1OlW18JicLXcDQXIB2FxVuxu0k64p/u/6fi6/Ab++HHjZAzPIP9+3HAAQ4gNQFVjsW1NGRql1pb1y5Z6m3YLiYddEDPmbTy+v99kw+N9qrplc+ut7Fob2Z872DPMkyPggKz5EPGqTTllL3yPs41dt1qYhbb3YkKS0BTnC62W7sqs/RkEcMmzUccp6hh2/b/fD55/dWXUxHg/m8fH4xm+m3Bm6YmocISOZtQxCyQI0Y/RaX15pn/B8swzSZm4AKpMdAN2Wdvca6yDNNqYaFcLzjgLSFlvprx3M0V3mrE+uJNOgtqHNBr1EXHllXe3nfcGmXFQffZ2evWd5V28PA6vvtl1wGuDSRHPM+3b/KRkb153r8v+nvPnwAAAP//JY5NpC4+S+sAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

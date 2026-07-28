@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobon Sokolec - Riese — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Sobon Sokolec - Riese</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Sokolec / Soboń, Dolní Slezsko, Polsko</p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.6450, 16.3600], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.6450, 16.3600]).addTo(dmap);
+</script>
+<div class="content"><h1>Soboń / Sokolec — zbytky vstupů (projekt Riese)</h1>
+<p>Nejmenší a nejméně zachovalý z objektů projektu Riese. Nacházejí se na svazích hory Soboń (Ramenberg) u obce Sokolec. Zachovány pouze zbytky vstupních portálů a krátké štoly — stavba byla zastavena ve velmi rané fázi.</p>
+<h2>Stav</h2>
+<ul>
+<li><strong>Přístupnost:</strong> neoficiální — zbytky v lese, bez značení</li>
+<li><strong>Vstupné:</strong> zdarma (žádný správce)</li>
+<li><strong>Stav:</strong> pouze zbytky vstupů, krátké zavalené štoly</li>
+</ul>
+<h2>Okolí (projekt Riese)</h2>
+<ul>
+<li>[[osowka|Osówka]] — 3 km (nejbližší zpřístupněný objekt)</li>
+<li>[[wlodarz|Włodarz]] — 5 km</li>
+<li>[[sztolnie-walimskie|Sztolnie Walimskie]] — 6 km</li>
+<li>[[jugowice-riese|Jugowice]] — 6 km</li>
+<li>[[rzeczka-riese|Rzeczka]] — 4 km</li>
+<li>[[ksiaz|Zamek Książ]] — 12 km</li>
+<li>[[hrad-grodno|Hrad Grodno]] — 7 km</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Pouze pro zarputilé nadšence projektu Riese — není co prohlížet uvnitř</li>
+<li>Lze kombinovat s túrou na [[osowka|Osówku]] (po hřebeni)</li>
+<li>Přístup lesní cestou z obce Sokolec</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXklEQVR42tTUsY0sLQwHcI8IyKABJNpwRktDAztsA9ASGW2MRAOzmYPR/D/Nfe+9S067Ts/ZzwHCxph+fXigrhwv7oAo7Mi0JmG1fSfWOM2ydbQu81K6FXsuQ+8nQAtYaTLPNgzA/+771nf9eYQ8+Lsf73ynKpnX6N8tfmeX4uGsgfQ9i8phuSh4kfPBP9gPlG3EwoiHzie5tG8d4ev8TyY2rRCtFvGlcqIFEg/m4LvCfuBY6VyZzpUUJhtySWED5qWxl1jvejBm1dilPbeB18B8icKUAPRZUoqtK+zS7o8UnE3zqfEy4qvSnsH09d6f7IUeGfvKfXcakzXXJoGSxCYKLzjdguAsU+4/2NE8vMxigUIK36n1/ktiDo090K5EXmQWjR2Z6uzpkpi/++C90yz3TuhAVbo+LG3g8NA6w1Tu/8/zR5MpuaNaQWGF7/rv+RT6M98f/LvivwAAAP//gWxZ17aBbwYAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maďarsko — Harkány (termální lázně) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Maďarsko — Harkány (termální lázně)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> </div>
+<div class="meta"><p class="meta-item">📍 Kossuth Lajos u. 7, 7815 Harkány, Maďarsko</p><p class="meta-item">🌐 <a href="https://www.harkanyfurdo.hu" target="_blank">www.harkanyfurdo.hu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.8476, 18.2369], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.8476, 18.2369]).addTo(dmap);
+</script>
+<div class="content"><h2>Harkány Thermal Spa</h2>
+<p>Termální lázně v jižním Maďarsku (Baranya) v <strong>13,5 ha prastarém parku</strong> se staleté stromy. Sirná léčivá voda objevena v roce 1823 — příběh studnaře Pogány Jánose, jemuž teplá voda vyléčila nemocnou nohu. Za 150+ let přilákaly přes milion návštěvníků ročně.</p>
+<h3>Léčivá voda</h3>
+<p>Voda bohatá na <strong>síru</strong> — jedna z nejúčinnějších v Maďarsku na:</p>
+<ul>
+<li>Pohybový aparát (klouby, revma)</li>
+<li>Chronické gynekologické záněty</li>
+<li>Poruchy lymfatického systému</li>
+<li><strong>Psoriáza</strong> (lupénka) — specialita Harkány</li>
+<li>Problémy s plodností</li>
+</ul>
+<h3>Praktické informace</h3>
+<p>| | |
+|---|---|
+| <strong>Areál</strong> | 13,5 ha park, pláž, bazény, tobogánový park |
+| <strong>Charakter</strong> | Koupaliště + léčivé lázně + tobogány |
+| <strong>Nemocnice</strong> | Revmatologická nemocnice přímo v areálu |
+| <strong>Léčebné pobyty</strong> | Možnost předepsat přes lékaře (i ze zahraničí) |</p>
+<p><em>Pozn.: Aktuální ceník a otevírací dobu ověřit na <a href="https://www.harkanyfurdo.hu">harkanyfurdo.hu</a> — web občas nefunguje.</em></p>
+<h3>Jak se dostat</h3>
+<ul>
+<li>Z Brna: cca <strong>3,5 hod</strong> (přes Bratislavu, Győr, M6 k Pécsi)</li>
+<li>Z Budapešti: ~2,5 hod (M6 jih)</li>
+<li>25 km jižně od Pécse</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Pécs</strong> (25 km) — UNESCO centrum, turecká mešita, katedrála, Zsolnay čtvrť, živé město</li>
+<li><strong>Villány</strong> (15 km) — vinařská oblast, řada sklepů s degustacemi (Cabernet Franc, Merlot)</li>
+<li><strong>Siklós</strong> (5 km) — gotický hrad, turecké minarety</li>
+<li><strong>Orfű</strong> (35 km) — jezera, koupání, vodní sporty</li>
+<li><strong>Mohács</strong> (50 km) — historické bojiště, busójárás (masopustní tradice)</li>
+</ul>
+<h3>Proč Harkány</h3>
+<ul>
+<li>Ideální kombinace: lázně + Pécs (kultura) + Villány (víno)</li>
+<li>Jižní klima — nejteplejší region Maďarska</li>
+<li>Méně turistické než Hévíz/Bük — autentičtější atmosféra</li>
+<li>Park plný vzrostlých stromů — příjemný stín v létě</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.harkanyfurdo.hu">Harkány Thermal Spa (oficiální)</a></li>
+<li><a href="https://www.harkany.hu">Harkány město</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hark%C3%A1ny">Wikipedia — Harkány</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABLUlEQVR42tzUMdLbIBAF4KdRQakLMOYaKjyjK6FOVdhU7uIr0ekaePYCuKPQ6GXIJHYqi1Gq/FvxdfCWXXy5MuQzDdbUQz5jwazEYg3Q5Ps2b16Lrq402tuQgmv3nPw/WOBtAHR93f+zyafe7aLrO59PrtWLyvZXDz7ZfCcTEFy5TPmEgWtHUiwuE1o8R49BBQZjk4etU3HU2MXc4m/9Dk9xa8IZG8YuBVfS6z8eeJ+eKTixI8Ym/+jv5LbYcW8yOuaevbj4iDhhI1dg6GX7nf+hc20rafH4leehd8DlBOWjoMWMcwopkOQZ1xemQW+MLra4zkedd7c2WjBvPhkXL6bJdZ+EtDgy5pPW7G5a3vvrwN56FZZ9arLAOwHSxNLkP3nUKT/h/7t+BgAA//8/2GcPBCqM2gAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

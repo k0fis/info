@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Výlet u Mikolova — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Výlet u Mikolova</h1>
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
+<div class="meta"></div>
+
+<div class="content"><h2>Pohádkový Portz Insel</h2>
+<p>Když vyšplháte na Svatý kopeček v Mikulově a rozhlédnete se, v dálce na jihovýchodě zahlédnete v moři listnatých stromů červenou střechu. Je to letohrádek Portz Insel, pozůstatek magické vodní krajiny kardinála Dietrichsteina.</p>
+<p>V časech pozdní renesance a raného baroka, tedy dávno před vznikem Lednicko-valtického areálu, se jižně a východně od Mikulova zrodila zvláštní komponovaná krajina. Jejím sjednocujícím prvkem byla voda: byly tu rybníky, potoky a síť náhonů, na jejich březích stály větrné i vodní mlýny a rybárny, táhly se tu dlouhé aleje a sady, tu a tam přes vodu vedly mosty, na areál navazovala obora a ovocnářské i zelinářské zahrady. Klenotem magické krajiny, za níž patrně stál kníže a kardinál František z Dietrichsteina (1570– 1636), byl letohrádek na takzvaném Tichém ostrově v Novém rybníku. Obklopovala ho lesní zahrada a líbezně upravené okolí, poskytující zábavu místní šlechtě. Od Mikulova sem vedlo dva a půl kilometru dlouhé stromořadí, s pevninou ostrovní areál spojoval sto metrů dlouhý cihlový most.</p>
+<h2>Růženka bez trní</h2>
+<p>Chybělo málo, aby tenhle příběh pokračoval stylem „bylo tu – není tu“, byť ještě na konci 19. století byl Portz Insel označován za krajinářský klenot jedinečné krásy. V té době už ale krajina dostala první rány pod pás. V polovině 19. století rybník vysušili a bývalý ostrov mezi letohrádkem a mostem proťala nově budovaná železnice. Rybník Portz sice po čase obnovili, ale kvůli trati se už nemohl vrátit k původní, téměř dvojnásobné rozloze. Cihlový most tak pozbyl smysl; sloužil jen jako přejezd přes Rybniční potok a zvolna mizel pod vrstvou bahna, prachu a náletových rostlin. Poslední ránu krajině uštědřil totalitní režim, když Portz Insel od vnitrozemí odřízla železná opona a torzo ostrova dlouhé desítky let bez zájmu chátralo v nepřístupném pohraničním pásmu.
+Na lepší časy se začalo blýskat teprve po roce 1989, i když z ostrovního areálu vlastně zbyla jen severní část. O pár let později byly letohrádek i s mostem prohlášeny za kulturní nemovité památky a ostrovní areál se podobně jako pohádková Šípková Růženka začal probírat z dlouhého spánku.</p>
+<h2>N jako Nicolsburg</h2>
+<p>V roce 2013 objevili letohrádek Portz Insel na Tichém ostrově lidé z rodinného bio vinařství Cibulka. Z pátrání po nových sklepních prostorech pro zrání sektů se rázem stal mnohem větší projekt, ale dnes už je letohrádek nádherně zrekonstruovaný, obklopený vinicemi a opět se stal ozdobou Mikulovska. Pokud chcete ochutnat víno v absolutním klidu na opravdu romantickém místě, můžete si objednat degustaci přímo v letohrádku anebo se při výletě zastavit v bistru na břehu rybníka, na dohled od domu. Občerstvení se uvelebilo v rozpadlých zdech bývalé hospodářské budovy, v místě se skvělou atmosférou, které láká cyklisty i pěší.
+V letech 2019–2020 přišly na řadu opravy vzácného cihlového mostu. Už bylo téměř pozdě, ale naštěstí je most dokladem mimořádného mistrovství našich předků. Barokní cihly nejenže vydržely čtyři sta let, ale dokonce dodnes při poklepu krásně zvoní. Ty, které se podařilo zachránit ze zchátralých části mostu, se opět použily při jeho obnově. Poznáte je snadno, podle velkého N (Nicolsburg): tak své zboží značili mikulovští cihláři.</p>
+<p><img src="img/mikulov_1.jpg" alt="mapka"></p>
+<h2>BRÁNA KE SVOBODĚ</h2>
+<p>Když se na Portz Insel vydáte pěšky z Mikulova, nechte se vést Stezkou svobody. Čtyřkilometrová trasa připomíná osudy těch, kteří se u Mikulova za dramatických okolností pokusili překonat železnou oponu a utéct z totalitního Československa. Stezka začíná na zámeckém nádvoří v Mikulově, kde je zavěšen pokřtěný zvon Svobody a umístěna informační mapa. Pokračuje na jih k hranicím, do místa bývalé signální stezky, kudy do roku 1989 vedl drátěný zátaras. Trasa míří k ostrovnímu areálu Portz Insel, ale končí necelý kilometr před ním, u Památníku železné opony. K nebi se tu tyčí třiapadesát kovových stél, symbolicky jedna za každý zmařený život těch, kdo za svá rozhodnutí zaplatili životem. Jejich osudy jsou popsány na informačních panelech.</p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXUlEQVR42tTUwantIBAG4Aku3GkDAdtwZ0vPBpLYQGxpdtNGwAZydi4k/+OSy33wuJzM9szuE5SfH5U+fjywEVEWArrCjszuUigcD4oap1bR2wvcLqX3iWnqXe3y4nYSK01m8z2UTj9539oDe5Y5S/zp462/jliZvPyr+K0dmXqlVgXHygr7Tr7K4VI3+M0UzbnyyGxN1dglypcdk0iAxh6mFARwHJPKQi7L7KKMtStMhDMzTWLv/U+emP64dGS2s4sK+95etZvNImwaT30sk7Ta+VhUhqlbGp77UJniWBYKEDYXaWxxep6djeGMCvs+8mXnxfZwksLONpwRp6Xv+/fo2WXQyvbO9789WkEfnoG73wd/LVUMF6PZNfZAAUZGb5UVdmTKlsjL93t5dGplt0eWhLufZ29Lmn234f4vFZ5kdsmGl8pkymnHKoKLFPZABUwVzJkV/qz5GwAA//8Pp19JVoZvCAAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

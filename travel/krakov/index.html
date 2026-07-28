@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krakov — královské město a okolí — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Krakov — královské město a okolí</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">mesto</span> <span class="tag">hory</span> </div>
+<div class="meta"><p class="meta-item">📍 Kraków, Polsko</p><p class="meta-item">🌐 <a href="https://www.krakow.pl" target="_blank">www.krakow.pl</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0617, 19.9373], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0617, 19.9373]).addTo(dmap);
+</script>
+<div class="content"><h1>Krakov — královské město</h1>
+<p>Bývalé hlavní město Polska, UNESCO. Krásné historické centrum, Wawel, židovská čtvrť Kazimierz a vynikající jídlo. Ideální základna pro výlety do okolí (Wieliczka, EnergyLandia, Ojców).</p>
+<h2>Vzdálenost</h2>
+<ul>
+<li>Z Olomouce: ~244 km (~2:40 h)</li>
+<li>Z Ostravy: ~156 km (~1:50 h)</li>
+<li>Z Krakova do Zakopaného: ~100 km (~1:30 h)</li>
+<li>Vlak: LEO Express z Olomouce ~3,5 h (5× denně)</li>
+</ul>
+<h2>Staré Město (Stare Miasto)</h2>
+<ul>
+<li><strong>Rynek Główny</strong> — největší středověké náměstí v Evropě (200×200 m)</li>
+<li><strong>Sukiennice</strong> (Cloth Hall) — renesanční tržnice, suvenýry, galerie v patře</li>
+<li><strong>Bazylika Mariacka</strong> (St. Mary's) — gotická bazilika, trubač každou hodinu, dřevěný oltář Víta Stwosza</li>
+<li><strong>Barbakan + Floriánská brána</strong> — středověké opevnění</li>
+<li><strong>Rynek Underground</strong> — archeologické muzeum pod náměstím</li>
+<li><strong>Planty</strong> — zelený pás kolem centra, příjemné procházky</li>
+</ul>
+<h2>Wawel</h2>
+<ul>
+<li><strong>Královský hrad</strong> — státní sály, korunní poklad, orientální umění</li>
+<li><strong>Katedrála</strong> — královské hrobky</li>
+<li><strong>Dračí jeskyně (Smocza Jama)</strong> — jeskyně s drakem co chrlí oheň (děti milují)</li>
+<li>Lístky kupovat online na bilety.wawel.krakow.pl — v létě vyprodáno</li>
+<li>GPS: 50.0540, 19.9352</li>
+</ul>
+<h2>Kazimierz (židovská čtvrť)</h2>
+<ul>
+<li>Synagogy, starý židovský hřbitov, Galicia Jewish Museum</li>
+<li>Dnes nejtrendovější čtvrť — kavárny, bary, street art</li>
+<li><strong>Plac Nowy</strong> — zapiekanki (polské toasty), street food</li>
+<li><strong>Schindlerova továrna</strong> (ul. Lipowa 4) — muzeum WW2, vhodné pro starší děti (10+)</li>
+</ul>
+<h2>Jídlo</h2>
+<ul>
+<li><strong>Pierogi</strong> — plněné knedlíky (ruské, s masem, se špenátem)</li>
+<li><strong>Żurek</strong> — kyselá žitná polévka s klobásou a vejcem</li>
+<li><strong>Bigos</strong> — lovecký guláš</li>
+<li><strong>Oscypek</strong> — uzený ovčí sýr (grilovaný s brusinkami)</li>
+<li><strong>Zapiekanki</strong> — polské toasty (Plac Nowy v Kazimierzi)</li>
+<li><strong>Tip:</strong> Milk Bary (Bar Mleczny) — levné a autentické polské jídlo</li>
+</ul>
+<h2>Parkování</h2>
+<ul>
+<li>Centrum je pěší zóna — autem se nedostanete dovnitř</li>
+<li><strong>P+R</strong> na okraji města (Czerwone Maki, Bieżanów) — levné (~3-5 PLN/den s MHD lístkem)</li>
+<li><strong>Podzemní garáže:</strong> Galeria Krakowska (u nádraží), Parking Szczepański, Parking Wawel — 5-10 PLN/h</li>
+<li><strong>Tip:</strong> P+R + tramvaj je rychlejší a levnější</li>
+</ul>
+<h2>Okolí Krakova</h2>
+<ul>
+<li>[[wieliczka|Wieliczka — solné doly]] — UNESCO, 14 km</li>
+<li>[[energylandia|EnergyLandia — zábavní park]] — 50 km</li>
+<li><strong>Ojcovský národní park</strong> — 25 km sever, vápencové skály, jeskyně, zříceniny</li>
+<li><strong>Bochnia Salt Mine</strong> — menší alternativa Wieliczky, podzemní hřiště + plavba na lodi</li>
+<li><strong>Niepołomice</strong> — zámek, prales, zubři</li>
+<li><strong>Aqua Park Kraków</strong> — kryté koupaliště s tobogány (ul. Dobrego Pasterza 126)</li>
+</ul>
+<h2>Zóna čistého transportu (SCT) ⚠️</h2>
+<p>Od <strong>1.1.2026</strong> platí v Krakově <strong>Strefa Czystego Transportu</strong> — pokrývá ~60 % města.</p>
+<h3>Pravidla pro osobní auta</h3>
+<p>| Motor | Požadavek |
+|-------|-----------|
+| <strong>Diesel</strong> | Euro 6 / vyrobeno 2014 nebo novější (max 12 let) |
+| <strong>Benzín</strong> | Euro 3 / vyrobeno 2000 nebo novější |</p>
+<h3>Zahraniční vozidla — NUTNÁ REGISTRACE</h3>
+<p><strong>I když auto splňuje normu, musíš ho registrovat v systému SCT!</strong></p>
+<ul>
+<li>Web: <a href="https://www.krakow.pl/sct">krakow.pl/sct</a></li>
+<li>Nahrát kopii TP + údaje o emisní normě</li>
+<li>Udělat PŘEDEM (online)</li>
+</ul>
+<h3>Poplatky pro nerezidenty (2026)</h3>
+<p>| Doba | Cena |
+|------|------|
+| Hodina | 2,50 PLN |
+| Den | 5 PLN |
+| Měsíc | 100 PLN |</p>
+<h3>Výjimky</h3>
+<ul>
+<li>Rezidenti Krakova (auta vlastněná před 26.6.2025)</li>
+<li>Invalidi s EU kartou</li>
+<li>Historická vozidla</li>
+</ul>
+<p>→ <strong>Pokud máš diesel starší než 2014 — do centra Krakova nesmíš!</strong></p>
+<h2>Tipy</h2>
+<ul>
+<li><strong>A4 Katowice–Kraków je placená</strong> (~31 PLN / ~175 CZK) — platba u mýtných bran (hotovost/karta/Autopay). e-TOLL registrace pro osobní auta NENÍ potřeba (jen kamiony 3,5t+)</li>
+<li>Kurz: 1 PLN ≈ 5,7 CZK</li>
+<li>Pohonné hmoty levnější než v ČR</li>
+<li><strong>Ideální plán</strong> (3-4 dny): Den 1 centrum + Wawel, Den 2 Wieliczka + Kazimierz, Den 3 EnergyLandia, Den 4 Ojców nebo odjezd</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMa7cIBAG4N+ioIsvgDzX2CKSr4Q7VzGp3IUrIW3BNYi4gLejQP4jR9nVVg7P3XvTfQViNPMDvlxp8sFNFYnkdsUOU3ayJg002VdrejoVpTR6IqGNbrY1S9KMF+1glTda4qv/c5OP7M2c3+ZzZgAdSb6t4NTa33djScYubhcMi+64WDigyd++L9kbpHEY0WDt+bNaOgn7v/3+xw4WiyLQFVxzzy3TaIxbixmWag0qhiajrz19miXuGg3WDD/EK8fCeMXo7s70eQV+s8X61/jIXhUVcWvxcV6oVuHQ5um+K5cpZLlkoEu2LgzyyvuZj/eRbJoZJaLFDlMC5hwa7auFlVVxHy96ypQihWFrdAUWCenWZAdr+goV+Oz/3H//32Mez/x9zJ+7/gQAAP//6OhXbyLeP/wAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cesta na Hévíz — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Cesta na Hévíz</h1>
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
+<div class="meta"></div>
+
+<div class="content"><h1>Cesta na Hévíz</h1>
+<p>Je několik variant. Cesta přes Slovensko. Tady je možné jet po dálnici a dojet až na hranice s Maďarskem. Sk dálniční známku je nutné koupit nejpozději na hranicích.</p>
+<p>Nebo je možné sjet z D2 v Břeclavi a jet na Lanžhot a dál na hranice mimo dálnici. Cesta víceméně kopíruje dálnici. V Bratislavě je rychlejší vrátit se na neplacený úsek dálnice a sjet tuším na Rusouvce. A dojet na Sk/Hu hranice.</p>
+<p>V Maďarsku je možné jet po dálničním přivaděči a kousek po dálnici až k Mosonmagyaróváru, kde se odbočí na Csornu. Nájezd na přivaděč je hned za hranicema. Do Mosonmagyaróváru je možné dojet i po vedlejší cestě, projet městem a směrem na Csornu dálnici jenom přejet.</p>
+<p>Cesta Csornu E65 a dál na Sárvár je v pracovní celkem používaná hlavně nákladní dopravou. Je to taková hlavní cesta na balkán. Takže je tam dost policajtů a často měří rychlost.</p>
+<p>Za vesnicí Vasegerszeg je velký kruháč s OMV benzínkou. Tady se odbočí na Sárvár/Sümég/Balaton na silnici 84. Nevím co je tam přesně na značkách. Tady se potkává cesta s rakouskou cestou.</p>
+<p>Tady před vesnicí Rábapaty se obvykle stavujeme na kávu a do obchodů u cesty. Už tam po krizi sice není takový výběr, ale jsou tam relativně levnější boty a oblečení.</p>
+<p>V Sümegu je možnost odbočit směrem na Hévíz přímo. Je to sice přes kopečky, ale v pracovní dny je to lepší vyhnout se cestě kolem Balatonu přes Keszthely. V zimě bych tuhle variantu moc nedoporučoval. A druhá varianta je dojet až k Balatonu a jet přes Keszthely až do Hévízu. Tady už jsou značky.</p>
+<p>Mesto Keszthely má pěkný střed i zámek. Určitě stojí za to se tam podívat. Je to kousek a spíš než cestou je lepší st tam stavit na půl dne z hotelu.</p>
+<p>Cesta přes Rakousko je možná po dálnicích nebo po vedlejších cestách. Jeden známý co pravidelně jezdí do Sárváru jezdí jenom variantu rakouská dálnice. Je to A5 - S2 - (Vídeň) A22 - A2 - A3 - maďarské hranice Šopron. Dál cesta 84 směr Balaton.</p>
+<p>Nebo v Břeclavi odbočit na Poštornou a jet po vedlejších cestách podél Moravy až k Dunaju. Tohle to je pro mě dražší a časově náročnější varianta, protože vede kolem Parndorfu, kde je vídeňský outlet. V nedělu je zavřený. Pak kolem neziderského jezera na Sopron.</p>
+<p>Co v Hévízu: podívat se na jezero, zaplavat si mezi lekníny. Většina hotelů má termální bazén plněný vodou z jezera. Občas mívají i pitkou kůru. Ta je ve městě zadarmo.  Jezero je zajímavé spíš mimo letní sezónu, kdy kolem je takové “věčné” jaro.</p>
+<p>Pak na konci je hrob římského vojáka, ten jsem viděl relativně málo propagovaný. Další info http://www.heviz.hu/cz</p>
+<p>Dá se tam jezdit mestským vláčkem. Záleží na poloze hotelu. Ty římské vykopávky jsou celkem daleko, ale cestou jsou vinné sklepy.</p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXElEQVR42tTUvankMBQF4GMUKJMaMKgNZWpp3IB/GrBaupnaEKgBO1Ng3lk8O7zHwjJz06fsMxhb5/7g1x9P7g6YCsiusIPZHwg7YkXUOLWchaS0L6XXQYDY1c6HrZNAaZhtjRgo3//71vf9pzJOJf7k8c4AhiPBl5+I39pZfi2FWWhy1zgCvlRnu6H8z+B5Fh6ptFe93vt+19m2CUYvGkv7cilQYh00RqrLEUeXOM5QeBDmrYwAKlTucI9UZySzR4Ud2rF0+EIeUNhznGd7+YK2R4WHzky5vPCaNfb97tFwQF71+GBYkw9754ZJ47s/hrs/Jfy93yeDmeV62P78tMLVPWJgseGV77/2bCvsNUji2RV+PpJr6NFkUfg5f6wLe9uh8L2fPOHle14++N4fsZ2FXKPO+yRmj2Vcus5bltHThk1lmHWRayoI1NiT+exhkx5WKPy7zp8AAAD//2PmTtxYx4VwAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

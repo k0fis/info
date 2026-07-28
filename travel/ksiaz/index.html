@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ksiaz — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Ksiaz</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Piastów Śląskich 1, 58-306 Wałbrzych, Polsko</p><p class="meta-item">🌐 <a href="https://www.ksiaz.walbrzych.pl" target="_blank">www.ksiaz.walbrzych.pl</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.8428, 16.2917], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.8428, 16.2917]).addTo(dmap);
+</script>
+<div class="content"><h1>Zamek Książ (Fürstenstein) — Wałbrzych, Polsko</h1>
+<p>Třetí největší zámek v Polsku (po Malborku a Wawelu). Postavený ve 13. století na skalním ostrohu nad řekou Pełcznicou. 400 pokojů, nádherné zahrady a palmový skleník. Pod zámkem tajné tunely z projektu Riese (přístupné).</p>
+<h2>Praktické info</h2>
+<ul>
+<li><strong>Adresa:</strong> ul. Piastów Śląskich 1, 58-306 Wałbrzych</li>
+<li><strong>Web:</strong> https://www.ksiaz.walbrzych.pl</li>
+<li><strong>Otevřeno:</strong> celoročně (dle sezóny, typicky 10:00–17:00/18:00)</li>
+<li><strong>Vstupné:</strong> cca 30–50 PLN dle trasy (základní/rozšířená/tunely)</li>
+<li><strong>Délka návštěvy:</strong> 2–3 hodiny (zámek + tunely + zahrady)</li>
+</ul>
+<h2>Co uvidíte</h2>
+<ul>
+<li>Reprezentační sály (Maximilianův sál, Zelený salon)</li>
+<li>Palmový skleník (Palmiarnia)</li>
+<li>Podzemní tunely projektu Riese pod zámkem</li>
+<li>Zámecké terasy a zahrady</li>
+<li>Noční prohlídky (v sezóně)</li>
+</ul>
+<h2>Okolí — projekt Riese</h2>
+<p>Zámek je součástí komplexu nacistických podzemních staveb z 2. sv. války. V okolí dalších 6 objektů:</p>
+<ul>
+<li>[[osowka|Osówka]] — 10 km, největší a nejzajímavější komplex</li>
+<li>[[sztolnie-walimskie|Sztolnie Walimskie (Walim)]] — 8 km, 8100 m chodeb</li>
+<li>Włodarz — 15 km, největší objekt Riese (30 000 m²)</li>
+<li>Jugowice (Säuferhöhen) — štoly v kopci nad obcí</li>
+<li>Rzeczka — nedokončené tunely</li>
+<li>Soboń/Sokolec — zbytky vstupů</li>
+</ul>
+<h2>Vzdálenost</h2>
+<ul>
+<li>Z Olomouce: ~210 km (~2,5 h)</li>
+<li>Z Ostravy: ~190 km (~2,5 h)</li>
+<li>Od [[osowka|Osówky]]: 10 km (15 min autem)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Kombinovat s [[osowka|Osowka]] — dá se stihnout za jeden den</li>
+<li>Tunely pod zámkem jsou samostatná prohlídka (extra vstupné)</li>
+<li>V létě koncerty a akce na nádvoří</li>
+<li>Parkování přímo u zámku (placené)</li>
+<li>Hotel přímo v zámku (Książ Hotel) pro přenocování</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUMQ7jIBAF0G9R0CUXQJ5rpIjkK0HnDlyl9JUspeAarHwB0lEg/1UsJdot1mLd7Y5E8Tr4Mwz+u9Lka50ZJJL5jAMcQ/JJA02eq4XFqKKURjtSHkY32wLGM550gDXXlRK/9z/2nocZ19/y+bMBdMyKv7Tg0Hp+bsavZOxiPuNtmKplEPZoMXC3BmlMQz+gwTrgYrwKsmyffA4Nv+ehga7ghPXrOVW8+40hNxiXu0s2jRV9k3UYJmYDiZtGg3FRTJDCwnjKrl6rlwfwgy3W0zMbz6Iibi3Gtb6PFvZtdtVVVC9kOWWgqx6ei3zn/cj7/8hmZJSIFge45Ou4LrI0ea7WAFpxG07aVagihUtuNHPSsqRbk/d9AqiFn/cdm3wx1JGfefxL/9v1MwAA///PgU13XeKmdAAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zakopané — termy — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Zakopané — termy</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">polsko</span> <span class="tag">termy</span> <span class="tag">hory</span> </div>
+<div class="meta"><p class="meta-item">📍 Zakopane, Polsko</p><p class="meta-item">🌐 <a href="https://www.zakopane.pl" target="_blank">www.zakopane.pl</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.2992, 19.9496], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.2992, 19.9496]).addTo(dmap);
+</script>
+<div class="content"><h1>Zakopané — zimní hlavní město Polska</h1>
+<p>Turistické centrum pod Tatrami. Ideální základna pro výlety do hor, termální lázně, lyžování i letní turistiku. Pěší zóna Krupówki, goralská kultura, oscypek a výhledy na Tatry.</p>
+<p>Poláci jsou proslulí svou pohostinností a velkými porcemi. Pokud máte příležitost, navštivte tradiční restauraci s goralskou a polskou kuchyní. Skvělou volbou je například Gazdowo Kuźnia Karczma, kde určitě vyzkoušejte knedlíky, masové speciality a řemeslné nápoje.</p>
+<h2>Trh</h2>
+<p>Jedním z nejznámějších míst v Zakopaném je tradiční trh, kde určitě stojí za to ochutnat oblíbené polské sýry, sušené nebo nakládané houby a domácí džemy. Nejznámější polský sýr je oscypek – uzený ovčí sýr – a bundz, který připomíná mozzarellu.</p>
+<h2>Chochołów</h2>
+<p>Mezi zakopanskými atrakcemi nesmí chybět ani objevování tradiční goralské architektury. Nedaleko Zakopaného se nachází vesnička Chochołów, jedno z nejmalebnějších míst v celých Tatrách.</p>
+<p>Tato pohádková obec si dodnes zachovala jedinečné dřevěné domy postavené v 18.–19. století. Zajímavostí je, že gorali pravidelně čistí fasády svých domů, díky čemuž mají stavby světlý a čistý vzhled.</p>
+<h2>Ve městě</h2>
+<ul>
+<li><strong>Krupówki</strong> — hlavní pěší zóna, obchody, restaurace, pouliční umělci</li>
+<li><strong>Muzeum Tater</strong> (Tatra Museum) — historie regionu a goralské kultury</li>
+<li><strong>Villa Koliba</strong> — muzeum zakopaňského architektonického stylu (1892)</li>
+<li><strong>Villa Atma</strong> — muzeum skladatele Karola Szymanowského</li>
+<li><strong>Starý hřbitov Pęksowy Brzyzek</strong> — historický hřbitov umělců</li>
+</ul>
+<h2>Lanovky a výhledy</h2>
+<ul>
+<li><strong>Kasprowy Wierch</strong> — lanovka na 1987 m n. m., lyžování, turistika</li>
+<li><strong>Gubałówka</strong> — pozemní lanovka, panoramatický výhled na Tatry, restaurace nahoře</li>
+<li><strong>Wielka Krokiew</strong> — skokanský můstek, v létě zipline</li>
+</ul>
+<h2>Termy v okolí</h2>
+<ul>
+<li>[[termy-zakopianskie|Termy Zakopianskie]] — přímo ve městě</li>
+<li>[[chocholowskie-termy|Chocholowské termy]] — 17 km, největší na Podhalí (52 bazénů!)</li>
+<li>[[terma-bania|Terma Bania]] — Białka Tatrzańska, 20 km</li>
+<li>[[goracy-potok|Gorący Potok]] — Szaflary, 10 km</li>
+</ul>
+<h2>Okolní cíle</h2>
+<ul>
+<li><strong>Morskie Oko</strong> — nejkrásnější horské jezero v Tatrách (pěšky 9 km z parkoviště) 🐕❌</li>
+<li><strong>Dolina Kościeliska</strong> — malebné údolí, jeskyně, snadná turistika 🐕❌</li>
+<li><strong>Dolina Chochołowska</strong> — nejdelší dolina v polských Tatrách, krokusy na jaře 🐕✅</li>
+<li><strong>Dunajec — pltě</strong> — tradiční plavba na dřevěných pltích (Sromowce Niżne, 40 km)</li>
+<li><strong>Aqua Park Zakopane</strong> — kryté bazény a tobogány pro děti</li>
+</ul>
+<h2>Se psem 🐕</h2>
+<p>V <strong>Tatrzańském národním parku (TPN)</strong> platí <strong>zákaz vstupu se psy</strong> (zákon o ochraně přírody, čl. 15). Pokuta 100–500 PLN. Platí pro VŠECHNY stezky v parku s dvěma výjimkami:</p>
+<h3>✅ Kam pes MŮŽE (na vodítku)</h3>
+<p>| Místo | Poznámka |
+|-------|----------|
+| <strong>Gubałówka</strong> (lanovka i stezky) | Mimo TPN — bez omezení |
+| <strong>Dolina Chochołowska</strong> | Výjimka TPN — na vodítku po údolí k chatě |
+| <strong>Droga pod Reglami</strong> | Výjimka TPN — 8 km lesní cesta pod Tatrami |
+| <strong>Butorowy Wierch</strong> (lanovka) | Mimo TPN |
+| <strong>Centrum Zakopaného, Krupówki</strong> | Bez problémů |
+| <strong>Hřeben Gubałówky</strong> (východ-západ) | Celý mimo TPN |</p>
+<h3>❌ Kam pes NESMÍ</h3>
+<p>| Místo | Poznámka |
+|-------|----------|
+| <strong>Morskie Oko</strong> | Zákaz, bez výjimek |
+| <strong>Kasprowy Wierch</strong> (i lanovka) | Zákaz |
+| <strong>Giewont</strong> | Zákaz |
+| <strong>Dolina Kościeliska</strong> | Zákaz (přestože je snadná) |
+| <strong>Dolina Strążyska</strong> | Zákaz |
+| <strong>Dolina Białego</strong> | Zákaz (přírodní rezervace) |
+| <strong>Dolina Pięciu Stawów</strong> | Zákaz |</p>
+<h3>🇸🇰 Slovenská strana (TANAP)</h3>
+<p>Na Slovensku psi <strong>povoleni</strong> na všech značených stezkách — podmínky:</p>
+<ul>
+<li>Vodítko + náhubek (povinně obojí)</li>
+<li>Platí v celém TANAP</li>
+</ul>
+<p>→ Pro pořádné horské túry se psem jet na slovenskou stranu.</p>
+<h3>Zdroje</h3>
+<ul>
+<li><a href="https://tpn.gov.pl/zakaz-wprowadzania-psow-do-tpn">TPN oficiální info</a></li>
+<li><a href="https://www.tatry.sk/navstevnik/zakladne-pravidla/">TANAP pravidla</a></li>
+</ul>
+<h2>Vzdálenost</h2>
+<ul>
+<li>Z Olomouce: ~280 km (~3,5 h)</li>
+<li>Z Ostravy: ~200 km (~2,5 h přes Žilinu)</li>
+<li>Z Krakova: ~100 km (~1,5 h)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Parkování</strong> je problém — v centru placené a plné, jet brzy nebo MHD z okraje</li>
+<li><strong>Oscypek</strong> — koupit čerstvý přímo od bačů (ne z Krupówek)</li>
+<li>Ideální sezóna: <strong>září/říjen</strong> (termy + barvy, bez davů) nebo <strong>únor</strong> (lyže + termy)</li>
+<li>Kombinovat termy + hory — dopoledne túra, odpoledne termály</li>
+<li>Polská strana Tater má snazší přístupy než slovenská</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABX0lEQVR42tTUsc2kMBAF4LEcOMMNILkNZ24JGgDcAG5pMrdhiQYgm8DinXb3bpP7tTvpP9kXMELPmke/fjyQC49LZEAUHsjmndossVHUOB07OTLg49Z6IZqiqF1uh1xJabL7RHYnef/vR3tgn+s41/jO46MfK0wdPfgd8UcPCflMoVTBrTFRW4yEwtKX+IOHFPKdkKuzhRUmRwPFcHG1r/1f7AW46miAcGpspJORNlFqXhT2wLVRN9X1lVXuwyptSrUtpDEjFxybQ9iiwgY0b5G8cF9FYc8hb65NMYZnvt9MieaLu8ff+/pmg8f3tMRkL409kzljN5A2RYUHCufM9nbUDGscHxmPqyT76of/bM/F2d0Bzzy/+flkHHaKdtfYA5sX5CpHYYUf970ybhL7r88++9lP3SDhjDqXi9tEzt5anwlZuC+k8atfp1SPXWMPlM0duWI0rPDvmj8BAAD//7a9V75QJgkyAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
