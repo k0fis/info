@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Labyrint pod Zelným trhem — podzemní Brno — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Labyrint pod Zelným trhem — podzemní Brno</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">brno</span> <span class="tag">pamatky</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Zelný trh 21, 602 00 Brno</p><p class="meta-item">🌐 <a href="https://www.gotobrno.cz/en/place/labyrinth-under-the-vegetable-market/" target="_blank">www.gotobrno.cz/en/place/labyrinth-under-the-vegetable-market</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.1919, 16.6090], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.1919, 16.6090]).addTo(dmap);
+</script>
+<div class="content"><p>Středověké podzemní chodby a sklepy 6–8 metrů pod jedním z nejstarších brněnských náměstí. Přes 1000 metrů chodeb propojených v roce 2009.</p>
+<h2>Základní info</h2>
+<p>| | |
+|---|---|
+| <strong>Otevřeno</strong> | Út–Ne 9:00–18:00 (Po zavřeno) |
+| <strong>Vstupné</strong> | Dospělí 200 CZK, děti 100 CZK, rodinné 450 CZK |
+| <strong>Telefon</strong> | +420 778 454 379 |
+| <strong>E-mail</strong> | labyrint@ticbrno.cz |
+| <strong>Délka prohlídky</strong> | cca 45–60 min |
+| <strong>Schody</strong> | 212 schodů dolů (a zase nahoru!) |
+| <strong>BRNOPAS</strong> | sleva 30 % |</p>
+<h2>Co uvidíte</h2>
+<ul>
+<li><strong>Středověké sklepy</strong> — skladování potravin, vína, ledu</li>
+<li><strong>Alchymistická laboratoř</strong> — rekonstrukce dobové dílny</li>
+<li><strong>Vinné sklepy</strong> — historické sudové hospodářství</li>
+<li><strong>Dobová krčma</strong> — jak vypadala hospoda ve středověku</li>
+<li><strong>Pranýř a klec bláznů</strong> — repliky z 17. století</li>
+<li><strong>Archeologické nálezy</strong> — keramika, mince, nástroje</li>
+</ul>
+<h2>Praktické tipy</h2>
+<ul>
+<li><strong>Teplota:</strong> Celoročně ~12°C — mikina i v létě</li>
+<li><strong>Obuv:</strong> Pohodlná, místy nerovný povrch</li>
+<li><strong>S dětmi:</strong> Vhodné od 5–6 let, děti baví &quot;strašidelná&quot; atmosféra</li>
+<li><strong>Rezervace:</strong> V sezóně doporučena (hlavně víkendy a prázdniny)</li>
+<li><strong>MHD:</strong> Tramvaj/bus zastávka Zelný trh (centum města)</li>
+</ul>
+<h2>Další podzemní Brno</h2>
+<p>Kombinuj s dalšími podzemními atrakcemi (multi-vstupenka TIC Brno):</p>
+<ul>
+<li>[[vodojemy-brno]] — tři vodojemy z 19. stol. na Žlutém kopci</li>
+<li><strong>Kostnice u sv. Jakuba</strong> — 2. největší kostnice v Evropě (50 000 koster)</li>
+<li><strong>Kryt 10-Z</strong> — protiatomový bunkr z 50. let</li>
+<li><strong>Mincmistrovský sklep</strong> — pod Dominikánským náměstím</li>
+<li><strong>Kasematy hradu Špilberk</strong> — vězení Habsburků</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABX0lEQVR42tTUsc3jMAwFYAoq2FkLGPAa6rSSvUBiLSCtxE5rCNACTsdCEA/On7sAh4PDK8PuM2DDeBIffP04kThgvnkSYYUnsDFB3chX8BqHlibshqkNpXMmWPE/HItE0hpsTmATvP/30k4kbWXeiv+Tx6XPT9zL7OQd8aWnILsTm4uXoTFgXw0vmbjf/D/sqB3nmTHaTBoXuE1+eXCxz3w+mm3ccTZUlgM0Ln29c12BqmGFJ7QxczcFRUhh8H3bQ10DvvL55CBZpO0oy+4VNtxdJnBE/c4Ku9LGinXFIK98rw0BzAHdCS2i8YSLDISbD/bwGvvqjnO/uK4qg40j2IFQDak8mx3nOwf76oe/7NsO3iYUeWh8Ptp4SeBt1tiJ7I4lFm4/+X7wBDY5kQFsf/fBtZ/90Y0EOUDp4esK+H7/kx/nPlKfQGOw8XmfS0sa//RTi4W7IYW/a34FAAD//2WyXZTP2mRrAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

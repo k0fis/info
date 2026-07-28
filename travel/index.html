@@ -42,39 +42,39 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle">78 destinací</span>
+  <span class="subtitle">79 destinací</span>
   <button onclick="window.print()" style="margin-left:auto;background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
 </header>
 <div id="map"></div>
 <div class="filters"><button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
-<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
-<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
-<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
-<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
-<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
-<button class="tag-btn" onclick="toggleFilter('info')">info</button>
-<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
-<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
-<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
-<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
-<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
-<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
-<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
-<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
-<button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
-<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
-<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
-<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
 <button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
+<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
+<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
+<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
+<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
+<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
 <button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
+<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
+<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
+<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
+<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
+<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
+<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
+<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
 <button class="tag-btn" onclick="toggleFilter('more')">more</button>
 <button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
-<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
+<button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
 <button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
+<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
 <button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
-<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
-<button class="tag-btn" onclick="toggleFilter('italie')">italie</button></div>
+<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
+<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
+<button class="tag-btn" onclick="toggleFilter('termy')">termy</button></div>
 <div class="cards" id="cards"><div class="card" data-tags="travel vylety">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum letecké a pozemní techniky Vyškov</p>
@@ -289,6 +289,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="kubickuv-lom/">Kubičkův lom</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2073&x=16.6772&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zatopený lom v Líšni. Oblíbené koupání, skalní stěny, pěší procházky.</p>
   <div class="tags"></div>
+</div>
+<div class="card" data-tags="travel vylety brno pamatky deti">
+  <h3><a href="labyrint-zelny-trh/">Labyrint pod Zelným trhem — podzemní Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1919&x=16.6090&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Středověké podzemní chodby a sklepy 6–8 metrů pod jedním z nejstarších brněnských náměstí. Přes 1000 metrů chodeb propojených v roce 2009.</p>
+  <div class="tags"><span class="tag" data-tag="brno">#brno</span> <span class="tag" data-tag="pamatky">#pamatky</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
 <div class="card" data-tags="travel vylety">
   <h3><a href="landek-park/">Landek Park Ostrava</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.8619&x=18.2803&z=14" target="_blank">📍</a></h3>
@@ -510,6 +515,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:50.0917,lng:16.8894,title:"Kraličák / Staré Město",slug:"kralicak",tags:"travel, vylety"},
 {lat:50.8428,lng:16.2917,title:"Ksiaz",slug:"ksiaz",tags:"travel, vylety, polsko, historie"},
 {lat:49.2073,lng:16.6772,title:"Kubičkův lom",slug:"kubickuv-lom",tags:"travel, vylety"},
+{lat:49.1919,lng:16.6090,title:"Labyrint pod Zelným trhem — podzemní Brno",slug:"labyrint-zelny-trh",tags:"travel, vylety, brno, pamatky, deti"},
 {lat:49.8619,lng:18.2803,title:"Landek Park Ostrava",slug:"landek-park",tags:"travel, vylety"},
 {lat:49.3743,lng:16.7382,title:"Propast Macocha",slug:"macocha",tags:"travel, vylety"},
 {lat:36.7213,lng:4.4214,title:"Málaga a Nerja — Costa del Sol",slug:"malaga-nerja",tags:"travel, vylety, spanelsko, more, mesto"},
