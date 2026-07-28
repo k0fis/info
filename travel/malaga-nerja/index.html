@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Málaga a Nerja — Costa del Sol — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Málaga a Nerja — Costa del Sol</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">spanelsko</span> <span class="tag">more</span> <span class="tag">mesto</span> </div>
+<div class="meta"><p class="meta-item">📍 Málaga, Andalusie, Španělsko</p><p class="meta-item">🌐 <a href="https://www.malagaturismo.com" target="_blank">www.malagaturismo.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([36.7213, 4.4214], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([36.7213, 4.4214]).addTo(dmap);
+</script>
+<div class="content"><p>Costa del Sol — Málaga jako základna pro výlety po andaluském pobřeží. Nerja s jeskyněmi a Balcón de Europa 50 km východně.</p>
+<h2>Málaga</h2>
+<p>Druhé největší město Andalusie, rodiště Picassa, živá atmosféra a výborné jídlo.</p>
+<h3>Co vidět</h3>
+<p>| Místo | Popis | Tip |
+|-------|-------|-----|
+| <strong>Alcazaba</strong> | Maurská pevnost z 11. stol., výhled na přístav | Kombinovaná vstupenka s Gibralfaro |
+| <strong>Castillo de Gibralfaro</strong> | Hrad nad městem, nejlepší výhledy | Jít pěšky nahoru, dolů taxi/bus |
+| <strong>Museo Picasso</strong> | Rodné město Picassa, 285 děl | Neděle po 17h zdarma |
+| <strong>Centro histórico</strong> | Calle Larios, katedrála (La Manquita), tapas bary | Večer nejživější |
+| <strong>Mercado de Atarazanas</strong> | Tržnice — čerstvé ryby, olivy, jamón | Dopoledne, zavírá v 15h |
+| <strong>Playa de la Malagueta</strong> | Městská pláž, 1.2 km | Přeplněná v létě, lepší mimo sezónu |
+| <strong>Muelle Uno</strong> | Přístav, promenáda, Centre Pompidou | Západ slunce |</p>
+<h3>Praktické</h3>
+<ul>
+<li><strong>Letiště:</strong> AGP, 8 km od centra (bus C1 / vlak do centra za 20 min)</li>
+<li><strong>Lety z ČR:</strong> Ryanair z Brna/Prahy (2.5–3h)</li>
+<li><strong>Počasí:</strong> 300+ slunečných dní, zima 15–18°C, léto 30–35°C</li>
+<li><strong>Jídlo:</strong> Espetos (sardely na ohni), gazpacho, pescaíto frito, tinto de verano</li>
+</ul>
+<hr>
+<h2>Nerja (50 km od Málagy)</h2>
+<p>Malebné přímořské městečko — &quot;balkón Evropy&quot;. Klidnější než Málaga, krásné pláže a unikátní jeskyně.</p>
+<h3>Co vidět</h3>
+<p>| Místo | Popis |
+|-------|-------|
+| <strong>Balcón de Europa</strong> | Vyhlídková terasa nad mořem — ikona Nerji |
+| <strong>Cuevas de Nerja</strong> | Prehistorické jeskyně (objev 1959), stalaktity, koncertní sál |
+| <strong>Playa Burriana</strong> | Nejlepší pláž, Blue Flag, chiringuitos |
+| <strong>Playa Carabeo</strong> | Malá ukrytá pláž, strmý přístup, romantická |
+| <strong>Río Chillar</strong> | Túra řečištěm (river walk), voda po kolena, osvěžující |
+| <strong>Frigiliana</strong> | Bílá vesnička 7 km od Nerji — nejkrásnější v Andalusii |</p>
+<h3>Cuevas de Nerja — praktické info</h3>
+<p>| | |
+|---|---|
+| <strong>Adresa</strong> | Ctra. de Maro, 29787 Nerja |
+| <strong>Geo</strong> | 36.7617,-3.8445 |
+| <strong>Otevřeno</strong> | Denně 9:00–16:00 (léto do 18:00) |
+| <strong>Vstupné</strong> | Dospělí ~14€, děti 6–12 let ~9€ |
+| <strong>Web</strong> | <a href="https://www.cuevadenerja.es">cuevadenerja.es</a> |
+| <strong>Tip</strong> | Kupovat online předem — v sezóně vyprodáno |</p>
+<h3>Río Chillar — tip na výlet</h3>
+<p>Procházka korytem řeky (cca 8 km tam a zpět). Voda po kolena, místy po pás. Ideální v létě na ochlazení.</p>
+<ul>
+<li><strong>Start:</strong> Parking u severního okraje Nerji</li>
+<li><strong>Obuv:</strong> Staré tenisky nebo aqua boty (kluzké kameny)</li>
+<li><strong>S dětmi:</strong> Ano, ale jen první část (2–3 km), dál jsou skaly</li>
+<li><strong>Čas:</strong> 3–5 hodin (celá trasa)</li>
+</ul>
+<hr>
+<h2>Praktické info pro celý region</h2>
+<p>| | |
+|---|---|
+| <strong>Doprava</strong> | Autobus ALSA Málaga↔Nerja (1h, ~5€), autem A-7 / AP-7 |
+| <strong>Ubytování</strong> | Airbnb v Nerji výhodnější než hotely, Málaga má vše |
+| <strong>Sezóna</strong> | Říjen–květen ideální (méně turistů, 20–25°C), léto 35°C+ |
+| <strong>Jazyk</strong> | Španělsky (angličtina v turistických zónách) |</p>
+<p>→ Viz také: [[archiv-cesta-do-malagy]]</p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNUlEQVR42tzUMY6rMBSF4YNu4e55AyjeRopIbAk6qoenogtbQkrhbXjkDTidC4szQkwmHXHoZlzxFUi/fK2LP3cUGdGiN279OGCLFjBWHFDkKXdhqns6k0rtkVWtys1Y94dt0eUhMDz7903e197wvJ9dA6hISWH+GcGu1bTed1bimA7ZoqL1MDw9+neN9vLf2EBxfgt4ZT1rUmzgpytyiy6DI1ClQ/53qRjRk8vW+8LqKotYSWi2/18Z+nYV1r1xiypydYsmhrF+9L1pZS860A+5Wc6xxB+3BWAShzNKPGWdtbFZeVVkK/cQZQxcmnjA2/v1A2fDEq/7RCJH40xCiS06r0My8wlFnnKX21rJo/eAGTFkVCx11kxCEiVe92MrVma6Iq/7xMpYN9/zfdO/+3wFAAD//3o5TQyS1IRwAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
