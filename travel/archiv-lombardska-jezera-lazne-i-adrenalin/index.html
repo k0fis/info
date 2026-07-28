@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>Lombardská jezera – lázně i adrenalin</h1>
-<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">jezera</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Lago di Garda, Itálie</p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.9417, 10.7167], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.9417, 10.7167]).addTo(dmap);
+</script>
 <div class="content"><p>Itálie není jen moře. Jezera Lago di Garda, Maggiore a Como vás okouzlí romantickou atmosférou</p>
 <h2>Menaggio, Lago di Como</h2>
 <p>Půvabné městečko na břehu jezera Como je obklopené horami. FOTO PROFIMEDIA

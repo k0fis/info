@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>Výlet u Mikolova</h1>
-<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">morava</span> <span class="tag">palava</span> </div>
+<div class="meta"><p class="meta-item">📍 Mikulov, Jihomoravský kraj</p><p class="meta-item">🌐 <a href="https://www.mikulov.cz" target="_blank">www.mikulov.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.8069, 16.6378], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.8069, 16.6378]).addTo(dmap);
+</script>
 <div class="content"><h2>Pohádkový Portz Insel</h2>
 <p>Když vyšplháte na Svatý kopeček v Mikulově a rozhlédnete se, v dálce na jihovýchodě zahlédnete v moři listnatých stromů červenou střechu. Je to letohrádek Portz Insel, pozůstatek magické vodní krajiny kardinála Dietrichsteina.</p>
 <p>V časech pozdní renesance a raného baroka, tedy dávno před vznikem Lednicko-valtického areálu, se jižně a východně od Mikulova zrodila zvláštní komponovaná krajina. Jejím sjednocujícím prvkem byla voda: byly tu rybníky, potoky a síť náhonů, na jejich březích stály větrné i vodní mlýny a rybárny, táhly se tu dlouhé aleje a sady, tu a tam přes vodu vedly mosty, na areál navazovala obora a ovocnářské i zelinářské zahrady. Klenotem magické krajiny, za níž patrně stál kníže a kardinál František z Dietrichsteina (1570– 1636), byl letohrádek na takzvaném Tichém ostrově v Novém rybníku. Obklopovala ho lesní zahrada a líbezně upravené okolí, poskytující zábavu místní šlechtě. Od Mikulova sem vedlo dva a půl kilometru dlouhé stromořadí, s pevninou ostrovní areál spojoval sto metrů dlouhý cihlový most.</p>

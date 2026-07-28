@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>Objevuj Slovinsko s dětmi</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">🌐 <a href="https://www.objevuj-slovinsko.cz/slovinsko-s-detmi-tipy-na-rodinny-vylet/" target="_blank">www.objevuj-slovinsko.cz/slovinsko-s-detmi-tipy-na-rodinny-vylet</a></p></div>
-
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">deti</span> <span class="tag">hory</span> <span class="tag">jezera</span> </div>
+<div class="meta"><p class="meta-item">📍 Bled, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.objevuj-slovinsko.cz/slovinsko-s-detmi-tipy-na-rodinny-vylet/" target="_blank">www.objevuj-slovinsko.cz/slovinsko-s-detmi-tipy-na-rodinny-vylet</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.3683, 14.1146], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.3683, 14.1146]).addTo(dmap);
+</script>
 <div class="content"><p>Tipy na rodinné výlety po Slovinsku — Bled, Bohinj, jeskyně Postojna, pobřeží Piran.</p>
 </div>
 <footer>

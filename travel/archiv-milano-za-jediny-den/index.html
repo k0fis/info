@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>Miláno za jediný den</h1>
-<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">mesto</span> </div>
+<div class="meta"><p class="meta-item">📍 Milano, Itálie</p><p class="meta-item">🌐 <a href="https://www.turismo.milano.it" target="_blank">www.turismo.milano.it</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.4642, 9.1900], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.4642, 9.1900]).addTo(dmap);
+</script>
 <div class="content"><p>Milán, druhé největší italské město, synonymum obchodu a módy, v němž se potkává historie se současností a pulzující atmosférou tolik odlišnou od jiných, obvykle mnohem ospalejších italských měst. Autem se do jeho centra od jižních cípů Maggiore či Coma po dálnici dostanete do hodiny, mnohem pohodlnější je to ale vlakem – z Varesse to trvá 44 minut a stojí 6 eur, z města Como jste na Milano Centrale za 41 minut a 5,20 eur. Jízdní řády najdete na Trainline.com. Do Milána z Prahy létají přímé charterové lety, historické centrum se dá zvládnout za jediný den, moderní mrakodrapy pak vydají na den druhý.</p>
 <p>Duomo di Milano je pátou největší katedrálou na světě</p>
 <p>Centrum Milána má čtyři historické dominanty: Duomo di Milano neboli katedrálu Narození Panny Marie, nákupní centrum Galleria Vittorio Emanuele II., operu La Scala a Castello Sforzesco. Duomo di Milano je pátá největší katedrála světa a architektura celého centra se odvíjí od náměstí, na němž dnešní dóm stojí: všechny ulice se paprskovitě sbíhají k dómu, na jehož místě byla první katedrála dokončena už v roce 355. Kromě prohlídky pompézního vnitřku stavby můžete navštívit i zdejší muzeum. Za vidění ale rozhodně stojí terasy na střeše dómu – vybrat si můžete mezi schody (14 eur) a výtahem (16 eur). Už samotná cesta úzkými chodbičkami plnými schodů je zážitek sám o sobě.

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Visit Hungary — Tipy na výlety</title>
+<title>Visit Hungary — průvodce — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,11 +43,71 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Visit Hungary</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">🌐 <a href="https://visithungary.com/cs" target="_blank">visithungary.com/cs</a></p></div>
-
-<div class="content"><p>Turistický portál Maďarska — tipy na výlety, termály, města, příroda.</p>
+<h1>Visit Hungary — průvodce</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Budapešť, Maďarsko</p><p class="meta-item">🌐 <a href="https://visithungary.com/cs" target="_blank">visithungary.com/cs</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.4979, 19.0402], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.4979, 19.0402]).addTo(dmap);
+</script>
+<div class="content"><p>Maďarsko — termály, historická města, Balaton a vynikající kuchyně. Z Brna 2–3h autem.</p>
+<h2>Termály a aquaparky</h2>
+<p>| Místo | Popis | Vzdálenost z Brna |
+|-------|-------|-------------------|
+| <strong>Hévíz</strong> | Největší termální jezero v Evropě, 33–36°C celoročně | 3h |
+| <strong>Bükfürdő</strong> | Rodinný aquapark + léčivé termy | 2h |
+| <strong>Sárvár</strong> | Moderní wellness, termální lázně | 2.5h |
+| <strong>Zalakaros</strong> | Velký aquapark, tobogány, vhodné pro děti | 3h |
+| <strong>Budapešť — Széchenyi</strong> | Ikonické lázně v městském parku | 2.5h |
+| <strong>Eger — Turecké lázně</strong> | Historické lázně + vinné sklepy Szépasszonyvölgy | 3.5h |
+| <strong>Miskolctapolca</strong> | Jeskyní lázně — koupání v jeskyni! | 3.5h |
+| <strong>Györ — Rába Quelle</strong> | Aquapark, nejblíž z ČR | 1.5h |</p>
+<h2>Města a památky</h2>
+<p>| Místo | Co tam | Tip |
+|-------|--------|-----|
+| <strong>Budapešť</strong> | Parlament, Budínský hrad, ruin bary, Széchenyi lázně | Min. 2 dny |
+| <strong>Eger</strong> | Hrad, minarety, Údolí krásných žen (víno) | Skvělé na 1 den |
+| <strong>Győr</strong> | Barokní centrum, blízko, málo turistů | Zastávka cestou |
+| <strong>Szentendre</strong> | Umělecké městečko u Dunaje, muzea | Půldenní výlet z Budapeště |
+| <strong>Esztergom</strong> | Největší bazilika v Maďarsku, hranice se Slovenskem | Cestou |
+| <strong>Pécs</strong> | Turecká mešita, raně křesťanské hrobky (UNESCO) | Jižní Maďarsko |
+| <strong>Visegrád</strong> | Hrad nad Dunajem, bobová dráha, historické hry | S dětmi super |</p>
+<h2>Příroda a aktivní</h2>
+<p>| Místo | Aktivita |
+|-------|----------|
+| <strong>Balaton</strong> | Koupání, cyklotrasy kolem jezera (200 km okruh), Tihany |
+| <strong>Aggtelek</strong> | Jeskyně Baradla (UNESCO), propojená se slovenským Domicou |
+| <strong>Hortobágy</strong> | Puszta, koně, vodní ptáci, pastýřské tradice (UNESCO) |
+| <strong>Tokaj</strong> | Vinařská oblast, degustace tokajských vín |
+| <strong>Dunajské ohyby</strong> | Visegrád → Esztergom, výhledy, cyklostezky |</p>
+<h2>S dětmi</h2>
+<ul>
+<li><strong>Györ Rába Quelle</strong> — aquapark s tobogány (1.5h z Brna)</li>
+<li><strong>Visegrád</strong> — bobová dráha + hrad s historickými hrami</li>
+<li><strong>Zalakaros</strong> — velký aquapark, blízko Balatonu</li>
+<li><strong>Miskolctapolca</strong> — koupání v jeskyni = unikátní zážitek</li>
+<li><strong>Budapešť zoo</strong> — jedna z nejstarších v Evropě, v městském parku</li>
+<li><strong>Bükfürdő</strong> — klidný rodinný aquapark</li>
+</ul>
+<h2>Praktické info</h2>
+<p>| | |
+|---|---|
+| <strong>Měna</strong> | Forint (HUF). 1 CZK ≈ 15–16 HUF. Kartou všude. |
+| <strong>Dálnice</strong> | E-vigneta (ematrica.hu), 10 dní ~3500 HUF (~500 CZK) |
+| <strong>Jazyk</strong> | Maďarsky (angličtina v turistických místech). Slovensky rozumí u hranic. |
+| <strong>Jídlo</strong> | Guláš, lángos, kürtőskalács. Porce obrovské, ceny nižší než ČR. |
+| <strong>Víno</strong> | Eger (Bikavér), Tokaj, Villány — kvalitní a levné |</p>
+<h2>Cestou z Brna</h2>
+<p>Dvě hlavní trasy:</p>
+<ol>
+<li><strong>Přes Bratislavu</strong> → Győr → Budapešť (dálnice M1, rychlé)</li>
+<li><strong>Přes Slovensko</strong> → Štúrovo/Esztergom (krajinářsky hezčí, Dunaj)</li>
+</ol>
+<p>→ Viz také: [[heviz]], [[bukfurdo]], [[miskolctapolca]]</p>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABN0lEQVR42tzUPY4jIRAF4NciqMy+AJq6xgSW+krtzNHCRpO1r4S0AddgxQVqMwdo3or52cncuLOdivoLGp6AKny7EtIQGP3bxw5HnAuUzMCQr23xi0cTvY1aqbcy7nOlRs07HdHXi/qV/77JP/XqLzX/O5+77qXGF01fd3DPsp4Wv1QCT7LHmH6tGkuo/J1swGIzaV7wXOYh/2wHgFR+7L9hYDaESscp2w4LuTpr4jilIRvOLbSLSx//bzmejtUqa54yRrw6UxbRz3wPGjgd/NFfME+3EUvED0cPPPfo20ZIBx/4AtG3vFuWeAoNZOUr9ri/qHbExaWn2Qb8Pk+KaNY85IjFH5vUNOje3+bFfeZ93ItjCQWvs435XOAFYBpynydX1/v9vV+23OeJOXbbDv/f9TcAAP//Ssk5uPImfcoAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

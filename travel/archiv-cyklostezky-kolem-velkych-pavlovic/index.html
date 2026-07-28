@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>Cyklostezky kolem Velkých Pavlovic</h1>
-<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<div class="tags"><span class="tag">archiv</span> <span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cyklo</span> <span class="tag">morava</span> <span class="tag">vino</span> </div>
+<div class="meta"><p class="meta-item">📍 Velké Pavlovice, Jihomoravský kraj</p><p class="meta-item">🌐 <a href="https://www.velkepavlovice.cz" target="_blank">www.velkepavlovice.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.9047, 16.8161], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.9047, 16.8161]).addTo(dmap);
+</script>
 <div class="content"><h2>Cesta kolem jezera</h2>
 <p>Přez Zaječí a tahle vesnice je na kopci, je tam i pěkná rozhledna nad komáří loukou a ta podle nápisu nebyla financovaná ze zdrojů eu. Postavili ji majitelé vinařství U kapličky je tam pěkný výhled na spodní jezero. Ale to je skoro všude :-)</p>
 <p>Ze zaječí se dá jet buď po hlavní cestě (docela frekventovaná) a nebo po takové vedlejší asfaltce kde vede lokální cyklostezka, ale i to je cesta pro auta.</p>
@@ -79,6 +86,31 @@ Bylo to z mladistvé herozvážnosti a kamarádi m to do dneška vyčítají.</p
 <p>Ke konci je soukromá obora s brankou, která se na noc zamyká. Takže pozor na pozdní návrat. V sezóně se zamyká v 7. Takže se musí jet zpět přes Podivín.</p>
 <p>Mezi Rakvicemi a oborou je to vyloženě polní cesta. V oboře je to rozbitá asfaltka. A na jejím konci se vyjede asi kilometr před Lednicí. Poměrně pohodlná je cesta k &quot;Janovu hradu&quot;, který patří k lichtenštejnským zastaveníčkům kolem Lednice.</p>
 <p>Od janova hradu se nalodit a kanály doplout až k Lednickému zámku.</p>
+<h2>Okolní cíle a cyklostezky</h2>
+<h3>Cyklostezky v okolí</h3>
+<p>| Stezka | Trasa | Délka | Povrch |
+|--------|-------|-------|--------|
+| <strong>Krajem André</strong> | Velké Pavlovice → Bořetice → Kobylí | ~12 km | asfalt |
+| <strong>Vinařská stezka</strong> | Velké Pavlovice → Zaječí → Rakvice | ~8 km | asfalt/polní |
+| <strong>Krajem modrého vína</strong> | Kurdějovice → Hustopeče | ~10 km | polní (pozor řepka!) |
+| <strong>Greenway Krakow–Vídeň</strong> | Podivín → Lednice → Valtice | ~25 km | asfalt |</p>
+<h3>Zajímavá místa v okolí</h3>
+<ul>
+<li><strong>Nové Mlýny</strong> — tři jezera, cyklostezka po hrázi, yacht klub, rybáři (geo: 48.8667,16.6500)</li>
+<li><strong>Lednicko-valtický areál</strong> (UNESCO) — zámky, Janův hrad, kanály, parkové cesty</li>
+<li><strong>Mandloňové sady u Hustopečí</strong> — rozhledna, květen nejkrásnější (geo: 48.9367,16.7283)</li>
+<li><strong>Dolní Věstonice</strong> — muzeum, hospoda s candátem</li>
+<li><strong>Rozhledna Zaječí</strong> — nad komáří loukou, vinařství U Kapličky</li>
+<li><strong>Rozhledna u Staroviček</strong> — odbočka z hlavní stezky</li>
+<li><strong>Pálava</strong> — Děvín, Sirotčí hrádek, vinice</li>
+</ul>
+<h3>Praktické tipy</h3>
+<ul>
+<li><strong>Vítr:</strong> V oblasti Novomlýnských jezer fouká často — plánuj trasu s větrem v zádech na zpáteční</li>
+<li><strong>Obora před Lednicí:</strong> V sezóně se branka zamyká v 19:00 — pozor na pozdní návrat (objezd přes Podivín)</li>
+<li><strong>Voda:</strong> V sezoně stánky s vínem i v půlce vinic, jinak Zaječí/Rakvice mají obchod</li>
+<li><strong>Povrch:</strong> Polní cesty po dešti jsou rozježděné traktory — doporučuji počkat na sucho</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABN0lEQVR42tTUW6r0RhADYIG2IdD+dyWobQgq+MxkICfOuB/zt58+sN0XVRf+uOGtd6HQ2wMLMifjFXTnVUAp0h56mg5zbmET/oehDVP7s76v9nb083z2+9UAOq07nyP8h7Ull+R4j9wp1A7pHNiyaxome2NqZstN9md/j46yHk6uiZ7tjEB3hq/6+WViOVcteNoTD8XAwAYH1q4tx9DcGcrYQN7n9ehuJ10r6IE91A6EZXVjjTwMBn3l+2AbyUyGUA58rafO/FTdjT0ZcJ3ZnJiSy+tSvPN+sMyozbwD/5dbjU3v6/+PnmzFjfmK58l2rLm+f/WjXwYQ0anx5nd7y0q8LkYPrCuGJWBUd15louXu6/0TOwr76Y8PXqPFgL0zJBLWNjqwt0vkKsm/+91X/7/HXwEAAP//CWtoR4svQsIAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

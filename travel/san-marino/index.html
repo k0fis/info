@@ -44,9 +44,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
 <h1>San Marino — Nejstarší republika světa</h1>
-<div class="tags"><span class="tag">info</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<div class="tags"><span class="tag">info</span> <span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">mesto</span> </div>
+<div class="meta"><p class="meta-item">📍 San Marino, Repubblica di San Marino</p><p class="meta-item">🌐 <a href="https://www.visitsanmarino.com" target="_blank">www.visitsanmarino.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([43.9424, 12.4578], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([43.9424, 12.4578]).addTo(dmap);
+</script>
 <div class="content"><h1>San Marino — Nejstarší republika světa</h1>
 <h2>Původ jména: Kdo byl svatý Marinus?</h2>
 <h3>Původ a povolání</h3>
