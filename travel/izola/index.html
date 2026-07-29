@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izola — rybářské městečko s plážemi pro děti — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Izola — rybářské městečko s plážemi pro děti</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">more</span> <span class="tag">deti</span> <span class="tag">plaz</span> </div>
+<div class="meta"><p class="meta-item">📍 Izola, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.izola.si/" target="_blank">www.izola.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.5363, 13.6561], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.5363, 13.6561]).addTo(dmap);
+</script>
+<div class="content"><h1>Izola — autentická rybářská vesnice s nejlepší pláží pro děti</h1>
+<p>Půvabné rybářské městečko s barevnými domy, vynikajícími restauracemi s mořskými plody a jednou z nejlepších rodinných pláží na celém slovinském pobřeží. Méně turistů než Piran, levnější než Portorož.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Koper</td>
+<td>7 km</td>
+<td>10 min</td>
+</tr>
+<tr>
+<td>Piran</td>
+<td>10 km</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>Portorož</td>
+<td>7 km</td>
+<td>10 min</td>
+</tr>
+<tr>
+<td>Lublaň</td>
+<td>110 km</td>
+<td>1:10 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>~600 km</td>
+<td>~6:10 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Co vidět a dělat</h2>
+<ul>
+<li><strong>Historické jádro</strong> — zachovalé benátské uličky, barevné fasády</li>
+<li><strong>Přístav</strong> — rybářské lodě, kavárny, večerní atmosféra</li>
+<li><strong>Mořské plody</strong> — čerstvé ryby přímo od rybářů, místní restaurace</li>
+<li><strong>Výletní lodě</strong> — do Piranu, Koperu, Terstu</li>
+<li><strong>Parenzana cyklotrasa</strong> — prochází městem (rovná, bez aut)</li>
+</ul>
+<h2>San Simon Resort — nejlepší pláž pro malé děti</h2>
+<ul>
+<li><strong>Typ:</strong> Hotelový resort (Sava Hotels), ale <strong>pláž je veřejně přístupná</strong></li>
+<li><strong>Vstup do vody:</strong> Pozvolný a mělký — &quot;zůstává mělká na dlouhé úseky&quot; — <strong>ideální pro batolata</strong></li>
+<li><strong>Povrch:</strong> Mix — částečně písčitý, částečně oblázky, částečně travnatý</li>
+<li><strong>Blue Flag</strong> certifikace, &quot;vynikající kvalita vody&quot;</li>
+<li><strong>Vybavení:</strong> Hřiště na pláži, skluzavka do vody (jediná na slovinském pobřeží!), plážový volejbal, plážová knihovna (VII–VIII), dětské dílny u archeologického parku (římská vila)</li>
+<li><strong>Plavčík</strong> v sezóně, stín od borovic</li>
+<li><strong>Lehátka/slunečníky</strong> k pronájmu</li>
+<li><strong>Upozornění:</strong> V horkých letních dnech velmi plno — přijít brzy!</li>
+<li><strong>Hotel:</strong> Haliaetum 4★, Mirta 4★ (wellness), Depandance San Simon 3★</li>
+</ul>
+<h2>Pláž Bele Skale (Bílé útesy)</h2>
+<ul>
+<li>Scenická přírodní pláž mezi Izolou a Strunjanským parkem</li>
+<li>Bílé vápencové útesy + průzračná voda</li>
+<li><strong>Méně přeplněná</strong> alternativa k hlavním plážím</li>
+<li>Přístup pěšky ze Struňanu (~15 min)</li>
+<li>Bez infrastruktury — vzít si jídlo a vodu</li>
+</ul>
+<h2>Další pláže v Izole</h2>
+<table>
+<thead>
+<tr>
+<th>Pláž</th>
+<th>Typ</th>
+<th>Poznámka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Svetilnik (Maják)</td>
+<td>Beton + tráva + oblázky</td>
+<td>300 m od centra, plavčík, hřiště, vstup po žebříku</td>
+</tr>
+<tr>
+<td>Belvedere</td>
+<td>Betonové platformy</td>
+<td>Skalnaté</td>
+</tr>
+<tr>
+<td>Jagodje</td>
+<td>Oblázky + skály</td>
+<td>SZ od centra, klidnější, šnorchlování</td>
+</tr>
+</tbody>
+</table>
+<h2>Pro děti</h2>
+<ul>
+<li><strong>San Simon = #1 pláž pro batolata</strong> na slovinském pobřeží</li>
+<li>Přístav — sledování rybářů, lodí</li>
+<li>Zmrzlina v centru (výborná!)</li>
+<li>Na kole po Parenzaně (rovné, bezpečné) — Koper–Izola jen 7 km</li>
+<li>Termaris v Portorži (10 min autem) — kryté bazény se slanou vodou</li>
+</ul>
+<h2>Proč Izola jako základna?</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Izola</th>
+<th>Piran</th>
+<th>Portorož</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turisté</td>
+<td>Málo</td>
+<td>Hodně</td>
+<td>Hodně</td>
+</tr>
+<tr>
+<td>Parkování</td>
+<td>Snadnější</td>
+<td>Obtížné, drahé</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Ceny</td>
+<td>Nižší</td>
+<td>Vyšší</td>
+<td>Nejvyšší</td>
+</tr>
+<tr>
+<td>Pláž pro děti</td>
+<td>San Simon ★★★</td>
+<td>Fiesa (malá)</td>
+<td>Hlavní (dovezený písek)</td>
+</tr>
+<tr>
+<td>Atmosféra</td>
+<td>Autentická rybářská</td>
+<td>Romantická benátská</td>
+<td>Resortová</td>
+</tr>
+<tr>
+<td>Jídlo</td>
+<td>Výborné, levnější</td>
+<td>Výborné</td>
+<td>Hotelové</td>
+</tr>
+</tbody>
+</table>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Základna pro pobřeží</strong> — Izola je ideální kompromis (levná, klidná, děti OK)</li>
+<li>Večeře u přístavu: čerstvé ryby za rozumné ceny</li>
+<li>Kombinovat: dopoledne pláž San Simon, odpoledne kolo na Parenzaně</li>
+<li>Všechna pobřežní města dostupná do 15 min autem</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOElEQVR42tzUMc7jIBAF4GdRuFtfAIVruIjElUjnak2qdMuVLKXgGkRcAHcUyG/lJPJ2DnG3/1R8BWI0zAx+XLRkEk7weThii0sZyyA8UGVXLqWLll7lWpMYVb2N7ESW7UFbGAlxi//y3zc5RyeH6Lf67BpAQ6tynLYv2PVav0i0gg2PGL/1H8UwSJx0lYExJlL4gDqfm9DFHP1jqrLRM1MYlA/P+n3tX9rRCku/tJVOIokM3WTU2JybAgyyX/pU4XbBJYziJvG6/7Xd3RVDlnbRqcbzfcEoKPGYqmzFtXRhKDq8++mDr8WoJNvI93tf+t2/N05qQoXXNaKS4Dq/VbYwyqqsptM2j7t2xQiWQZH+qOWoWPom11qlaCP5msdPXvN1KkNz2z+7JucCjFKjxwH/3/E3AAD//45YTrCWm7b7AAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
