@@ -42,49 +42,51 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle">95 destinací</span>
+  <span class="subtitle">104 destinací</span>
   <button onclick="window.print()" style="margin-left:auto;background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
 </header>
 <div id="map"></div>
-<div class="filters"><button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
-<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
-<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
-<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
-<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
-<button class="tag-btn" onclick="toggleFilter('aktivni')">aktivni</button>
-<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
-<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
-<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
-<button class="tag-btn" onclick="toggleFilter('adrenalin')">adrenalin</button>
-<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
-<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
-<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<div class="filters"><button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
 <button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
 <button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
-<button class="tag-btn" onclick="toggleFilter('cyklistika')">cyklistika</button>
-<button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
-<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
-<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
-<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
-<button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
-<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
+<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
+<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
+<button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('aktivni')">aktivni</button>
 <button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
-<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
 <button class="tag-btn" onclick="toggleFilter('more')">more</button>
 <button class="tag-btn" onclick="toggleFilter('plaz')">plaz</button>
-<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
-<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
-<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
 <button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
-<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
-<button class="tag-btn" onclick="toggleFilter('info')">info</button>
-<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<button class="tag-btn" onclick="toggleFilter('cyklistika')">cyklistika</button>
+<button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
+<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
 <button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
-<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
-<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
+<button class="tag-btn" onclick="toggleFilter('budapest')">budapest</button>
+<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
+<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
+<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
+<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
 <button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
-<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button></div>
+<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
+<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
+<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
+<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
+<button class="tag-btn" onclick="toggleFilter('adrenalin')">adrenalin</button>
+<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
+<button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
+<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
+<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
+<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button>
+<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
+<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
+<button class="tag-btn" onclick="toggleFilter('aquapark')">aquapark</button>
+<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
+<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
+<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button></div>
 <div class="cards" id="cards"><div class="card" data-tags="travel vylety">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum letecké a pozemní techniky Vyškov</p>
@@ -235,15 +237,35 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Hrastovlje — gotické fresky Tanec smrti</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="umeni">#umeni</span> </div>
 </div>
+<div class="card" data-tags="travel vylety madarsko aquapark deti budapest">
+  <h3><a href="hu-aquaworld/">Aquaworld Budapest — největší krytý aquapark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5867&x=19.0936&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Aquaworld Budapest — jeden z největších krytých aquaparků v Evropě</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="budapest">#budapest</span> </div>
+</div>
 <div class="card" data-tags="travel vylety madarsko termy">
   <h3><a href="hu-buk/">Maďarsko — Bükfürdő (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.3864&x=16.7456&z=14" target="_blank">📍</a></h3>
   <p class="desc">Bükfürdő Thermal &amp; Spa</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
+<div class="card" data-tags="travel vylety madarsko termy aquapark deti">
+  <h3><a href="hu-debrecen/">Debrecen Aquaticum — mediteránní aquapark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5550&x=21.6250&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Debrecen Aquaticum — krytá mediteránní pláž</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="deti">#deti</span> </div>
+</div>
 <div class="card" data-tags="travel vylety madarsko termy priroda">
   <h3><a href="hu-egerszalok/">Maďarsko — Egerszalók (Salt Hill — „maďarské Pamukkale&#34;)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.8636&x=20.3264&z=14" target="_blank">📍</a></h3>
   <p class="desc">Egerszalók Salt Hill (Sódomb)</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
+</div>
+<div class="card" data-tags="travel vylety madarsko termy hrad historie">
+  <h3><a href="hu-gyula/">Gyula — hradní lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.6472&x=21.2789&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Gyula — jediné hradní lázně v Maďarsku (Várfürdő)</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="hrad">#hrad</span> <span class="tag" data-tag="historie">#historie</span> </div>
+</div>
+<div class="card" data-tags="travel vylety madarsko termy deti aquapark">
+  <h3><a href="hu-hajduszoboszlo/">Hajdúszoboszló — největší termální komplex v Evropě</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.4489&x=21.3937&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Hajdúszoboszló — „Mekka revmatiků&#34; a obří aquapark</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="aquapark">#aquapark</span> </div>
 </div>
 <div class="card" data-tags="travel vylety madarsko termy">
   <h3><a href="hu-harkany/">Maďarsko — Harkány (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.8476&x=18.2369&z=14" target="_blank">📍</a></h3>
@@ -255,15 +277,40 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Termální jezero Hévíz</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="balaton">#balaton</span> </div>
 </div>
+<div class="card" data-tags="travel vylety madarsko termy deti">
+  <h3><a href="hu-mezokovesd/">Mezőkövesd — Zsóry termální lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.8056&x=20.5833&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Mezőkövesd — Zsóry termální lázně</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
+</div>
+<div class="card" data-tags="travel vylety madarsko termy jeskyne deti">
+  <h3><a href="hu-miskolctapolca/">Miskolctapolca — jeskynní lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.0667&x=20.7167&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Miskolctapolca — termální koupání v jeskyních</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> <span class="tag" data-tag="deti">#deti</span> </div>
+</div>
 <div class="card" data-tags="travel vylety madarsko termy">
   <h3><a href="hu-sarvar/">Maďarsko — Sárvár (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.2536&x=16.9361&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sárvár Spa and Wellness Centre</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
+<div class="card" data-tags="travel vylety madarsko termy budapest historie">
+  <h3><a href="hu-szechenyi/">Széchenyi fürdő — největší lázně v Evropě (Budapešť)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5183&x=19.0822&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Széchenyi fürdő — největší léčivé lázně v Evropě</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="budapest">#budapest</span> <span class="tag" data-tag="historie">#historie</span> </div>
+</div>
+<div class="card" data-tags="travel vylety madarsko aquapark termy deti">
+  <h3><a href="hu-szeged/">Szeged Napfényfürdő — aquapark u 3. největšího města</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.2530&x=20.1414&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Szeged Napfényfürdő Aquapolis — „Vodní město čtyř ročních období&#34;</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
+</div>
 <div class="card" data-tags="travel vylety madarsko balaton jeskyne">
   <h3><a href="hu-tapolca/">Maďarsko — Tapolca (jeskyní jezero)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.8828&x=17.4081&z=14" target="_blank">📍</a></h3>
   <p class="desc">Tavasbarlang — Tapolca Lake Cave</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="balaton">#balaton</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> </div>
+</div>
+<div class="card" data-tags="travel vylety madarsko termy deti">
+  <h3><a href="hu-zalakaros/">Zalakaros — termální lázně u Balatonu</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.5511&x=17.1242&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Zalakaros — horká voda (96 °C!) a květiny</p>
+  <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
 <div class="card" data-tags="travel vylety">
   <h3><a href="hvezdarna-brno/">Hvězdárna Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2044&x=16.5881&z=14" target="_blank">📍</a></h3>
@@ -592,12 +639,21 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.4507,lng:16.3194,title:"Hrad Pernštejn",slug:"hrad-pernstejn",tags:"travel, vylety"},
 {lat:49.2569,lng:16.4597,title:"Hrad Veveří",slug:"hrad-veveri",tags:"travel, vylety"},
 {lat:45.5064,lng:13.8972,title:"Hrastovlje — Tanec smrti (středověké fresky)",slug:"hrastovlje",tags:"travel, vylety, slovinsko, historie, umeni"},
+{lat:47.5867,lng:19.0936,title:"Aquaworld Budapest — největší krytý aquapark",slug:"hu-aquaworld",tags:"travel, vylety, madarsko, aquapark, deti, budapest"},
 {lat:47.3864,lng:16.7456,title:"Maďarsko — Bükfürdő (termální lázně)",slug:"hu-buk",tags:"travel, vylety, madarsko, termy"},
+{lat:47.5550,lng:21.6250,title:"Debrecen Aquaticum — mediteránní aquapark",slug:"hu-debrecen",tags:"travel, vylety, madarsko, termy, aquapark, deti"},
 {lat:47.8636,lng:20.3264,title:"Maďarsko — Egerszalók (Salt Hill — „maďarské Pamukkale\")",slug:"hu-egerszalok",tags:"travel, vylety, madarsko, termy, priroda"},
+{lat:46.6472,lng:21.2789,title:"Gyula — hradní lázně",slug:"hu-gyula",tags:"travel, vylety, madarsko, termy, hrad, historie"},
+{lat:47.4489,lng:21.3937,title:"Hajdúszoboszló — největší termální komplex v Evropě",slug:"hu-hajduszoboszlo",tags:"travel, vylety, madarsko, termy, deti, aquapark"},
 {lat:45.8476,lng:18.2369,title:"Maďarsko — Harkány (termální lázně)",slug:"hu-harkany",tags:"travel, vylety, madarsko, termy"},
 {lat:46.7881,lng:17.1894,title:"Maďarsko — Hévíz (termální jezero)",slug:"hu-heviz",tags:"travel, vylety, madarsko, termy, balaton"},
+{lat:47.8056,lng:20.5833,title:"Mezőkövesd — Zsóry termální lázně",slug:"hu-mezokovesd",tags:"travel, vylety, madarsko, termy, deti"},
+{lat:48.0667,lng:20.7167,title:"Miskolctapolca — jeskynní lázně",slug:"hu-miskolctapolca",tags:"travel, vylety, madarsko, termy, jeskyne, deti"},
 {lat:47.2536,lng:16.9361,title:"Maďarsko — Sárvár (termální lázně)",slug:"hu-sarvar",tags:"travel, vylety, madarsko, termy"},
+{lat:47.5183,lng:19.0822,title:"Széchenyi fürdő — největší lázně v Evropě (Budapešť)",slug:"hu-szechenyi",tags:"travel, vylety, madarsko, termy, budapest, historie"},
+{lat:46.2530,lng:20.1414,title:"Szeged Napfényfürdő — aquapark u 3. největšího města",slug:"hu-szeged",tags:"travel, vylety, madarsko, aquapark, termy, deti"},
 {lat:46.8828,lng:17.4081,title:"Maďarsko — Tapolca (jeskyní jezero)",slug:"hu-tapolca",tags:"travel, vylety, madarsko, balaton, jeskyne"},
+{lat:46.5511,lng:17.1242,title:"Zalakaros — termální lázně u Balatonu",slug:"hu-zalakaros",tags:"travel, vylety, madarsko, termy, deti"},
 {lat:49.2044,lng:16.5881,title:"Hvězdárna Brno",slug:"hvezdarna-brno",tags:"travel, vylety"},
 {lat:42.6508,lng:11.5128,title:"Itálie — Saturnia (termální prameny)",slug:"it-saturnie",tags:"travel, vylety, italie, termy"},
 {lat:45.5363,lng:13.6561,title:"Izola — rybářské městečko s plážemi pro děti",slug:"izola",tags:"travel, vylety, slovinsko, more, deti, plaz"},

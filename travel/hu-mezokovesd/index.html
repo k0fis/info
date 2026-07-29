@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mezőkövesd — Zsóry termální lázně — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Mezőkövesd — Zsóry termální lázně</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Mezőkövesd, Maďarsko</p><p class="meta-item">🌐 <a href="https://www.zsoryfurdo.hu/" target="_blank">www.zsoryfurdo.hu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.8056, 20.5833], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.8056, 20.5833]).addTo(dmap);
+</script>
+<div class="content"><h1>Mezőkövesd — Zsóry termální lázně</h1>
+<p>Termální komplex v severovýchodním Maďarsku (region Bükk). Velký areál s venkovními a vnitřními bazény, tobogány a wellness.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brno</td>
+<td>~320 km</td>
+<td>~3:15 h</td>
+</tr>
+<tr>
+<td>Bratislava</td>
+<td>~260 km</td>
+<td>~2:40 h</td>
+</tr>
+<tr>
+<td>Eger</td>
+<td>25 km</td>
+<td>25 min</td>
+</tr>
+<tr>
+<td>Miskolctapolca</td>
+<td>40 km</td>
+<td>35 min</td>
+</tr>
+<tr>
+<td>Budapešť</td>
+<td>130 km</td>
+<td>1:30 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Lázně Zsóry</h2>
+<ul>
+<li>Velký areál s více bazény</li>
+<li>Termální voda — léčivá</li>
+<li>Tobogány a skluzavky (léto)</li>
+<li>Wellness a sauna svět</li>
+<li>Krytá i venkovní část</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Tobogány v létě</li>
+<li>Dětské bazény</li>
+<li>Velký travnatý areál na hraní</li>
+</ul>
+<h2>Proč jet?</h2>
+<ul>
+<li>Blízko Egeru a Egerszalóku — kombinace 3 lázní v regionu</li>
+<li>Méně známé = méně turistů, lepší ceny</li>
+<li>Na cestě do Miskolctapolca</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Ideální trojkombinace: <strong>Eger</strong> (hrad + víno) → <strong>Egerszalók</strong> (Salt Hill) → <strong>Zsóry</strong> (aquapark)</li>
+<li>Nebo: Zsóry + Miskolctapolca (jeskyně) za 2 dny</li>
+<li>Region Bükk — turistika v přírodě jako bonus</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNUlEQVR42tzUPe7jIBAF8GdRTLe+AArXSBHJV3I6V4FUKbmSpRRcgxUXIB0F8lvlYzedQ9ztf7pfxdMMM/hxJWRWOU4mkHmLHUbjWVQAmuzrMTkNBlNaXVFFS7vjqKfNdjhGS6Z3/nWTt+T1lN79WTWALo6Y0vxvBKsWz6z7KiqwbDFO6FPGZLh75P1kWXCCNRcV4vP9T/b0pEbi79BinIYbfbVAVzb516GvvZ7I5Zn/g8XPNrlUMHSv/qwb46GLvSkmLNJiOV8XWF70K9/3nvvYw9Zh2ecW+zpqa+77tEeL3eAUVakSpcnnazYuSuIy5A2+/1/6aDkbtvh5T0gTTEGLHY713v95J7nFj/2GqL95t9hGqejYbKiSSKLFj/uYSpoZmkzemBX18Jrvl/6/608AAAD//xjvXM+ynJg/AAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

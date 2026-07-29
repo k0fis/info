@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Széchenyi fürdő — největší lázně v Evropě (Budapešť) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Széchenyi fürdő — největší lázně v Evropě (Budapešť)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">budapest</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Állatkerti krt. 9-11, Budapešť, Maďarsko</p><p class="meta-item">🌐 <a href="https://www.szechenyibath.hu/" target="_blank">www.szechenyibath.hu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.5183, 19.0822], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.5183, 19.0822]).addTo(dmap);
+</script>
+<div class="content"><h1>Széchenyi fürdő — největší léčivé lázně v Evropě</h1>
+<p>Ikonické novorenesanční/neobarokní lázně v Městském parku (Városliget) v Budapešti. Otevřeny 1913, plně rekonstruovány 1999–2009. Dva termální prameny (74 °C a 77 °C) dodávají 6 milionů litrů horké vody denně. Nejfotografovanější budova Budapešti vedle Parlamentu.</p>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bazény</strong></td>
+<td>3 venkovní + 15 vnitřních = 18 celkem</td>
+</tr>
+<tr>
+<td><strong>Teplota vody</strong></td>
+<td>Venku 27–38 °C, uvnitř 18–38 °C</td>
+</tr>
+<tr>
+<td><strong>Minerály</strong></td>
+<td>Síran, vápník, hořčík, bikarbonát, fluor, metaborová kyselina</td>
+</tr>
+<tr>
+<td><strong>Metro</strong></td>
+<td>M1 (žlutá), stanice Széchenyi fürdő</td>
+</tr>
+<tr>
+<td><strong>Otevřeno</strong></td>
+<td>Denně, celoročně</td>
+</tr>
+</tbody>
+</table>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brno</td>
+<td>~330 km</td>
+<td>~3:15 h</td>
+</tr>
+<tr>
+<td>Bratislava</td>
+<td>~200 km</td>
+<td>~2 h</td>
+</tr>
+<tr>
+<td>Centrum Budapešti</td>
+<td>3 km</td>
+<td>Metro 10 min</td>
+</tr>
+</tbody>
+</table>
+<h2>Co je unikátní</h2>
+<ul>
+<li><strong>Největší léčivé lázně v Evropě</strong></li>
+<li>Neobarokní architektura (1913) — monumentální žlutá budova</li>
+<li>Ikonický výhled: šachisté hrající ve venkovním bazénu v páře</li>
+<li>Přes 200 000 návštěvníků už v prvním roce otevření</li>
+<li>Městský park okolo — ZOO, cirkus, hrad Vajdahunyad, Muzeum umění</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Venkovní bazény dost velké na hraní</li>
+<li>Městský park (Városliget) — ZOO, botanická zahrada, dětské hřiště</li>
+<li>Vajdahunyad Castle — jako z pohádky</li>
+<li><strong>Pozor:</strong> Lázně jsou populární, bývá plno — jet ráno</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Lístek kupovat online (fronty u pokladen)</li>
+<li>Kabinka (ne šatna) = pohodlnější s dětmi, ale dražší</li>
+<li>Nejlepší v zimě — pára nad venkovními bazény = magické</li>
+<li>Kombinovat s procházkou Városliget (ZOO, hrad, muzea)</li>
+<li>Sobota/neděle ráno: &quot;Sparty&quot; (spa party) — večerní akce s DJ, NE pro děti</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOklEQVR42tzUMY6zMBAF4BdN4S5cYBRfI0UkruR0VBn+C+ArIaXwNYh8AdNRWMwvkmy0FXjpdqfiq4D37MGfG6OabGtbXh72uIXjymoMQJF9dqhYNNip1CyMwZQbzk4UdrrFNVekbD7fv27VMXpuYvjks+rnCIT6byWs2Py7j+pzQ9Ow0+pjYon66FOJ9T5Gn4Xrh6LEHY7s4sT1XJcYkp3VQUgPIe2wGbWjtLT9zmfL3eUaPQR4vPrY8owq+mxiOAQUGNLfWKzSBLPLt8uREgu989+y8XcdZADOMCUGLtUgyw05Fdl09RhbIOp8xg4DOGSHhvpTnQq8rBGuIBROBiV+3j87xf7V8KZ9dpRISWfs9HUQNMu+K7Tjis3y/lTiFo68qu3x9X/rVh21XfJ4n8cf+nfP/wAAAP//Sy4r87+kbPIAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

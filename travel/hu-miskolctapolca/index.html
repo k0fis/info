@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miskolctapolca — jeskynní lázně — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Miskolctapolca — jeskynní lázně</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">madarsko</span> <span class="tag">termy</span> <span class="tag">jeskyne</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Miskolctapolca, Miskolc, Maďarsko</p><p class="meta-item">🌐 <a href="https://www.barlangfurdo.hu/" target="_blank">www.barlangfurdo.hu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.0667, 20.7167], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.0667, 20.7167]).addTo(dmap);
+</script>
+<div class="content"><h1>Miskolctapolca — termální koupání v jeskyních</h1>
+<p>Unikátní jeskynní lázně (Barlangfürdő) — termální koupání uvnitř přírodních vápencových jeskyní! Voda 30–36 °C, nízká mineralizace (~1000 mg/l) — můžete se koupat bez časového omezení. Objev 1939, otevřeno 1959.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brno</td>
+<td>~340 km</td>
+<td>~3:30 h</td>
+</tr>
+<tr>
+<td>Bratislava</td>
+<td>~280 km</td>
+<td>~2:50 h</td>
+</tr>
+<tr>
+<td>Eger</td>
+<td>50 km</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Budapešť</td>
+<td>180 km</td>
+<td>2 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Co je unikátní</h2>
+<ul>
+<li><strong>Koupání v jeskyních</strong> — &quot;Hvězdný sál&quot; (Csillagterem), &quot;Římský sál&quot;</li>
+<li>Teplá termální voda (30–36 °C) v přírodních vápencových jeskyních</li>
+<li>Charakteristická střecha ve tvaru mušle (1969)</li>
+<li>Nízká mineralizace = bez omezení délky koupání</li>
+<li>Magická atmosféra — podsvícené jeskyně, ozvěna</li>
+</ul>
+<h2>Bazény</h2>
+<ul>
+<li><strong>Jeskynní bazény</strong> — hlavní atrakce, průchod mezi sály</li>
+<li>3 dětské bazény</li>
+<li>Zážitkový bazén</li>
+<li>Venkovní plavecký bazén</li>
+<li>Wellness sekce</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li><strong>3 dětské bazény</strong> — výborné!</li>
+<li>Jeskynní koupání = magický zážitek pro děti (jako ve fantasy světě)</li>
+<li>Vhodné pro všechny věky</li>
+<li>Teplá voda = příjemné i pro malé děti</li>
+</ul>
+<h2>Léčivé účinky</h2>
+<ul>
+<li>Kloubní bolesti, pohybový aparát</li>
+<li>Dýchací potíže (jeskynní mikroklima)</li>
+<li>Trávicí potíže, kardiovaskulární</li>
+</ul>
+<h2>Okolí</h2>
+<ul>
+<li><strong>Eger</strong> — 30 min (hrad, víno, termy Egerszalók)</li>
+<li><strong>Bukk Mountains</strong> — turistika, jeskyně</li>
+<li><strong>Lillafüred</strong> — zámek, vodopády, visutá železnice</li>
+</ul>
+<h2>⚠️ Upozornění</h2>
+<p>V září 2024 proběhl požár — lázně měly být znovu otevřeny v létě 2025. <strong>Ověřit aktuální stav před cestou!</strong></p>
+<h2>Tipy</h2>
+<ul>
+<li>Kombinovat s Eger + Egerszalók (30 min) — 2–3denní výlet</li>
+<li>Jeskynní koupání je nezapomenutelný zážitek — nic podobného jinde v Evropě</li>
+<li>Levnější a autentičtější než budapešťské lázně</li>
+<li>Lillafüred (5 min) — krásný zámek u jezera, vodopády</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUzanlMAwFYBkvvIsbMKQN7dxS0kB+Gkha0s5tBNxAstPC5Ay5b+YNDMO92j7tPoHBHCTRj68ILFPubxZADe7IL0Ouq/JBbHGu28T1gtTbaleSEzV7h9STxGjyWyxYhb7/+9YR2MaSxsLfebz101rLQVn/RvzOXcbScV0L47bY6TFNlKJom/U/JsbtpI0l+F0szo2mkBzEw+Ko/UZEA8OfbDDl5lY0J3JEtZixQ6gLuV5isAPNS04zQpvI4C77cyx+C+gXNpgoUVS/i7TJ4i7X9aS6BO5f+X40t7gFQEoPk0PFjhSR+0sNjjjimY+By595fu8u+H0LuAq1USzOjYie9/73vv3rekatSwBWNfhpTTl1zH5jgyOwQtuoWl95fvKz37O0LuvXPH/0c5/CMXDGpTbvNzVXwtf8W7yq31jaQBa/7muaQf62OAL7pX4vmpwY/LPqVwAAAP//t7Rb8jXlFn4AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
