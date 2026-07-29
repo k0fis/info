@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velika Planina — alpská pastvina s lanovkou — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Velika Planina — alpská pastvina s lanovkou</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">hory</span> <span class="tag">deti</span> <span class="tag">priroda</span> </div>
+<div class="meta"><p class="meta-item">📍 Kamniška Bistrica 2, 1242 Stahovica, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.velikaplanina.si/" target="_blank">www.velikaplanina.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.2969, 14.6519], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.2969, 14.6519]).addTo(dmap);
+</script>
+<div class="content"><h1>Velika Planina — pastevecká osada v oblacích</h1>
+<p>Jedna z největších a nejzachovalejších pasteveckých osad v Evropě. ~140 tradičních dřevěných chalup s šindelovými střechami sahajícími téměř k zemi. Lanovka vás vyveze na 1412 m, odtud lehká procházka na náhorní plošinu (1600 m).</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lublaň</td>
+<td>35 km</td>
+<td>40 min</td>
+</tr>
+<tr>
+<td>Kamnik</td>
+<td>15 km</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td>Z ČR (Brno)</td>
+<td>~420 km</td>
+<td>~4:30 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Lanovka — ceny (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Mimo sezónu (září–červen)</th>
+<th>Hlavní sezóna (červenec–srpen)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dospělí (lanovka + vlek)</td>
+<td>27 EUR</td>
+<td>30 EUR</td>
+</tr>
+<tr>
+<td>Děti 6–15</td>
+<td>16 EUR</td>
+<td>19 EUR</td>
+</tr>
+<tr>
+<td>Rodina 2+1–4 (lanovka + vlek)</td>
+<td>63 EUR</td>
+<td>68 EUR</td>
+</tr>
+<tr>
+<td>Dospělí (jen lanovka)</td>
+<td>25 EUR</td>
+<td>28 EUR</td>
+</tr>
+<tr>
+<td>Děti 6–15 (jen lanovka)</td>
+<td>14 EUR</td>
+<td>17 EUR</td>
+</tr>
+<tr>
+<td>Děti do 6 let</td>
+<td>Zdarma</td>
+<td>Zdarma</td>
+</tr>
+</tbody>
+</table>
+<h3>Provozní doba (červenec–srpen)</h3>
+<ul>
+<li>Lanovka: Po–Čt 8:00–18:00, Pá–Ne 8:00–19:00 (každých 30 min)</li>
+<li>Sedačková lanovka: Po–Čt 8:30–17:15, Pá–Ne 8:30–18:15</li>
+</ul>
+<h2>Co vidět a dělat</h2>
+<ul>
+<li><strong>Pastevecká osada</strong> — 140 tradičních chalup, krávy, zvonky</li>
+<li><strong>Muzeum Preskar</strong> — jediná zachovalá původní chalupa (8 EUR / 5 EUR děti / rodina 20 EUR, 10:00–15:00)</li>
+<li><strong>Výroba sýra Trnic</strong> — ukázka denně ve 13:00 u muzea</li>
+<li><strong>Tradiční jídla</strong> — kyselé mléko, žgance, mléčné výrobky (červen–září)</li>
+<li><strong>Panoramatické výhledy</strong> — Gradišče, Zeleni Rob, Simnovec</li>
+<li><strong>Naučná stezka</strong> &quot;Po stopách pastýřů&quot;</li>
+<li><strong>Jeskyně Vetrnica</strong>, skalní okno Luknja</li>
+<li><strong>Kaple Panny Marie Sněžné</strong> (architekt Jože Plečník, 1939)</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li><strong>Vhodné od 3–4 let</strong> — lanovka + lehká procházka (30–45 min na plošinu)</li>
+<li>Terén na plošině téměř rovný — i menší děti zvládnou</li>
+<li>Krávy, zvonky, sýr — děti milují</li>
+<li>Lanovka bez věkového omezení (malé děti s dospělým)</li>
+<li>Kočárek se nedostane (horský terén)</li>
+<li>Vzít svačinu a vodu (na plošině bez obchodu, jen chalupy s jídlem v sezóně)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Ideální návštěva: 4–5 hodin</strong> (půldenní výlet)</li>
+<li>Naplánovat kolem <strong>13:00</strong> — ukázka výroby sýra</li>
+<li>Pastýři s dobytkem: červen–září</li>
+<li>Mimo sezónu klidnější a levnější, ale chalupy zavřené</li>
+<li>Kombinovat s Kamnikem (historické město pod horou)</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXklEQVR42tTUsY3lIBAG4B8ROIMGLL02JqOldQPPuAFoiYw2kGjgOSOw9j9Ze+vTSie/SZfss2Q083s8+PXHk8nwWEohh8IOdsvEE9IgGocefbX7kP6pdN4LY4DayckjqQ2bk/RtjKveW5/9L3VeqvzL487nFaZaDrkivrVD/wQYA/kShX1pnpVRiLX8x6Zyf4W2FLZFYxfa0wlMlWaGwgiPnORw0+h7UdgT8BXrCLODwgiPtLLvhX0rCruADzMYJfAFhRH6nofNHN/33duXY91rA+p33vc2pW/p/F7lWDR2E3xm5wiz0dgUMqEtRb7yfWc/ZrhpdhPnRWMEm1lnh8FN5+PDlPMZ/s7HT/vC5Ka+MfCrnjc+W14LtyE2a+zJ/KPfN3aw0U3NTWIjNA49R5nddM3TW28bsQ4wF52jk7ZQrvfvDRuf0/m/N2h87ic/bArEtc/u/LvOnwAAAP//+hdbEulu9JMAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
