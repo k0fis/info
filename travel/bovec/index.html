@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bovec — adrenalin na smaragdové Soči — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Bovec — adrenalin na smaragdové Soči</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">hory</span> <span class="tag">rafting</span> <span class="tag">deti</span> <span class="tag">aktivni</span> </div>
+<div class="meta"><p class="meta-item">📍 Bovec, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.soca-valley.com/" target="_blank">www.soca-valley.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.3370, 13.5520], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.3370, 13.5520]).addTo(dmap);
+</script>
+<div class="content"><h1>Bovec — adrenalin na smaragdové Soči</h1>
+<p>Městečko v srdci Julských Alp, brána k řece Soče — &quot;Smaragdové krásce&quot;. Krystalově čistá voda smaragdové barvy, vodácké sporty, zipline park a vodopády. Ideální pro aktivní rodiny.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lublaň</td>
+<td>131 km</td>
+<td>1:45 h</td>
+</tr>
+<tr>
+<td>Z ČR (Brno)</td>
+<td>~570 km</td>
+<td>~6 h</td>
+</tr>
+<tr>
+<td>Trasa přes Vršič</td>
+<td>Spektakulární! 50 serpentin — náročné ale krásné</td>
+<td></td>
+</tr>
+<tr>
+<td>Trasa přes Tolmin</td>
+<td>Jednodušší, po údolí</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Aktivity pro rodiny — věkové limity</h2>
+<table>
+<thead>
+<tr>
+<th>Aktivita</th>
+<th>Min. věk/výška</th>
+<th>Cena (2026)</th>
+<th>Délka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Relax rafting</strong> (I–II)</td>
+<td><strong>5 let</strong></td>
+<td>60 EUR/os</td>
+<td>~2,5 h</td>
+</tr>
+<tr>
+<td><strong>Kayak škola</strong></td>
+<td>7 let</td>
+<td>95 EUR/os (min 2)</td>
+<td>~2,5 h</td>
+</tr>
+<tr>
+<td><strong>Boka rafting</strong> (I–IV)</td>
+<td>10 let</td>
+<td>80 EUR/os</td>
+<td>~2,5 h</td>
+</tr>
+<tr>
+<td><strong>Canyoning</strong> (Sušec)</td>
+<td>10 let</td>
+<td>80 EUR/os</td>
+<td>~2,5 h</td>
+</tr>
+<tr>
+<td><strong>Zip Line Park</strong></td>
+<td><strong>120 cm</strong></td>
+<td>60–100 EUR</td>
+<td>varies</td>
+</tr>
+</tbody>
+</table>
+<h2>Zip Line Park Bovec</h2>
+<ul>
+<li>&quot;Největší zipline park v Evropě&quot;</li>
+<li>10 ocelových lan (250–600 m každé), celkem 4 km + visutý most</li>
+<li>Rychlost 40–60 km/h, výška až 200 m nad zemí</li>
+<li>Min. výška 120 cm, do 14 let s rodičem</li>
+<li>Celoroční provoz</li>
+</ul>
+<h2>Vodopád Boka (Slap Boka)</h2>
+<ul>
+<li><strong>Dva stupně:</strong> 106 m + 33 m = celkem 139 m</li>
+<li>Na silnici mezi Kobaridem a Bovcem</li>
+<li><strong>Spodní vyhlídka:</strong> lehká procházka ~20 min z parkoviště — vhodné pro rodiny</li>
+<li>Horní stezka ke zdroji: via ferrata, NEvhodné pro děti</li>
+<li>Nejimpozantnější po dešti</li>
+</ul>
+<h2>Pevnost Kluže (Trdnjava Kluže)</h2>
+<ul>
+<li>Historická vojenská pevnost z roku 1472</li>
+<li>Fort Hermann nahoře — propojen tunelem (dobrodružství pro děti)</li>
+<li>Krátká jízda z Bovce</li>
+</ul>
+<h2>Soška stezka (Soška pot)</h2>
+<ul>
+<li>Říční stezka od pramene Soči dolů (~25 km)</li>
+<li>Úseky u Trenty vhodné pro rodiny (krátké procházky, výhled na pramen)</li>
+<li>Celá trasa spíše pro starší děti</li>
+</ul>
+<h2>Koupání v Soči</h2>
+<ul>
+<li>Voda je <strong>velmi studená</strong> i v létě (smaragdová barva = vápencová)</li>
+<li>Krátké koupání ano, delší plavání jen pro otužilce</li>
+<li>Nejkrásnější tůně: Velika Korita (soutěska), okolí Trenty</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Sezóna:</strong> červen–září (vodácké sporty plně v provozu)</li>
+<li>Relax rafting (od 5 let) — ideální pro rodiny s menšími dětmi</li>
+<li>Průvodci zajistí neopren, helmu, vestu — stačí přijet v plavkách</li>
+<li>Rezervovat předem v hlavní sezóně</li>
+<li>Kombinovat: ráno rafting, odpoledne vodopád Boka nebo pevnost Kluže</li>
+<li>Vršič Pass: krásný, ale řidiče unaví — jet raději přes Tolmin pokud jedete s malými dětmi</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABP0lEQVR42tzUMY7jMAwF0G+wYLd7ASK6RooAupLTuYqUyl18JQMpdA0FuoDSuRDMhXeSzFSOxt0MK7+GsEn649cVq2YaYifLwxZ7tKTapwBUeSitydFpMFOtSdVHrre40lHYaI9jcYWFX++/btV7GqRL4TWfVS8lTpjGzx2smc/Xe1KaaIrbfDnAeNMnvY25wvg7upThxN4UNT6Rl1Y6sbOts82USUmbkLe4uZ6ThzPTY1hvzLPNxoOB28c+3hh/7MUMhVNoAqp8aEkL07T02OATXUyGo+f835i9neEisAfXGE1pIlIv2FWZvdWk0iWd99jgpWNE7Gjc2VzhJUYEhSnsGDX2OKYhdmk0z/xZ95IPWZh0xkY//nf9f+8VbgWCNH7JlzV7tGaIzox4ft+6lzzJqafH/X3XP7v+BQAA//8JvDHhbiaesQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
