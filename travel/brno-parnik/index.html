@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brno parník — Tipy na výlety</title>
+<title>Brno parník — lodí k hradu Veveří — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,73 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Brno parník</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">📍 Přístavní, 635 00 Brno-Bystrc</p><p class="meta-item">🌐 <a href="https://www.kudyznudy.cz/aktivity/lodni-doprava-na-brnenske-prehrade" target="_blank">www.kudyznudy.cz/aktivity/lodni-doprava-na-brnenske-prehrade</a></p></div>
+<h1>Brno parník — lodí k hradu Veveří</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">brno</span> <span class="tag">deti</span> <span class="tag">lod</span> </div>
+<div class="meta"><p class="meta-item">📍 Brněnská přehrada, přístaviště Bystrc</p><p class="meta-item">🌐 <a href="https://www.dpmb.cz/cs/lodni-doprava" target="_blank">www.dpmb.cz/cs/lodni-doprava</a></p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([49.2283, 16.5153], 13);
+const dmap = L.map('detail-map').setView([49.2400, 16.5100], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([49.2283, 16.5153]).addTo(dmap);
+L.marker([49.2400, 16.5100]).addTo(dmap);
 </script>
-<div class="content"><p>Lodní doprava na Brněnské přehradě. Výletní plavby, zastávky u ZOO a hradu Veveří.</p>
+<div class="content"><h1>Brno parník — elektrické lodě na přehradě</h1>
+<p>Lodní doprava na Brněnské přehradě — elektrickými loděmi až k hradu Veveří. 6 dvoupalubových lodí, provoz od roku 1946! Za cenu běžné MHD jízdenky.</p>
+<h2>Vzdálenost z Olomouce: ~80 km (1:10 h)</h2>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Provozovatel</strong></td>
+<td>DPMB (Dopravní podnik města Brna)</td>
+</tr>
+<tr>
+<td><strong>Lodě</strong></td>
+<td>6 elektrických (Brno, Stuttgart, Dallas, Lipsko, Utrecht, Vídeň)</td>
+</tr>
+<tr>
+<td><strong>Trasa</strong></td>
+<td>Bystrc → Kozí Horka → zastávky → hrad Veveří</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>Duben/květen – září/říjen</td>
+</tr>
+<tr>
+<td><strong>Cena</strong></td>
+<td>Jako MHD Brno (~30–50 Kč) — platí IDS JMK jízdenky!</td>
+</tr>
+</tbody>
+</table>
+<h2>Co zažít</h2>
+<ul>
+<li>Plavba dvoupalubovou lodí po přehradě</li>
+<li>Cílová zastávka: <strong>hrad Veveří</strong> (gotický hrad, prohlídky)</li>
+<li>Koupání na přehradě (pláže podél trasy)</li>
+<li>Piknik na břehu</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li><strong>Všechny věky</strong> — děti milují loď!</li>
+<li>Dvoupalubová loď = vzrušení</li>
+<li>Hrad Veveří = pohádkový zážitek</li>
+<li>Za cenu MHD = žádná investice</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Loď + hrad Veveří = ideální rodinný výlet</strong></li>
+<li>Za cenu běžné MHD jízdenky (IDS JMK)!</li>
+<li>Provoz od 1946 — tradice</li>
+<li>Kombinovat s koupáním nebo cyklo kolem přehrady</li>
+<li>Parkoviště v Bystrci u přístaviště</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMY7zIBAF4GdR0MUXQJlrpIjkK8Wdq9/8lbvlSpZScA1WXAB3LpDfytlk08XE3e50X4F4moHBnytNJoPQiSfTHltchLTKA0V2uY0WoJe51LkmjS53ZOh226LNtWJ85n9tcorOdPHZn5cGUMUkNo4/I3hp7dZ+c1Ce8x6jHatch054vOXdsk74J4yD8uH7/i0zH1CLjfz0RV5UUowEqnmP0dJlhI5c7vk3DLX2Y0ZzP7/lw/kgTmbxiy6zWkwPbR753rSerh/CoHOznFKJ7bmn5aw8Tiixu7pwCV3WQRf5P6dcGx25NGmH1/dLh56jsMS3fdKrQbzMKLFFu/4nGY+6yLf9AK0eeXeYznQZFUudwSGSRInX/ZgM4khfZHIKF9I09/m+6d9dXwEAAP//0c5WIlYHIi4AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

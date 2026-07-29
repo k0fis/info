@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rozhledna Brusná U Bludova — Tipy na výlety</title>
+<title>Rozhledna Brusná — výhled nad Bludovem — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,32 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Rozhledna Brusná U Bludova</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">🌐 <a href="https://www.facebook.com/pages/Rozhledna%20Brusná%20U%20Bludova/1164610143611431/" target="_blank">www.facebook.com/pages/Rozhledna%20Brusná%20U%20Bludova/1164610143611431</a></p></div>
+<h1>Rozhledna Brusná — výhled nad Bludovem</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">jeseniky</span> <span class="tag">rozhledna</span> </div>
+<div class="meta"><p class="meta-item">📍 Kopec Brusná (587 m), Bludov, okres Šumperk</p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([49.9316744, 16.9345169], 13);
+const dmap = L.map('detail-map').setView([49.9400, 16.9100], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([49.9316744, 16.9345169]).addTo(dmap);
+L.marker([49.9400, 16.9100]).addTo(dmap);
 </script>
-<div class="content"><p>Rozhledna stojí na kopci nad Bludovem a patří mezi kratší výlety. Výlet si ale můžete prodloužit a projít naučnou stezku Bludovská stráň, která tudy vede. Nahoře si užijete chvíli klidu i posezení pod rozhlednou.</p>
+<div class="content"><h1>Rozhledna Brusná — panorama Jeseníků a Šumperska</h1>
+<p>Rozhledna na kopci Brusná (587 m n.m.) nad Bludovem. Výhledy na Jeseníky, Šumpersko a Hanáckou rovinu. Výšlap z Bludova ~30–40 min.</p>
+<h2>Vzdálenost z Olomouce: ~50 km (45 min + pěšky)</h2>
+<h2>Praktické info</h2>
+<ul>
+<li>Zdarma / dobrovolné vstupné</li>
+<li>Výšlap z Bludova: 30–40 min pěšky</li>
+<li>Od 5 let (kopec + schody)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Bludov je lázeňské městečko — po rozhledně lze do lázní</li>
+<li>Krátký odpolední výlet</li>
+<li>Kombinovat s výletem do Šumperka nebo Velkých Losin (zámek)</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOUlEQVR42tzUP67iMBAG8IlcuCMXsJhrpEDylUxHtQxVylwpEoWvETQXMJ0LK98qwLJdMOnemyq/Jom++UO/riyQGOgfD1ssdFQYMZGoykM5ltadEDlXmxhc78CAOLvRQsG15az//3/dwF0Hd9L4zmfVRNSoaNbx3YJVL/mV4KxBg02+XIep5exo72tMf8zMYmDiRDW29+ugcKTxNlb5coUmZI7TM7+vXZpCyIizrTHtDkckCPkmU4WtUFsCxHVzlypMgc5TcNbR631f2ia/pIliZ59qPPvZtegd3cYqD+PODCzFv/r1yXIIDAPF63tfepnfibTHyP8metXLGTHAY3+rLBQ4TSce9zbVeCjBtSoMxK3mpLl0Ta62oFfguX+fLMtEcJ483vdn1cAdCXCeOtrgn11/AwAA///5lG03zZsFnQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kraličák / Staré Město — Tipy na výlety</title>
+<title>Kraličák — lyže a koloběžky u Králického Sněžníku — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,45 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Kraličák / Staré Město</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">📍 Staré Město pod Králickým Sněžníkem</p><p class="meta-item">🌐 <a href="https://www.staremesto.info/areal-kralicak" target="_blank">www.staremesto.info/areal-kralicak</a></p></div>
+<h1>Kraličák — lyže a koloběžky u Králického Sněžníku</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">jeseniky</span> <span class="tag">lyzovani</span> <span class="tag">deti</span> <span class="tag">aktivni</span> </div>
+<div class="meta"><p class="meta-item">📍 Staré Město pod Kralickým Sněžníkem</p><p class="meta-item">🌐 <a href="https://www.kralicak.cz/" target="_blank">www.kralicak.cz</a></p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([50.0917, 16.8894], 13);
+const dmap = L.map('detail-map').setView([50.1700, 16.8800], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([50.0917, 16.8894]).addTo(dmap);
+L.marker([50.1700, 16.8800]).addTo(dmap);
 </script>
-<div class="content"><p>Sportovní areál pod Králickým Sněžníkem. Ski, biatlonová střelnice, běžky, letní aktivity.</p>
+<div class="content"><h1>Kraličák — rodinný areál pod Králickým Sněžníkem</h1>
+<p>Menší, klidnější lyžařský a letní areál u Králického Sněžníku (1424 m). Bobová dráha, koloběžky z kopce, v zimě sjezdovky.</p>
+<h2>Vzdálenost z Olomouce: ~60 km (1 h)</h2>
+<h2>Léto</h2>
+<ul>
+<li>Bobová dráha (s dospělým od 4 let)</li>
+<li>Koloběžky z kopce</li>
+<li>Cyklotrasy</li>
+<li>Turistika na Králický Sněžník (1424 m)</li>
+</ul>
+<h2>Zima</h2>
+<ul>
+<li>Sjezdovky (rodinné)</li>
+<li>Běžkařské trasy</li>
+<li>Lyžařská škola</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Od 4 let: bobovka s rodičem</li>
+<li>Od 8 let: samostatně bobovka, koloběžky</li>
+<li>Klidnější než Kouty — lepší pro menší děti</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Menší areál = méně lidí, lepší pro rodiny s malými dětmi</li>
+<li>Králický Sněžník — pěkný výšlap (2–3 h nahoru z Dolní Moravy)</li>
+<li>Blízko: Dolní Morava (Sky Walk, stezka v oblacích)</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABPElEQVR42tzUMY7DIBAF0B9NQbe+AArXSLGSr4Q7V4FU7sKVLKXgGkRcAHcukGflTTbb2YRudyq/ysOf0eDflWBOyvEs148aW2hoHqIHiuyyhlbMXs3lDgjiHauZfKUtOmZiKV79b5t5ik720b/y2fRaUkem8XcGWxaX25SN7GkOdZ5ul6CDiXwfU4kTJdlkI9s7o8DochNTgGyXtsiaFrLSEB98qrC4omGXhZqf+ewYDSepswDuj/x3LBKgLA3RHzwKjI/PM7k40AxR5TO5YLKhZ/57FpfxTEn2OH23sms0Nxe0GiSORRZXYk40R15OqDCAw7rvNB7bVOD1jJCDIX8UKLFFF6BsHB8T3rXLmiwM8SJSnTt2Aeu9Q5m1bNCv/08lttDkguARP+/bNvPEvObx3Mc3/bfrKwAA//9g6TZHx6oBXAAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

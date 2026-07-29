@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Velké Opatovice — Tipy na výlety</title>
+<title>Velké Opatovice — zámek a koupaliště — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,32 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Velké Opatovice</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">📍 Velké Opatovice, okres Blansko</p><p class="meta-item">🌐 <a href="https://www.kudyznudy.cz/kam-pojedete/jihomoravsky-kraj/moravsky-kras-a-okoli/velke-opatovice" target="_blank">www.kudyznudy.cz/kam-pojedete/jihomoravsky-kraj/moravsky-kras-a-okoli/velke-opatovice</a></p></div>
+<h1>Velké Opatovice — zámek a koupaliště</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">morava</span> <span class="tag">zamek</span> </div>
+<div class="meta"><p class="meta-item">📍 Velké Opatovice, okres Blansko</p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([49.6139, 16.6833], 13);
+const dmap = L.map('detail-map').setView([49.6200, 16.6800], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([49.6139, 16.6833]).addTo(dmap);
+L.marker([49.6200, 16.6800]).addTo(dmap);
 </script>
-<div class="content"><p>Zámek s parkem, naučná stezka, dětské hřiště. Blízko Moravského krasu.</p>
+<div class="content"><h1>Velké Opatovice — barokní zámek a koupaliště</h1>
+<p>Městečko s barokním zámkem, zámeckým parkem a letním koupalištěm. Blízko Moravského krasu.</p>
+<h2>Vzdálenost z Olomouce: ~70 km (1 h)</h2>
+<h2>Co vidět</h2>
+<ul>
+<li><strong>Barokní zámek</strong> — prohlídky, zámecký park</li>
+<li><strong>Koupaliště</strong> (letní sezóna)</li>
+<li>Turistické stezky do okolí</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Blízkost Moravského krasu = kombinace se jeskyněmi</li>
+<li>Koupaliště v létě</li>
+<li>Spíše kratší zastávka na cestě</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXUlEQVR42tTTv63tIAwGcEcUdLAAUtZwx0phgfxZIKzkjjWQWCDpKKJ8T9HRO7e5OsftdfdzgexPmP58eWBNfbxJgK6wI7MOaFvhSqxxbPng8RRpt9L7Uq4BXe8k7SBWmszuLDah97wf7YE9lZAKv/P46Kd1lkpRfiL+ZBexbcBWOm6NhxKmJMH3fs38iym2NcmVum07Kewo+NuGAaVBFCZuBxFNjPHUmZbbXkNBTV3j2DJAztprEYU9njfCAltn0riYdSlmt3FcWWEXwzRbk0Ve+X7z0A02tNXGMYvCjmraCZD3fX22L+N2cPCI5mCFHdHke51Y6qQyt3xHnIVqEo1jnSnWiRFm+s085ts+++LsCj+tmYNjNjsr7IHt4Cv13rIo7MjknS4Xu3nd1zfHtvsnm//zfnc+5RqKfc2n8O6eXeRypDGZdX7+M7VbYw9kFJMLwiAK/636FwAA///t8FTwxTC8NgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

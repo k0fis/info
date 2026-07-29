@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rozhledna Tučín — Tipy na výlety</title>
+<title>Rozhledna Tučín — výhled na Hanou — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,36 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Rozhledna Tučín</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">📍 Tučín, okres Přerov</p><p class="meta-item">🌐 <a href="https://www.tucin.cz/rozhledna-tucin-rimska-vez" target="_blank">www.tucin.cz/rozhledna-tucin-rimska-vez</a></p></div>
+<h1>Rozhledna Tučín — výhled na Hanou</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">hana</span> <span class="tag">rozhledna</span> </div>
+<div class="meta"><p class="meta-item">📍 Tučín u Přerova</p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([49.4553, 17.4722], 13);
+const dmap = L.map('detail-map').setView([49.4800, 17.4200], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([49.4553, 17.4722]).addTo(dmap);
+L.marker([49.4800, 17.4200]).addTo(dmap);
 </script>
-<div class="content"><p>Nová rozhledna ve stylu římské strážní věže. Výhled na Hanou a Oderské vrchy.</p>
+<div class="content"><h1>Rozhledna Tučín — panorama Jeseníků a Beskyd</h1>
+<p>Rozhledna na Hané s výhledem na Jeseníky, Beskydy a hanáckou rovinu. Krátký výlet blízko Přerova.</p>
+<h2>Vzdálenost z Olomouce: ~25 km (25 min)</h2>
+<h2>Co nabízí</h2>
+<ul>
+<li>Výhled na Hanou, Jeseníky, Beskydy (za dobré viditelnosti)</li>
+<li>Krátká procházka od parkoviště</li>
+</ul>
+<h2>Praktické info</h2>
+<ul>
+<li>Zdarma nebo dobrovolné vstupné (20–30 Kč)</li>
+<li>Výlet na 1–2 hodiny celkem</li>
+<li>Od 4 let (schody na rozhlednu)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Ideální kombinace s cyklovýletem po Hané</li>
+<li>Blízko Přerova — krátké odpolední zpestření</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXUlEQVR42tTUMY63IBQE8DEUdHgBEq/xOq6kF1C4AFyJjmuQcIG1ozC+L/9dP6uNvnbpfoVkHJLBnz8jcwqF956Zu8AGKkSo6KiCJHYthG6HQu0UOhrd9g6x014UdxIaKs6YIuHO++iROS7FLoXuPh79fYXmL6K74kcbNE55io75iyTWwNIPgLHlXzxkFVJugRmLxNB2nbXa+/98bya1n65uufOXyBpDyta4bleJR57iStOJ0kIWGFTnkVXqrl75nm0wnRu3wP3n+zcPvWLpzVO5+n1zVrznY0axi8RG13lGHYuzP/leDD156AOa2p4FNu4Y0ifble/NcCrtuQ65X/e9GXXjwt6VyeMXj6zOWavEzCJ/PwEdQyaVssCffUqlBb7+982fffK6nUTKk8SuRThs2fHV56u9gTUOcq/Oro74hMRQfiaV+j02z/7s04rmXce9Z0/+W+dfAAAA//97bDh4VrLEMQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">

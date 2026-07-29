@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Landek Park Ostrava — Tipy na výlety</title>
+<title>Landek Park — hornické muzeum Ostrava — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,18 +43,54 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Landek Park Ostrava</h1>
-<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> </div>
-<div class="meta"><p class="meta-item">📍 Pod Landekem 64, 725 29 Ostrava-Petřkovice</p><p class="meta-item">🌐 <a href="https://www.landekpark.cz/cs/" target="_blank">www.landekpark.cz/cs</a></p></div>
+<h1>Landek Park — hornické muzeum Ostrava</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">ostravsko</span> <span class="tag">deti</span> <span class="tag">muzeum</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Pod Landekem 65, 725 29 Ostrava-Petřkovice</p><p class="meta-item">🌐 <a href="https://www.landekpark.cz/" target="_blank">www.landekpark.cz</a></p></div>
 <div id="detail-map" style="height:250px;margin-bottom:16px"></div>
 <script>
-const dmap = L.map('detail-map').setView([49.8619, 18.2803], 13);
+const dmap = L.map('detail-map').setView([49.8600, 18.2700], 13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
 }).addTo(dmap);
-L.marker([49.8619, 18.2803]).addTo(dmap);
+L.marker([49.8600, 18.2700]).addTo(dmap);
 </script>
-<div class="content"><p>Hornické muzeum — sfárat do dolu, expozice uhlí a záchranářství. Venkovní areál, lanovka.</p>
+<div class="content"><h1>Landek Park — čtvrt km podzemních chodeb</h1>
+<p>Největší hornické muzeum v ČR na místě bývalého dolu Anselm. Autentické podzemní pracoviště z 60. let, jízda důlním vláčkem. Areál 35 ha kombinující přírodu, sport a historii.</p>
+<h2>Vzdálenost z Olomouce: ~95 km (1:15 h)</h2>
+<h2>Co vidět</h2>
+<ul>
+<li><strong>Podzemní chodby</strong> — 250 m autentických důlních prostor</li>
+<li><strong>Důlní pracoviště z 60. let</strong> — jak se fáralo</li>
+<li><strong>Historický důlní vlak</strong> — jízda pod zemí</li>
+<li><strong>Báňská záchranná služba</strong> — expozice</li>
+<li><strong>Akvárium Landek</strong></li>
+</ul>
+<h2>Sport a volný čas</h2>
+<ul>
+<li>Padel, tenis</li>
+<li>Lanové centrum</li>
+<li>Yoga, rodinný gym</li>
+<li>Camp Landek (ubytování)</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Od 5 let: podzemí fascinuje (jako dungeon!)</li>
+<li>Důlní vlak = zážitek</li>
+<li>Sportovní část i pro menší</li>
+<li>Přírodní rezervace Landek = procházky</li>
+</ul>
+<h2>Praktické info</h2>
+<ul>
+<li>Podzemí: ~150–200 Kč dospělý</li>
+<li>Sport: duben–říjen, muzeum celoročně</li>
+<li>Areál 35 ha — počítat půlden</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Kombinace příroda + technická památka</li>
+<li>Přírodní rezervace Landek (nejstarší nález ohniště v Evropě!)</li>
+<li>Vzít si bundu do podzemí (stálá teplota)</li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABPUlEQVR42tzUMc6jMBAF4BdNMd1yASu+RopIvpLTUYGp0sGVkFL4Go58AdNRWMzKUpLdinjp9p+KrxvewMOPGxZJetJOlYcjdrA6kUQPVHnKVjWqF6/XWuuk18D1pimu5A/a4ZahRfFn/32LLHFSbfSffHZdRjV0p/nPDfbMw2MRkZXWcMjozJAbcJTnnCrMy2PJveqVeQoqDJhRTwHKbKbK3bXTToTk5NMRWzPClmu/wvpmmE1LZuD5yn/f7IxDLxL9yaPC6LNVyEwr+JBPjxFW9fS+xxfzeO3QhBYXcI3xywxR4l3hXGUectmwjbJdcMBl42BDS/PZpAqXGlFNZvJnRo0dbjKFNs5aqlz+76SFZMNB3yRllL6rtNUSmOa/+mnPDpaE7nrG+/32XfoklTxe3+M/+v+e3wEAAP//wWQ2bQhuxIkAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
