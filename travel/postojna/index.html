@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postojnska jama — největší jeskyně ve Slovinsku — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Postojnska jama — největší jeskyně ve Slovinsku</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">jeskyne</span> <span class="tag">deti</span> <span class="tag">unesco</span> </div>
+<div class="meta"><p class="meta-item">📍 Jamská cesta 30, 6230 Postojna, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.postojnska-jama.eu/" target="_blank">www.postojnska-jama.eu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.7797, 14.2053], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.7797, 14.2053]).addTo(dmap);
+</script>
+<div class="content"><h1>Postojnska jama — podzemní vlak a dračí mláďata</h1>
+<p>Největší turistická jeskyně ve Slovinsku (24 km chodeb, 5 km přístupných). Unikátní podzemní železnice vás proveze 3,7 km hluboko do nitra — jedinou dvojkolejnou jeskynní železnicí na světě.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Praha</td>
+<td>~620 km</td>
+<td>~7 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>~530 km</td>
+<td>~5:30 h</td>
+</tr>
+<tr>
+<td>Lublaň</td>
+<td>48 km</td>
+<td>35 min</td>
+</tr>
+<tr>
+<td>Terst (IT)</td>
+<td>47 km</td>
+<td>36 min</td>
+</tr>
+</tbody>
+</table>
+<h3>Trasa z ČR</h3>
+<p>Praha/Brno → Vídeň → Graz → Karawankenský tunel → Lublaň → Postojna (sjezd z A1)</p>
+<h3>Dálniční poplatky (jednosměrně, ~38 EUR)</h3>
+<ul>
+<li>Rakousko: digitální viněta 10 dní = 12,80 EUR</li>
+<li>Karawankenský tunel: 9 EUR</li>
+<li>Slovinsko: e-viněta 7 dní = 16 EUR</li>
+</ul>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Otevřeno</strong></td>
+<td>Celoročně, denně</td>
+</tr>
+<tr>
+<td><strong>Květen–září</strong></td>
+<td>Každou hodinu 9:00–18:00</td>
+</tr>
+<tr>
+<td><strong>Říjen–duben</strong></td>
+<td>10:00, 12:00, 14:00</td>
+</tr>
+<tr>
+<td><strong>Délka prohlídky</strong></td>
+<td>~90 min (vlak + 1,5 km pěšky)</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td>Konstantních 10 °C — vzít bundu!</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma (velké parkoviště)</td>
+</tr>
+</tbody>
+</table>
+<p>Přijít 30 minut před odjezdem vlaku!</p>
+<h2>Vstupné (2025/2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Jeskyně</th>
+<th>Hrad Predjama</th>
+<th>Kombi (jeskyně + hrad + vivarium)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dospělí (26+)</td>
+<td>34,90 EUR</td>
+<td>24 EUR</td>
+<td><strong>49,90 EUR</strong></td>
+</tr>
+<tr>
+<td>Studenti (16–25)</td>
+<td>27,80 EUR</td>
+<td>19,20 EUR</td>
+<td>~39,90 EUR</td>
+</tr>
+<tr>
+<td>Děti (6–15)</td>
+<td>20,70 EUR</td>
+<td>14,40 EUR</td>
+<td>~29,90 EUR</td>
+</tr>
+<tr>
+<td>Děti do 5 let</td>
+<td>1 EUR</td>
+<td>1 EUR</td>
+<td>4 EUR</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tip:</strong> Kombi lístek ušetří ~9 EUR oproti jednotlivým vstupenkám.</p>
+<h2>Co uvidíte</h2>
+<ul>
+<li><strong>Podzemní vlak</strong> — 3,7 km jízda (10–12 min), dvojkolejka od r. 1872</li>
+<li><strong>&quot;Brilliant&quot;</strong> — 5m krystalově bílý stalagmit, symbol jeskyně</li>
+<li><strong>&quot;Mrakodrap&quot;</strong> — 16m vysoký stalagmit</li>
+<li><strong>Taneční sál</strong> — s muránskými lustry</li>
+<li><strong>Podzemní pošta</strong> — jediná na světě</li>
+<li><strong>150+ druhů živočichů</strong> v jeskyni</li>
+</ul>
+<h2>Člověčí rybky (Proteus anguinus)</h2>
+<ul>
+<li>Jediný evropský striktně jeskynní obratlovce</li>
+<li>25–30 cm, slepý, růžovobílý, žije až 100 let</li>
+<li>Přezdívka &quot;dračí mláďata&quot; (místní legenda)</li>
+<li>K vidění ve <strong>Viváriu</strong> (součást kombi lístku)</li>
+<li>V roce 2016 zde poprvé pozorováno líhnutí</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li><strong>Vhodné pro všechny věky</strong> — vlak je zážitek i pro batolata</li>
+<li>Kočárek se vejde do vlaku (bezbariérový přístup)</li>
+<li>Děti držet uvnitř vozu (nízký strop, ostré skály)</li>
+<li>Vivarium s &quot;dráčky&quot; — děti milují</li>
+<li>Celkem s viváriem a expozicí: 2–2,5 hodiny</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Kupovat online předem (v létě vyprodáno)</li>
+<li>Audio guide: 2,90 EUR nebo zdarma mobilní appka</li>
+<li>Kombinovat s Predjamským hradem (10 km, shuttle bus červen–září)</li>
+<li>Letní víkendy extrémně plné — jet ve všední den</li>
+<li>Viněty kupovat online před cestou (asfinag.at, evinjeta.dars.si)</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNUlEQVR42tzUP47rIBAG8M+ioHu+AArXSBHJV4o7qmdSpXtcydIruAYrLkA6CuRvlT+76ZyJu93pfgXiEzMDfl1pspgpwUaybLHH0XpWFQGRQxtZrGe0Veo0qbPRcrc+uc32GLPnOT/zr5u85GBcfr7PqgF0LMnl+bsFq9aBRRWjVWTdYnSto4ez3N3yvrIuOCqqs4rpfv8rn2YYGGR+RJE5/zUTNNDVTQ7/Tzk0Ry6PeVo3Ri4qsGK4n3/pP4c+l+RsXLTEumDKwWjzle9dX2ZgwtSGZV8k/qeYg/IqYg+RDzC9rU0nLfKJbL1i5jKUDb5OVC5t4mwpsb6tBWmjrZDYY6RPsPMOIl//E2+puOw3m8mZ61oKnXpVM0lI7HFED5dnRpHJS+qhzfDo75v+2fUZAAD///rjR2VvmHB4AAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
