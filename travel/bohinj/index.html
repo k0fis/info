@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bohinjské jezero — nejkrásnější jezero ve Slovinsku — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Bohinjské jezero — nejkrásnější jezero ve Slovinsku</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">jezero</span> <span class="tag">hory</span> <span class="tag">deti</span> <span class="tag">priroda</span> </div>
+<div class="meta"><p class="meta-item">📍 Ribčev Laz, Bohinj, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.bohinj.si/" target="_blank">www.bohinj.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.2823, 13.8582], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.2823, 13.8582]).addTo(dmap);
+</script>
+<div class="content"><h1>Bohinjské jezero — Julské Alpy bez davů</h1>
+<p>Největší přírodní jezero ve Slovinsku (délka 4,2 km, hloubka až 45 m). Ledovcového původu, v Triglavském národním parku. Mnohem klidnější alternativa k turistickému Bledu — a krásnější.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lublaň</td>
+<td>82 km</td>
+<td>1:15 h (v létě až 2 h)</td>
+</tr>
+<tr>
+<td>Bled</td>
+<td>30 km</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Z ČR (Brno)</td>
+<td>~560 km</td>
+<td>~6 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné na jezero</strong></td>
+<td>Zdarma</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Placené, ~3 EUR/h v létě</td>
+</tr>
+<tr>
+<td><strong>Teplota vody (červenec)</strong></td>
+<td>21 °C (až 25 °C v mělčinách)</td>
+</tr>
+<tr>
+<td><strong>Teplota vody (červen)</strong></td>
+<td>18–19 °C</td>
+</tr>
+<tr>
+<td><strong>Motorové lodě</strong></td>
+<td>Zakázány (klid a bezpečnost)</td>
+</tr>
+</tbody>
+</table>
+<h3>Parkování tip</h3>
+<p>Vzdálenější parkoviště jsou levnější + shuttle bus (24h lístek 2 EUR). O víkendech v létě přijít před 9–10 hod!</p>
+<h2>Koupání — kde s dětmi</h2>
+<ul>
+<li><strong>Východní břeh</strong> (Ribčev Laz → Stará Fužina) — mělké, nejlepší pro malé děti</li>
+<li><strong>Západní konec</strong> (u kostela sv. Jana) — mělčí, rychleji se ohřívá</li>
+<li><strong>Camp Zlatorog</strong> (jihozápad) — největší udržovaná pláž, štěrkový vstup</li>
+<li><strong>Ukanc</strong> (západ) — travnaté plochy, mělká voda</li>
+</ul>
+<p><strong>Poznámka:</strong> Kamenitý dno — boty do vody doporučeny. Bez plavčíků.</p>
+<h2>Výletní loď</h2>
+<ul>
+<li>Elektrické lodě &quot;Zlatorog&quot; a &quot;Triglavská ruža&quot;</li>
+<li>Trasa: Ribčev Laz → Ukanc (30 min jednosměrně)</li>
+<li><strong>Sezóna:</strong> 25. 6. – 20. 9., každých 40 min (9:30–18:10)</li>
+<li><strong>Ceny:</strong> 9 EUR dospělí / 5,50 EUR děti (6–14) jednosměrně</li>
+<li><strong>Zpátečka:</strong> 14–15 EUR / 8,50 EUR děti</li>
+<li>Julian Alps Card: loď zdarma</li>
+</ul>
+<h2>Vodopád Savica (Slap Savica)</h2>
+<ul>
+<li>~500 kamenných schodů, 15–20 min z parkoviště</li>
+<li>Vstupné: ~3 EUR / 1,50 EUR děti</li>
+<li>Vhodné pro děti co zvládnou 20 min do schodů</li>
+<li>Kočárek neprojede</li>
+</ul>
+<h2>Lanovka Vogel (1535 m)</h2>
+<ul>
+<li>Gondola z Ukance na vrchol Vogelu</li>
+<li><strong>Provoz (léto):</strong> 8:00–18:00</li>
+<li><strong>Ceny:</strong> Bohinj Package 41 EUR dospělí / 22 EUR děti (gondola + loď + kostel)</li>
+<li>Nahoře: panoramatické výhledy, pěší trasy, disc golf, restaurace</li>
+<li>Velmi family-friendly — rovinaté cesty, krátké procházky</li>
+</ul>
+<h2>Další aktivity pro rodiny</h2>
+<ul>
+<li><strong>Kajaky/SUP</strong> — půjčovna ~10 EUR/h</li>
+<li><strong>Cyklotrasa</strong> — 12 km podél řeky Sava Bohinjka (rodinné)</li>
+<li><strong>Mostnica Gorge</strong> — soutěska se skalním &quot;slonem&quot;</li>
+<li><strong>Jízda na koni</strong> — farma Mrčina, islandští koně</li>
+<li><strong>Okolní výšlapy</strong> — Triglavský NP, nenáročné trasy</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li>Méně turistů než Bled, krásnější příroda</li>
+<li>Julian Alps Card (3+ dny) = zdarma parkování + loď + slevy</li>
+<li>V létě přijet brzy ráno (parkoviště plné od 10)</li>
+<li>Kombinovat: loď na Ukanc → pěšky zpět po břehu (~1,5 h)</li>
+<li>Dešťový den: aquapark v Bohinjské Bistrici</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOUlEQVR42tzUP47rIBAG8M+aYrrnC6BwjRSRfCXTvepBqnTPV7K0Bdcg4gKTzgXKrLybP1s5LN3uVPwq4GMY/LpiVYE3MB+LBgeMNMHnCFR5KqMVe9Jol1qjT0hcbxKAYqMDnAqp4cf5t616yZP5m+Mjn02vZUNimp9vsGU+vl2y2IWW1Oi515A463mWGk8qJIXNcFZUGP/QZUkww3WoMWtxqbdK2kVpsQz/KRS2yy2fF4abXdbigfNn/q/c6TFh7dcuosIsB5dDPtECbjH+0FT64umW/yvzsbg0GmAPrjFw6Epv1WBXZQ6DkNKS9bpHg9eE1n6neTdIhe9jhOKOUeMAV2BDnp//ddPrfPCkpFc02hWfeJ13qPNoPPB1/00HjFaLtzPu99u26qXAnujef9/0z673AAAA//+6VDFpyAgNGgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
