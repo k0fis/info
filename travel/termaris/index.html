@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termaris — kryté mořské bazény v Portorži — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Termaris — kryté mořské bazény v Portorži</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">more</span> <span class="tag">deti</span> <span class="tag">bazen</span> </div>
+<div class="meta"><p class="meta-item">📍 Obala 2, 6320 Portorož, Slovinsko (Hotel Histrion)</p><p class="meta-item">🌐 <a href="https://www.sava-hotels-resorts.com/" target="_blank">www.sava-hotels-resorts.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.5150, 13.5750], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.5150, 13.5750]).addTo(dmap);
+</script>
+<div class="content"><h1>Termaris — největší kryté mořské bazény na slovinském pobřeží</h1>
+<p>Morský vodní park s vyhřívanou mořskou vodou — otevřený 365 dní v roce. Ideální pro špatné počasí nebo mimo sezónu. 7 bazénů, 4 skluzavky, 2400 m². Součást resortu St. Bernardin / Hotel Histrion.</p>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Otevřeno</strong></td>
+<td>Po–Ne 8:00–19:00, celoroční (365 dní)</td>
+</tr>
+<tr>
+<td><strong>Plocha</strong></td>
+<td>2400 m²</td>
+</tr>
+<tr>
+<td><strong>Voda</strong></td>
+<td>Vyhřívaná mořská (&quot;mladé moře&quot;) — jód, draslík, vápník, selen</td>
+</tr>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Převážně kryté, v létě terasa k moři</td>
+</tr>
+</tbody>
+</table>
+<h2>Bazény a atrakce</h2>
+<ul>
+<li><strong>7 bazénů</strong> s vyhřívanou mořskou vodou:
+<ul>
+<li>1 plavecký bazén</li>
+<li>1 masážní bazén</li>
+<li><strong>2 dětské bazény</strong></li>
+<li>3 bazény s vodními efekty</li>
+</ul>
+</li>
+<li><strong>4 vnitřní skluzavky</strong></li>
+<li>Vodní kanón, vodopád, divoká řeka, vířivky</li>
+<li>Panoramatický výhled na Piranský záliv</li>
+</ul>
+<h2>Vstupné (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Lístek</th>
+<th>Dospělí Po–Čt</th>
+<th>Dospělí Pá–Ne</th>
+<th>Děti Po–Čt</th>
+<th>Děti Pá–Ne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 hodiny</td>
+<td>13 EUR</td>
+<td>15 EUR</td>
+<td>9,50 EUR</td>
+<td>12 EUR</td>
+</tr>
+<tr>
+<td>4 hodiny</td>
+<td>16 EUR</td>
+<td>19,50 EUR</td>
+<td>13 EUR</td>
+<td>16 EUR</td>
+</tr>
+<tr>
+<td>Celý den</td>
+<td>20,50 EUR</td>
+<td>23,50 EUR</td>
+<td>16 EUR</td>
+<td>19,50 EUR</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Děti do 3 let: ZDARMA</strong></li>
+<li>Permanentka (10 vstupů): 150 EUR dospělí / 120 EUR děti</li>
+<li>Hosté hotelu St. Bernardin: vstup zdarma</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>2 dětské bazény — vhodné i pro batolata</li>
+<li>4 skluzavky, vodní kanón, vodopád</li>
+<li>Menší a klidnější než velké termy — <strong>ideální pro mladší děti</strong></li>
+<li>Vyhřívaná voda — příjemné i mimo letní sezónu</li>
+<li>Záchrana při špatném počasí u moře!</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Plán B</strong> když je na pobřeží déšť nebo chladno</li>
+<li>2-hodinový lístek stačí pro rodiny s malými dětmi</li>
+<li>Kombinovat s procházkou po Piranu (3 km) nebo pláží v Portorži</li>
+<li>V létě terasa propojená s pláží u moře</li>
+<li>Méně adrenalinové než Terme 3000 nebo Aqualuna — spíše relaxační</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMY7kIBAF0G9VQLZ9ATR1jQ5G8pXcmaMxGzlrruSMa7DiAkxGgPgra3p3sjbtbLciv8Diq4oC/10ZMmOJ0LB/nLDDJGSRAHTZ1xudBYOWXteL0Jp+xyXOp+1wqyDTd/7nJj+Tt3P67s9TAxjqklza/o7gqY1nVmeNBJZTzhgiMCvfvvIe+f7+IVlWCfHr/ANjoZNskfgrdHmSrF4IDOWMDTco60y2R/8P3MZsJxaMj/+PfMcPTMlpaKbLns1edLV/8r1q9z4kYqlju+Ye36Wpk32fruix58960VJNNF12+LCASWxjPuH9/tLXhZuyx/t7IpmrBi3o8b5/U4Rub+iyr7fklMJ2Pet4ibPFwNzrJRUhiR47TJq1pI2hy+QnKasdH/N90f92/Q4AAP//AX9GHyYkvYwAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
