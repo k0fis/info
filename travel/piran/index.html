@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piran — benátské městečko na Jadranu — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Piran — benátské městečko na Jadranu</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">more</span> <span class="tag">mesto</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Piran, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.portoroz.si/" target="_blank">www.portoroz.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.5283, 13.5681], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.5283, 13.5681]).addTo(dmap);
+</script>
+<div class="content"><h1>Piran — nejkrásnější městečko na slovinském pobřeží</h1>
+<p>Malebné přímořské město s benátskou architekturou, úzkými uličkami a fantastickými výhledy. Slovinský &quot;malý Dubrovník&quot; — jedno z nejfotogeničtějších míst na celém Jadranu.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lublaň</td>
+<td>119 km</td>
+<td>1:18 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>612 km</td>
+<td>6:21 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>686 km</td>
+<td>7:04 h</td>
+</tr>
+<tr>
+<td>Terst (IT)</td>
+<td>35 km</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Portorož</td>
+<td>3 km</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>Koper</td>
+<td>17 km</td>
+<td>20 min</td>
+</tr>
+</tbody>
+</table>
+<h2>Co vidět</h2>
+<ul>
+<li><strong>Tartiniho náměstí</strong> — hlavní náměstí, kavárny, socha houslového virtuóza Giuseppe Tartiniho</li>
+<li><strong>Městské hradby</strong> — ~400 m pochůzný úsek na kopci Morgoron, 6 věží k výstupu, vstup 2 EUR (děti do 12 zdarma), otevřeno 8:00–21:00 v létě</li>
+<li><strong>Zvonice sv. Jiří</strong> — 146 schodů, 46 m vysoká, vstup 3 EUR — <strong>nejlepší výhled ve městě</strong> (replika benátské Campanile, 1615)</li>
+<li><strong>Benátské uličky</strong> — typická zástavba, prádelní šňůry mezi domy</li>
+<li><strong>Pobřežní promenáda</strong> — procházky podél moře až do Portorože</li>
+</ul>
+<h2>Parkování</h2>
+<ul>
+<li><strong>Centrum je bez aut</strong> (od 2010 pěší zóna)</li>
+<li><strong>Garaža Fornače</strong> — hlavní parkovací dům, ~450 míst, <strong>~17 EUR/den</strong></li>
+<li><strong>Arze Parking</strong> — levnější alternativa, ~12 EUR/den</li>
+<li><strong>Shuttle bus</strong> z Fornače na Tartiniho náměstí každých ~15 min (nebo 10–15 min pěšky po promenádě)</li>
+<li>Celý Piran se projde za 30 minut — auto nepotřebujete</li>
+</ul>
+<h2>Pláže</h2>
+<ul>
+<li>Piran nemá velkou pláž — většinou <strong>betonové platformy</strong> a kamení</li>
+<li><strong>Fiesa</strong> — malá oblázková pláž ve vedlejší zátoce (~1 km po pobřežní stezce), oblíbená u rodin</li>
+<li><strong>Portorož</strong> — 3 km, hlavní &quot;písčitá&quot; pláž (dovezený písek, placená)</li>
+<li><strong>San Simon (Izola)</strong> — 12 km, <strong>nejlepší pozvolný vstup pro malé děti</strong></li>
+</ul>
+<h2>Restaurace</h2>
+<table>
+<thead>
+<tr>
+<th>Restaurace</th>
+<th>Styl</th>
+<th>Poznámka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neptun</td>
+<td>Mořské plody</td>
+<td>Župančičeva 7, intimní</td>
+</tr>
+<tr>
+<td>Pavel</td>
+<td>Ryby + maso</td>
+<td>Na promenádě, vnitřní i venkovní</td>
+</tr>
+<tr>
+<td>Pri Mari</td>
+<td>Tradiční seafood</td>
+<td>V centru</td>
+</tr>
+<tr>
+<td>Riva</td>
+<td>Místní oblíbenec</td>
+<td>U moře</td>
+</tr>
+<tr>
+<td>Gostilnica</td>
+<td>Seafood, 10–20 EUR</td>
+<td>Gregorčičeva 35</td>
+</tr>
+<tr>
+<td>Pizzeria Batana</td>
+<td>Pizza</td>
+<td>U přístavu</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tip:</strong> O uličku od Tartiniho náměstí = lepší poměr cena/kvalita.</p>
+<h2>Istrijská kuchyně</h2>
+<ul>
+<li><strong>Mořské plody</strong> — čerstvé ryby, scampi, kalamáry</li>
+<li><strong>Fuži</strong> — místní těstoviny s tartufem</li>
+<li><strong>Olivový olej</strong> — istrický, výborný</li>
+<li><strong>Piranska sůl</strong> — fleur de sel z Sečovlje</li>
+<li><strong>Malvazija</strong> — místní bílé víno</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Hradby — dobrodružství (výšlapy, průzory), ale <strong>ne s kočárkem</strong> (schody)</li>
+<li>Zmrzlina na náměstí</li>
+<li>Pláž Fiesa (pěšky 15 min)</li>
+<li>Výletní lodě z přístavu (do Izoly, Koperu, Terstu)</li>
+<li><strong>Kočárek:</strong> Obtížný terén (dlažba, úzké uličky, schody). Rovné plochy kolem Tartiniho náměstí a promenády OK.</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Západ slunce z hradeb</strong> — nezapomenutelný výhled na Istrii, Terst i Alpy</li>
+<li>Nejlepší atmosféra <strong>večer</strong> (méně turistů, osvětlení)</li>
+<li>Kombinovat: Piran + Sečovlje (10 min) + Portorož (3 km)</li>
+<li>V létě o víkendech parkoviště plné — přijet dopoledne</li>
+<li>Ze slovinského pobřeží snadno výlet do <strong>Terstu</strong> (IT, 30 min) — zámek Miramare</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNklEQVR42tzUPY6rMBQF4INu4S5swIq3keJJbAk6qnBfle6xJaRXeBuMvAGnc2FxRmQySUccuplb8TXowP3BrytDRgxU59eHHVa0aJnEA0Uec5fboPQulXoe3MWaNwxJu63oMmDCM/+2yWsYbR+e/2fTACqq7cP0aMGmzcgohBHPtMuKA1qq4/E7/7b5nxxJ8fN9PraNg4yBcx/44YtcMUq0BqjSHpsrVUaAXL7yvjDq6SxRFM39fa98/lPlwfbOL6bIVT5LhLGPvO/ZMB8c85Cb5RRLrBjm+rZPJ5T47wQ7BM1mNkX+hy7QXQKXJu7w7QtrDJwcS7zeEwu5OO8SSnzbPws3HU0s8Zi7QKFwabDTuba9XQex0FRJgSRKvN7H2mmY6ItMXqmzsc29v2/6Z9dnAAAA//8agD6iH0oA1wAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
