@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planica — zipline a větrný tunel — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Planica — zipline a větrný tunel</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">hory</span> <span class="tag">adrenalin</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Rateče 167, 4283 Rateče-Planica, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.nc-planica.si/" target="_blank">www.nc-planica.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.4761, 13.7242], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.4761, 13.7242]).addTo(dmap);
+</script>
+<div class="content"><h1>Planica — Nordické centrum s rodinnými atrakcemi</h1>
+<p>Jedno z nejmodernějších nordických center na světě (otevřeno 2015, investice 40 mil EUR). &quot;Kolébka létání na lyžích&quot; — 8 skokanských můstků. V létě funguje jako <strong>rodinný adrenalinový park</strong>: zipline, větrný tunel, muzeum, lanovka.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kranjska Gora</td>
+<td>10 km</td>
+<td>9 min</td>
+</tr>
+<tr>
+<td>Lublaň</td>
+<td>95 km</td>
+<td>1:07 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>~470 km</td>
+<td>~5 h</td>
+</tr>
+<tr>
+<td>Bovec</td>
+<td>45 km</td>
+<td>50 min (přes Vršič)</td>
+</tr>
+</tbody>
+</table>
+<h2>Zipline — &quot;nejstrmější na světě&quot;</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Délka</strong></td>
+<td>566 m</td>
+</tr>
+<tr>
+<td><strong>Výškový rozdíl</strong></td>
+<td>202 m</td>
+</tr>
+<tr>
+<td><strong>Max. rychlost</strong></td>
+<td>85 km/h</td>
+</tr>
+<tr>
+<td><strong>Sklon</strong></td>
+<td>38°</td>
+</tr>
+<tr>
+<td><strong>Zážitek</strong></td>
+<td>~30 min (vč. lanovky + vybavení)</td>
+</tr>
+<tr>
+<td><strong>Cena sólo</strong></td>
+<td><strong>29 EUR</strong></td>
+</tr>
+<tr>
+<td><strong>Cena tandem</strong> (dospělý + dítě)</td>
+<td><strong>49 EUR</strong></td>
+</tr>
+<tr>
+<td><strong>GoPro video</strong></td>
+<td>19 EUR</td>
+</tr>
+</tbody>
+</table>
+<h3>Požadavky zipline</h3>
+<ul>
+<li><strong>Sólo:</strong> min. 10 let, 140 cm, 30–120 kg</li>
+<li><strong>Tandem:</strong> min. <strong>5 let</strong>, 120 cm (s rodičem!)</li>
+</ul>
+<h2>Větrný tunel (Indoor Skydiving)</h2>
+<ul>
+<li>Rychlost větru až 250 km/h, výška letu ~2 m</li>
+<li>Zážitek ~45 min celkem, 2–3 lety po 1 minutě</li>
+<li>Vybavení zapůjčeno (helma, overal, špunty)</li>
+<li>Min. věk: <strong>6 let</strong>, váha 20–100 kg</li>
+<li>Cena: cca 45–65 EUR (reservace nutná: +386 31 689 806)</li>
+</ul>
+<h2>Muzeum skoků na lyžích</h2>
+<ul>
+<li>80+ let historie létání na lyžích, 40+ světových rekordů</li>
+<li>Interaktivní exponáty, simulátory, 20min film</li>
+<li><strong>Vstupné:</strong> 10 EUR/os (min. 4 osoby), nebo součást prohlídky</li>
+<li><strong>Děti do 10 let: zdarma</strong></li>
+</ul>
+<h2>Lanovka</h2>
+<ul>
+<li>Jednosměrně: 5 EUR, zpáteční: 8 EUR</li>
+<li><strong>Děti do 10 let: zdarma</strong></li>
+<li>Panoramatické výhledy na Julské Alpy, ~7–8 min jízda</li>
+</ul>
+<h2>Další aktivity</h2>
+<ul>
+<li><strong>Curling</strong> v podzemním sněhovém tunelu (-2 °C, ~60 min)</li>
+<li><strong>Disc golf</strong> (~1 h)</li>
+<li><strong>&quot;Heroes of Planica&quot;</strong> — AR geo-hra (všechny věky)</li>
+<li><strong>Pěší stezka údolím Planica</strong> — snadná, rodinná</li>
+<li><strong>Escape room</strong> &quot;Kajznkova hiša&quot; (10 EUR dospělí, 6 EUR děti)</li>
+</ul>
+<h2>Otevírací doba (léto)</h2>
+<ul>
+<li>Hlavní budova: denně 9:00–17:00</li>
+<li>Lanovka: denně kromě pondělí</li>
+<li>Zipline: květen–listopad (dle počasí)</li>
+<li>Větrný tunel: pouze na rezervaci</li>
+</ul>
+<h2>Pro děti — dle věku</h2>
+<table>
+<thead>
+<tr>
+<th>Věk</th>
+<th>Aktivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4</td>
+<td>Hřiště, lanovka zdarma, muzeum, procházka údolím</td>
+</tr>
+<tr>
+<td>5–9</td>
+<td><strong>Tandem zipline (5+)</strong>, větrný tunel (6+), AR hra, disc golf</td>
+</tr>
+<tr>
+<td>10+</td>
+<td>Sólo zipline, větrný tunel, všechny aktivity</td>
+</tr>
+<tr>
+<td>Teenageři</td>
+<td>Vše vč. escape room, curling</td>
+</tr>
+</tbody>
+</table>
+<h2>Stojí to za to v létě?</h2>
+<p><strong>Ano!</strong> TripAdvisor Travelers' Choice (top 10%). Architektonicky impozantní komplex (8 skokanských můstků) je ohromující i bez aktivit. Půl dne stačí na zipline + muzeum + lanovku.</p>
+<h2>Tipy</h2>
+<ul>
+<li>Kombinovat s <strong>Kranjskou Gorou</strong> (jezero Jasna, přírodní rezervace Zelenci — oba 10 min)</li>
+<li>Tandem zipline od 5 let = super zážitek pro odvážnější děti</li>
+<li>Reservovat větrný tunel předem (oblíbený!)</li>
+<li>Na cestě mezi Lublaní a Bovcem — ideální zastávka</li>
+<li>Celodenní program: Planica + Kranjska Gora + jezero Jasna</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOklEQVR42tzUPY7bMBAF4CewYBddgNBcY4sAvJLUqbLGlUteScAWvAYDXkDpVBB6gdZZIyki0+qy7L5mwPnFl3uW/JlDVonkcsaKIbVpShaocig9WqMmylrpofTOOlvt3k1yYzxpRS+arMTH/4/9UQ835r/q828DaLjA/tGCQ9vwvrkpTYxNXM5YfaCWUdihxmjKRTSNyXceFbbXAqNmlXm7x3tmxUVUbkCz4pTNNUHoLPxSYVz85pBQ0NW5fb8yiErc7j14ZvjNUJQr4yl/+96mfs/vB2ts1ZOBaiLeaox2bhhIYVfn3jMvu7meMtBkYuIsj3k/8r4fBW5klIgaK4asZcyzzEuNP/bb3Ay3e31e98CQyZWf8Z66TG6UOb1Veb8nIa955md+x97vySLK3/P3qv/v9ysAAP//YNNXsOSJCQQAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
