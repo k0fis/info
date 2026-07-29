@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predjamský hrad — hrad ve skále — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Predjamský hrad — hrad ve skále</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">hrad</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Predjama 1, 6230 Postojna, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.postojnska-jama.eu/" target="_blank">www.postojnska-jama.eu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.8158, 14.1271], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.8158, 14.1271]).addTo(dmap);
+</script>
+<div class="content"><h1>Predjamský hrad — největší jeskynní hrad na světě</h1>
+<p>Renesanční hrad vrostlý do 123 metrů vysoké skály. Guinessův rekord — největší jeskynní hrad na světě. Stojí přes 800 let (první zmínka 1274).</p>
+<h2>Vzdálenost</h2>
+<ul>
+<li>Z Postojnské jeskyně: <strong>10 km</strong> (shuttle bus červen–září)</li>
+<li>Z Lublaně: ~58 km</li>
+</ul>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Leden–březen</strong></td>
+<td>10:00–16:00</td>
+</tr>
+<tr>
+<td><strong>Duben, říjen</strong></td>
+<td>10:00–17:00</td>
+</tr>
+<tr>
+<td><strong>Květen–červen, září</strong></td>
+<td>9:00–18:00</td>
+</tr>
+<tr>
+<td><strong>Červenec–srpen</strong></td>
+<td>9:00–19:00</td>
+</tr>
+<tr>
+<td><strong>Listopad–prosinec</strong></td>
+<td>10:00–16:00</td>
+</tr>
+<tr>
+<td><strong>Délka prohlídky</strong></td>
+<td>45–60 min (hrad) + 45 min (jeskyně)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>24 EUR dospělí / 14,40 EUR děti</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma</td>
+</tr>
+</tbody>
+</table>
+<h2>Co vidět</h2>
+<ul>
+<li><strong>Zbrojnice</strong> — plátové zbroje, středověké zbraně</li>
+<li><strong>Rytířský sál</strong> — nejrozsáhlejší expozice</li>
+<li><strong>Kaple</strong></li>
+<li><strong>Kuchyně</strong></li>
+<li><strong>Mučírna</strong></li>
+<li><strong>Podkroví</strong> — sbírka zbraní</li>
+<li>Řeka Lokva mizící pod hradem do podzemí</li>
+</ul>
+<h2>Jeskyně za hradem</h2>
+<ul>
+<li><strong>14 km celkem</strong> (2. nejdelší v Slovinsku)</li>
+<li><strong>Turistická trasa:</strong> 700 m, 4 propojená patra</li>
+<li><strong>Otevřeno:</strong> pouze červen–září (zimování netopýrů)</li>
+<li><strong>Vstupné:</strong> 24 EUR (samostatný lístek)</li>
+<li>Bez el. osvětlení — svítilny pro návštěvníky</li>
+<li>Obydlena od doby kamenné</li>
+<li><strong>Nevhodné pro děti do 6 let</strong> a kočárky</li>
+</ul>
+<h2>Legenda o Erazmu Luegerovi</h2>
+<p>Loupeživý rytíř z 15. století, který zabil příbuzného císaře Fridricha III. a utekl na Predjamu. Díky <strong>tajnému tunelu</strong> zásoboval hrad přes rok, zatímco ho obléhali — posílal obléhatelům čerstvé třešně a pečené voly.</p>
+<p>Nakonec ho <strong>zradil vlastní sluha</strong> — zapálil svíčku jako signál pro dělostřelce, když Erazem seděl na prevétu (záchodě). Jediný výstřel z děla ho zabil tím nejméně důstojným způsobem.</p>
+<p>Dnes připomínán jako slovinský Robin Hood. Každoročně se koná <strong>Erazmův turnaj</strong> (středověký festival).</p>
+<h2>Pro děti</h2>
+<ul>
+<li>Hrad fascinuje děti (zbraně, zbroje, legenda)</li>
+<li>Strmé schody a úzké prostory — <strong>vhodné od 6 let</strong></li>
+<li>Kočárek se nedostane</li>
+<li>Jeskyně za hradem: od 6+ let</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Kombi lístek s Postojnou</strong> — ušetříte ~9 EUR</li>
+<li>Nejdřív jeskyně (ráno, dle jízdního řádu), pak hrad (vlastní tempo)</li>
+<li>Na obojí počítat 5–6 hodin celkem</li>
+<li>Mobilní appka jako průvodce zdarma</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMklEQVR42tzUMY7kIBAF0G8RkPVeADXX6GAlX8nOnMFGzporWdqAa7CqC9AZAfJfWZ6Zztq0s5lKrJeUPxQq/LjSZDYuwUYyn7HHYAOLikCTQx0TrGe0pdUMajb6Dfs0nbbHmEDKM/9rkw8JZpLn/bw0gK4OUmT5GsFL68BsYLSKLKf8+HuHw2R53fMe+Y7BUlHFtP//yIF/hNYL/8UWo1scvZqBrpyxXgH8qhO57nkPjK6OydGj/+x34HG57O971U3u6ijBaINnv3esMzrJcLVfb7nF99+D9cqriBvafLHBlqqTbnJYnHg1C9c+n/B2QgnVcbFs8bZP4EgbbUGLPUahFLtc0eRtnwx2VlxvZ02PyaBjbnRyygtJtNhj2L6yMDaZfDCTpv+Y75v+3vU/AAD//yusSQDi3QS2AAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
