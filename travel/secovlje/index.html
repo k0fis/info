@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sečovlje — solné pánve s 800letou historií — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Sečovlje — solné pánve s 800letou historií</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">priroda</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Sečovlje, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.kpss.si/" target="_blank">www.kpss.si</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.4847, 13.6028], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.4847, 13.6028]).addTo(dmap);
+</script>
+<div class="content"><h1>Sečovlje — solné pánve (Krajinský park)</h1>
+<p>Rozsáhlá solná pole (650 ha) na slovinsko-chorvatské hranici s více než 800letou historií ruční těžby mořské soli. Přírodní rezervace s 280+ druhy ptáků.</p>
+<h2>Vzdálenost</h2>
+<ul>
+<li>Z Piranu: ~10 km (15 min)</li>
+<li>Z Portorože: ~5 km (10 min)</li>
+<li>Z Izoly: ~15 km (20 min)</li>
+</ul>
+<h2>Vstupné (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Léto (IV–X)</th>
+<th>Zima (XI–III)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dospělí</td>
+<td>7 EUR</td>
+<td>6 EUR</td>
+</tr>
+<tr>
+<td>Žáci/studenti/senioři</td>
+<td>5 EUR</td>
+<td>4 EUR</td>
+</tr>
+<tr>
+<td>Děti do 6 let</td>
+<td>Zdarma</td>
+<td>Zdarma</td>
+</tr>
+<tr>
+<td><strong>Rodinný lístek</strong></td>
+<td><strong>16 EUR</strong></td>
+<td><strong>14 EUR</strong></td>
+</tr>
+<tr>
+<td>Roční pas</td>
+<td>28 EUR</td>
+<td>28 EUR</td>
+</tr>
+</tbody>
+</table>
+<p>Jeden lístek platí na obě části (Lera + Fontanigge) celý den.</p>
+<h2>Otevírací doba</h2>
+<table>
+<thead>
+<tr>
+<th>Část</th>
+<th>Léto</th>
+<th>Zima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lera</td>
+<td>8:00–21:00</td>
+<td>8:00–17:00</td>
+</tr>
+<tr>
+<td>Fontanigge</td>
+<td>9:00–20:00</td>
+<td>9:00–17:00</td>
+</tr>
+</tbody>
+</table>
+<h2>Dvě části parku</h2>
+<h3>Lera (severní) — hlavní vstup, rodiny</h3>
+<ul>
+<li><strong>Aktivní ruční těžba soli</strong> — 700letá metoda, ukázky v sezóně</li>
+<li><strong>Muzeum solného dělníka</strong> — jak se žilo a pracovalo</li>
+<li><strong>Obchod s pirnanskou solí</strong> — sůl, fleur de sel, kosmetika</li>
+<li><strong>Komentované prohlídky</strong> v 9:00, 11:00, 13:00</li>
+<li>Trasa 1,3 km (~45 min)</li>
+<li><strong>Lepší pro rodiny s malými dětmi</strong></li>
+</ul>
+<h3>Fontanigge (jižní) — příroda, ptáci</h3>
+<ul>
+<li>Opuštěné domky solných dělníků — fotogenické ruiny</li>
+<li><strong>280+ druhů ptáků</strong> — výjimečné birdwatching</li>
+<li>Stezka podél řeky Dragonja: 3,4 km (~2 h)</li>
+<li><strong>Půjčovna kol zdarma</strong> na trase Dragonja (duben–říjen, u recepce)</li>
+<li>Psi na vodítku povoleni (na Leře ne)</li>
+<li>Divočejší, atmosféričtější</li>
+</ul>
+<h2>Čas na návštěvu</h2>
+<ul>
+<li><strong>Doporučeno: 2–3 hodiny</strong> pro dobrou návštěvu</li>
+<li>Obě části = půl dne</li>
+<li>Jen Lera (s dětmi): 1–1,5 h</li>
+</ul>
+<h2>Pro děti</h2>
+<ul>
+<li>Rovný terén — <strong>kočárek projede</strong> (po cestách na Leře)</li>
+<li>Ptáci, krabi, solné krystaly — zajímavé pozorování</li>
+<li>Ukázka výroby soli — praktické a zajímavé</li>
+<li>Nákup soli jako suvenýr (děti si mohou vybrat)</li>
+<li>Spíše 2h doplněk k pláži nebo Piranu</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Piranska sůl</strong> = výborný suvenýr (fleur de sel = &quot;solní květy&quot;)</li>
+<li>Ráno/večer: nejlepší světlo + méně horko</li>
+<li>Fontanigge na kole (zdarma půjčovna!) — příjemnější než pěšky</li>
+<li>Kombinovat s Piranem (10 min) nebo pláží v Portorži</li>
+<li>Jaro: hnízdiště ptáků, zajímavější pro birdwatching</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMUlEQVR42tzUMa7jIBAG4D+ioPQF0OMaKVbylXDnDjp3y5UsvYJrzIoL4I4C+V/lJUo6h7jbne4rkH7NMIP/rjRZjBPYRJYzDnAqsKoEdDm2ibSVydZeN6jF6E8s82kHTDlyya/8xya3HM2cX/05NICLQJDX5wgOrSOLCkarxHrGGBoUMVt+/eR9ayjmqBaV5BHn2LqMAc7WzD+p07tx0MClnvLGYGObyf3e/zfGtHoBA8b7+3fW/I7iZbZp110uv7w4S/PM+6HjOoiDb+N+LT3+DWegbvt0RY9jG5o3c9Oi+/y9iYfO3Mdywrf/29A8V8se3+6JCqRNtqLHAZN4gV2/0OWf/baL4n49axlkNriwdLrBMpNEjwOcGWxVK1OXyU2cWsz4mO+H/rfrbwAAAP//knJD4mB2ADsAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
