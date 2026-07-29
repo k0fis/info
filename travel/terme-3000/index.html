@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terme 3000 — černá termální voda — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Terme 3000 — černá termální voda</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">termy</span> <span class="tag">deti</span> <span class="tag">zabava</span> </div>
+<div class="meta"><p class="meta-item">📍 Moravske Toplice, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.sava-hotels-resorts.com/en/terme-3000/" target="_blank">www.sava-hotels-resorts.com/en/terme-3000</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.6847, 16.2222], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.6847, 16.2222]).addTo(dmap);
+</script>
+<div class="content"><h1>Terme 3000 Moravske Toplice — unikátní černá termální voda</h1>
+<p>Jeden z největších termálních parků ve Slovinsku (5000 m² vodních ploch, 32 bazénů). Unikátní <strong>černá termálně-minerální voda</strong> (37 °C) — nejtepleji ve Slovinsku. Venkovní část vyloženě zaměřená na rodiny s dětmi.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z ČR (Brno)</td>
+<td>~230 km</td>
+<td>~2:30 h</td>
+</tr>
+<tr>
+<td>Lublaň</td>
+<td>200 km</td>
+<td>2:15 h</td>
+</tr>
+<tr>
+<td>Budapešť</td>
+<td>250 km</td>
+<td>2:45 h</td>
+</tr>
+<tr>
+<td>Maribor</td>
+<td>80 km</td>
+<td>1 h</td>
+</tr>
+</tbody>
+</table>
+<h2>Praktické info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Otevřeno</strong></td>
+<td>9:00–21:00 denně</td>
+</tr>
+<tr>
+<td><strong>Tobogány venku</strong></td>
+<td>10:00–19:00</td>
+</tr>
+<tr>
+<td><strong>Tobogány uvnitř</strong></td>
+<td>10:00–20:00</td>
+</tr>
+<tr>
+<td><strong>Teplota vody</strong></td>
+<td>34–38 °C (černá voda 37 °C)</td>
+</tr>
+<tr>
+<td><strong>Bazénů</strong></td>
+<td>32 (termy + 3 hotely)</td>
+</tr>
+</tbody>
+</table>
+<h2>Vstupné (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Celý den (všední)</th>
+<th>Celý den (víkend)</th>
+<th>3 hodiny (všední)</th>
+<th>3 hodiny (víkend)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dospělí (15+)</td>
+<td>20,90 EUR</td>
+<td>23,90 EUR</td>
+<td>17,90 EUR</td>
+<td>20,90 EUR</td>
+</tr>
+<tr>
+<td>Děti (5–14)</td>
+<td>16,90 EUR</td>
+<td>19,90 EUR</td>
+<td>13,90 EUR</td>
+<td>16,90 EUR</td>
+</tr>
+<tr>
+<td><strong>Děti do 5 let</strong></td>
+<td><strong>Zdarma</strong></td>
+<td><strong>Zdarma</strong></td>
+<td><strong>Zdarma</strong></td>
+<td><strong>Zdarma</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Pronájem ručníku: 15 EUR.</p>
+<h2>Tobogány a skluzavky</h2>
+<h3>Adrenalinové (starší děti/teenageři)</h3>
+<ul>
+<li><strong>Aqualoop</strong> — looping, &quot;závodní zrychlení&quot; (4. nejrychlejší v Evropě)</li>
+<li><strong>Kamikaze</strong> — volný pád, strmý shoz</li>
+</ul>
+<h3>Rodinné (všechny věky)</h3>
+<ul>
+<li><strong>Unicorn Ride</strong> — víceproudý</li>
+<li><strong>Space Hole</strong> — rotační</li>
+<li><strong>Blue Wave</strong> — &quot;budování odvahy&quot;</li>
+<li><strong>Black Hole</strong> — uzavřená trubka (uvnitř)</li>
+<li><strong>Menthol</strong> — &quot;osvěžující&quot; (uvnitř)</li>
+<li>2 venkovní + 1 vnitřní rodinné tobogány</li>
+</ul>
+<h3>Pro nejmenší</h3>
+<ul>
+<li>Dětský brodivý bazén pro batolata (celoročně, uvnitř)</li>
+<li>Dětské bazény se skluzavkami u každého hotelu</li>
+<li>Velký travnatý prostor se stínem kolem venkovních bazénů</li>
+</ul>
+<h2>Pro děti — dle věku</h2>
+<table>
+<thead>
+<tr>
+<th>Věk</th>
+<th>Co je čeká</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–3</td>
+<td>Brodivý bazén uvnitř, travnaté plochy, 2 venkovní hřiště</td>
+</tr>
+<tr>
+<td>3–6</td>
+<td>Dětské bazény se skluzavkami, rodinné tobogány s rodičem</td>
+</tr>
+<tr>
+<td>7–12</td>
+<td>Všechny rodinné skluzavky, sportovní park (fotbal, basket)</td>
+</tr>
+<tr>
+<td>13+</td>
+<td>Aqualoop, Kamikaze, zipline, fitness</td>
+</tr>
+</tbody>
+</table>
+<h2>Animační program (léto, červenec–srpen)</h2>
+<ul>
+<li>Maskot <strong>Čáp Viki</strong> (Strk Viki) vede aktivity</li>
+<li>Bazénové hry, kreativní dílny, sportovní soutěže</li>
+<li><strong>Mini disko</strong> pro děti (St, Pá, So)</li>
+<li>Ranní procházky, čokoládové ochutnávky</li>
+<li>Bingo s cenami (Út, Čt)</li>
+</ul>
+<h2>Tipy</h2>
+<ul>
+<li><strong>3-hodinový lístek</strong> — stačí pro rodiny s malými dětmi</li>
+<li>Hotelový host = vstup do termálního parku zdarma</li>
+<li>Aquapass — kombinovaný pas pro 5 aquaparků Sava v Slovinsku</li>
+<li>Blízko: <strong>Pavilon Expano</strong> u Murské Soboty (interaktivní muzeum, hřiště, pláž, kajaky)</li>
+<li>Blízko: <strong>Sikalu Mini Zoo</strong> u Radenců (krmení zvířat)</li>
+<li>Dobré jako zastávka na cestě do/z Maďarska nebo Chorvatska</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNUlEQVR42tzUIc7jMBAF4BcZmNUXsDrXKKiUKyWsqDEra64UqcDX8MoX8DIDK2+V7bZliRu2/7CPRE8z8cOPG00moYV4Mu2xQ2eNcsoDVR5LHzrl6CXXmoy0ut5hsNhth55OMX7yr5v8HUd7iZ/9rBpAUwwQp/cJVq1HJnGRyjPvMfoCmADh8W/eTQ+PpBypfHgG2LKZDpIkR/7yNdb3NomDBpq8y+kMdAHk/Nz/lu+4WjCjfX1vwyxNMTGLn3WVx6lDJzf7yve1H2MwGEo7n1KN3fkqVFl5nFDjOw7WSC466Dq3SRJ05NymHV7+35jKwElY46VP1MibeMmosUMfXYBMx/d7XPXSD6NQcX7uY4fDgItFw1RrI1mRRI0dOnQqx4m+ykufMN5s++++X/r/nj8BAAD///k6PfGb5dmsAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
