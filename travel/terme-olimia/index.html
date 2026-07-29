@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terme Olimia — Aqualuna aquapark — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Terme Olimia — Aqualuna aquapark</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">termy</span> <span class="tag">deti</span> <span class="tag">zabava</span> </div>
+<div class="meta"><p class="meta-item">📍 Zdraviliška cesta 24, 3254 Podčetrtek, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.terme-olimia.com/" target="_blank">www.terme-olimia.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([46.1569, 15.6068], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([46.1569, 15.6068]).addTo(dmap);
+</script>
+<div class="content"><h1>Terme Olimia — rodinný aquapark Aqualuna</h1>
+<p>Rozsáhlý termální resort ve východním Slovinsku s aquaparkem Aqualuna (3000+ m², 10 skluzavek, vlnový bazén). Termální voda z 520 m hloubky, nízká mineralizace — pitná! Blízko chorvatské hranice.</p>
+<h2>Vzdálenost</h2>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brno</td>
+<td>~290 km</td>
+<td>~3 h</td>
+</tr>
+<tr>
+<td>Lublaň</td>
+<td>110 km</td>
+<td>1:15 h</td>
+</tr>
+<tr>
+<td>Záhřeb (HR)</td>
+<td>60 km</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>Maribor</td>
+<td>60 km</td>
+<td>50 min</td>
+</tr>
+</tbody>
+</table>
+<h2>Aqualuna — venkovní aquapark</h2>
+<p><strong>Sezóna:</strong> červen–září (pouze venkovní!)</p>
+<h3>10 skluzavek</h3>
+<table>
+<thead>
+<tr>
+<th>Skluzavka</th>
+<th>Délka</th>
+<th>Rychlost</th>
+<th>Min. požadavek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>King Cobra</strong></td>
+<td>80 m</td>
+<td>55 km/h</td>
+<td>10+, 120 cm, tandem</td>
+</tr>
+<tr>
+<td><strong>Black Cannon</strong></td>
+<td>50 m</td>
+<td>40 km/h</td>
+<td>12+, 150 cm</td>
+</tr>
+<tr>
+<td><strong>Kamikaze</strong></td>
+<td>70 m</td>
+<td>70 km/h</td>
+<td>16+</td>
+</tr>
+<tr>
+<td>Blue Tornado</td>
+<td>90 m</td>
+<td>30 km/h</td>
+<td>10+, 120 cm</td>
+</tr>
+<tr>
+<td>GreenGO</td>
+<td>50 m</td>
+<td>15 km/h</td>
+<td>10+, 120 cm</td>
+</tr>
+<tr>
+<td>4slide (závod)</td>
+<td>40 m</td>
+<td>36 km/h</td>
+<td>10+, 120 cm</td>
+</tr>
+<tr>
+<td>Giant Slide</td>
+<td>110 m</td>
+<td>45 km/h</td>
+<td>10+, 120 cm</td>
+</tr>
+<tr>
+<td>Water Chutes (3×)</td>
+<td>50 m</td>
+<td>60 km/h</td>
+<td>10+, 120 cm</td>
+</tr>
+<tr>
+<td>Dětská skluzavka</td>
+<td>5 m</td>
+<td>5 km/h</td>
+<td>Všechny věky</td>
+</tr>
+<tr>
+<td>Dětský tobogán</td>
+<td>5 m</td>
+<td>5 km/h</td>
+<td>Všechny věky</td>
+</tr>
+</tbody>
+</table>
+<h3>6 bazénů</h3>
+<ul>
+<li><strong>Vlnový bazén</strong> — umělé vlny</li>
+<li><strong>Relaxační bazén</strong> — vodní trysky, vodopád</li>
+<li><strong>Aqua Jungle</strong> — 70+ interaktivních efektů (vodní pistole, šplhací sítě, překlápěcí kbelíky)</li>
+<li><strong>Dětský bazén</strong> (30 cm) — bambusová chýše se skluzavkami</li>
+<li><strong>Baby bazén</strong> (0–15 cm) — sloní skluzavka pro batolata</li>
+<li>Landing pool (dojezdy ze skluzavek)</li>
+</ul>
+<h3>Vstupné Aqualuna (2026)</h3>
+<p>Kategorie dle výšky: nad 150 cm = dospělý, 115–150 cm = dítě, <strong>pod 115 cm = ZDARMA</strong></p>
+<table>
+<thead>
+<tr>
+<th>Lístek</th>
+<th>Po–Čt</th>
+<th>Pá–Ne/svátky</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Celý den dospělí</td>
+<td>19 EUR</td>
+<td>26 EUR</td>
+</tr>
+<tr>
+<td>Celý den děti</td>
+<td>16 EUR</td>
+<td>19 EUR</td>
+</tr>
+<tr>
+<td>Odpoledne (od 15:00) dospělí</td>
+<td>16 EUR</td>
+<td>20 EUR</td>
+</tr>
+<tr>
+<td>Večer (od 18:00)</td>
+<td>9 EUR</td>
+<td>10 EUR</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rodinné lístky:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kombinace</th>
+<th>Po–Čt</th>
+<th>Pá–Ne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 dospělí + 1 dítě</td>
+<td>51 EUR</td>
+<td>68 EUR</td>
+</tr>
+<tr>
+<td>2 dospělí + 2 děti</td>
+<td>66 EUR</td>
+<td>86 EUR</td>
+</tr>
+<tr>
+<td>1 dospělý + 1 dítě</td>
+<td>33 EUR</td>
+<td>43 EUR</td>
+</tr>
+</tbody>
+</table>
+<h3>Otevírací doba</h3>
+<ul>
+<li>Aqualuna: Po–Čt 9:00–20:00, Pá–Ne 8:00–20:00</li>
+</ul>
+<h2>Termalija — rodinný wellness (celoročně!)</h2>
+<ul>
+<li><strong>První a největší rodinný wellness ve Slovinsku</strong> (~2000 m²)</li>
+<li>Celoroční provoz (na rozdíl od Aqualuny)</li>
+<li>Ne–Čt 8:00–22:00, Pá–So 8:00–24:00</li>
+<li>Vnitřní bazény, sauny přístupné rodinám</li>
+</ul>
+<h2>Ubytování</h2>
+<ul>
+<li><strong>Family Hotel Vilinia</strong> 4★ superior — 146 rodinných pokojů, přímo u Aqualuny</li>
+<li>Wellness Hotel Sotelia 4★ — adults only (wellness Orhidelia, 10× nejlepší wellness v SI)</li>
+<li>Hotel Breza 4★</li>
+<li>Camping + glamping</li>
+</ul>
+<h2>Okolí — co navštívit</h2>
+<ul>
+<li><strong>Klášter Olimje</strong> (~3 km) — 16. století, 3. nejstarší lékárna v Evropě, bylinky</li>
+<li><strong>Čokoládovna Olimje</strong> — ruční výroba, pozorování produkce (děti milují!)</li>
+<li><strong>Jelenov Greben</strong> — jelení farma, krmení zvířat (pěšky od kláštera)</li>
+<li><strong>Hrad Podčetrtek</strong> — znovuotevřen 2024, kavárna s panoramatem</li>
+<li><strong>Kozjanský park</strong> — regionální přírodní park, turistika</li>
+</ul>
+<h2>Pro děti — dle věku</h2>
+<table>
+<thead>
+<tr>
+<th>Věk</th>
+<th>Co je čeká</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–3</td>
+<td>Baby bazén (sloní skluzavka, 0–15 cm), Termalija (celoročně)</td>
+</tr>
+<tr>
+<td>3–6</td>
+<td>Dětský bazén (30 cm, bambusová chýše), Aqua Jungle</td>
+</tr>
+<tr>
+<td>7–12</td>
+<td>Aqua Jungle (70 efektů!), vlnový bazén, okolní atrakce</td>
+</tr>
+<tr>
+<td>10+</td>
+<td>Všechny skluzavky (od 120 cm) — King Cobra, GreenGO...</td>
+</tr>
+<tr>
+<td>13+</td>
+<td>Black Cannon (150 cm), Kamikaze (16+)</td>
+</tr>
+</tbody>
+</table>
+<h2>Tipy</h2>
+<ul>
+<li><strong>Aqualuna jen v létě</strong> — mimo sezónu funguje Termalija (celoročně)</li>
+<li>Ve všední den výrazně levnější a prázdnější</li>
+<li>Děti pod 115 cm zdarma — super pro rodiny s batolaty</li>
+<li>Kombinovat s čokoládovnou a jelení farmou (půlden)</li>
+<li>Na cestě mezi ČR a Chorvatskem — ideální zastávka</li>
+<li>Hotel Vilinia = nejlepší volba pro rodiny (přímo u aquaparku)</li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMUlEQVR42tzUPY7jMAwF4GeoUJe9gBBew8UCvpLcpVorVUpfSZ2voYAXkDsVRt5CmJ9MFWvczbDy54ogxYdfV5ZcE5ytH/mIA8aErf5Bk+dtZGbQRUqjvYNS2j3qvE2HHeANHXT57P+1yVVnd9HlOZ9XrmWylu3LDl7ZXsnNu0nKecgHjJO5cmZwOA9o8cQ1/ZECi77Fdt060lmNXcwNRhe9ybjIknDENqNjYEgf72/f/ww1uB59i3FCpzPg+kebR1Izg8R7xAHXfnXWsL3Pf9ePvyOzuTnc3+a75zXChHRR3gtanE2GTxNJHnHdWJp4Y5TY4nofzBpkaXTNE6+UeLa5xfW+qUHIBQedJimmPPNrx955CVIeQ5NrnmSHNLA0uebvJEGYnvn9Df/s+h8AAP//u75sOuz8KacAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
