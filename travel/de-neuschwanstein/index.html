@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&#34;Německo — Neuschwanstein (pohádkový zámek Ludvíka II.)&#34; — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>&#34;Německo — Neuschwanstein (pohádkový zámek Ludvíka II.)&#34;</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">nemecko</span> <span class="tag">hrad</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 &#34;Neuschwansteinstraße 20, 87645 Schwangau, Německo&#34;</p><p class="meta-item">🌐 <a href="https://www.neuschwanstein.de/" target="_blank">www.neuschwanstein.de</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.5575, 10.7494], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.5575, 10.7494]).addTo(dmap);
+</script>
+<div class="content"><h2>Neuschwanstein — pohádkový zámek Ludvíka II.</h2>
+<p>Neuschwanstein je ikonický zámek bavorského krále Ludvíka II., zasazený na strmém skalním ostrohu nad soutěskou Pöllat s výhledem na alpská jezera. S <strong>1,5 milionu návštěvníků ročně</strong> je nejnavštěvovanějším zámkem v Německu. Stavěl se v letech 1869–1886 jako králův soukromý úkryt inspirovaný operami Richarda Wagnera — Ludvík tu ale prožil jen 172 dní.</p>
+<p>S výškou 65 metrů je to nejvyšší zámek na světě. Dokončeno bylo pouze 15 z plánovaných 200+ místností — přesto jsou Trůnní sál, Sál pěvců a královské komnaty ohromující. Silueta zámku inspirovala Disneyho Popelčin zámek a je jedním z nejfotografovanějších míst Evropy.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí ~18 €, děti do 18 let zdarma (s doprovodem); pouze s průvodcem!</td>
+</tr>
+<tr>
+<td><strong>Prohlídka</strong></td>
+<td>35 min, v němčině nebo angličtině; vnitřní focení zakázáno</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Duben–říjen: 9:00–18:00; listopad–březen: 10:00–16:00</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>P4 Hohenschwangau — 10 €/den (velké, pod zámky)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=47.5575,10.7494">47.5575, 10.7494</a></td>
+</tr>
+<tr>
+<td><strong>Vstupenky</strong></td>
+<td>Pouze přes <a href="https://www.hohenschwangau.de/">hohenschwangau.de</a> — <strong>rezervuj předem!</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Jak se dostat k zámku (od parkování)</h3>
+<table>
+<thead>
+<tr>
+<th>Způsob</th>
+<th>Čas</th>
+<th>Cena</th>
+<th>Poznámka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pěšky</td>
+<td>30–40 min</td>
+<td>zdarma</td>
+<td>Strmá asfaltka, ale zvládnou i děti</td>
+</tr>
+<tr>
+<td>Autobus</td>
+<td>10 min</td>
+<td>~3 €</td>
+<td>Jede k Marienbrücke (most nad zámkem)</td>
+</tr>
+<tr>
+<td>Kočár</td>
+<td>20 min</td>
+<td>~7 € nahoru</td>
+<td>Koňský povoz, romantické</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Zámek</strong> (s průvodcem) — Trůnní sál, Sál pěvců, královská ložnice, grotta</li>
+<li><strong>Marienbrücke</strong> — most přes soutěsku s klasickým panoramatickým výhledem na zámek (zdarma, ale fronty!)</li>
+<li><strong>Nádvoří</strong> — přístupné i bez vstupenky, výhledy do údolí</li>
+<li><strong>Hohenschwangau</strong> (500 m) — žlutý zámek Ludvíkova otce, méně front, hezké interiéry</li>
+<li><strong>Soutěska Pöllat</strong> — vodopád pod Marienbrücke (přístupný v létě)</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv (strmý výstup k zámku, Marienbrücke)</li>
+<li>Předem koupené vstupenky (v létě vyprodáno i dny dopředu!)</li>
+<li>Baťůžky a kočárky NESMÍ dovnitř — nechej v autě</li>
+<li>Vodu a svačinu (občerstvení u parkování předražené)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: září–říjen (podzimní barvy, menší fronty než léto)</li>
+<li><strong>Léto</strong> (červen–srpen): až 6 000 lidí denně, bez rezervace čekáš hodiny</li>
+<li><strong>Zima</strong>: zasněžený zámek je magický, ale Marienbrücke bývá zavřená</li>
+<li><strong>Ráno</strong> (9:00): nejmenší davy — první prohlídky jsou nejklidnější</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Kup vstupenky online</strong> minimálně týden předem v sezóně — na místě jsou často vyprodané</li>
+<li><strong>Kombi-ticket</strong> (Neuschwanstein + Hohenschwangau) — ušetříš a Hohenschwangau je klidnější</li>
+<li>Nejlepší foto zámku: z <strong>Marienbrücke</strong> (klasika) nebo zdola od jezera <strong>Alpsee</strong></li>
+<li>S dětmi: výstup pěšky je OK od 5 let, s menšími raději autobus</li>
+<li>Kombinuj s [[de-fuessen|Füssen]] — cyklovýlety kolem jezer jsou ideální na odpoledne po zámku</li>
+<li>Drony jsou přísně zakázány!</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[de-fuessen</td>
+<td>Füssen]]</td>
+<td>4 km</td>
+</tr>
+<tr>
+<td>Mnichov</td>
+<td>130 km</td>
+<td>1,5 h</td>
+</tr>
+<tr>
+<td>Innsbruck</td>
+<td>100 km</td>
+<td>1,5 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>~530 km</td>
+<td>5,5 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>~570 km</td>
+<td>5,5 h</td>
+</tr>
+</tbody>
+</table>
+<p>Parkování: Odbočka na Hohenschwangau z B17 (Schwangau), P4 je největší. Naviguj na &quot;Parkplatz Hohenschwangau&quot;.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>[[de-fuessen|Füssen / Allgäu]]</strong> (4 km) — cyklovýlety kolem alpských jezer, historické centrum</li>
+<li><strong>Hohenschwangau</strong> (500 m) — žlutý královský zámek, rodný dům Ludvíka II.</li>
+<li><strong>Tegelberg</strong> (5 km) — lanovka na 1 720 m, paragliding, letní tobogán</li>
+<li><strong>Alpsee</strong> (pod zámky) — průzračné horské jezero, pěší okruh 5 km</li>
+<li><strong>Highline 179</strong> (15 km, Rakousko) — nejdelší tibetský most v Evropě (406 m)</li>
+<li><strong>Forggensee</strong> (8 km) — 5. největší jezero Bavorska, cyklookruh, výletní loď</li>
+<li><strong>Wieskirche</strong> (25 km) — rokokový kostel UNESCO</li>
+<li><strong>Linderhof</strong> (50 km) — další zámek Ludvíka II. (grotta, zahrada, méně lidí)</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.neuschwanstein.de/">Oficiální web</a></li>
+<li><a href="https://www.hohenschwangau.de/">Vstupenky</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Neuschwanstein_Castle">Wikipedia</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABY0lEQVR42tTUsQ2sMAwGYEcp0iULILGGu6wUFuBggWQld1kjUhYgXYoIPx08XfOeDrfn7mvg55cN/Pw45i3gfAIxd4Et6G31dc9YACX2NR3IrVM9hY5ghqIudopQDyChQSfOvBN88n61Y45LnpaMnz6++v0Ilwt4/FT81dbz5nrdc+dT5qIaTY76ePX/GFAfC40lg04ksDUDgpkUZ80Sqz6nRhCQ5yax62CtH4qoXPmebJHTgWCNqff7HwxmCi+eXmzKCgKrrk/rdTR+PlBgl8dqjU5EY5VY0bynXjfj+er3yRandSFmIr7388GO59PR5Njr1gW2WFyjEjAXiyLXFpFbxrGQxGa8oikBzXzn/ce1tXx9794Fvu9jsog6osCOed9wLL3Xq88nv+9788P6/ne/n/z+P0EJ6Pnu89lR0VDZ3PkETkw6Io0AEoPe+b3PpE+JHXOKqFPmoUjg35o/AQAA//+ugmYeE+j0ggAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
