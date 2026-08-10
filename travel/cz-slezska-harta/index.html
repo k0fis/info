@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&#34;Slezská Harta — přehrada v Jeseníkách&#34; — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>&#34;Slezská Harta — přehrada v Jeseníkách&#34;</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">priroda</span> <span class="tag">jezera</span> <span class="tag">cyklo</span> </div>
+<div class="meta"><p class="meta-item">📍 &#34;Leskovec nad Moravicí 204, 793 68 Dvorce&#34;</p><p class="meta-item">🌐 <a href="https://www.slezskaharta.cz/" target="_blank">www.slezskaharta.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.8903, 17.5814], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.8903, 17.5814]).addTo(dmap);
+</script>
+<div class="content"><h2>Slezská Harta — přehrada v Jeseníkách</h2>
+<p>Slezská Harta je jedna z největších přehrad v Česku (8,7 km²) v Nízkém Jeseníku, obklopená lesy a kopci. Přehrada leží v 500 m n. m. a nabízí klidnou alternativu k přeplněným moravským přehradám — čistou vodu, výletní lodě, cyklostezky kolem celé nádrže a romantické zbytky zatopených vesnic na břehu.</p>
+<p>Ideální na víkendový výlet z Ostravy (45 min) nebo jako základna pro poznávání Jeseníků. Oblast je nenáročná na kole — cyklostezka kolem přehrady je převážně rovná.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Přehrada zdarma; lodě: dle tarifu (viz web)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma u pláží a přístavišť</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.8903,17.5814">49.8903, 17.5814</a></td>
+</tr>
+<tr>
+<td><strong>Infocentrum</strong></td>
+<td>+420 603 996 548, infocentrum@slezskaharta.cz</td>
+</tr>
+<tr>
+<td><strong>Lodě</strong></td>
+<td>Loď Harta, Loď Santa Maria, přívoz Rázová–Roudno</td>
+</tr>
+</tbody>
+</table>
+<h3>Co dělat</h3>
+<ul>
+<li><strong>Cyklostezka</strong> kolem přehrady — pravobřežní cyklostezka, e-biky k půjčení</li>
+<li><strong>Výletní lodě</strong> — vyhlídkové plavby po přehradě (Loď Harta, Santa Maria)</li>
+<li><strong>Přívoz Rouza</strong> — propojení Rázová–Roudno přes vodu</li>
+<li><strong>Koupání</strong> — pláže na několika místech (voda čistá, ale chladnější — 500 m n.m.)</li>
+<li><strong>Kostel sv. Jana Nepomuckého</strong> — stojí přímo na břehu, patřil k zatopené vesnici</li>
+<li><strong>Dragon Boat Festival</strong> (srpen) — závody dračích lodí</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Kolo (nebo půjčit e-bike na místě)</li>
+<li>Plavky v létě (voda bývá chladnější než na Moravě — cca 18–22 °C)</li>
+<li>Svačinu a vodu (občerstvení jen u přístavišť)</li>
+<li>Rybářský lístek (přehrada je oblíbený revír)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: červen–září (koupání, lodě, cyklo)</li>
+<li><strong>Jaro/podzim</strong>: krásné na kolo (méně lidí, barvy)</li>
+<li><strong>Srpen</strong>: Dragon Boat Festival, koncerty na lodích</li>
+<li><strong>Zima</strong>: klidná, ale lodě nejezdí</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Cyklookruh kolem přehrady ~30 km — nenáročný, vhodný i pro rodiny</li>
+<li>Přívoz zkrátí okruh o několik km (a je to zážitek)</li>
+<li>Zatopené vesnice — při nízkém stavu vody (podzim) vyčnívají zbytky základů</li>
+<li>Kombinuj s Bruntálem (renesanční zámek, 10 min autem)</li>
+<li>E-biky k půjčení přímo u infocentra</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ostrava</td>
+<td>55 km</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>75 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Opava</td>
+<td>40 km</td>
+<td>35 min</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>160 km</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>Bruntál</td>
+<td>10 km</td>
+<td>10 min</td>
+</tr>
+</tbody>
+</table>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Bruntál</strong> (10 km) — renesanční zámek, historické centrum</li>
+<li><strong>Karlova Studánka</strong> (30 km) — lázeňské městečko v Jeseníkách, příroda</li>
+<li><strong>Praděd</strong> (40 km) — nejvyšší hora Moravy (1 491 m), televizní vysílač</li>
+<li><strong>Kružberk</strong> (15 km) — menší přehrada, skalní stěny</li>
+<li><strong>Město Albrechtice</strong> (15 km) — zámek, muzeum</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.slezskaharta.cz/">Slezská Harta</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Slezsk%C3%A1_Harta_Dam">Wikipedia</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXUlEQVR42tTUwY2lMAwG4B/lkFteA0ivDd/c0qQBIA2ElnJLG5HSANx8QHjFztsZaTXi+Tq5fUgg+zcxfv15qGbQEaWoisEBLm08TkwNZDH3dPrnLtRPo9dUdGHYreWZSYyGW1PtSfBV762v/mMdY6XvPO58fWIuTqV8RXzrgK5a+8KsG1nM4yN7XUgxlx88qG4f3GLRFk2WI4AwVP6s553BTjMdwUvfLH5ICx+MWSomi+F7ytz3UnsqBj9Km4Crf11gcGCXZ3WrUt+LwUNFmNCA+sr3jQPcvoouXI5oMdDi6bsKjYOY/NR8zQ99tzjQMWx+DL6OQzEY3M9Yx4DSZpP9MQ3iVvWv9//zQ52e1JOyfv4Pb3w9WqBJyGWLr/sX0GJ5zeudA9wyoQVPLpnMfc1XPq/6DE6rYBboWozO1KKSZlgMl5LoQvRvf9z7b//eZZbvfXbn33X+BAAA//9/ZEv9PAEqKwAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
