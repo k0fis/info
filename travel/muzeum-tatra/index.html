@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Muzeum tatra — Tipy na výlety</title>
+<title>Muzeum TATRA Kopřivnice — Tipy na výlety</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -43,14 +43,28 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; tex
 </head>
 <body>
 <nav><a href="../">← Zpět na přehled</a></nav>
-<h1>Muzeum tatra</h1>
-<div class="tags"><span class="tag">vylety</span> <span class="tag">travel</span> </div>
-<div class="meta"></div>
-
+<h1>Muzeum TATRA Kopřivnice</h1>
+<div class="tags"><span class="tag">vylety</span> <span class="tag">travel</span> <span class="tag">cz</span> <span class="tag">muzeum</span> </div>
+<div class="meta"><p class="meta-item">📍 Záhumenní 367/1, 742 21 Kopřivnice</p><p class="meta-item">🌐 <a href="https://www.muzeumtatra.cz" target="_blank">www.muzeumtatra.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.5947, 18.1450], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.5947, 18.1450]).addTo(dmap);
+</script>
 <div class="content"><h1>Muzeum TATRA Kopřivnice</h1>
-<p>https://www.muzeumtatra.cz</p>
-<p>Nákladní [[address:Husova 1326/13, Koprivnice, Czech Republic]]
-Osobní [[address:Záhumenní 367/1, 74221 Kopřivnice, Czechia]]</p>
+<p>Dvě budovy v Kopřivnici — osobní a nákladní vozy.</p>
+<h3>Budovy</h3>
+<ul>
+<li><strong>Osobní automobily</strong> — [[address:Záhumenní 367/1, 742 21 Kopřivnice]]</li>
+<li><strong>Nákladní automobily</strong> — [[address:Husova 1326/13, 742 21 Kopřivnice]]</li>
+</ul>
+<h3>Odkazy</h3>
+<ul>
+<li><a href="https://www.muzeumtatra.cz">muzeumtatra.cz</a></li>
+</ul>
 </div>
 <footer>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMUlEQVR42tzUMa7jIBSF4WNR0D02gN7dRoqRvCXSuTOp0oUt0bENRmzA6SiQz8gzyaRziLsZKn+FpV/32uC/O5pcYDBJ2h4O2MPBKa8S0OXQzoVSmaT2uhnS6n6XxU6H7XGmF5ZX/77Jewl2Kq/57BrAUKhqiX9XsGsduKjQtEqsh8w4MFgIvx+9+8YQHVCoUn7UvPHMm2y9/Jl6rAOZ56aBoR4yo2nARK7P/l3DjYtaVMX45/33/vFljVRJq+6xXtU9o9A++z51aF92znMb19PS5ehgWFXCCT2+8NKM1Kaz7vINzjp1LVzH5YB/f78hz4zCHm/3ifK8SpKKHnucm8mQ+I0ub/93sLN69h6xz3PDwF7nbf4k0WMPJyxVRaYuk/dmhHZ87PdD/9vnVwAAAP//j6pYNDGfJpcAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
