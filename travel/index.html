@@ -42,421 +42,422 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle">110 destinací</span>
-  <button onclick="window.print()" style="margin-left:auto;background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
+  <span class="subtitle"><span id="visible-count">110 / 110</span> destinací</span>
+  <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
 </header>
 <div id="map"></div>
-<div class="filters"><button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
-<button class="tag-btn" onclick="toggleFilter('viden')">viden</button>
-<button class="tag-btn" onclick="toggleFilter('cyklistika')">cyklistika</button>
-<button class="tag-btn" onclick="toggleFilter('aquapark')">aquapark</button>
-<button class="tag-btn" onclick="toggleFilter('slovacko')">slovacko</button>
-<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
-<button class="tag-btn" onclick="toggleFilter('rozhledna')">rozhledna</button>
-<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<div class="filters"><button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
 <button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
-<button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
-<button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
-<button class="tag-btn" onclick="toggleFilter('archeologie')">archeologie</button>
-<button class="tag-btn" onclick="toggleFilter('aktivni')">aktivni</button>
-<button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
-<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
-<button class="tag-btn" onclick="toggleFilter('adrenalin')">adrenalin</button>
-<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
-<button class="tag-btn" onclick="toggleFilter('cesko')">cesko</button>
-<button class="tag-btn" onclick="toggleFilter('zamek')">zamek</button>
-<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button>
-<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
-<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
-<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
-<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
 <button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
+<button class="tag-btn" onclick="toggleFilter('cesko')">cesko</button>
+<button class="tag-btn" onclick="toggleFilter('aktivni')">aktivni</button>
+<button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
+<button class="tag-btn" onclick="toggleFilter('slovacko')">slovacko</button>
+<button class="tag-btn" onclick="toggleFilter('veda')">veda</button>
+<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
+<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
+<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
+<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
+<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
+<button class="tag-btn" onclick="toggleFilter('hana')">hana</button>
+<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
+<button class="tag-btn" onclick="toggleFilter('more')">more</button>
+<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
+<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
+<button class="tag-btn" onclick="toggleFilter('nemecko')">nemecko</button>
+<button class="tag-btn" onclick="toggleFilter('adrenalin')">adrenalin</button>
+<button class="tag-btn" onclick="toggleFilter('budapest')">budapest</button>
+<button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
+<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
+<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
+<button class="tag-btn" onclick="toggleFilter('zamek')">zamek</button>
+<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
+<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
+<button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
+<button class="tag-btn" onclick="toggleFilter('olomouc')">olomouc</button>
+<button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
+<button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
+<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
+<button class="tag-btn" onclick="toggleFilter('muzeum')">muzeum</button>
+<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
+<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
+<button class="tag-btn" onclick="toggleFilter('rakousko')">rakousko</button>
+<button class="tag-btn" onclick="toggleFilter('aquapark')">aquapark</button>
+<button class="tag-btn" onclick="toggleFilter('ostravsko')">ostravsko</button>
+<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
+<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
+<button class="tag-btn" onclick="toggleFilter('viden')">viden</button>
+<button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
+<button class="tag-btn" onclick="toggleFilter('zoo')">zoo</button>
+<button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
+<button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
+<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
+<button class="tag-btn" onclick="toggleFilter('archeologie')">archeologie</button>
+<button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
+<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button>
+<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
+<button class="tag-btn" onclick="toggleFilter('rozhledna')">rozhledna</button>
+<button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
 <button class="tag-btn" onclick="toggleFilter('hiking')">hiking</button>
 <button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
-<button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
-<button class="tag-btn" onclick="toggleFilter('info')">info</button>
-<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
-<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
-<button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
-<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
-<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
-<button class="tag-btn" onclick="toggleFilter('ostravsko')">ostravsko</button>
-<button class="tag-btn" onclick="toggleFilter('veda')">veda</button>
-<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
-<button class="tag-btn" onclick="toggleFilter('rakousko')">rakousko</button>
-<button class="tag-btn" onclick="toggleFilter('zoo')">zoo</button>
-<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
-<button class="tag-btn" onclick="toggleFilter('budapest')">budapest</button>
-<button class="tag-btn" onclick="toggleFilter('olomouc')">olomouc</button>
-<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
-<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
-<button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
 <button class="tag-btn" onclick="toggleFilter('plaz')">plaz</button>
-<button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
-<button class="tag-btn" onclick="toggleFilter('hana')">hana</button>
-<button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
-<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
-<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
-<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
-<button class="tag-btn" onclick="toggleFilter('nemecko')">nemecko</button>
-<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
-<button class="tag-btn" onclick="toggleFilter('more')">more</button>
-<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
-<button class="tag-btn" onclick="toggleFilter('muzeum')">muzeum</button>
-<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
-<button class="tag-btn" onclick="toggleFilter('italie')">italie</button></div>
-<div class="cards" id="cards"><div class="card" data-tags="travel vylety">
+<button class="tag-btn" onclick="toggleFilter('cyklistika')">cyklistika</button></div>
+<div class="cards" id="cards"><div class="card" data-tags="travel vylety" data-lat="49.30247" data-lng="17.023542">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum letecké a pozemní techniky Vyškov</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="archiv travel vylety cyklo morava vino">
+<div class="card" data-tags="archiv travel vylety cyklo morava vino" data-lat="48.9047" data-lng="16.8161">
   <h3><a href="archiv-cyklostezky-kolem-velkych-pavlovic/">Cyklostezky kolem Velkých Pavlovic</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.9047&x=16.8161&z=14" target="_blank">📍</a></h3>
   <p class="desc">Přez Zaječí a tahle vesnice je na kopci, je tam i pěkná rozhledna nad komáří loukou a ta podle nápisu nebyla financovaná ze zdrojů eu. Postavili ji majitelé vinařství U kapličky je tam …</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="cyklo">#cyklo</span> <span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="vino">#vino</span> </div>
 </div>
-<div class="card" data-tags="archiv travel vylety cyklo jeseniky hory">
+<div class="card" data-tags="archiv travel vylety cyklo jeseniky hory" data-lat="50.1208" data-lng="17.1483">
   <h3><a href="archiv-cyklovylet-vrbno-pro-pradedem/">Cyklovýlet Vrbno pod Pradědem</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.1208&x=17.1483&z=14" target="_blank">📍</a></h3>
   <p class="desc">Údolím lapků z Drakova</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="cyklo">#cyklo</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="archiv travel vylety italie jezera deti">
+<div class="card" data-tags="archiv travel vylety italie jezera deti" data-lat="45.9417" data-lng="10.7167">
   <h3><a href="archiv-lombardska-jezera-lazne-i-adrenalin/">Lombardská jezera – lázně i adrenalin</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.9417&x=10.7167&z=14" target="_blank">📍</a></h3>
   <p class="desc">Itálie není jen moře. Jezera Lago di Garda, Maggiore a Como vás okouzlí romantickou atmosférou</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="jezera">#jezera</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="archiv travel vylety italie mesto">
+<div class="card" data-tags="archiv travel vylety italie mesto" data-lat="45.4642" data-lng="9.1900">
   <h3><a href="archiv-milano-za-jediny-den/">Miláno za jediný den</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.4642&x=9.1900&z=14" target="_blank">📍</a></h3>
   <p class="desc">Milán, druhé největší italské město, synonymum obchodu a módy, v němž se potkává historie se současností a pulzující atmosférou tolik odlišnou od jiných, obvykle mnohem ospalejší…</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="mesto">#mesto</span> </div>
 </div>
-<div class="card" data-tags="archiv travel vylety morava palava">
+<div class="card" data-tags="archiv travel vylety morava palava" data-lat="48.8069" data-lng="16.6378">
   <h3><a href="archiv-vylet-u-mikolova/">Výlet u Mikolova</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.8069&x=16.6378&z=14" target="_blank">📍</a></h3>
   <p class="desc">Pohádkový Portz Insel</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="palava">#palava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko jezero hory deti priroda">
+<div class="card" data-tags="travel vylety slovinsko jezero hory deti priroda" data-lat="46.2823" data-lng="13.8582">
   <h3><a href="bohinj/">Bohinjské jezero — nejkrásnější jezero ve Slovinsku</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.2823&x=13.8582&z=14" target="_blank">📍</a></h3>
   <p class="desc">Bohinjské jezero — Julské Alpy bez davů</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="jezero">#jezero</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko hory rafting deti aktivni">
+<div class="card" data-tags="travel vylety slovinsko hory rafting deti aktivni" data-lat="46.3370" data-lng="13.5520">
   <h3><a href="bovec/">Bovec — adrenalin na smaragdové Soči</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.3370&x=13.5520&z=14" target="_blank">📍</a></h3>
   <p class="desc">Bovec — adrenalin na smaragdové Soči</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="rafting">#rafting</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="aktivni">#aktivni</span> </div>
 </div>
-<div class="card" data-tags="travel vylety brno deti lod">
+<div class="card" data-tags="travel vylety brno deti lod" data-lat="49.2400" data-lng="16.5100">
   <h3><a href="brno-parnik/">Brno parník — lodí k hradu Veveří</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2400&x=16.5100&z=14" target="_blank">📍</a></h3>
   <p class="desc">Brno parník — elektrické lodě na přehradě</p>
   <div class="tags"><span class="tag" data-tag="brno">#brno</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="lod">#lod</span> </div>
 </div>
-<div class="card" data-tags="travel vylety jeseniky rozhledna">
+<div class="card" data-tags="travel vylety jeseniky rozhledna" data-lat="49.9400" data-lng="16.9100">
   <h3><a href="brusna/">Rozhledna Brusná — výhled nad Bludovem</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9400&x=16.9100&z=14" target="_blank">📍</a></h3>
   <p class="desc">Rozhledna Brusná — panorama Jeseníků a Šumperska</p>
   <div class="tags"><span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="rozhledna">#rozhledna</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.5967818" data-lng="17.4038628">
   <h3><a href="bunkr-praslavice/">Bunkr Přáslavice</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5967818&x=17.4038628&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum v bývalém vojenském krytu civilní obrany. Prohlídky podzemí, dobová výbava studené války.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety polsko termy deti zakopane">
+<div class="card" data-tags="travel vylety polsko termy deti zakopane" data-lat="49.3520" data-lng="19.8232">
   <h3><a href="chocholowskie-termy/">Chochołowské termy — 52 bazénů, největší v Polsku</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3520&x=19.8232&z=14" target="_blank">📍</a></h3>
   <p class="desc">Chochołowské termy — největší termální komplex v Polsku</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zakopane">#zakopane</span> </div>
 </div>
-<div class="card" data-tags="travel vylety nemecko cyklo jezera priroda">
-  <h3><a href="de-fuessen/">&#34;Německo — Füssen / Allgäu (cyklovýlety kolem jezer)&#34;</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5670&x=10.7000&z=14" target="_blank">📍</a></h3>
+<div class="card" data-tags="travel vylety nemecko cyklo jezera priroda" data-lat="47.5670" data-lng="10.7000">
+  <h3><a href="de-fuessen/">Německo — Füssen / Allgäu (cyklovýlety kolem jezer)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5670&x=10.7000&z=14" target="_blank">📍</a></h3>
   <p class="desc">Füssen / Allgäu — cyklovýlety kolem alpských jezer</p>
   <div class="tags"><span class="tag" data-tag="nemecko">#nemecko</span> <span class="tag" data-tag="cyklo">#cyklo</span> <span class="tag" data-tag="jezera">#jezera</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety nemecko hrad historie">
+<div class="card" data-tags="travel vylety nemecko hrad historie" data-lat="47.5575" data-lng="10.7494">
   <h3><a href="de-neuschwanstein/">Německo — Neuschwanstein (pohádkový zámek Ludvíka II.)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5575&x=10.7494&z=14" target="_blank">📍</a></h3>
   <p class="desc">Neuschwanstein — pohádkový zámek Ludvíka II.</p>
   <div class="tags"><span class="tag" data-tag="nemecko">#nemecko</span> <span class="tag" data-tag="hrad">#hrad</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety morava deti zabava">
+<div class="card" data-tags="travel vylety morava deti zabava" data-lat="49.2800" data-lng="16.9900">
   <h3><a href="dinopark-vyskov/">DinoPark Vyškov — 100+ robotických dinosaurů</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2800&x=16.9900&z=14" target="_blank">📍</a></h3>
   <p class="desc">DinoPark Vyškov — království dinosaurů</p>
   <div class="tags"><span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zabava">#zabava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko hory priroda">
+<div class="card" data-tags="travel vylety polsko hory priroda" data-lat="49.2450" data-lng="19.8150">
   <h3><a href="dolina-chocholowska/">Dolina Chocholowska</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2450&x=19.8150&z=14" target="_blank">📍</a></h3>
   <p class="desc">Dolina Chochołowska — nejdelší údolí polských Tater</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko hory priroda">
+<div class="card" data-tags="travel vylety polsko hory priroda" data-lat="49.2500" data-lng="19.8750">
   <h3><a href="dolina-koscieliska/">Dolina Koscieliska</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2500&x=19.8750&z=14" target="_blank">📍</a></h3>
   <p class="desc">Dolina Kościeliska — malebné údolí s jeskyněmi</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.0700" data-lng="16.4619">
   <h3><a href="dolni-kounice/">Dolní Kounice</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.0700&x=16.4619&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zřícenina kláštera Rosa Coeli (gotika), vinařské městečko na řece Jihlavě. Cyklostezka, vinotéky.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety rakousko viden vyhledy">
+<div class="card" data-tags="travel vylety rakousko viden vyhledy" data-lat="48.2405" data-lng="16.4105">
   <h3><a href="donauturm/">Donauturm — nejvyšší stavba Rakouska (252 m)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.2405&x=16.4105&z=14" target="_blank">📍</a></h3>
   <p class="desc">Donauturm — 360° výhled z 150 m + nejvy šší skluzavka Evropy</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="viden">#viden</span> <span class="tag" data-tag="vyhledy">#vyhledy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety rakousko aktivni deti">
+<div class="card" data-tags="travel vylety rakousko aktivni deti" data-lat="47.6020" data-lng="16.6340">
   <h3><a href="draisinentour/">Drezína Burgenland — šlapací vlak po kolejích</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.6020&x=16.6340&z=14" target="_blank">📍</a></h3>
   <p class="desc">Drezína Burgenland — šlapací vlak po starých kolejích</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="aktivni">#aktivni</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko priroda rodina">
+<div class="card" data-tags="travel vylety polsko priroda rodina" data-lat="49.3960" data-lng="20.4170">
   <h3><a href="dunajec-plte/">Dunajec plte</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3960&x=20.4170&z=14" target="_blank">📍</a></h3>
   <p class="desc">Plavba na pltích po Dunajci — Pieniny</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="rodina">#rodina</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy vino historie">
+<div class="card" data-tags="travel vylety madarsko termy vino historie" data-lat="47.9025" data-lng="20.3772">
   <h3><a href="eger/">Maďarsko — Eger</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.9025&x=20.3772&z=14" target="_blank">📍</a></h3>
   <p class="desc">Eger — barokní město, hrad, termy a víno</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="vino">#vino</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko deti zabava">
+<div class="card" data-tags="travel vylety polsko deti zabava" data-lat="49.9722" data-lng="19.6817">
   <h3><a href="energylandia/">EnergyLandia — zábavní park</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9722&x=19.6817&z=14" target="_blank">📍</a></h3>
   <p class="desc">EnergyLandia — největší zábavní park v Polsku</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zabava">#zabava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety rakousko deti zabava">
+<div class="card" data-tags="travel vylety rakousko deti zabava" data-lat="47.7920" data-lng="16.5960">
   <h3><a href="familypark/">Familypark St. Margarethen — zábavní park pro rodiny</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.7920&x=16.5960&z=14" target="_blank">📍</a></h3>
   <p class="desc">Familypark St. Margarethen — největší rodinný park v Rakousku</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zabava">#zabava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko termy deti zakopane priroda">
+<div class="card" data-tags="travel vylety polsko termy deti zakopane priroda" data-lat="49.3997" data-lng="20.0231">
   <h3><a href="goracy-potok/">Gorący Potok — přírodní sirná voda bez chemie</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3997&x=20.0231&z=14" target="_blank">📍</a></h3>
   <p class="desc">Gorący Potok — jediná přírodní termální voda na Podhalí</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zakopane">#zakopane</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko hory">
+<div class="card" data-tags="travel vylety polsko hory" data-lat="49.3028" data-lng="19.9425">
   <h3><a href="gubalowka/">Gubalowka</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3028&x=19.9425&z=14" target="_blank">📍</a></h3>
   <p class="desc">Gubałówka — panoramatický výhled na Tatry</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="travel vylety rakousko deti zoo viden">
+<div class="card" data-tags="travel vylety rakousko deti zoo viden" data-lat="48.1990" data-lng="16.3540">
   <h3><a href="haus-des-meeres/">Haus des Meeres — akvárium ve válečné věži (Vídeň)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.1990&x=16.3540&z=14" target="_blank">📍</a></h3>
   <p class="desc">Haus des Meeres — 10 000 zvířat ve flakové věži</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zoo">#zoo</span> <span class="tag" data-tag="viden">#viden</span> </div>
 </div>
-<div class="card" data-tags="travel vylety morava deti adrenalin">
+<div class="card" data-tags="travel vylety morava deti adrenalin" data-lat="49.6600" data-lng="17.7400">
   <h3><a href="heipark-tosovice/">Heipark Tošovice — bobovka, tubing, bikepark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.6600&x=17.7400&z=14" target="_blank">📍</a></h3>
   <p class="desc">Heipark Tošovice — celodenní adrenalin pro rodiny</p>
   <div class="tags"><span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="adrenalin">#adrenalin</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6833" data-lng="16.4333">
   <h3><a href="hrad-grodno/">Hrad Grodno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6833&x=16.4333&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zamek Grodno — středověký hrad (Zagórze Śląskie)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.4507" data-lng="16.3194">
   <h3><a href="hrad-pernstejn/">Hrad Pernštejn</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4507&x=16.3194&z=14" target="_blank">📍</a></h3>
   <p class="desc">Jeden z nejzachovalejších gotických hradů v ČR. Prohlídkové trasy, noční prohlídky v létě.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.2569" data-lng="16.4597">
   <h3><a href="hrad-veveri/">Hrad Veveří</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2569&x=16.4597&z=14" target="_blank">📍</a></h3>
   <p class="desc">Jeden z nejstarších a největších hradů na Moravě. Nad Brněnskou přehradou, přístupný lodí z Bystrce.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko historie umeni">
+<div class="card" data-tags="travel vylety slovinsko historie umeni" data-lat="45.5064" data-lng="13.8972">
   <h3><a href="hrastovlje/">Hrastovlje — Tanec smrti (středověké fresky)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5064&x=13.8972&z=14" target="_blank">📍</a></h3>
   <p class="desc">Hrastovlje — gotické fresky Tanec smrti</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="umeni">#umeni</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko aquapark deti budapest">
+<div class="card" data-tags="travel vylety madarsko aquapark deti budapest" data-lat="47.5867" data-lng="19.0936">
   <h3><a href="hu-aquaworld/">Aquaworld Budapest — největší krytý aquapark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5867&x=19.0936&z=14" target="_blank">📍</a></h3>
   <p class="desc">Aquaworld Budapest — jeden z největších krytých aquaparků v Evropě</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="budapest">#budapest</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy">
+<div class="card" data-tags="travel vylety madarsko termy" data-lat="47.3864" data-lng="16.7456">
   <h3><a href="hu-buk/">Maďarsko — Bükfürdő (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.3864&x=16.7456&z=14" target="_blank">📍</a></h3>
   <p class="desc">Bükfürdő Thermal &amp; Spa</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy aquapark deti">
+<div class="card" data-tags="travel vylety madarsko termy aquapark deti" data-lat="47.5550" data-lng="21.6250">
   <h3><a href="hu-debrecen/">Debrecen Aquaticum — mediteránní aquapark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5550&x=21.6250&z=14" target="_blank">📍</a></h3>
   <p class="desc">Debrecen Aquaticum — krytá mediteránní pláž</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy priroda">
+<div class="card" data-tags="travel vylety madarsko termy priroda" data-lat="47.8636" data-lng="20.3264">
   <h3><a href="hu-egerszalok/">Maďarsko — Egerszalók (Salt Hill — „maďarské Pamukkale&#34;)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.8636&x=20.3264&z=14" target="_blank">📍</a></h3>
   <p class="desc">Egerszalók Salt Hill (Sódomb)</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy hrad historie">
+<div class="card" data-tags="travel vylety madarsko termy hrad historie" data-lat="46.6472" data-lng="21.2789">
   <h3><a href="hu-gyula/">Gyula — hradní lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.6472&x=21.2789&z=14" target="_blank">📍</a></h3>
   <p class="desc">Gyula — jediné hradní lázně v Maďarsku (Várfürdő)</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="hrad">#hrad</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy deti aquapark">
+<div class="card" data-tags="travel vylety madarsko termy deti aquapark" data-lat="47.4489" data-lng="21.3937">
   <h3><a href="hu-hajduszoboszlo/">Hajdúszoboszló — největší termální komplex v Evropě</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.4489&x=21.3937&z=14" target="_blank">📍</a></h3>
   <p class="desc">Hajdúszoboszló — „Mekka revmatiků&#34; a obří aquapark</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="aquapark">#aquapark</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy">
+<div class="card" data-tags="travel vylety madarsko termy" data-lat="45.8476" data-lng="18.2369">
   <h3><a href="hu-harkany/">Maďarsko — Harkány (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.8476&x=18.2369&z=14" target="_blank">📍</a></h3>
   <p class="desc">Termální lázně v jižním Maďarsku (Baranya) v 13,5 ha prastarém parku se staleté stromy. Sirná léčivá voda objevena v roce 1823 — příběh studnaře Pogány Jánose, jemuž teplá voda …</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy balaton">
+<div class="card" data-tags="travel vylety madarsko termy balaton" data-lat="46.7881" data-lng="17.1894">
   <h3><a href="hu-heviz/">Maďarsko — Hévíz (termální jezero)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.7881&x=17.1894&z=14" target="_blank">📍</a></h3>
   <p class="desc">Termální jezero Hévíz</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="balaton">#balaton</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy deti">
+<div class="card" data-tags="travel vylety madarsko termy deti" data-lat="47.8056" data-lng="20.5833">
   <h3><a href="hu-mezokovesd/">Mezőkövesd — Zsóry termální lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.8056&x=20.5833&z=14" target="_blank">📍</a></h3>
   <p class="desc">Mezőkövesd — Zsóry termální lázně</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy jeskyne deti">
+<div class="card" data-tags="travel vylety madarsko termy jeskyne deti" data-lat="48.0667" data-lng="20.7167">
   <h3><a href="hu-miskolctapolca/">Miskolctapolca — jeskynní lázně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.0667&x=20.7167&z=14" target="_blank">📍</a></h3>
   <p class="desc">Miskolctapolca — termální koupání v jeskyních</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy">
+<div class="card" data-tags="travel vylety madarsko termy" data-lat="47.2536" data-lng="16.9361">
   <h3><a href="hu-sarvar/">Maďarsko — Sárvár (termální lázně)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.2536&x=16.9361&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sárvár Spa and Wellness Centre</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy budapest historie">
+<div class="card" data-tags="travel vylety madarsko termy budapest historie" data-lat="47.5183" data-lng="19.0822">
   <h3><a href="hu-szechenyi/">Széchenyi fürdő — největší lázně v Evropě (Budapešť)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5183&x=19.0822&z=14" target="_blank">📍</a></h3>
   <p class="desc">Széchenyi fürdő — největší léčivé lázně v Evropě</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="budapest">#budapest</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko aquapark termy deti">
+<div class="card" data-tags="travel vylety madarsko aquapark termy deti" data-lat="46.2530" data-lng="20.1414">
   <h3><a href="hu-szeged/">Szeged Napfényfürdő — aquapark u 3. největšího města</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.2530&x=20.1414&z=14" target="_blank">📍</a></h3>
   <p class="desc">Szeged Napfényfürdő Aquapolis — „Vodní město čtyř ročních období&#34;</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="aquapark">#aquapark</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko balaton jeskyne">
+<div class="card" data-tags="travel vylety madarsko balaton jeskyne" data-lat="46.8828" data-lng="17.4081">
   <h3><a href="hu-tapolca/">Maďarsko — Tapolca (jeskyní jezero)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.8828&x=17.4081&z=14" target="_blank">📍</a></h3>
   <p class="desc">Tavasbarlang — Tapolca Lake Cave</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="balaton">#balaton</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> </div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy deti">
+<div class="card" data-tags="travel vylety madarsko termy deti" data-lat="46.5511" data-lng="17.1242">
   <h3><a href="hu-zalakaros/">Zalakaros — termální lázně u Balatonu</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.5511&x=17.1242&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zalakaros — horká voda (96 °C!) a květiny</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.2044" data-lng="16.5881">
   <h3><a href="hvezdarna-brno/">Hvězdárna Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2044&x=16.5881&z=14" target="_blank">📍</a></h3>
   <p class="desc">Hvězdárna a planetárium na Kraví hoře. Pozorování oblohy, programy pro děti, digitální planetárium.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety italie termy">
+<div class="card" data-tags="travel vylety italie termy" data-lat="42.9300" data-lng="11.7014">
   <h3><a href="it-bagni-san-filippo/">Itálie — Bagni San Filippo (termální prameny)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.9300&x=11.7014&z=14" target="_blank">📍</a></h3>
   <p class="desc">Fosso Bianco — přírodní termální vodopády</p>
   <div class="tags"><span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety italie priroda hory hiking">
+<div class="card" data-tags="travel vylety italie priroda hory hiking" data-lat="42.9000" data-lng="11.6333">
   <h3><a href="it-monte-amiata/">&#34;Itálie — Monte Amiata (vyhaslá sopka s výhledy na celé Toskánsko)&#34;</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.9000&x=11.6333&z=14" target="_blank">📍</a></h3>
   <p class="desc">Monte Amiata — vyhaslá sopka s výhledy na celé Toskánsko</p>
   <div class="tags"><span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="hiking">#hiking</span> </div>
 </div>
-<div class="card" data-tags="travel vylety italie mesto historie">
-  <h3><a href="it-pitigliano/">&#34;Itálie — Pitigliano (město na tufových skalách)&#34;</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.6347&x=11.6697&z=14" target="_blank">📍</a></h3>
+<div class="card" data-tags="travel vylety italie mesto historie" data-lat="42.6347" data-lng="11.6697">
+  <h3><a href="it-pitigliano/">Itálie — Pitigliano (město na tufových skalách)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.6347&x=11.6697&z=14" target="_blank">📍</a></h3>
   <p class="desc">Pitigliano — město na tufových skalách</p>
   <div class="tags"><span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="mesto">#mesto</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety italie termy">
+<div class="card" data-tags="travel vylety italie termy" data-lat="42.6508" data-lng="11.5128">
   <h3><a href="it-saturnie/">Itálie — Saturnia (termální prameny)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.6508&x=11.5128&z=14" target="_blank">📍</a></h3>
   <p class="desc">Cascate del Mulino — přírodní termální prameny</p>
   <div class="tags"><span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety italie historie archeologie">
+<div class="card" data-tags="travel vylety italie historie archeologie" data-lat="42.6569" data-lng="11.6444">
   <h3><a href="it-sovana/">Itálie — Sovana (etruské nekropole a skalní hrobky)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=42.6569&x=11.6444&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sovana — etruské nekropole a skalní hrobky</p>
   <div class="tags"><span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="archeologie">#archeologie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko more deti plaz">
+<div class="card" data-tags="travel vylety slovinsko more deti plaz" data-lat="45.5363" data-lng="13.6561">
   <h3><a href="izola/">Izola — rybářské městečko s plážemi pro děti</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5363&x=13.6561&z=14" target="_blank">📍</a></h3>
   <p class="desc">Izola — autentická rybářská vesnice s nejlepší pláží pro děti</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="plaz">#plaz</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6583" data-lng="16.3750">
   <h3><a href="jugowice-riese/">Jugowice - Riese</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6583&x=16.3750&z=14" target="_blank">📍</a></h3>
   <p class="desc">Jugowice (Säuferhöhen) — objekt projektu Riese</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko hory">
+<div class="card" data-tags="travel vylety polsko hory" data-lat="49.2319" data-lng="19.9817">
   <h3><a href="kasprowy-wierch/">Kasprowy Wierch</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2319&x=19.9817&z=14" target="_blank">📍</a></h3>
   <p class="desc">Kasprowy Wierch — lanovka na 1987 m n. m.</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="travel vylety jeseniky aktivni deti lyzovani">
+<div class="card" data-tags="travel vylety jeseniky aktivni deti lyzovani" data-lat="50.0800" data-lng="17.0700">
   <h3><a href="kouty/">Kouty — bikepark a koloběžky v Jeseníkách</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0800&x=17.0700&z=14" target="_blank">📍</a></h3>
   <p class="desc">Kouty nad Desnou — 17 km sjezd na koloběžce!</p>
   <div class="tags"><span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="aktivni">#aktivni</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="lyzovani">#lyzovani</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovacko deti umeni">
+<div class="card" data-tags="travel vylety slovacko deti umeni" data-lat="49.0700" data-lng="17.4300">
   <h3><a href="kovozoo/">Kovo-zoo — zvířata z recyklovaného šrotu</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.0700&x=17.4300&z=14" target="_blank">📍</a></h3>
   <p class="desc">Kovozoo — unikátní zoo z kovových soch</p>
   <div class="tags"><span class="tag" data-tag="slovacko">#slovacko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="umeni">#umeni</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko mesto hory">
+<div class="card" data-tags="travel vylety polsko mesto hory" data-lat="50.0617" data-lng="19.9373">
   <h3><a href="krakov/">Krakov — královské město a okolí</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0617&x=19.9373&z=14" target="_blank">📍</a></h3>
   <p class="desc">Krakov — královské město</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="mesto">#mesto</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="travel vylety jeseniky lyzovani deti aktivni">
+<div class="card" data-tags="travel vylety jeseniky lyzovani deti aktivni" data-lat="50.1700" data-lng="16.8800">
   <h3><a href="kralicak/">Kraličák — lyže a koloběžky u Králického Sněžníku</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.1700&x=16.8800&z=14" target="_blank">📍</a></h3>
   <p class="desc">Kraličák — rodinný areál pod Králickým Sněžníkem</p>
   <div class="tags"><span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="lyzovani">#lyzovani</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="aktivni">#aktivni</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.8428" data-lng="16.2917">
   <h3><a href="ksiaz/">Ksiaz</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.8428&x=16.2917&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zamek Książ (Fürstenstein) — Wałbrzych, Polsko</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety brno priroda">
+<div class="card" data-tags="travel vylety brno priroda" data-lat="49.2300" data-lng="16.5200">
   <h3><a href="kubickuv-lom/">Kubičkův lom — tyrkysové jezero v Brně</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2300&x=16.5200&z=14" target="_blank">📍</a></h3>
   <p class="desc">Kubičkův lom — zatopený lom s tyrkysovou vodou</p>
   <div class="tags"><span class="tag" data-tag="brno">#brno</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety brno pamatky deti">
+<div class="card" data-tags="travel vylety brno pamatky deti" data-lat="49.1919" data-lng="16.6090">
   <h3><a href="labyrint-zelny-trh/">Labyrint pod Zelným trhem — podzemní Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1919&x=16.6090&z=14" target="_blank">📍</a></h3>
   <p class="desc">Středověké podzemní chodby a sklepy 6–8 metrů pod jedním z nejstarších brněnských náměstí. Přes 1000 metrů chodeb propojených v roce 2009.</p>
   <div class="tags"><span class="tag" data-tag="brno">#brno</span> <span class="tag" data-tag="pamatky">#pamatky</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety ostravsko deti muzeum historie">
+<div class="card" data-tags="travel vylety ostravsko deti muzeum historie" data-lat="49.8600" data-lng="18.2700">
   <h3><a href="landek-park/">Landek Park — hornické muzeum Ostrava</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.8600&x=18.2700&z=14" target="_blank">📍</a></h3>
   <p class="desc">Landek Park — čtvrt km podzemních chodeb</p>
   <div class="tags"><span class="tag" data-tag="ostravsko">#ostravsko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="muzeum">#muzeum</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.3743" data-lng="16.7382">
   <h3><a href="macocha/">Propast Macocha</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3743&x=16.7382&z=14" target="_blank">📍</a></h3>
   <p class="desc">Nejhlubší propast v ČR (138 m). Plavba na lodičkách v jeskyních, horní a spodní vyhlídka.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety spanelsko more mesto">
+<div class="card" data-tags="travel vylety spanelsko more mesto" data-lat="36.7213" data-lng="-4.4214">
   <h3><a href="malaga-nerja/">Málaga a Nerja — Costa del Sol</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=36.7213&x=-4.4214&z=14" target="_blank">📍</a></h3>
   <p class="desc">Costa del Sol — Málaga jako základna pro výlety po andaluském pobřeží. Nerja s jeskyněmi a Balcón de Europa 50 km východně.</p>
   <div class="tags"><span class="tag" data-tag="spanelsko">#spanelsko</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="mesto">#mesto</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.1877" data-lng="16.5932">
   <h3><a href="mamut-muzeum-brno/">Mamut muzeum Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1877&x=16.5932&z=14" target="_blank">📍</a></h3>
   <p class="desc">Pavilon Anthropos — interaktivní muzeum pravěku. Mamut v životní velikosti, rekonstrukce pravěkých lovců.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko vino gastronomie">
+<div class="card" data-tags="travel vylety slovinsko vino gastronomie" data-lat="45.5150" data-lng="13.7500">
   <h3><a href="marezige/">Marezige — vinná fontána</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5150&x=13.7500&z=14" target="_blank">📍</a></h3>
   <p class="desc">Marezige — první vinná fontána ve Slovinsku</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="vino">#vino</span> <span class="tag" data-tag="gastronomie">#gastronomie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovacko deti priroda">
+<div class="card" data-tags="travel vylety slovacko deti priroda" data-lat="49.1120" data-lng="17.4030">
   <h3><a href="modra-tunel/">Modrá — sladkovodní akvárium s tunelem pod vodou</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1120&x=17.4030&z=14" target="_blank">📍</a></h3>
   <p class="desc">Modrá — průchozí tunel pod vodou (Živá voda)</p>
   <div class="tags"><span class="tag" data-tag="slovacko">#slovacko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety morava jeskyne deti priroda">
+<div class="card" data-tags="travel vylety morava jeskyne deti priroda" data-lat="49.36042" data-lng="16.64423">
   <h3><a href="moravsky-kras/">Moravský kras — jeskyně a propast Macocha</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.36042&x=16.64423&z=14" target="_blank">📍</a></h3>
   <p class="desc">Největší krasový útvar v ČR — přes 1100 jeskyní, z toho 5 přístupných veřejnosti. 20 minut vlakem z Brna.</p>
   <div class="tags"><span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko hory priroda">
+<div class="card" data-tags="travel vylety polsko hory priroda" data-lat="49.2015" data-lng="20.0713">
   <h3><a href="morskie-oko/">Morskie Oko</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2015&x=20.0713&z=14" target="_blank">📍</a></h3>
   <p class="desc">Morskie Oko — nejkrásnější horské jezero v Tatrách</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
@@ -466,192 +467,192 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Muzeum TATRA Kopřivnice</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="49.4080" data-lng="20.3090">
   <h3><a href="niedzica-hrad/">Niedzica hrad</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4080&x=20.3090&z=14" target="_blank">📍</a></h3>
   <p class="desc">Hrad Niedzica — gotický hrad nad přehradou Czorsztyn</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko deti hory jezera more termy">
+<div class="card" data-tags="travel vylety slovinsko deti hory jezera more termy" data-lat="46.3683" data-lng="14.1146">
   <h3><a href="objevuj-slovinsko/">Objevuj Slovinsko s dětmi</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.3683&x=14.1146&z=14" target="_blank">📍</a></h3>
   <p class="desc">Objevuj Slovinsko s dětmi</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="jezera">#jezera</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="termy">#termy</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6486" data-lng="16.3561">
   <h3><a href="osowka/">Osowka</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6486&x=16.3561&z=14" target="_blank">📍</a></h3>
   <p class="desc">Osówka — podzemní město (Góry Sowie, Polsko)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="47.7936" data-lng="18.7406">
   <h3><a href="ostrihom/">Ostrihom</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.7936&x=18.7406&z=14" target="_blank">📍</a></h3>
   <p class="desc">Historické město na Dunaji s největší bazilikou v Maďarsku. Termální lázně, Grand Hotel.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko cyklistika aktivni deti">
+<div class="card" data-tags="travel vylety slovinsko cyklistika aktivni deti" data-lat="45.5100" data-lng="13.7600">
   <h3><a href="parenzana/">Parenzana — cyklotrasa po úzkokolejce</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5100&x=13.7600&z=14" target="_blank">📍</a></h3>
   <p class="desc">Parenzana — cyklotrasa po bývalé úzkokolejce</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="cyklistika">#cyklistika</span> <span class="tag" data-tag="aktivni">#aktivni</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety olomouc deti muzeum veda">
+<div class="card" data-tags="travel vylety olomouc deti muzeum veda" data-lat="49.6000" data-lng="17.2600">
   <h3><a href="pevnost-poznani/">Pevnost poznání — interaktivní věda v Olomouci</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.6000&x=17.2600&z=14" target="_blank">📍</a></h3>
   <p class="desc">Pevnost poznání — vědecké centrum v historické pevnosti</p>
   <div class="tags"><span class="tag" data-tag="olomouc">#olomouc</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="muzeum">#muzeum</span> <span class="tag" data-tag="veda">#veda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko more mesto historie">
+<div class="card" data-tags="travel vylety slovinsko more mesto historie" data-lat="45.5283" data-lng="13.5681">
   <h3><a href="piran/">Piran — benátské městečko na Jadranu</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5283&x=13.5681&z=14" target="_blank">📍</a></h3>
   <p class="desc">Piran — nejkrásnější městečko na slovinském pobřeží</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="mesto">#mesto</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko hory adrenalin deti">
+<div class="card" data-tags="travel vylety slovinsko hory adrenalin deti" data-lat="46.4761" data-lng="13.7242">
   <h3><a href="planica/">Planica — zipline a větrný tunel</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.4761&x=13.7242&z=14" target="_blank">📍</a></h3>
   <p class="desc">Planica — Nordické centrum s rodinnými atrakcemi</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="adrenalin">#adrenalin</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko jeskyne deti unesco">
+<div class="card" data-tags="travel vylety slovinsko jeskyne deti unesco" data-lat="45.7797" data-lng="14.2053">
   <h3><a href="postojna/">Postojnska jama — největší jeskyně ve Slovinsku</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.7797&x=14.2053&z=14" target="_blank">📍</a></h3>
   <p class="desc">Postojnska jama — podzemní vlak a dračí mláďata</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="unesco">#unesco</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko hrad deti">
+<div class="card" data-tags="travel vylety slovinsko hrad deti" data-lat="45.8158" data-lng="14.1271">
   <h3><a href="predjama/">Predjamský hrad — hrad ve skále</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.8158&x=14.1271&z=14" target="_blank">📍</a></h3>
   <p class="desc">Predjamský hrad — největší jeskynní hrad na světě</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="hrad">#hrad</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko priroda">
+<div class="card" data-tags="travel vylety polsko priroda" data-lat="50.6850" data-lng="16.4300">
   <h3><a href="prehrada-zagorze-slaskie/">Prehrada Zagórze Śląskie</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6850&x=16.4300&z=14" target="_blank">📍</a></h3>
   <p class="desc">Přehrada Zagórze Śląskie (Jezioro Bystrzyckie)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety hana rozhledna">
+<div class="card" data-tags="travel vylety hana rozhledna" data-lat="49.4800" data-lng="17.4200">
   <h3><a href="rozhledna-tucin/">Rozhledna Tučín — výhled na Hanou</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4800&x=17.4200&z=14" target="_blank">📍</a></h3>
   <p class="desc">Rozhledna Tučín — panorama Jeseníků a Beskyd</p>
   <div class="tags"><span class="tag" data-tag="hana">#hana</span> <span class="tag" data-tag="rozhledna">#rozhledna</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6700" data-lng="16.4100">
   <h3><a href="rzeczka-riese/">Rzeczka - Riese</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6700&x=16.4100&z=14" target="_blank">📍</a></h3>
   <p class="desc">Rzeczka — nedokončené tunely (projekt Riese)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="info travel vylety italie mesto">
+<div class="card" data-tags="info travel vylety italie mesto" data-lat="43.9424" data-lng="12.4578">
   <h3><a href="san-marino/">San Marino — Nejstarší republika světa</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=43.9424&x=12.4578&z=14" target="_blank">📍</a></h3>
   <p class="desc">San Marino — Nejstarší republika světa</p>
   <div class="tags"><span class="tag" data-tag="info">#info</span> <span class="tag" data-tag="italie">#italie</span> <span class="tag" data-tag="mesto">#mesto</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko priroda historie">
+<div class="card" data-tags="travel vylety slovinsko priroda historie" data-lat="45.4847" data-lng="13.6028">
   <h3><a href="secovlje/">Sečovlje — solné pánve s 800letou historií</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.4847&x=13.6028&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sečovlje — solné pánve (Krajinský park)</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6450" data-lng="16.3600">
   <h3><a href="sobon-sokolec-riese/">Sobon Sokolec - Riese</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6450&x=16.3600&z=14" target="_blank">📍</a></h3>
   <p class="desc">Soboń / Sokolec — zbytky vstupů (projekt Riese)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="51.9606" data-lng="20.5089">
   <h3><a href="suntago/">Suntago</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=51.9606&x=20.5089&z=14" target="_blank">📍</a></h3>
   <p class="desc">Největší krytý aquapark v Evropě (Park of Poland). Tropické bazény, tobogány, sauny. Cca 5h z Brna.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6808" data-lng="16.4272">
   <h3><a href="sztolnie-walimskie/">Sztolnie Walimskie</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6808&x=16.4272&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sztolnie Walimskie — podzemní komplex (projekt Riese)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety cesko adrenalin">
+<div class="card" data-tags="travel vylety cesko adrenalin" data-lat="50.2300" data-lng="14.8900">
   <h3><a href="tankodrom-milovice/">Tankodrom Milovice — jízda v obrněnci</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.2300&x=14.8900&z=14" target="_blank">📍</a></h3>
   <p class="desc">Tankodrom Milovice — vojákem na jeden den</p>
   <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="adrenalin">#adrenalin</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.5936" data-lng="17.2509">
   <h3><a href="technotrasa/">Technotrasa</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5936&x=17.2509&z=14" target="_blank">📍</a></h3>
   <p class="desc">Síť technických památek.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety polsko termy deti zakopane">
+<div class="card" data-tags="travel vylety polsko termy deti zakopane" data-lat="49.3876" data-lng="20.0990">
   <h3><a href="terma-bania/">Terma Bania — termy s panoramatem Tater</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3876&x=20.0990&z=14" target="_blank">📍</a></h3>
   <p class="desc">Terma Bania — termály s výhledem na Tatry</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zakopane">#zakopane</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko more deti bazen">
+<div class="card" data-tags="travel vylety slovinsko more deti bazen" data-lat="45.5150" data-lng="13.5750">
   <h3><a href="termaris/">Termaris — kryté mořské bazény v Portorži</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.5150&x=13.5750&z=14" target="_blank">📍</a></h3>
   <p class="desc">Termaris — největší kryté mořské bazény na slovinském pobřeží</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="more">#more</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="bazen">#bazen</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko termy deti zabava">
+<div class="card" data-tags="travel vylety slovinsko termy deti zabava" data-lat="46.6847" data-lng="16.2222">
   <h3><a href="terme-3000/">Terme 3000 — černá termální voda</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.6847&x=16.2222&z=14" target="_blank">📍</a></h3>
   <p class="desc">Terme 3000 Moravske Toplice — unikátní černá termální voda</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zabava">#zabava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko termy deti zabava">
+<div class="card" data-tags="travel vylety slovinsko termy deti zabava" data-lat="46.1569" data-lng="15.6068">
   <h3><a href="terme-olimia/">Terme Olimia — Aqualuna aquapark</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.1569&x=15.6068&z=14" target="_blank">📍</a></h3>
   <p class="desc">Terme Olimia — rodinný aquapark Aqualuna</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zabava">#zabava</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko termy deti zakopane">
+<div class="card" data-tags="travel vylety polsko termy deti zakopane" data-lat="49.2950" data-lng="19.9655">
   <h3><a href="termy-zakopianskie/">Termy Zakopianskie — přímo v Zakopaném (bez auta)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2950&x=19.9655&z=14" target="_blank">📍</a></h3>
   <p class="desc">Termy Zakopianskie — jediné termy přímo v Zakopaném</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="zakopane">#zakopane</span> </div>
 </div>
-<div class="card" data-tags="travel vylety rakousko termy deti">
+<div class="card" data-tags="travel vylety rakousko termy deti" data-lat="48.7200" data-lng="16.3850">
   <h3><a href="therme-laa/">Therme Laa — termální lázně u české hranice</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.7200&x=16.3850&z=14" target="_blank">📍</a></h3>
   <p class="desc">Therme Laa — termály hned za hranicí</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety slovinsko hory deti priroda">
+<div class="card" data-tags="travel vylety slovinsko hory deti priroda" data-lat="46.2969" data-lng="14.6519">
   <h3><a href="velika-planina/">Velika Planina — alpská pastvina s lanovkou</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.2969&x=14.6519&z=14" target="_blank">📍</a></h3>
   <p class="desc">Velika Planina — pastevecká osada v oblacích</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="hory">#hory</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
-<div class="card" data-tags="travel vylety morava zamek">
+<div class="card" data-tags="travel vylety morava zamek" data-lat="49.6200" data-lng="16.6800">
   <h3><a href="velke-opatovice/">Velké Opatovice — zámek a koupaliště</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.6200&x=16.6800&z=14" target="_blank">📍</a></h3>
   <p class="desc">Velké Opatovice — barokní zámek a koupaliště</p>
   <div class="tags"><span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="zamek">#zamek</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.1951" data-lng="16.6068">
   <h3><a href="vida-brno/">VIDA! Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1951&x=16.6068&z=14" target="_blank">📍</a></h3>
   <p class="desc">Interaktivní vědecký park pro děti i dospělé. Přes 170 exponátů, planetárium, dílny.</p>
   <div class="tags"></div>
 </div>
-<div class="card" data-tags="travel vylety madarsko termy deti">
+<div class="card" data-tags="travel vylety madarsko termy deti" data-lat="47.4979" data-lng="19.0402">
   <h3><a href="visit-hungary/">Visit Hungary — průvodce</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.4979&x=19.0402&z=14" target="_blank">📍</a></h3>
   <p class="desc">Maďarsko — termály, historická města, Balaton a vynikající kuchyně. Z Brna 2–3h autem.</p>
   <div class="tags"><span class="tag" data-tag="madarsko">#madarsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety brno pamatky deti">
+<div class="card" data-tags="travel vylety brno pamatky deti" data-lat="49.1908" data-lng="16.5928">
   <h3><a href="vodojemy-brno/">Vodojemy Žlutý kopec — podzemní Brno</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1908&x=16.5928&z=14" target="_blank">📍</a></h3>
   <p class="desc">Tři monumentální podzemní vodojemy z let 1874, 1894 a 1917 — dva cihlové a jeden betonový. Unikátní industriální architektura bez evropských ekvivalentů. Přirovnávány k istanbulské Y…</p>
   <div class="tags"><span class="tag" data-tag="brno">#brno</span> <span class="tag" data-tag="pamatky">#pamatky</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko unesco deti">
+<div class="card" data-tags="travel vylety polsko unesco deti" data-lat="49.9833" data-lng="20.0556">
   <h3><a href="wieliczka/">Wieliczka — solné doly</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9833&x=20.0556&z=14" target="_blank">📍</a></h3>
   <p class="desc">Wieliczka — solné doly (UNESCO)</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="unesco">#unesco</span> <span class="tag" data-tag="deti">#deti</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko sport">
+<div class="card" data-tags="travel vylety polsko sport" data-lat="49.2720" data-lng="19.9510">
   <h3><a href="wielka-krokiew/">Wielka Krokiew</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2720&x=19.9510&z=14" target="_blank">📍</a></h3>
   <p class="desc">Wielka Krokiew — skokanský můstek Zakopane</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="sport">#sport</span> </div>
 </div>
-<div class="card" data-tags="travel vylety rakousko lyzovani deti hory">
+<div class="card" data-tags="travel vylety rakousko lyzovani deti hory" data-lat="47.2520" data-lng="12.2740">
   <h3><a href="wildkogel-arena/">Wildkogel Arena — lyžování pro rodiny</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.2520&x=12.2740&z=14" target="_blank">📍</a></h3>
   <p class="desc">Wildkogel Arena — rodinný lyžařský ráj + nejdelší sáňkařská dráha světa</p>
   <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="lyzovani">#lyzovani</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko historie">
+<div class="card" data-tags="travel vylety polsko historie" data-lat="50.6639" data-lng="16.3908">
   <h3><a href="wlodarz/">Wlodarz</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.6639&x=16.3908&z=14" target="_blank">📍</a></h3>
   <p class="desc">Włodarz — největší objekt projektu Riese</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety polsko termy hory">
+<div class="card" data-tags="travel vylety polsko termy hory" data-lat="49.2992" data-lng="19.9496">
   <h3><a href="zakopane-termy/">Zakopané — termy</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2992&x=19.9496&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zakopané — zimní hlavní město Polska</p>
   <div class="tags"><span class="tag" data-tag="polsko">#polsko</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
-<div class="card" data-tags="travel vylety jeseniky deti historie">
+<div class="card" data-tags="travel vylety jeseniky deti historie" data-lat="50.2600" data-lng="17.3900">
   <h3><a href="zlatokopecky-skanzen/">Zlatokopecký skanzen — rýžování zlata v Jeseníkách</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.2600&x=17.3900&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zlatokopecký skanzen — zkuste si rýžovat zlato!</p>
   <div class="tags"><span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="deti">#deti</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
-<div class="card" data-tags="travel vylety">
+<div class="card" data-tags="travel vylety" data-lat="49.2672" data-lng="17.7014">
   <h3><a href="zoo-lesna/">Zoo Lešná</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.2672&x=17.7014&z=14" target="_blank">📍</a></h3>
   <p class="desc">Zoologická zahrada ZlínLešná. Africká a asijská expozice, dětský svět YOOHOO.</p>
   <div class="tags"></div>
@@ -670,7 +671,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.9400,lng:16.9100,title:"Rozhledna Brusná — výhled nad Bludovem",slug:"brusna",tags:"travel, vylety, jeseniky, rozhledna"},
 {lat:49.5967818,lng:17.4038628,title:"Bunkr Přáslavice",slug:"bunkr-praslavice",tags:"travel, vylety"},
 {lat:49.3520,lng:19.8232,title:"Chochołowské termy — 52 bazénů, největší v Polsku",slug:"chocholowskie-termy",tags:"travel, vylety, polsko, termy, deti, zakopane"},
-{lat:47.5670,lng:10.7000,title:"\"Německo — Füssen / Allgäu (cyklovýlety kolem jezer)\"",slug:"de-fuessen",tags:"travel, vylety, nemecko, cyklo, jezera, priroda"},
+{lat:47.5670,lng:10.7000,title:"Německo — Füssen / Allgäu (cyklovýlety kolem jezer)",slug:"de-fuessen",tags:"travel, vylety, nemecko, cyklo, jezera, priroda"},
 {lat:47.5575,lng:10.7494,title:"Německo — Neuschwanstein (pohádkový zámek Ludvíka II.)",slug:"de-neuschwanstein",tags:"travel, vylety, nemecko, hrad, historie"},
 {lat:49.2800,lng:16.9900,title:"DinoPark Vyškov — 100+ robotických dinosaurů",slug:"dinopark-vyskov",tags:"travel, vylety, morava, deti, zabava"},
 {lat:49.2450,lng:19.8150,title:"Dolina Chocholowska",slug:"dolina-chocholowska",tags:"travel, vylety, polsko, hory, priroda"},
@@ -708,7 +709,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.2044,lng:16.5881,title:"Hvězdárna Brno",slug:"hvezdarna-brno",tags:"travel, vylety"},
 {lat:42.9300,lng:11.7014,title:"Itálie — Bagni San Filippo (termální prameny)",slug:"it-bagni-san-filippo",tags:"travel, vylety, italie, termy"},
 {lat:42.9000,lng:11.6333,title:"\"Itálie — Monte Amiata (vyhaslá sopka s výhledy na celé Toskánsko)\"",slug:"it-monte-amiata",tags:"travel, vylety, italie, priroda, hory, hiking"},
-{lat:42.6347,lng:11.6697,title:"\"Itálie — Pitigliano (město na tufových skalách)\"",slug:"it-pitigliano",tags:"travel, vylety, italie, mesto, historie"},
+{lat:42.6347,lng:11.6697,title:"Itálie — Pitigliano (město na tufových skalách)",slug:"it-pitigliano",tags:"travel, vylety, italie, mesto, historie"},
 {lat:42.6508,lng:11.5128,title:"Itálie — Saturnia (termální prameny)",slug:"it-saturnie",tags:"travel, vylety, italie, termy"},
 {lat:42.6569,lng:11.6444,title:"Itálie — Sovana (etruské nekropole a skalní hrobky)",slug:"it-sovana",tags:"travel, vylety, italie, historie, archeologie"},
 {lat:45.5363,lng:13.6561,title:"Izola — rybářské městečko s plážemi pro děti",slug:"izola",tags:"travel, vylety, slovinsko, more, deti, plaz"},
@@ -780,17 +781,41 @@ markers.forEach(m => {
 if (bounds.length > 1) map.fitBounds(bounds, {padding: [30, 30]});
 
 let activeFilters = new Set();
+let mapFilterActive = true;
 function toggleFilter(tag) {
   const btns = document.querySelectorAll('.tag-btn');
   if (activeFilters.has(tag)) { activeFilters.delete(tag); } else { activeFilters.add(tag); }
   btns.forEach(b => b.classList.toggle('active', activeFilters.has(b.textContent)));
-  document.querySelectorAll('.card').forEach(card => {
-    if (activeFilters.size === 0) { card.classList.remove('hidden'); return; }
-    const cardTags = card.dataset.tags.split(' ');
-    const match = [...activeFilters].some(f => cardTags.includes(f));
-    card.classList.toggle('hidden', !match);
-  });
+  applyFilters();
 }
+function applyFilters() {
+  const bounds = mapFilterActive ? map.getBounds() : null;
+  document.querySelectorAll('.card').forEach(card => {
+    let show = true;
+    // Tag filter
+    if (activeFilters.size > 0) {
+      const cardTags = card.dataset.tags.split(' ');
+      show = [...activeFilters].some(f => cardTags.includes(f));
+    }
+    // Map bounds filter
+    if (show && bounds && card.dataset.lat) {
+      const lat = parseFloat(card.dataset.lat);
+      const lng = parseFloat(card.dataset.lng);
+      if (!isNaN(lat) && !isNaN(lng)) {
+        show = bounds.contains([lat, lng]);
+      }
+    }
+    card.classList.toggle('hidden', !show);
+  });
+  // Update count
+  const visible = document.querySelectorAll('.card:not(.hidden)').length;
+  document.getElementById('visible-count').textContent = visible + ' / ' + markers.length;
+}
+map.on('moveend', function() { if (mapFilterActive) applyFilters(); });
+document.getElementById('map-filter-toggle').addEventListener('change', function() {
+  mapFilterActive = this.checked;
+  applyFilters();
+});
 </script>
 </body>
 </html>
