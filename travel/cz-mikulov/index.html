@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&#34;Mikulov — víno, zámek a Pálava&#34; — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>&#34;Mikulov — víno, zámek a Pálava&#34;</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">mesto</span> <span class="tag">vino</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 &#34;Mikulov, Jihomoravský kraj&#34;</p><p class="meta-item">🌐 <a href="https://www.mikulov.cz/" target="_blank">www.mikulov.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.8056, 16.6378], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.8056, 16.6378]).addTo(dmap);
+</script>
+<div class="content"><h2>Mikulov — víno, zámek a Pálava</h2>
+<p>Mikulov je malebné vinařské městečko na úpatí Pálavských kopců, přímo na rakouské hranici. Dominuje mu renesanční <strong>zámek</strong> na vápencovém kopci, pod ním se rozprostírá historické centrum s jednou z nejlépe zachovalých <strong>židovských čtvrtí</strong> ve střední Evropě. Město je srdcem Mikulovské vinařské podoblasti a výchozím bodem pro výlety do CHKO Pálava.</p>
+<p>Kombinace historie, vína, přírody a krásné architektury z něj dělá jeden z nejatraktivnějších jednodenních výletů z Brna. Navíc — 62 km značených vinařských cyklostezek v okolí!</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zámek: ~120 Kč dospělí; Svatý kopeček, město: zdarma</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Zámek: duben–říjen denně 9–17; mimo sezónu víkendy</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Placené v centru (zóny ~30 Kč/h); větší P u koupaliště</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.8056,16.6378">48.8056, 16.6378</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Mikulovský zámek</strong> — regionální muzeum, obří vinný sud (1 010 hl!), výhledy z věže</li>
+<li><strong>Svatý kopeček</strong> — křížová cesta (1623), kaple sv. Šebestiána, panorama Pálavy</li>
+<li><strong>Židovská čtvrť</strong> — synagoga (16. stol.), hřbitov s ~4 000 náhrobky, rabín Jehuda Löw (golem!) tu působil 1553–1573</li>
+<li><strong>Dietrichsteinská hrobka</strong> — replika lorety, barokní mauzoleum</li>
+<li><strong>Kozí hrádek</strong> — zřícenina nad městem, výhledy, krátký výšlap</li>
+<li><strong>Náměstí</strong> — renesanční a barokní domy, kavárny, vinárny</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv (Svatý kopeček, Kozí hrádek — krátké strmé výstupy)</li>
+<li>Chuť na víno (Pálava, Ryzlink vlašský, Chardonnay — místní odrůdy)</li>
+<li>Kolo (vinařské cyklostezky jsou ploché a krásné)</li>
+<li>V létě: plavky — koupaliště pod zámkem</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: květen–říjen (vinobraní září, pálavské vinobraní začátek září)</li>
+<li><strong>Jaro</strong>: kvetoucí mandloně na Svatém kopečku (konec března!)</li>
+<li><strong>Léto</strong>: koupaliště, cyklo, vinné sklípky ve sklepních uličkách</li>
+<li><strong>Podzim</strong>: vinobraní, burčák, podzimní barvy na Pálavě</li>
+<li><strong>Zima</strong>: klidné, vánoční trhy, otevřené vinárny</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Mandloňové sady</strong> (Svatý kopeček) kvetou koncem března — unikát v ČR!</li>
+<li>Vinné sklípky v <strong>Šatově</strong> a na <strong>Šibeničním vrchu</strong> — ochutnávky za pár korun</li>
+<li>Cyklo okruh Mikulov → Pavlov → Dolní Věstonice → zpět (~25 km, rovinaté)</li>
+<li><strong>Kozí hrádek</strong> — 15 min výšlap, nejlepší výhled na město a Pálavu</li>
+<li>Na zámku si nenech ujít obří sud (1 010 hektolitrů!) — 3. největší v Evropě</li>
+<li>Koupaliště přímo pod zámkem — ideální v létě s dětmi</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brno</td>
+<td>50 km</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>Vídeň</td>
+<td>80 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Břeclav</td>
+<td>18 km</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td>[[cz-znojmo</td>
+<td>Znojmo]]</td>
+<td>45 km</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>230 km</td>
+<td>2,5 h</td>
+</tr>
+</tbody>
+</table>
+<p>Vlak: Znojmo–Břeclav linka, zastávka Mikulov na Moravě.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Pálava / Děvín</strong> (5 km) — vápencové kopce, stepi, orchideje, výhledy z Děvína (554 m)</li>
+<li><strong>Pavlov</strong> (8 km) — vinařská vesnička pod Pálavou, sklípky</li>
+<li><strong>Dolní Věstonice</strong> (10 km) — naleziště Věstonické Venuše, muzeum</li>
+<li><strong>Lednicko-valtický areál</strong> (15 km) — UNESCO, zámky Lednice a Valtice, minarety</li>
+<li><strong>[[cz-znojmo|Znojmo]]</strong> (45 km) — podzemí, rotunda, NP Podyjí</li>
+<li><strong>[[therme-laa|Therme Laa]]</strong> (35 km, Rakousko) — termální lázně</li>
+<li><strong>Valtice</strong> (10 km) — Salon vín ČR, zámek, Národní vinařské centrum</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.mikulov.cz/">Mikulov.cz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mikulov">Wikipedia</a></li>
+<li><a href="https://www.stezky.cz/">Vinařské stezky</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNklEQVR42tzUPY7CMBAF4Be5cEcuYDHXoEDKlZKOzk5FR65kicLX8MoXMB2FxVsF2J8qmHS7U+UrojzNZAb/rjSZATrzeHjfDkNycmQAqjyV3ligaLnWGq1BrPfArJyElXbo1SRX+cm/bPKSJnNI4bs/i75Xmyj+1xAWrE/7XnLRwFav8oUnWNjED59rPJahtFFjF7saY/BN6YsWPr73ynr0tkCo2IS8yuexWFjFxlf5tO8VI5R/vv/S2EhWxxSagArDnrNpFeWZ721v9g2neEDXXGs8/3/iDLCDrjHseUyOhJavvIue+2EgTLxhjQE0xZqD8tsuV3g+I2qKWoKEKt/3TzF58VWe99spKt70SvewUQO3rtJDbGEj6Ks8552vqcdjP16ZvJSWR/HPeb/pv12fAQAA//+r3yulRLa+RgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
