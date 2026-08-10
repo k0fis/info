@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itálie — Bagni San Filippo (termální prameny) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Itálie — Bagni San Filippo (termální prameny)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">termy</span> </div>
+<div class="meta"><p class="meta-item">📍 Bagni San Filippo, 53023 Castiglione d&#39;Orcia SI, Itálie</p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([42.9300, 11.7014], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([42.9300, 11.7014]).addTo(dmap);
+</script>
+<div class="content"><h2>Fosso Bianco — přírodní termální vodopády</h2>
+<p>Ukrytý klenot jižního Toskánska. Přírodní termální prameny v lese u vesničky Bagni San Filippo (obec Castiglione d'Orcia, provincie Siena). Voda bohatá na uhličitan vápenatý vytváří bílé travertinové formace připomínající turecké Pamukkale — odtud přezdívka <strong>„Balena Bianca&quot;</strong> (Bílá velryba).</p>
+<p>Voda stéká z Monte Amiata lesním údolím (Fosso Bianco) a tvoří přirozené tůně a kaskády. Koupání je <strong>zdarma</strong>, přístupné celoročně.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (celoročně)</td>
+</tr>
+<tr>
+<td><strong>Teplota vody</strong></td>
+<td>36–48 °C (liší se dle tůně a vzdálenosti od pramene)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Bezplatné podél silnice u vesnice (~300 m k pramenům)</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Minimální — ve vesnici bar/restaurace</td>
+</tr>
+<tr>
+<td><strong>Přístup</strong></td>
+<td>Lesní pěšina z vesnice (~5 min chůze), místy kluzká</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=42.9300,11.7014">42.9300, 11.7014</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Boty do vody</strong> — dno kluzké od travertinu, cesta lesem po kořenech</li>
+<li><strong>Starší plavky</strong> — minerály (síra, vápník) mohou zabarvit</li>
+<li><strong>Ručník</strong> — žádné převlékárny, převlékat se v lese/u auta</li>
+<li><strong>Svačina a pití</strong> — u pramenů žádné občerstvení</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: jaro a podzim — méně turistů, příjemné počasí</li>
+<li><strong>Léto</strong>: teplé, ale v lese stín; může být více lidí</li>
+<li><strong>Zima</strong>: magická atmosféra — pára mezi stromy, ale přístup může být blatitý</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Navigovat na <strong>„Fosso Bianco&quot;</strong> nebo <strong>„Balena Bianca&quot;</strong> — ne na vesnici Bagni San Filippo (ta je výš)</li>
+<li>Jít dál po proudu potoka — víc tůní, méně lidí</li>
+<li>Menší a intimnější než [[it-saturnie|Saturnia]] — místo velkých travertinových teras tu jsou lesní tůně a vodopády</li>
+<li>Bílé formace se neustále mění — voda nanáší nové vrstvy travertinu</li>
+<li>Pojmenováno po sv. Filipu Benizi (13. stol.), který zde žil jako poustevník</li>
+</ul>
+<h3>Jak se dostat</h3>
+<p>Vesnice leží v jižním Toskánsku na svazích Monte Amiata:</p>
+<ul>
+<li>~120 km od Říma (dálnice A1, exit Chiusi)</li>
+<li>~110 km od Florencie (dálnice A1, exit Chiusi)</li>
+<li>~50 km od [[it-saturnie|Saturnie]] (kombinace obou term je skvělý výlet)</li>
+<li>~60 km od Sieny</li>
+</ul>
+<h3>Okolí</h3>
+<ul>
+<li>
+<p><strong>[[it-monte-amiata|Monte Amiata]]</strong> (20 km) — vyhaslá sopka, hiking, panoramata celého Toskánska</p>
+</li>
+<li>
+<p><strong>[[it-pitigliano|Pitigliano]]</strong> (60 km) — město na tufových skalách, „Malý Jeruzalém&quot;, etruské vie cave — co navštívit</p>
+</li>
+<li>
+<p><strong>[[it-saturnie|Saturnia]]</strong> (~50 km) — větší přírodní termální prameny, travertinové terasy</p>
+</li>
+<li>
+<p><strong>Val d'Orcia</strong> — UNESCO krajina, cypřišové aleje, Pienza, Montalcino</p>
+</li>
+<li>
+<p><strong>Monte Amiata</strong> — pěší turistika, v zimě lyžování</p>
+</li>
+<li>
+<p><strong>Abbazia di San Salvatore</strong> (4 km) — středověký klášter a horské městečko</p>
+</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bagni_San_Filippo">Wikipedia — Bagni San Filippo</a></li>
+<li><a href="https://maps.google.com/?q=42.9300,11.7014">Google Maps — Fosso Bianco</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABX0lEQVR42tTUsY2lMBDG8bEcOMMNINGGM7cEDfBwA3ZLzqYNS27gkU2A+E7srvZOpxVMupP9iEZ/DaZfPx5ImxtXqoAoPJDdiI5FQqOgcezl7ZpB7afWqdLsRG8wElelyZbENtPffW/tgbzwuHD47nHr69NGo8c/ie88RKRdbGHBqTFRG7xMReRYww82jHOOSEK2VI3lMEWmXdhC48F1FB4NY3qTwh7Nl9pmV9tLFDYynUs9DLu+V4W9jKvhNsd4rKSwEWTDfXOYtqDwENpSQF7qZ98ne9i8UptDxEffJ1McX3s9vFR83OeThzghMa0u2M/eT3ZksjuM1DYHjQl7Ynu60EzVOJJJMr6+7+N/u17eZLOL2EjhK1GqU6Zgc1D4ep9yRGLpX33vff3f2eGM8rXfk2PPCx9EEbuo3WZyNmm9OqTrfkhjstsi7QXXs8YeKG/XC2M0VeHfNX8CAAD//wbGZ9X1cWWqAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&#34;Itálie — Pitigliano (město na tufových skalách)&#34; — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>&#34;Itálie — Pitigliano (město na tufových skalách)&#34;</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">mesto</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 &#34;Pitigliano, 58017 GR, Toskánsko, Itálie&#34;</p><p class="meta-item">🌐 <a href="https://www.comune.pitigliano.gr.it/" target="_blank">www.comune.pitigliano.gr.it</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([42.6347, 11.6697], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([42.6347, 11.6697]).addTo(dmap);
+</script>
+<div class="content"><h2>Pitigliano — město na tufových skalách</h2>
+<p>Pitigliano je středověké městečko v jižním Toskánsku, dramaticky posazené na vysokém tufovém útesu nad soutokem řek Lente a Meleta. Patří mezi „I Borghi più belli d'Italia&quot; (nejkrásnější vesnice Itálie). Z dálky vypadá, jako by domy vyrůstaly přímo ze skály — a v podstatě tomu tak je: mnohé sklepy a místnosti jsou vytesány přímo do tufu.</p>
+<p>Město je známé jako <strong>„Malý Jeruzalém&quot;</strong> díky historické židovské komunitě, která tu žila od 15. století. Židovská čtvrť se synagogou, košérním vinným sklepem a rituální lázní je unikátně zachovalá. Další vrstvou je etruské dědictví — záhadné <strong>vie cave</strong>, hluboké průseky vytesané do tufové skály (až 20 m vysoké stěny), sloužily jako cesty i rituální koridory.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Město volně přístupné; Židovské muzeum + synagoga ~5 €, Palazzo Orsini ~4 €</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Muzea: duben–říjen 10:00–13:00, 14:30–18:00; mimo sezónu víkendy</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Velké bezplatné parkoviště pod městem (Piazza del Mercato); centrum je pěší zóna</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=42.6347,11.6697">42.6347, 11.6697</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Židovská čtvrť</strong> — synagoga (1598), rituální lázeň (mikve), košérní vinný sklep, muzeum</li>
+<li><strong>Palazzo Orsini</strong> — renesanční palác s archeologickým muzeem (etruské nálezy)</li>
+<li><strong>Vie cave</strong> — etruské cesty vytesané do skály (Via Cava di Fratenuti, Via Cava di San Giuseppe)</li>
+<li><strong>Katedrála Santi Pietro e Paolo</strong> — barokní interiér</li>
+<li><strong>Akvadukt Medicejský</strong> — fotogenická dominanta při příjezdu do města</li>
+<li><strong>Vyhlídky</strong> — úchvatné panorama z městských hradeb na kaňon</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv (kopce, nerovné dlažby, vie cave mají kluzký terén)</li>
+<li>Svačinu a vodu (restaurace jsou malé, v sezóně plné)</li>
+<li>Fotoaparát — město je extrémně fotogenické</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–červen a září–říjen (příjemné teploty 20–28 °C, méně turistů)</li>
+<li><strong>Léto</strong> (červenec–srpen): horko (35 °C+), ale město je živé</li>
+<li><strong>SettembreDivino</strong> (září): slavnost vína — historické sklepy otevřou, ochutnávky Bianco di Pitigliano DOC</li>
+<li><strong>Zima</strong>: klidné, ale některá muzea zavřená</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Ochutnej <strong>Sfratto dei Goym</strong> — tradiční židovskou sladkost (tyčinka s ořechy, medem a citrusem)</li>
+<li><strong>Bianco di Pitigliano</strong> (DOC) — místní bílé víno z vulkanické půdy</li>
+<li>Vie cave nejlépe ráno (stín, klid, mystická atmosféra)</li>
+<li>Kombinuj s [[it-saturnie|Saturnia]] — přírodní termály jsou jen 25 km daleko!</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Řím</td>
+<td>~150 km</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>Florencie</td>
+<td>~190 km</td>
+<td>2,5 h</td>
+</tr>
+<tr>
+<td>Siena</td>
+<td>~130 km</td>
+<td>1,5 h</td>
+</tr>
+<tr>
+<td>Orvieto</td>
+<td>~50 km</td>
+<td>50 min</td>
+</tr>
+<tr>
+<td>Saturnia (termy)</td>
+<td>~25 km</td>
+<td>25 min</td>
+</tr>
+<tr>
+<td>Brno (přes Brenner)</td>
+<td>~1 100 km</td>
+<td>11 h</td>
+</tr>
+</tbody>
+</table>
+<p>Typická trasa z Moravy: A1/E65 → Rakousko → Brenner → A22 → Bologna → Firenze → SS/E80 → Grosseto → SR74 → Pitigliano. Nebo alternativně přes Slovinsko a pobřeží.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>[[it-saturnie|Saturnia — termální prameny]]</strong> (25 km) — volně přístupné přírodní termály (37 °C)</li>
+<li><strong>[[it-sovana|Sovana]]</strong> (8 km) — etruské nekropole, skalní hrobky, středověké centrum</li>
+<li><strong>Sorano</strong> (10 km) — další „tufové město&quot; s Orsini hradem a podzemními chodbami</li>
+<li><strong>[[it-bagni-san-filippo|Bagni San Filippo]]</strong> (60 km) — bílé vápencové kaskády v lese</li>
+<li><strong>Orvieto</strong> (50 km) — gotická katedrála, podzemní město, Orvieto Classico víno</li>
+<li><strong>[[it-monte-amiata|Monte Amiata]]</strong> (40 km) — vyhaslá sopka, hiking, výhledy na celé Toskánsko</li>
+<li><strong>Bolsena</strong> (35 km) — vulkanické jezero, koupání, ostrov Bisentina</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pitigliano">Wikipedia</a></li>
+<li><a href="https://www.visittuscany.com/en/destinations/pitigliano/">Visit Tuscany</a></li>
+<li><a href="https://borghipiubelliditalia.it/borgo/pitigliano/">I Borghi più belli d'Italia</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMc6jMBAF4Be5cAcXQP9cI0UkrhQ6qsVbpVtfCSmFr+GVL2A6F5bfik3YdMSh23+6rwA9+Y0G3240GYV+FEfGIza4SpSkHFBlmwffYqSTVOvc8tbpegfjx8M2GIJVDK/8+yaXYLsxvN5n1wBOvhUT5n8V7FpbRkxZK8d0yOUCsRiFX4+8bwysfambcn7Ls2tN/syQFPjbVbms35PAKR0xmt5m+JEsj7xvrJf7kicm9M//vXNEg1YZcUXXGNP8QzHrbsv3oXW8NMr4KfflHGts70VIoxzOqPGvS9NNYrL2usqmL5gCA0sfD/jv/l79xFlY4/WeoCXFSUKNDQYaSTJ/6VhjmwcSWm15j9h6nXFitWMwgevOVni7jzNdlcklt8Kuf/b7of/v+RMAAP//XItepP6tr6sAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

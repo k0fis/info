@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itálie — Sovana (etruské nekropole a skalní hrobky) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Itálie — Sovana (etruské nekropole a skalní hrobky)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">historie</span> <span class="tag">archeologie</span> </div>
+<div class="meta"><p class="meta-item">📍 &#34;Sovana, 58010 Sorano GR, Toskánsko, Itálie&#34;</p><p class="meta-item">🌐 <a href="https://cittadeltufo.com/" target="_blank">cittadeltufo.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([42.6569, 11.6444], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([42.6569, 11.6444]).addTo(dmap);
+</script>
+<div class="content"><h2>Sovana — etruské nekropole a skalní hrobky</h2>
+<p>Sovana je maličká středověká vesnička (122 obyvatel!) v jižním Toskánsku, která skrývá jedny z nejpůsobivějších etruských památek v Itálii. Patří mezi „I Borghi più belli d'Italia&quot; a je součástí <strong>Parco Archeologico Città del Tufo</strong> — archeologického parku zahrnujícího nekropole, monumentální skalní hrobky a tajemné <strong>vie cave</strong> (hluboké průseky v tufové skále).</p>
+<p>Rodiště <strong>papeže Řehoře VII.</strong> (Ildebrando di Soana), ve středověku sídlo biskupství. Dnes je to klidná, nedotčená vesnička s románskou katedrálou, hradem Aldobrandeschi a muzeem s pokladem 500 zlatých mincí z 5. století.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Archeologický park: ~5 € dospělí, kombinované vstupenky (park + muzeum) ~8 €</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Duben–říjen: 10:00–19:00; listopad–březen: 10:00–17:00 (pondělí zavřeno mimo sezónu)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Bezplatné parkoviště na okraji vesnice (u silnice SP22)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=42.6569,11.6444">42.6569, 11.6444</a></td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td>+39 0564 614074, info@leviecave.it</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<h4>Etruská nekropole</h4>
+<ul>
+<li><strong>Tomba Ildebranda</strong> — monumentální skalní hrobka s kolonádou, napodobuje etruský chrám (3. stol. př. n. l.)</li>
+<li><strong>Tomba della Sirena</strong> — hrobka se Sirénou, reliéf mořského démona nad vchodem</li>
+<li><strong>Tomba dei Demoni Alati</strong> — hrobka okřídlených démonů (odkryta 2004!)</li>
+<li><strong>Tomba del Tifone</strong> — hrobka s reliéfem Tyfóna</li>
+</ul>
+<h4>Vie cave (etruské cesty)</h4>
+<ul>
+<li>Hluboké průseky vytesané v tufu (stěny 15–20 m) — tajemné koridory spojující nekropole</li>
+<li>Via Cava di San Sebastiano — nejlépe zachovalá</li>
+</ul>
+<h4>Středověká Sovana</h4>
+<ul>
+<li><strong>Katedrála San Pietro</strong> (11.–12. stol.) — románská, krypta se sv. Mamiliánem</li>
+<li><strong>Kostel Santa Maria Maggiore</strong> — předrománský ciborium (unikát)</li>
+<li><strong>Rocca Aldobrandesca</strong> — zřícenina hradu</li>
+<li><strong>Muzeum San Mamiliano</strong> — etruské nálezy + poklad 498 zlatých mincí (5. stol.)</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pevnou obuv (nekropole a vie cave jsou v terénu, kořeny, kamení)</li>
+<li>Svítilnu (některé hrobky jsou hluboké a temné)</li>
+<li>Repelent v létě (lesnaté údolí)</li>
+<li>Vodu — v parku není občerstvení</li>
+<li>Čas: na pořádnou prohlídku počítej 2–3 hodiny</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–červen a září–říjen (mírné teploty, zeleň, málo lidí)</li>
+<li><strong>Léto</strong>: horko, ale stín ve vie cave příjemný</li>
+<li><strong>Zima</strong>: park otevřen, ale kratší hodiny; vesnice má zvláštní atmosféru</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Kup <strong>kombinovanou vstupenku</strong> (nekropole + muzeum + Sorano) — vyplatí se</li>
+<li>Začni nekropolí ráno (méně lidí, lepší světlo pro focení hrobek)</li>
+<li>V muzeu San Mamiliano si prohlédni poklad mincí — příběh nálezu je fascinující</li>
+<li>Na hlavním náměstí (Piazza del Pretorio) si dej lokální víno nebo pici</li>
+<li>Sovana, [[it-pitigliano|Pitigliano]] a Sorano tvoří <strong>„tufový trojúhelník&quot;</strong> — ideálně navštiv všechny tři za jeden den</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[it-pitigliano</td>
+<td>Pitigliano]]</td>
+<td>8 km</td>
+</tr>
+<tr>
+<td>Sorano</td>
+<td>10 km</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>[[it-saturnie</td>
+<td>Saturnia (termy)]]</td>
+<td>30 km</td>
+</tr>
+<tr>
+<td>Orvieto</td>
+<td>55 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Řím</td>
+<td>160 km</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>Florencie</td>
+<td>200 km</td>
+<td>2,5 h</td>
+</tr>
+<tr>
+<td>Brno (přes Brenner)</td>
+<td>~1 100 km</td>
+<td>11 h</td>
+</tr>
+</tbody>
+</table>
+<p>Přístup: z Pitigliana po SP22 směr Sorano, odbočka na Sovana. Ze Saturnie po SP10.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>[[it-pitigliano|Pitigliano]]</strong> (8 km) — město na tufových skalách, „Malý Jeruzalém&quot;</li>
+<li><strong>Sorano</strong> (10 km) — další tufové město, Orsini hrad, podzemní chodby</li>
+<li><strong>[[it-saturnie|Saturnia — termální prameny]]</strong> (30 km) — volně přístupné přírodní termály</li>
+<li><strong>[[it-bagni-san-filippo|Bagni San Filippo]]</strong> (65 km) — bílé vápencové kaskády v lese</li>
+<li><strong>[[it-monte-amiata|Monte Amiata]]</strong> (35 km) — vyhaslá sopka, hiking, panoramata</li>
+<li><strong>Vulci</strong> (45 km) — další etruské město s mostem a muzeem</li>
+<li><strong>Bolsenské jezero</strong> (40 km) — vulkanické jezero, koupání</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cittadeltufo.com/">Parco Archeologico Città del Tufo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sovana">Wikipedia</a></li>
+<li><a href="https://www.visittuscany.com/en/destinations/sovana/">Visit Tuscany</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUL27DMBQG8M8KMFsuYOVdo2BSrpSwoNpDZcuVLA34Gp58AYcFRPmmdmtVFHlm22M/Yvn9xb8LTS6xxSSBzDV2GKM1OmqgyPM2iKNrgqyFHumiNrrYA1qSodIOA6zREh7/Pza5pNlM6ak+RwagUoZ+asGh9fyxN4yWQYVcZa/IOAk7lBjnPsNGxL7rUWA906FtnPj9571j4wVjohBQK2psN5Wc0Gj0ucB64UJGbOiKDKCNMJOE/d6DYw/NsrXiuDJUGa8qUS7AJ0us32GT49oEnEoMxbc48CLsyjzgLG7TQq5VBtTWwtLLY96PfNuPbCYGCSixw8i8IXnxRb7tN3TD/VTpMc3JyUqfCx2tmcTHU5Fv9yStjec9v2Nf7+9wrcf3/P3Wfzu+AgAA///pF0aMu+Vp3wAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
