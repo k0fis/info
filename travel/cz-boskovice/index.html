@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Boskovice (hrad, zámek, židovská čtvrť) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Boskovice (hrad, zámek, židovská čtvrť)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">hrad</span> <span class="tag">zamek</span> <span class="tag">historie</span> <span class="tag">mesto</span> </div>
+<div class="meta"><p class="meta-item">📍 Boskovice, 680 01</p><p class="meta-item">🌐 <a href="https://www.boskovice.cz" target="_blank">www.boskovice.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.4877, 16.6600], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.4877, 16.6600]).addTo(dmap);
+</script>
+<div class="content"><h2>Boskovice — hrad, zámek a unikátní židovská čtvrť</h2>
+<p>Město s 12 500 obyvateli 14 km severně od Blanska a 33 km od Brna. Kombinace <strong>zříceniny hradu</strong> (13. století) na kopci nad městem, <strong>empírového zámku</strong> (1819–1826) a <strong>památkově chráněné židovské čtvrti</strong> s jednou z nejstarších synagog na Moravě.</p>
+<p>Boskovice jsou kulturně živé město — letní kino s <strong>největším plátnem v ČR</strong> (32×14 m, 448 m²), hudební festival Boskovice (od 1993) a zajímavá industriální historie (šicí stroje Minerva).</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hrad</strong></td>
+<td>Zřícenina, volně přístupná (vyhlídka na město a okolí)</td>
+</tr>
+<tr>
+<td><strong>Zámek</strong></td>
+<td>Vstupné cca 120/80 Kč, prohlídkové okruhy</td>
+</tr>
+<tr>
+<td><strong>Synagoga</strong></td>
+<td>Vstupné cca 60 Kč, součást prohlídky židovské čtvrti</td>
+</tr>
+<tr>
+<td><strong>Letní kino</strong></td>
+<td>Program dle sezóny (květen–září)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V centru města, bezplatné i placené</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.4877,16.6600">49.4877, 16.6600</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Hrad Boskovice</strong> (13. stol.) — romantická zřícenina na kopci, krásný výhled, volně přístupná</li>
+<li><strong>Zámek Boskovice</strong> (empír, 1819–1826) — prohlídkové okruhy, historické interiéry</li>
+<li><strong>Židovská čtvrť</strong> — památková zóna (od 1990), uzavřené ghetto z roku 1742</li>
+<li><strong>Velká synagoga</strong> (1639) — jedna z nejstarších na Moravě</li>
+<li><strong>Židovský hřbitov</strong> — cenné náhrobky</li>
+<li><strong>Letní kino</strong> — největší projekční plátno v ČR (448 m²)</li>
+<li><strong>Western Town</strong> — westernové městečko (zábava pro děti)</li>
+<li><strong>Regionální muzeum</strong> — historie města a okolí</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv (kopec k hradu, dlážděné uličky ghetta)</li>
+<li>V létě: program letního kina (předem na webu)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen (hrad + zámek + synagoga otevřeny)</li>
+<li><strong>Festival Boskovice</strong>: obvykle červenec — hudba, divadlo, film v židovské čtvrti</li>
+<li><strong>Léto</strong>: letní kino pod širým nebem</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Hrad + zámek</strong> v jednom — hrad je na kopci nad zámkem, procházka nahoru cca 15 min</li>
+<li>Židovská čtvrť je autenticky zachovalá — uličky, brány, domy</li>
+<li>Festival Boskovice — multižánrový (alternativa, jazz, divadlo) v unikátním prostředí ghetta</li>
+<li>Western Town — děti milují, hodí se jako odpolední program</li>
+<li>Boskovická přehrada (3 km) — koupání v létě</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 33 km (cca 35 min po R43 přes Blansko)</li>
+<li><strong>Z Blanska</strong>: 14 km (15 min)</li>
+<li><strong>Z Ostravy</strong>: cca 150 km (1:30 h po D1)</li>
+<li>Vlak: linka Brno–Skalice nad Svitavou, stanice Boskovice</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-blansko/">Blansko</a></strong> (14 km) — brána do Moravského krasu, zámek, aquapark</li>
+<li><strong><a href="../moravsky-kras/">Moravský kras</a></strong> (15–25 km) — jeskyně, Macocha</li>
+<li><strong><a href="../cz-sloupsko-sosuvske-jeskyne/">Sloupsko-šošůvské jeskyně</a></strong> (15 km) — nejdelší systém v ČR</li>
+<li><strong>Černá Hora</strong> (8 km) — pivovar, zámek</li>
+<li><strong>Letovice</strong> (10 km) — zámek, přehrada</li>
+<li><strong>Kunštát</strong> (12 km) — renesanční zámek</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.boskovice.cz">Město Boskovice</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Boskovice">Wikipedia — Boskovice</a></li>
+<li><a href="https://www.boskovice-festival.cz">Festival Boskovice</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUIa7jMBAG4D8yMHvvAlZ8jYJKuVLCgjbDyuorRSrwNbzyBRwWYOVfpVKrouxs2L5hH7Bkz/xj/Liy5MLiRh/JcsaCgSFNyQIqh9obyWKiX5UeKNU6q3bvepLxpAW9Ccn6+L7/scklBzfmj/4cGUCTi7l9jODQNjw2N3kyNrGc8fK4uwmjZwuVpStG6pi6toPC6NHkwNXP2/P8X/11HSgk0Kw4YbvUpn57Oouu6DxlVlS0Opfu7rDne7NQGEOdKihcGU/5+3FHv8/7NzW2cv1lAsVEXDTGVydezM2z1XmoU0LaE7SeMtDs5uzfeT/ycz8kjYw+QmPBkAuQZx+Lxs/9dtZw6056yMXf/MpZ7eAmP6eLyvt/UgAz8/W+Y+/9oFn5yuM/+v+uPwEAAP//MmxgiFJHetUAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
