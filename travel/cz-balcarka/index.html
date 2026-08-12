@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Jeskyně Balcarka (nejbohatší krápníková výzdoba v Moravském krasu) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Jeskyně Balcarka (nejbohatší krápníková výzdoba v Moravském krasu)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">moravsky-kras</span> </div>
+<div class="meta"><p class="meta-item">📍 Ostrov u Macochy, 679 14</p><p class="meta-item">🌐 <a href="https://balcarka.caves.cz" target="_blank">balcarka.caves.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.3769, 16.7572], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.3769, 16.7572]).addTo(dmap);
+</script>
+<div class="content"><h2>Jeskyně Balcarka — nejbohatší krápníková výzdoba Moravského krasu</h2>
+<p>Jeskyně jižně od Ostrova u Macochy proslulá <strong>nejbohatší a nejbarevnější krápníkovou výzdobou</strong> v celém <a href="../moravsky-kras/">Moravském krasu</a>. Objevena v roce 1923 Josefem Šamalíkem a otevřena veřejnosti na Velikonoce 1925.</p>
+<p>Dominantou je zakřivený stalaktit <strong>Handžár</strong> (připomíná tureckou šavli), dvě 10 m vysoké <strong>Wilsonovy rotundy</strong>, 65 m dlouhý Velký dóm a Galerie ve druhém patře s bohatou sintrovou výzdobou. Vstupní portál je zároveň významné paleolitické naleziště (opracované kameny, kosti, ohniště).</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí cca 180 Kč, děti cca 120 Kč (ověř aktuální ceník)</td>
+</tr>
+<tr>
+<td><strong>Délka prohlídky</strong></td>
+<td>60 min, 720 m, 330 schodů</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td>7–8 °C, vlhkost 99 %</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>1. duben – 30. listopad (zavřeno v zimě — netopýři)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma u pokladny (auta i autobusy), 100 m od vstupu</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.3769,16.7572">49.3769, 16.7572</a></td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Občerstvení, WC, suvenýry u pokladny</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — 7–8 °C celoročně</li>
+<li>Pevnou obuv (330 schodů, mokré povrchy)</li>
+<li>Bez kočárku (schody)</li>
+<li>Focení bez blesku povoleno</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen</li>
+<li><strong>Zavřeno</strong>: prosinec–březen (ochrana cca 700 hibernujících netopýrů)</li>
+<li>Méně vytížená než Punkevní jeskyně — kratší fronty</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Handžár</strong> — unikátní zakřivený stalaktit, symbol jeskyně</li>
+<li><strong>Wilsonovy rotundy</strong> — dva impozantní 10m dómy</li>
+<li>Krápníky jsou barevnější než v ostatních jeskyních krasu (železo, mangan)</li>
+<li>Ideální jako doplněk k <a href="../cz-punkevni-jeskyne/">Punkevním jeskyním</a> — jiný charakter (méně prostoru, více výzdoby)</li>
+<li>330 schodů — fyzicky náročnější než ostatní jeskyně, počítejte s tím u malých dětí</li>
+<li>Vstupní portál — zastavte se u archeologické expozice (paleolitické osídlení)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 35 km (cca 40 min přes Blansko a Vilémovice)</li>
+<li><strong>Z Blanska</strong>: 10 km (směr Ostrov u Macochy)</li>
+<li><strong>Z Ostravy</strong>: cca 160 km (1:40 h po D1)</li>
+<li>Leží blízko <a href="../macocha/">Macochy</a> — dá se kombinovat v jednom dni</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../macocha/">Propast Macocha</a></strong> (2 km) — 138 m hluboká propast, vyhlídky</li>
+<li><strong><a href="../cz-punkevni-jeskyne/">Punkevní jeskyně</a></strong> (3 km) — plavba na řece Punkvě</li>
+<li><strong><a href="../cz-katerinska-jeskyne/">Kateřinská jeskyně</a></strong> (5 km) — největší dóm v ČR</li>
+<li><strong><a href="../cz-sloupsko-sosuvske-jeskyne/">Sloupsko-šošůvské jeskyně</a></strong> (6 km) — nejdelší systém v ČR</li>
+<li><strong><a href="../cz-krtiny/">Křtiny</a></strong> (15 km) — Santiniho chrám, jeskyně Výpustek</li>
+<li><strong>Jedovnice</strong> (5 km) — Olšovec (koupání, kemp)</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://balcarka.caves.cz">Jeskyně Balcarka — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Jeskyn%C4%9B_Balcarka">Wikipedia — Jeskyně Balcarka</a></li>
+<li><a href="https://www.caves.cz">Správa jeskyní ČR</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNUlEQVR42tzUMc6jMBQE4EEu3IULWHnXSLESV4KODqeii6+ElMLX8MoXMB2FxazYJJsuOHT7v+5r7JGfNfhxo8kkNL14Mh2xRatcXJQHiuxyF6AsvSylZuJodLmjC/1hW3S5jozv/J9NztGZPr7f56MBVKRBnP6t4KO1Y8LAUXkuh3xT15jQC8+PvHtOv7pcq1H58Lh/zzfU0coS+duXGFUeyKCBajliPecTEHpyfeTdMU4qSeKC5nnejvWc61yLFb/qEqPmqpIazSvvl9ZugjAMuVkvqcRWJXG0yuOCErv7zbQBWQdd5Os9oZUxcm3SAW8bCy0GTsISb31iBkXxsqDEFt32n2Q66yJvfVJDq1feA44uI6NiqfPAMZJEif/2I6Am+iKTM2kG0zz3+6X/7/kTAAD//4DEVLyJ85eIAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
