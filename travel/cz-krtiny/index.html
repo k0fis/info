@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Křtiny (Santiniho chrám, jeskyně Výpustek, arboretum) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Křtiny (Santiniho chrám, jeskyně Výpustek, arboretum)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">architektura</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">poutni-misto</span> </div>
+<div class="meta"><p class="meta-item">📍 Křtiny, 679 05 (okres Blansko)</p><p class="meta-item">🌐 <a href="https://www.krtiny.cz" target="_blank">www.krtiny.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.2947, 16.7394], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.2947, 16.7394]).addTo(dmap);
+</script>
+<div class="content"><h2>Křtiny — barokní klenot Moravského krasu</h2>
+<p>Křtiny jsou malé městečko (820 obyvatel) 15 km severovýchodně od Brna, které nabízí unikátní kombinaci tří atrakcí: <strong>monumentální poutní chrám od Santiniho</strong>, <strong>jeskyni Výpustek</strong> s vojenskou historií a <strong>arboretum</strong> v krásném prostředí Drahanské vrchoviny.</p>
+<p>Poutní místo s tradicí sahající do středověku — gotická Madona ze 14. století sem přitahovala ve své době přes 41 000 poutníků ročně. Dnes je to ideální cíl na půldenní výlet z Brna s dětmi i bez.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chrám</strong></td>
+<td>Volný přístup, komentované prohlídky po dohodě</td>
+</tr>
+<tr>
+<td><strong>Jeskyně Výpustek</strong></td>
+<td>Vstupné cca 180/120 Kč, prohlídka 75 min / 600 m, celoroční provoz</td>
+</tr>
+<tr>
+<td><strong>Arboretum</strong></td>
+<td>Volný přístup</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U kostela + u jeskyně Výpustek (samostatné parkoviště)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.2947,16.7394">49.2947, 16.7394</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<h4>1. Chrám Jména Panny Marie (Santini)</h4>
+<p>Barokní poutní chrám navržený Janem Blažejem Santinim-Aichelem (1728–1750). Půdorys řeckého kříže s centrální kupolí a 73m věží. Geometrické vztahy založené na pětiúhelníku (symbolika pěti Kristových ran). Fresky od Jana Jiřího Etgense, sochy bratří Schweiglových. <strong>Národní kulturní památka</strong> (od 2008).</p>
+<h4>2. Jeskyně Výpustek</h4>
+<p>Jeskyně osídlená před 15 000 lety, s fascinující vojenskou historií:</p>
+<ul>
+<li>1936–1945: muniční sklad české armády, pak nacistická podzemní továrna (vstřikovače leteckých motorů)</li>
+<li>1961–2001: protiatomový kryt pro 250 důstojníků</li>
+<li>Od 2008: přístupná veřejnosti</li>
+</ul>
+<p>Prohlídka (600 m, 75 min) kombinuje přírodní krápníkové partie s expozicí bývalého velitelského stanoviště.</p>
+<h4>3. Arboretum Křtiny</h4>
+<p>Sbírka dřevin založená Augustem Bayerem — příjemná procházka lesem s popisky stromů.</p>
+<h3>Co s sebou</h3>
+<ul>
+<li>Teplé oblečení do jeskyně (stálých cca 8 °C)</li>
+<li>Pevnou obuv (arboretum, stezky kolem)</li>
+<li>Svačinu na piknik v arboretu</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen (jeskyně celoročně)</li>
+<li><strong>Květen–červen</strong>: arboretum v plném květu</li>
+<li><strong>Pouť</strong>: tradičně kolem svátku Jména Panny Marie (12. září)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Jeskyně Výpustek je bezbariérová (vojenské chodby) — vhodná i pro kočárky</li>
+<li>Na chrám se vyplatí podívat i zvenčí — průčelí a ambit jsou monumentální</li>
+<li>Cesta radostných tajemství — 7 kaplí na poutní cestě do Křtin (pěší okruh)</li>
+<li>Přírodní rezervace Býčí skála je blízko (slavná pravěká jeskyně)</li>
+<li>Kombinujte: dopoledne chrám + arboretum, odpoledne jeskyně</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 15 km (cca 20 min autem přes Adamov nebo Bílovice nad Svitavou)</li>
+<li><strong>Z Blanska</strong>: 8 km</li>
+<li><strong>Z Ostravy</strong>: cca 165 km (1:40 h po D1 + sjezd Brno-sever)</li>
+<li>Křtiny leží na okraji Moravského krasu — dá se kombinovat s [[moravsky-kras|Moravským krasem]]</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>[[moravsky-kras|Moravský kras]]</strong> (10 km) — Punkevní jeskyně, Macocha</li>
+<li><strong>[[cz-mohyla-miru|Mohyla míru]]</strong> (25 km) — památník bitvy u Slavkova</li>
+<li><strong>[[cz-slavkov|Slavkov u Brna]]</strong> (25 km) — barokní zámek</li>
+<li><strong>Adamov</strong> (5 km) — hrad Boskovice, naučná stezka</li>
+<li><strong>Blansko</strong> (8 km) — zámek, Kateřinská jeskyně</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/K%C5%99tiny_(okres_Blansko)">Wikipedia — Křtiny</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Kostel_Jm%C3%A9na_Panny_Marie_(K%C5%99tiny)">Wikipedia — Chrám Jména Panny Marie</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/V%C3%BDpustek">Wikipedia — Jeskyně Výpustek</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUIY7zMBAF4BcNMPt7gai+RkGlXClhQX9mUVl9pUgFvkZWvoDLDKy8VbbtlqVu2K7ZByw9zRsN/twzZLSae+vJuMWKVlRUPFBklzvGuqe3qdTTbjK1ecv9Ziu63JLhmX/d5DW4ug/P+awaQBVoNYw/FazaOEZRGPFMmxzFZUy95f6W95VJBuVJ/PTYj3VfL44aUuCnL3JEa9USqNIWo7o4Ej05f+d96fbYUUXR3P+/sDnjH4Ya1s+mxBjG/4CwfuR70+Z8BHZ5yM18iGUe8sAkHgeU+ONyFjchm8kUetlXEzg3cYOXBkgMHC1LvNwTcULrbUKJFV2INtlxb2KJXe5yCyOcb/PY4OAyMirGQpP2FEiixIq2bjNkpC/yck8ihrq59/umf/f7CgAA//8lslEuYoYdYgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
