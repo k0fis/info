@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Kateřinská jeskyně (největší podzemní dóm v ČR) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Kateřinská jeskyně (největší podzemní dóm v ČR)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">moravsky-kras</span> </div>
+<div class="meta"><p class="meta-item">📍 Skalní Mlýn, 678 25 Blansko</p><p class="meta-item">🌐 <a href="https://katerinska.caves.cz" target="_blank">katerinska.caves.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.3607, 16.7103], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.3607, 16.7103]).addTo(dmap);
+</script>
+<div class="content"><h2>Kateřinská jeskyně — největší zpřístupněný podzemní dóm v ČR</h2>
+<p>Jeskyně na severním okraji <a href="../moravsky-kras/">Moravského krasu</a> s <strong>největším veřejně přístupným podzemním dómem v České republice</strong> — Hlavní dóm měří 97 m na délku, 44 m na šířku a 20 m na výšku. Vstup tvoří impozantní 8 m vysoký gotický portál.</p>
+<p>Proslavená unikátním <strong>Bambusovým lesíkem</strong> (vzácné tyčovité stalagmity), skalní formací Čarodějnice a nejstaršími pravěkými kresbami v Čechách (uhlíkové kresby z cca 4200 př. n. l., objeveny 2019). V jeskyni se konají koncerty využívající výjimečnou akustiku Hlavního dómu.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí cca 160 Kč, děti cca 100 Kč (ověř aktuální ceník)</td>
+</tr>
+<tr>
+<td><strong>Délka prohlídky</strong></td>
+<td>40 min, 580 m, 199 schodů</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td>7–8 °C, vlhkost 99 %</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Březen–listopad (zavřeno prosinec–únor kvůli netopýrům)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U pokladny (auta i autobusy), zastávka 400 m</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.3607,16.7103">49.3607, 16.7103</a></td>
+</tr>
+<tr>
+<td><strong>Bezbariérový přístup</strong></td>
+<td>Ne (199 schodů)</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — 7–8 °C celoročně</li>
+<li>Pevnou obuv (mokré schody)</li>
+<li>Kočárek nelze (schody)</li>
+<li>Focení bez blesku povoleno</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen</li>
+<li><strong>Zavřeno</strong>: prosinec–únor (ochrana hibernujících netopýrů — 11 druhů)</li>
+<li>Kombinujte s <a href="../cz-punkevni-jeskyne/">Punkevními jeskyněmi</a> (3 km) — jsou u stejného Skalního mlýna</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Hlavní dóm</strong> — největší podzemní prostor přístupný veřejnosti v ČR, ohromující akustika</li>
+<li><strong>Bambusový lesík</strong> — raritní tyčovité stalagmity, unikát v celoevropském měřítku</li>
+<li><strong>Čarodějnice</strong> — skalní útvar nasvícený barevně, oblíbený u dětí</li>
+<li>Konají se tu <strong>koncerty v jeskyni</strong> — sledujte program na webu</li>
+<li>Speciální <strong>archeologické prohlídky</strong> (pravěké kresby z 4200 př. n. l.)</li>
+<li>Kratší a jednodušší než Punkevní jeskyně — vhodné i pro menší děti</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 28 km (cca 30 min přes Blansko, směr Skalní mlýn)</li>
+<li><strong>Z Blanska</strong>: 6,5 km (vlak + autobus, nebo auto)</li>
+<li><strong>Z Ostravy</strong>: cca 160 km (1:40 h po D1)</li>
+<li>Vstup u Skalního mlýna — stejná lokalita jako <a href="../cz-punkevni-jeskyne/">Punkevní jeskyně</a></li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-punkevni-jeskyne/">Punkevní jeskyně</a></strong> (300 m) — plavba na řece Punkvě, dno Macochy</li>
+<li><strong><a href="../macocha/">Propast Macocha</a></strong> (2 km) — 138 m hluboká propast</li>
+<li><strong><a href="../cz-sloupsko-sosuvske-jeskyne/">Sloupsko-šošůvské jeskyně</a></strong> (10 km) — nejdelší systém v ČR</li>
+<li><strong><a href="../cz-krtiny/">Křtiny</a></strong> (12 km) — Santiniho chrám, jeskyně Výpustek</li>
+<li><strong>Blansko</strong> (6,5 km) — zámek, město, občerstvení</li>
+<li><strong>Jedovnice</strong> (8 km) — Olšovec (koupání, kemp)</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://katerinska.caves.cz">Kateřinská jeskyně — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Kate%C5%99insk%C3%A1_jeskyn%C4%9B">Wikipedia — Kateřinská jeskyně</a></li>
+<li><a href="https://www.caves.cz">Správa jeskyní ČR</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUMY7sIAwG4B9RpIMLIOUa7rhSuEAmXCBzJXdcIxIXSDoXKH6a3aetVjNu193X+TfG+PMVVZ9PRlGoisEBvj51vgQHyOLc92VKK6HfRterpaJit7bxaDAafncyX0I//b51VN1LS6XRzzzeGoC7GMtEPyN+60D+0jYCJAUy2MkRb4yH8FHkN7e+L7nfUztWMjhMI9Y2SlO92GBMfUOelelwYnDUVKq+3msUi4F+Rp4rS1rJ4IAj3nnE1vSEwY573ZEc0yhsMPJYArqKHAsZ7NifTkdU/e7vkyOnsGJ+Nu2XGBymXk/ylWU4NhjAQxWAjIUMjtr3Bx8rmt8tBpLThsjZn785cr8DDcdZqxj8iuDaWIn8Rga/7tOW+w36/t+fHOC3ImmF+O/9/uSve6PKqhts3gLSSnn+ymPwHiiFPM2XyfAbaLhG8//9fu9X/iopQPQkg/9W/QsAAP//2nBgBTh7oTUAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
