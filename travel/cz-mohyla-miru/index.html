@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Mohyla míru (památník bitvy u Slavkova) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Mohyla míru (památník bitvy u Slavkova)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">pamatnik</span> <span class="tag">muzeum</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Prace, 664 58 (Pracký kopec, u obce Prace)</p><p class="meta-item">🌐 <a href="https://www.muzeumbrnenska.cz" target="_blank">www.muzeumbrnenska.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.1282, 16.7625], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.1282, 16.7625]).addTo(dmap);
+</script>
+<div class="content"><h2>Mohyla míru — první mírový památník v Evropě</h2>
+<p>Mohyla míru je secesní památník na Prackém kopci u obce Prace, připomínající oběti bitvy u Slavkova (2. prosince 1805). Jde o <strong>první mírový památník v Evropě</strong>, navržený Josefem Fantou a postavený v letech 1910–1912. Čtyřboký komolý jehlan vysoký 26 metrů je korunován měděným křížem a zdobí ho čtyři sochy symbolizující Francii, Rakousko, Rusko a Moravu.</p>
+<p>Uvnitř se nachází kaple s oltářem, mozaikou a ossáriem (kostnicí). Zajímavostí je diagonální akustika — šepot v jednom rohu je slyšet ve stejné hlasitosti v protilehlém rohu.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí cca 120 Kč, děti/senioři 60 Kč (ověř aktuální ceny na webu muzea)</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Duben–říjen: denně 9:00–17:00, listopad–březen: omezeno (víkendy)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Bezplatné parkoviště přímo u památníku</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.1282,16.7625">49.1282, 16.7625</a></td>
+</tr>
+<tr>
+<td><strong>Provozovatel</strong></td>
+<td>Muzeum Brněnska (Jihomoravský kraj)</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv (kopec, okolní naučná stezka)</li>
+<li>Svačinu — na kopci není občerstvení, ale výhled láká k pikniku</li>
+<li>Mapu bojiště (k dispozici v muzeu)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen (památník i muzeum plně otevřeny)</li>
+<li><strong>Slavnostní den</strong>: kolem 2. prosince — výroční vzpomínková akce s rekonstrukcí bitvy</li>
+<li><strong>Na jaře a na podzim</strong> méně lidí, příjemnější počasí na procházku bojištěm</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Vedle Mohyly stojí <strong>muzeum s multimediální expozicí &quot;Fenomén Austerlitz&quot;</strong> (otevřeno 2010) — interaktivní výklad bitvy, makety, uniformy, zbraně</li>
+<li>Kaple má unikátní akustiku — vyzkoušejte šeptat v rohu</li>
+<li>Na kopci je krásný <strong>panoramatický výhled</strong> na celé bojiště</li>
+<li>V okolí jsou rozmístěny pomníky a informační tabule — dá se projít naučnou stezkou (cca 3–5 km)</li>
+<li>Dětem se líbí replika děla u památníku</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 20 km východně (cca 25 min autem po D1/E50 směr Vyškov, sjezd Prace)</li>
+<li><strong>Z Ostravy</strong>: cca 170 km (1:45 h po D1)</li>
+<li><strong>Z Olomouce</strong>: cca 100 km (1:10 h po D1)</li>
+<li>Odbočka z hlavní silnice je značená, památník stojí na viditelném kopci</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Slavkov u Brna (Austerlitz)</strong> (5 km) — barokní zámek s expozicí napoleonských válek, zámecký park</li>
+<li><strong>Brno</strong> (20 km) — VIDA!, Špilberk, Mamut muzeum, hvězdárna</li>
+<li><strong>Vyškov</strong> (20 km) — DinoPark, Zoo Vyškov</li>
+<li><strong>Křtiny</strong> (25 km) — barokní poutní chrám (Santini), jeskyně Výpustek</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/Mohyla_m%C3%ADru">Wikipedia — Mohyla míru</a></li>
+<li><a href="https://www.muzeumbrnenska.cz">Muzeum Brněnska</a></li>
+<li><a href="https://www.slavkov.cz">Slavkov u Brna — město</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABX0lEQVR42tTUv43vIAwHcCMKOlgAiTXcsRJZIH8WICvRsQZSFvilc4HwUy5Pd80pcXvuPq7MVzbw58sxr9b4GQszCWxBrxb6RNgAJY5HVhUUl2MIvWdoCUns7Ji3CkKD3gfqDPQ976Mdc56qnyp+5/Hoq7UX77j8RPxkG3nLqPdKPESGPlsMe6E+42+OeizXe82xF4EBWpoonKXq//M/22I4P8Yr5nBKDAh2hpYAm5LYIq9T6aqa5orAqnhwpaVYj6983mwxDFWP1XD4oMAQ/cQMjsqd75td5XPnlhD5K99Xk0+KuuMaWGJFx7YCzBjvfN/syKs1dsXc731+sYUwIOphoC1F5OsG/ELGL/SbUZ8b6Wwiryjw1UomZECdJb7+p4V4q3Tv85st6GwjDyDNIscjz1c+ke/9FnjilsDoDwp93SOVbkFi0GuClmLRQ2LHvA9zbJW6KgL/rfoXAAD//+53VsnK8RknAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
