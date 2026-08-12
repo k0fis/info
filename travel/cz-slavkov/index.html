@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Slavkov u Brna (barokní zámek, bitva tří císařů) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Slavkov u Brna (barokní zámek, bitva tří císařů)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">zamek</span> <span class="tag">historie</span> <span class="tag">mesto</span> </div>
+<div class="meta"><p class="meta-item">📍 Palackého náměstí 1, 684 01 Slavkov u Brna</p><p class="meta-item">🌐 <a href="https://www.zamek-slavkov.cz" target="_blank">www.zamek-slavkov.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.1533, 16.8764], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.1533, 16.8764]).addTo(dmap);
+</script>
+<div class="content"><h2>Slavkov u Brna — město bitvy tří císařů</h2>
+<p>Slavkov u Brna (Austerlitz) je město proslavené bitvou tří císařů (2. prosince 1805), kde Napoleon porazil spojená rakousko-ruská vojska. Dominantou je <strong>barokní zámek</strong> navržený italským architektem Domenicem Martinellim se 115 pokoji, impozantními freskami a rozlehlým parkem ve francouzském i anglickém stylu.</p>
+<p>Město nabízí kombinaci historie, architektury a příjemného zázemí — zámek s několika prohlídkovými okruhy, historické centrum, synagogu a blízkost slavkovského bojiště s [[cz-mohyla-miru|Mohylou míru]].</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Historické sály: 220/150 Kč, Život ve staletích: 180/130 Kč, Podzemí: 220/150 Kč</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Březen–květen, září–prosinec: Út–Ne 9–17; Červen–srpen: denně 9–17 (polední pauza 12–12:45)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Rezervovaná místa do 100 m od zámku, další parkoviště před areálem</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.1533,16.8764">49.1533, 16.8764</a></td>
+</tr>
+<tr>
+<td><strong>Bezbariérový přístup</strong></td>
+<td>Ano (výtah do 1. patra)</td>
+</tr>
+</tbody>
+</table>
+<h3>Prohlídkové okruhy</h3>
+<ol>
+<li><strong>Historické sály</strong> (50 min) — nejstarší křídlo, nástropní fresky, 220/150 Kč</li>
+<li><strong>Život ve staletích</strong> (30 min) — stylové salonky od renesance po empír, 180/130 Kč (Po–Pá)</li>
+<li><strong>Šifra pana knížete</strong> (30–45 min) — dětská prohlídka s kostýmy a hádankami (So–Ne)</li>
+<li><strong>Právo útrpné</strong> (50 min) — podzemí zámku, doporučeno teplé oblečení</li>
+</ol>
+<h3>Co s sebou</h3>
+<ul>
+<li>Teplou vrstvu pro podzemní prohlídku</li>
+<li>Pohodlnou obuv na procházku parkem</li>
+<li>Kočárek nechat u vchodu (nelze dovnitř)</li>
+<li>Psi nemají přístup</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–září (celý zámek + park otevřen denně)</li>
+<li><strong>Pro děti</strong>: víkendy — speciální pohádkové a kostýmové prohlídky</li>
+<li><strong>Slavnostní den</strong>: začátek prosince — vzpomínkové akce k výročí bitvy</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Kombinujte s návštěvou [[cz-mohyla-miru|Mohyly míru]] (5 km) — památník bitvy</li>
+<li>V zámku je <strong>kavárna a restaurace</strong> — příjemný oběd po prohlídce</li>
+<li>Zámecký park je zdarma (otevřen 6:00–20:00 v létě) — půjčovna sportovního vybavení</li>
+<li>Platba kartou na všech okruzích</li>
+<li>Pro skupiny doporučeno ověřit na pokladně (mohou být změny kvůli rezervacím)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 20 km (cca 25 min po silnici 416 nebo D1 + výjezd)</li>
+<li><strong>Z Ostravy</strong>: cca 170 km (1:45 h po D1)</li>
+<li><strong>Z Olomouce</strong>: cca 100 km (1:10 h po D1)</li>
+<li>Centrum Slavkova je dobře značené, zámek přímo na náměstí</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>[[cz-mohyla-miru|Mohyla míru]]</strong> (5 km) — první mírový památník v Evropě, muzeum bitvy</li>
+<li><strong>Brno</strong> (20 km) — VIDA!, Špilberk, Mamut muzeum</li>
+<li><strong>Vyškov</strong> (20 km) — DinoPark, letecké muzeum</li>
+<li><strong>Židlochovice</strong> (15 km) — zámek, rybníky, cyklotrasy</li>
+<li><strong>Bučovice</strong> (12 km) — renesanční zámek s arkádovým nádvořím</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.zamek-slavkov.cz">Zámek Slavkov — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Slavkov_u_Brna">Wikipedia — Slavkov u Brna</a></li>
+<li><a href="https://www.slavkov.cz">Město Slavkov</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUO46zMBQF4INu4ZINWPE2KCKxJdJRBf9VSm8J6S/YBpE34HQuLM6ITB4dc0M344qvQLbu4+DPHUMmR2vuH3vscYqh9DIBKodymgcLTi5rHX2k07tDZ3trdtqjk1BMfL9/2+QtBtvH6VWfTQOoCiTH8dWCTa/1K3WksOIu3wpsTW9xaFX2GEpHyjRD5VDqMljE6TqqvOAsZHbT/F2/D42BgT5mTotRGW0ST4+2ytC4/v+PLLDN0iSNz8ez0BqLx/8f2ixHSBAWs7RJ44ROEi8W11HlMMIOzpf22a8f7CWt90U+7vvQ6/zSxwtH95zoTa8xIuR9f1X26Bzn3o0HkzS+7/fcO3Lca/HiS1NlrV3iJZKExmuekBkt3/mz5TVPUhlsiwY7/LvPVwAAAP//KIhcmrfuIuIAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
