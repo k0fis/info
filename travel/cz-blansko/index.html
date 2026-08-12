@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Blansko (brána do Moravského krasu) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Blansko (brána do Moravského krasu)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">mesto</span> <span class="tag">muzeum</span> <span class="tag">priroda</span> <span class="tag">moravsky-kras</span> </div>
+<div class="meta"><p class="meta-item">📍 Blansko, 678 01</p><p class="meta-item">🌐 <a href="https://www.blansko.cz" target="_blank">www.blansko.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.3631, 16.6432], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.3631, 16.6432]).addTo(dmap);
+</script>
+<div class="content"><h2>Blansko — brána do Moravského krasu</h2>
+<p>Město s 20 000 obyvateli v údolí řeky Svitavy, 19 km severně od Brna. Přirozená <strong>brána do <a href="../moravsky-kras/">Moravského krasu</a></strong> — odtud se dostanete ke všem pěti zpřístupněným jeskyním. Blansko samo nabízí zámek s muzeem, aquapark a zatopený lom na koupání.</p>
+<p>Vlakové spojení z Brna trvá pouhých 20 minut, takže se hodí i jako jednodenní výlet z města — dopoledne jeskyně, odpoledne aquapark nebo procházka údolím Punkvy.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zámek/muzeum</strong></td>
+<td>Vstupné cca 80–120 Kč, expozice železářství, umělecké litiny, Moravského krasu</td>
+</tr>
+<tr>
+<td><strong>Aquapark</strong></td>
+<td>Celodenní vstupné cca 150–200 Kč</td>
+</tr>
+<tr>
+<td><strong>Zatopený lom</strong></td>
+<td>Zdarma (u vlakového nádraží, čistá voda)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Centrum města, placené i bezplatné zóny</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.3631,16.6432">49.3631, 16.6432</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět a dělat</h3>
+<ul>
+<li><strong>Zámek Blansko</strong> — muzeum s expozicemi: historie železářství, umělecká litina, Moravský kras, historické interiéry</li>
+<li><strong>Kostel sv. Martina</strong> — barokní (1672–1691), na evropské stezce Via Sancti Martini</li>
+<li><strong>Aquapark Blansko</strong> — krytý i venkovní, tobogány, vhodné pro děti</li>
+<li><strong>Zatopený lom</strong> — přírodní koupání s čistou vodou hned u nádraží</li>
+<li><strong>Naučná stezka údolím Punkvy</strong> — rovinatá cesta ze Skalního mlýna (kočárek OK)</li>
+<li><strong>Cyklostezka podél Svitavy</strong> — z Brna až do Blanska a dál</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Plavky (aquapark nebo zatopený lom v létě)</li>
+<li>Kolo (cyklostezka z Brna, 19 km, rovinaté)</li>
+<li>Teplou vrstvu pokud plánujete jeskyně</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — město s plným zázemím</li>
+<li><strong>Léto</strong>: aquapark + koupání v lomu + jeskyně</li>
+<li><strong>Jaro/podzim</strong>: ideální na cyklo a pěší turistiku údolím</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Vlakem z Brna za 20 min</strong> — ideální bez auta (bus 226 ze stanice do Skalního mlýna)</li>
+<li>Zatopený lom u nádraží — příjemné osvěžení po jeskyních</li>
+<li>Zámek vhodný i v dešti — celé expozice jsou uvnitř</li>
+<li>Dobré zázemí (restaurace, obchody, lékárna) — základna pro výlety do krasu</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 19 km (20 min vlakem nebo 25 min autem po R43)</li>
+<li><strong>Z Ostravy</strong>: cca 155 km (1:35 h po D1)</li>
+<li><strong>Vlakem</strong>: přímé spojení Brno hl.n. → Blansko (každou hodinu, 20 min)</li>
+<li><strong>Na kole</strong>: cyklostezka podél Svitavy z Brna (rovinaté, 19 km)</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../moravsky-kras/">Moravský kras</a></strong> (5–15 km) — 5 zpřístupněných jeskyní</li>
+<li><strong><a href="../cz-punkevni-jeskyne/">Punkevní jeskyně</a></strong> (6 km) — plavba na řece Punkvě</li>
+<li><strong><a href="../cz-katerinska-jeskyne/">Kateřinská jeskyně</a></strong> (6 km) — největší dóm v ČR</li>
+<li><strong><a href="../cz-balcarka/">Jeskyně Balcarka</a></strong> (10 km) — nejbohatší krápníková výzdoba</li>
+<li><strong><a href="../cz-sloupsko-sosuvske-jeskyne/">Sloupsko-šošůvské jeskyně</a></strong> (12 km) — nejdelší systém</li>
+<li><strong><a href="../macocha/">Propast Macocha</a></strong> (8 km) — 138 m hluboká propast</li>
+<li><strong><a href="../cz-krtiny/">Křtiny</a></strong> (8 km) — Santiniho chrám, jeskyně Výpustek</li>
+<li><strong>Jedovnice</strong> (10 km) — Olšovec (koupání, kemp)</li>
+<li><strong>Černá Hora</strong> (5 km) — pivovar, zámek</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.blansko.cz">Město Blansko — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Blansko">Wikipedia — Blansko</a></li>
+<li><a href="https://moravskykras.eu">Moravský kras — info</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMc7jIBAF4GdNQffnAshcI0UkXwl3rgJbuVuuZGkLrsHKF8AdBfJbJdpEqSzW3f7TfQ0azcwD364UuTGkyUQyn7HHSF9dUkCTQ7VCFommNHokSa2abSWQjCftYfVFOxPf/R+b3Nagp/VjPkcG0FUIP1ZwaBV+7doJGbuYTxj2BvFpMuzRYpUla6QpDf2ABsMOPxjqZJb973vHVj+HbILMQFdwxvvty+THvjHkFmdYOD1V9G3eGCrWYuKu0GDcYSWIZ2E8ZYiHW2fgN1usPO4a4iXi2mJc6pd4mQ37NtubqzY5Q5ZTBjqG6riY970f+ZmPnCZGE9FijzFZYF0a/fxPtBLu15Me04WzKVxyqx/zWNK1yR72kShZ+Or/2ORWnRS+7vEf/X/XnwAAAP//NyNPKz69FtsAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
