@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Sloupsko-šošůvské jeskyně (nejdelší zpřístupněný systém v ČR) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Sloupsko-šošůvské jeskyně (nejdelší zpřístupněný systém v ČR)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">moravsky-kras</span> </div>
+<div class="meta"><p class="meta-item">📍 Sloup v Moravském krasu, 679 13</p><p class="meta-item">🌐 <a href="https://sloupskososuvske.caves.cz" target="_blank">sloupskososuvske.caves.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.4111, 16.7381], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.4111, 16.7381]).addTo(dmap);
+</script>
+<div class="content"><h2>Sloupsko-šošůvské jeskyně — nejdelší zpřístupněný jeskynní systém v ČR</h2>
+<p>Rozsáhlý komplex dómů, chodeb a podzemních propastí ve dvou patrech na severním okraji <a href="../moravsky-kras/">Moravského krasu</a> u městečka Sloup. S prohlídkovou trasou <strong>1 760 metrů</strong> jde o nejdelší zpřístupněný jeskynní systém v České republice. Celý systém (propojený s Amatérskou jeskyní) měří téměř 35 km.</p>
+<p>Jeskyně jsou známé krásnými krápníkovými výzdobami, obřími propastmi a unikátním archeologickým nalezištěm — v jeskyni Kůlna byly objeveny pozůstatky neandertálců staré 120 000 let.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Delší trasa cca 250/170 Kč, kratší cca 200/130 Kč (ověř aktuální ceník na webu)</td>
+</tr>
+<tr>
+<td><strong>Prohlídkové trasy</strong></td>
+<td>Dlouhá: 1 760 m / 110 min, Krátká: 890 m / 70 min</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td>7–8 °C, vlhkost 99 %</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Duben–září denně, březen+říjen omezeno (viz web)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U provozní budovy, stojany na kola</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.4111,16.7381">49.4111, 16.7381</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — uvnitř je 7 °C i v létě!</li>
+<li>Pevnou obuv (mokré schody, nerovný terén)</li>
+<li>Bez kočárku (schody, úzké chodby)</li>
+<li>Fotit lze bez blesku (bez stativu a selfie tyčí)</li>
+<li>Psi nemají přístup</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–září (plný provoz)</li>
+<li><strong>Léto 2026</strong>: akce ke 150. výročí prvního sestupu na dno — sleva na vstupné</li>
+<li>V létě doporučeno přijet brzy ráno (kapacita prohlídek omezená)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Eliščina jeskyně</strong> má výjimečnou akustiku — konají se tu koncerty komorní hudby</li>
+<li><strong>Nagelova propast</strong> (90 m) — jedna z nejpůsobivějších podzemních propastí v ČR</li>
+<li><strong>Stupňovitá propast</strong> (65 m) — další impozantní prostor</li>
+<li>Jeskyně Kůlna (archeologie) — naleziště neandertálců</li>
+<li>Veřejnosti přístupné od roku 1881 — jedna z nejstarších zpřístupněných jeskyní</li>
+<li>Prohlídky jsou <strong>pouze s průvodcem</strong></li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 35 km (cca 40 min přes Blansko)</li>
+<li><strong>Z Blanska</strong>: 12 km severně</li>
+<li><strong>Z Ostravy</strong>: cca 155 km (1:35 h po D1 + sjezd Brno-sever)</li>
+<li>Autobusová zastávka u jeskyní (linka z Blanska)</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../macocha/">Propast Macocha</a></strong> (8 km) — 138 m hluboká propast, Punkevní jeskyně</li>
+<li><strong><a href="../moravsky-kras/">Moravský kras</a></strong> — kompletní nabídka jeskyní (Punkevní, Kateřinská, Balcarka)</li>
+<li><strong><a href="../cz-krtiny/">Křtiny</a></strong> (15 km) — Santiniho chrám, jeskyně Výpustek</li>
+<li><strong>Blansko</strong> (12 km) — zámek, Kateřinská jeskyně</li>
+<li><strong>Jedovnice</strong> (10 km) — Olšovec (koupání), kemp</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://sloupskososuvske.caves.cz">Sloupsko-šošůvské jeskyně — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Sloupsko-%C5%A1o%C5%A1%C5%AFvsk%C3%A9_jeskyn%C4%9B">Wikipedia — Sloupsko-šošůvské jeskyně</a></li>
+<li><a href="https://www.caves.cz">Správa jeskyní ČR</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABZElEQVR42tTTv82kMBAF8LEcOLMbQKKNyWhp3QB/GsAtOZs2kNwAZA6Q34lvV3sXfMdOuhMg/ZAYjZ4e9PUTgJlc3zgDVWFPdo4Zh/BGrPFQ1tGRqbk0rWMus9M7LUASrcmmne2S6X3vrQOwRumi8DuPW18rTO788DfiW/sBy1HtIoymcahkGvep1nPkX2wqEnDG7ErKCj+/7wyk/LP//zbSr1H6RXJ/VIXD9eBtynmLKottI59GXDmywp7pMbotAq+8PjjAHgvK7IZ+Z40rPaLYlPM771ubWg5ImWnAK+97B9BjknOC9K8+3dtIaQZ2da7fSeEgnUk4pyrb894P9s4eje3uqCBrzORj7kaWbvrdBetgVwf85PnJ16updp7ZpqpwAJZGp0F99fmDPdl15NMP1ULloaxByk4Dfvqs8ePqs3vep/HosNR8etKY7GykiyDbNA5Amp1Ncv3zCn/X/AkAAP//c0lziBRBo/4AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
