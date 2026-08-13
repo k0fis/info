@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Velehrad (poutní bazilika a klášter) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Velehrad (poutní bazilika a klášter)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">pamatky</span> <span class="tag">poutni-misto</span> </div>
+<div class="meta"><p class="meta-item">📍 Velehrad, 687 06, okres Uherské Hradiště</p><p class="meta-item">🌐 <a href="https://www.velehrad.cz" target="_blank">www.velehrad.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.1056, 17.3942], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.1056, 17.3942]).addTo(dmap);
+</script>
+<div class="content"><h2>Velehrad — nejslavnější poutní místo Moravy</h2>
+<p>Velehrad je malá obec 7 km severozápadně od Uherského Hradiště, ale svým duchovním významem patří mezi nejvýznamnější poutní místa v Česku. Dominantou je <strong>Bazilika Nanebevzetí Panny Marie a sv. Cyrila a Metoděje</strong> — monumentální barokní chrám na místě prvního cisterciáckého kláštera na Moravě (založen 1205). Místo je spojováno s odkazem věrozvěstů Cyrila a Metoděje.</p>
+<p>Bazilika je impozantní stavba s bohatým barokním interiérem, 14 bočními kaplemi a unikátní atmosférou. V roce 1990 Velehrad navštívil papež Jan Pavel II. a přivítal ho půl milionu věřících. Areál je spravován jezuity od roku 1890.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (bazilika volně přístupná)</td>
+</tr>
+<tr>
+<td><strong>Prohlídky</strong></td>
+<td>Individuálně kdykoliv v otevírací době; skupinové po domluvě</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně cca 7:00–18:00 (mimo bohoslužby)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Bezplatné parkoviště u baziliky</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.1056,17.3942">49.1056, 17.3942</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Bazilika</strong> — barokní interiér, 14 bočních kaplí, Zlatá růže od Jana Pavla II.</li>
+<li><strong>Klášterní areál</strong> — ambity, rajský dvůr, lapidárium</li>
+<li><strong>Mariánský sloup</strong> (1681) — barokní sloup před bazilikou</li>
+<li><strong>Královský stůl</strong> — kamenný památník z r. 1228</li>
+<li><strong>Barokní most s kaplí</strong> (1715)</li>
+<li><strong>Stojanov</strong> — poutní dům s kavárnou a knihkupectvím</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: Květen–září (zahrady v květu, příjemné počasí)</li>
+<li><strong>5. červenec</strong> — Národní pouť (největší akce roku, tisíce poutníků)</li>
+<li>Kdykoli mimo hlavní pouť je klidno a nerušený zážitek</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Projděte si <strong>Růžencovou cestu</strong> — poutní stezku vedoucí z Velehradu do Starého Města (3 km)</li>
+<li>V areálu je malé <strong>knihkupectví a kavárna</strong> (Stojanov)</li>
+<li>Pro děti je zajímavější kombinace s okolím (Modrá, Buchlov)</li>
+<li>Ideální jako zastávka na cestě do/z Slovácka</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 95 km (cca 1:10 autem po D1 → exit Vyškov → R50 → UH)</li>
+<li><strong>Z Olomouce</strong>: 75 km (cca 1:00)</li>
+<li><strong>Z Ostravy</strong>: 140 km (cca 1:40)</li>
+<li><strong>Z Uherského Hradiště</strong>: 7 km (10 min)</li>
+<li>Vlak do UH + autobus č. 4 nebo cyklo</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-buchlov/">Hrad Buchlov</a></strong> (~5 km) — královský hrad ze 13. století na kopci v Chřibech, rozhledna 35 m</li>
+<li><strong>Zámek Buchlovice</strong> (~4 km) — italský barokní zámek s parkem a zahradami</li>
+<li><strong>Modrá — archeoskanzen</strong> (~3 km) — rekonstrukce velkomoravského opevněného sídla, tunel pod vodou</li>
+<li><strong>Staré Město u UH</strong> (~6 km) — centrum Velké Moravy, muzeum, <a href="../kovozoo/">Kovo-zoo</a></li>
+<li><strong><a href="../zoo-lesna/">Zoo Lešná</a></strong> (~12 km) — jedna z nejhezčích ZOO v ČR</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.velehrad.cz">Obec Velehrad</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Velehrad">Bazilika Velehrad — Wikipedie</a></li>
+<li><a href="https://www.hrad-buchlov.cz">Hrad Buchlov</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABPElEQVR42tzUMY6rMBAG4B9NMd3LBUbxNVJE4kqmo3o41evClZAofA1HvoDTUSDmydokuxXxutudiq8A4fmtH79uWDWRkpP8UGMHSylq9ECRx9WahEG9WUotEAQuN6ku5Cvt0K1WVfj1//tWvcdR+uhf+9l1HrHmH02fGeyZL/M9urWnJdT5PjtyYYh6m1KJx/x+YGlvihKn9irQRdqtLTG6eROokjY+1fjvuVltTvuxrHe26IJdGbh97P+NedQx5xt941HidO7UrUwLuMb4047hIAM99v/OfNGEQ+hxApcYzXylFFhwLDJfaSMniLqdUOH8xaihp+nYpgLnGjHjOpA/Mkrscl5xiZPRIud+OBgl3VDpLgwy5L4rtBWEPk5f+2nHDtY4sE54nm/fuU+SUXrev2/6Z8//AAAA///gUUmPZa69HQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
