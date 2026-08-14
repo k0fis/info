@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Klentnice a Sirotčí hrádek (Pálava, vyhlídky, víno) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Klentnice a Sirotčí hrádek (Pálava, vyhlídky, víno)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">hrady</span> <span class="tag">vino</span> <span class="tag">palava</span> </div>
+<div class="meta"><p class="meta-item">📍 Klentnice, 692 01, okres Břeclav</p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.8436, 16.6350], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.8436, 16.6350]).addTo(dmap);
+</script>
+<div class="content"><h2>Klentnice — brána na Pálavu se Sirotčím hrádkem</h2>
+<p>Klentnice je malebná vinařská vesnička pod vápencovými útesy Pálavy, 4 km severně od Mikulova. Hlavním lákadlem je <strong>Sirotčí hrádek</strong> — zřícenina gotického hradu ze 13. století na dramatickém vápencovém skalním útesu (458 m n.m.), odkud se otevírají úchvatné výhledy na Novomlýnské nádrže, Mikulov a za jasného dne až na Alpy.</p>
+<p>Okolí nabízí skvělou kombinaci přírody, historie a vína: CHKO Pálava s UNESCO biosférickou rezervací, středověké zříceniny, vinné sklepy a unikátní stepní flóru na vápencových skalách. Ideální pro půldenní až celodenní výlet s pěší turistikou.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (volně přístupná zřícenina i trasy)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V obci Klentnice (u hřbitova nebo u hospody), zdarma</td>
+</tr>
+<tr>
+<td><strong>Náročnost</strong></td>
+<td>Výstup na Sirotčí hrádek ~20 min, místy strmé (ne kočárek)</td>
+</tr>
+<tr>
+<td><strong>GPS Klentnice</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.8436,16.6350">48.8436, 16.6350</a></td>
+</tr>
+<tr>
+<td><strong>GPS Sirotčí hrádek</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.8394,16.6394">48.8394, 16.6394</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Sirotčí hrádek</strong> — gotická zřícenina na skále, 8m vysoká zeď s okny, výhledy</li>
+<li><strong>Tabulová hora (Stolová hora)</strong> — 459 m, plochý vápencový vrch s výhledem, pokračování z hrádku</li>
+<li><strong>Kostel sv. Jiří</strong> — barokně-klasicistní (1783), zdobený sochařem O. Schweiglem</li>
+<li><strong>Vinné sklepy</strong> — ochutnávky pálavských vín přímo u vinařů</li>
+<li><strong>Děvín</strong> (550 m) — nejvyšší vrch Pálavy, dosažitelný pěšky (~1:30 z Klentnice)</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pevné boty (vápencové skály, prudší terén)</li>
+<li>Vodu (na trase žádný zdroj)</li>
+<li>Vítr nahoře i v létě — lehká bunda</li>
+<li>Fotoaparát (výhledy!)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: Duben–květen (stepní květena, krokusy) a září–říjen (vinobraní, barvy)</li>
+<li><strong>Léto</strong>: Horko na skalách, málo stínu — raději brzy ráno</li>
+<li><strong>Zima</strong>: Krásné výhledy, ale skluzké cesty</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Okruh: Klentnice → Sirotčí hrádek → Tabulová hora → zpět (~1:30)</li>
+<li>Delší okruh přes Děvín: ~3:30, nádherné výhledy celou cestu</li>
+<li>Po túře si dejte <strong>pálavské víno</strong> přímo ve sklepě v Klentnici</li>
+<li>Kombinujte s <a href="../cz-mikulov/">Mikulovem</a> (4 km) — zámek, náměstí, Svatý kopeček</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 55 km (cca 0:50 po D2 → exit Podivín → Mikulov → Klentnice)</li>
+<li><strong>Z Olomouce</strong>: 130 km (cca 1:30)</li>
+<li><strong>Z Ostravy</strong>: 200 km (cca 2:10)</li>
+<li><strong>Z Mikulova</strong>: 4 km (5 min autem, nebo pěšky přes vinice)</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-mikulov/">Mikulov</a></strong> (4 km) — zámek, Svatý kopeček, Dietrichsteinská hrobka, vinařství</li>
+<li><strong>Děvičky (Dívčí hrady)</strong> (5 km pěšky) — další zřícenina na Pálavě s výhledy</li>
+<li><strong>Pavlov</strong> (6 km) — vinařská obec, Archeopark (naleziště Venus)</li>
+<li><strong>Novomlýnské nádrže</strong> (3 km) — koupání, vodní sporty, cyklo kolem břehů</li>
+<li><strong>Lednicko-valtický areál</strong> (15 km) — UNESCO, zámky Lednice a Valtice</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://palava.ochranaprirody.cz">CHKO Pálava</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Klentnice">Klentnice — Wikipedie</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Sirot%C4%8D%C3%AD_hr%C3%A1dek">Sirotčí hrádek — Wikipedie</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABN0lEQVR42tzUMY7CMBAF0I+mcLe5wAhfgwIpV3I6KhwquuRKkbbINYJ8AdO5sPirLLvQBZNud6q8KuOZ0ce/K0NGeLb6/bHCLZztyTACRe6zg4PhaFOppbdpMu9ZxpVu0TDyrObR/7LJa+j1EMbHfBY9l6UaGZ47WLI5fV6zZ5I0rTJc3dl+8oGXIZb4CJ+deq0vRInnfmNIWt/qEpsoDHHyws0Y17iTTnoYm37m88Jw+4ZRPXC5z/+FDdnBzfe6GVFgVPmosGdJMKvs9h9aqZfHPpZtTtkHTsAOpsSo2CnUK7ZFvt+3pMDbDisMYBNaHGTY1rHAc4wI4WXcGpS4RZMrm8Jw3/BL99nZVii8YaWbqZr8nHeFdvA4zP+PJW7hhNlwwO/7lj3nSbSU5z2+5b9dXwEAAP//68A3TveI/fwAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
