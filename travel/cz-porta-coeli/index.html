@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Klášter Porta coeli (gotický klenot u Tišnova) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Klášter Porta coeli (gotický klenot u Tišnova)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">klaster</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Porta coeli 1001, 666 02 Předklášteří</p><p class="meta-item">🌐 <a href="https://www.portacoeli.cz" target="_blank">www.portacoeli.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.3531, 16.4008], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.3531, 16.4008]).addTo(dmap);
+</script>
+<div class="content"><h2>Klášter Porta coeli</h2>
+<p>Cisterciácký ženský klášter <strong>Porta coeli</strong> (latinsky „Brána nebes&quot;) v Předklášteří u Tišnova patří k nejvýznamnějším raně gotickým památkám střední Evropy. Založen roku 1233 královnou Konstancií — dodnes v něm žije komunita řeholních sester.</p>
+<p>Unikátní je především <strong>kostel Nanebevzetí Panny Marie</strong> s bohatě zdobeným portálem, křížová chodba s kamennými reliéfy zvířat a rostlin a kapitulní síň. Od roku 2010 je národní kulturní památkou. V areálu funguje muzeum, klášterní pivovar Vorkloster a v létě kavárna.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>od 40 Kč (prohlídka kostela s průvodcem, min. 2 osoby)</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>květen–září: 9–17 h, říjen–duben: 8–16 h, pondělí zavřeno</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>zdarma u kláštera</td>
+</tr>
+<tr>
+<td><strong>Telefon</strong></td>
+<td>+420 537 026 220 (klášter), +420 731 763 658 (muzeum/prohlídky)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.3531,16.4008">49.3531, 16.4008</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Kostel Nanebevzetí Panny Marie</strong> — románsko-gotická bazilika s unikátním portálem</li>
+<li><strong>Křížová chodba</strong> — kamenné reliéfy, rajský dvůr</li>
+<li><strong>Kapitulní síň</strong> — dva gotické pilíře</li>
+<li><strong>Podhorácké muzeum</strong> — paleontologie, mineralogie, historie kláštera</li>
+<li><strong>Pivovar Vorkloster</strong> — klášterní pivovar (otevřen 2019)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen (kavárna + pivovar otevřeny, zahrady v květu)</li>
+<li>Prohlídky celoročně mimo pondělí</li>
+<li>V adventu bývají speciální akce</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Prohlídku kostela nutno objednat předem (min. 2 osoby) přes muzeum</li>
+<li>Pivovar nabízí degustace — kontakt: +420 777 243 603</li>
+<li>Klidné místo na procházku — klášterní zahrady a okolní krajina</li>
+<li>Kombinuj s výletem na Květnici nebo do Tišnova (2 km)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Z Brna</strong>: 25 km (30 min autem po R43 / silnice 385)</li>
+<li><strong>Z Olomouce</strong>: 95 km (1:15 h)</li>
+<li><strong>Vlakem</strong>: stanice Tišnov (2 km pěšky), přímé spojení z Brna (30 min)</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Květnice</strong> (1 km) — přírodní památka, vrch s jeskyněmi (Králova jeskyně) a vzácnými minerály</li>
+<li><strong>Rozhledna Klucanina</strong> (3 km) — výhled na Tišnovsko</li>
+<li><strong>Hrad Veveří</strong> (15 km) — jeden z nejstarších hradů na Moravě</li>
+<li><strong>Brno</strong> (25 km) — VIDA!, hvězdárna, Špilberk</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.portacoeli.cz">Oficiální web kláštera</a></li>
+<li><a href="https://www.muzeumbrnenska.cz">Podhorácké muzeum</a></li>
+<li><a href="https://www.pivovarportacoeli.cz">Pivovar Vorkloster</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Kl%C3%A1%C5%A1ter_Porta_coeli">Wikipedia</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXUlEQVR42tTTsa3tIAwGYEcUdLBAJNZwx0pkAZIsACvRsQYSC+R0LlD8xNG790lPV7luj7uPCv3+DR8/lvkweo1YmElgA+pMMDbCBiix72mrsHDpt9R7aQFJbuP5rCA0qMykEtD3fx9tmdNW163idx6Pnk+5rJbLv4ifPP92oMqV+BYZRjTocqGx0w+27O6d+ay65yKwAdhOcq9S+9/9PttSv0GvC7N7STxnKy0ANiux8ZwijKXqfhaBl7LGpbTg64ggsEGXbO2HZnehwOBH2CtYKiNKvFR12dlP7975/mpaw8bDcnXv/f5mg/0IGiJ6d0lsGfYLx8LUIgpstLuNV7eGZovE752sO3n11Zf/rF6ZVNLMBwo8n4J2CVBlEtgyn0x8Vvrq97PnfSfNN5BikX1Pcebj+UVCg28BtEoo9LzH2R+QGNQRoAWve5LYMudL97PSuhSBP2v+BAAA//8gYVWd/MjpCQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
