@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovinsko — Predjamský hrad (hrad zabudovaný ve skále) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovinsko — Predjamský hrad (hrad zabudovaný ve skále)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">hrad</span> <span class="tag">historie</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Predjama 1, 6230 Postojna, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.postojnska-jama.eu/en/predjama-castle/" target="_blank">www.postojnska-jama.eu/en/predjama-castle</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.8153, 14.1267], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.8153, 14.1267]).addTo(dmap);
+</script>
+<div class="content"><h2>Predjamský hrad — renesanční hrad v ústí jeskyně</h2>
+<p>Spektakulární hrad zabudovaný do 123 m vysoké skalní stěny — jeden z nejneobvyklejších hradů na světě. Stojí v ústí jeskyně, jejíž tunely sloužily jako tajný zásobovací koridor. Legendární sídlo loupeživého rytíře <strong>Erasma Luegerského</strong> (15. století), který odtud přepadal kupecké karavany a odolával císařskému obléhání díky tajné chodbě na povrch.</p>
+<p>Hrad v současné podobě je renesanční přestavba (16. stol.), dnes muzeum s dobovým vybavením, mučírnou a jeskyní pod hradem.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí ~18 €, děti ~11 €, kombi s Postojnou ~40/24 €</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně celoročně; 9–17 (léto), 10–16 (zima)</td>
+</tr>
+<tr>
+<td><strong>Doba prohlídky</strong></td>
+<td>~45–60 minut (individuálně, bez průvodce)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma u hradu</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=45.8153,14.1267">45.8153, 14.1267</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlná obuv (schody, nerovný povrch)</li>
+<li>V jeskyni pod hradem je chladno (~10 °C) — svetr</li>
+<li>Fotoaparát — exteriér je neuvěřitelně fotogenický</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> (muzeum je kryté)</li>
+<li><strong>Červenec</strong>: Erasmův rytířský turnaj (historický festival)</li>
+<li><strong>Nejlepší foto</strong>: ranní/večerní světlo na skalní stěnu</li>
+<li>V létě fronty — přijeďte ráno nebo kombi s Postojnou (organizovaný bus)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Kombi lístek</strong> s <a href="../si-postojna/">Postojnskou jeskyní</a> — ušetříte ~15 %, 9 km vzdálená</li>
+<li>Pod hradem je jeskyně (přístupná květen–září) — tajná Erasmova úniková cesta</li>
+<li>Mučírna a rytířský sál fascinují děti</li>
+<li>Hrad je zasazený do skály tak, že ze zadní stěny vystupuje přírodní kámen</li>
+<li>Kniha/film „The Keep&quot; se inspiroval právě tímto hradem</li>
+</ul>
+<h3>Pro děti ★★★★☆</h3>
+<ul>
+<li>Rytíři, tajné chodby, mučírna — přesně to, co děti milují</li>
+<li>Krátká prohlídka (45 min), ne příliš fyzicky náročná</li>
+<li>V červenci rytířský turnaj = hity</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Postojnská jeskyně → Predjama</td>
+<td>9 km</td>
+<td>0:10</td>
+</tr>
+<tr>
+<td>Lublaň → Predjama</td>
+<td>55 km</td>
+<td>0:50</td>
+</tr>
+<tr>
+<td><a href="../si-skocjanske-jeskyne/">Škocjan</a> → Predjama</td>
+<td>40 km</td>
+<td>0:35</td>
+</tr>
+<tr>
+<td>Brno → Predjama</td>
+<td>480 km</td>
+<td>4:45</td>
+</tr>
+</tbody>
+</table>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../si-postojna/">Postojnská jeskyně</a></strong> (9 km) — vláček do podzemí, olm</li>
+<li><strong><a href="../si-skocjanske-jeskyne/">Škocjanské jeskyně</a></strong> (40 km) — UNESCO kaňon</li>
+<li><strong><a href="../si-lipica/">Lipica</a></strong> (30 km) — hřebčín lipicánů</li>
+<li><strong>Lublaň</strong> (55 km) — hrad, stará tržnice, dračí most</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.postojnska-jama.eu/en/predjama-castle/">Predjama Castle — oficiální</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABZ0lEQVR42tTUsa2lMBAF0LEcOMMNILkNZ24JGgDcgN2SM7dhiQZ42QQWd8Vn/660Wj3mh2+yk6Dh+mro48cC21zGxReABR5Ix436zL6RlzjsaTCkUPZT6HxSmwz/wAGxFKFJJ1V0or/7vrUF0lzHufo/ebz19YnFjPYbTx4CItjl6nFKbGuzL3aZuS/+PyavcwYiSOcisCp9juxeXO98nmwrcqyjKlUfJDLZg9pEpa0ssGK3TaarGtpaBCbTl7m2KYT9K58nq4pksW8GbvMSo62bJ1tKv/d78EAOEW0yHl/5PtlWUq/aLer3+743BZcmT4sP7pDYottYuuLa7r48eDAuR9anoWaLxKEvK8aVzXj//7+mPc2skwGixNdKB7l09VTi6z4NHrHyfuf54IF0ToSTWEPksOcjdIWAF8ucltAmMnrzMufNIHLpv+/Bg0lv69Vnuvv8ZAvk5PdYw6iKwJ81vwIAAP//XSxlwCmrl6oAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
