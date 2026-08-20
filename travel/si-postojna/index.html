@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovinsko — Postojnská jeskyně (vláčkem do podzemí) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovinsko — Postojnská jeskyně (vláčkem do podzemí)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">priroda</span> <span class="tag">jeskyne</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Jamska cesta 30, 6230 Postojna, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.postojnska-jama.eu/" target="_blank">www.postojnska-jama.eu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.7827, 14.2037], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.7827, 14.2037]).addTo(dmap);
+</script>
+<div class="content"><h2>Postojnská jeskyně — největší turistická jeskyně Evropy</h2>
+<p>Nejnavštěvovanější jeskyně v Evropě (~1 milion návštěvníků ročně) a jedna z největších na světě. Unikátní zážitek: <strong>3,5 km jízda podzemním elektrickým vláčkem</strong> + 1,5 km pěší prohlídka s průvodcem. Jeskyně je turisticky zpřístupněná od roku 1819, podzemní železnice funguje od 1872.</p>
+<p>Domov <strong>olma</strong> (Proteus anguinus) — enigmatického slepého obojživelníka přezdívaného „lidská ryba&quot;. V 2016 se podařil unikátní odchov — z 50+ vajíček se vylíhlo 22 mláďat.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí ~28–30 €, děti (6–15) ~18 €, kombi s Predjamou ~40/24 €</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně celoročně; prohlídky každou hodinu (léto), 2–3× denně (zima)</td>
+</tr>
+<tr>
+<td><strong>Doba prohlídky</strong></td>
+<td>~90 minut (vláček + pěší část)</td>
+</tr>
+<tr>
+<td><strong>Délka trasy</strong></td>
+<td>5 km (3,5 km vláček + 1,5 km pěšky)</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td>10 °C (celoročně)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Velké parkoviště u vchodu (placené ~5 €)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=45.7827,14.2037">45.7827, 14.2037</a></td>
+</tr>
+<tr>
+<td><strong>Rezervace</strong></td>
+<td>Online doporučena v létě</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Teplé oblečení (10 °C + průvan z vláčku)</li>
+<li>Pohodlná obuv (1,5 km pěšky po zpevněné cestě)</li>
+<li>✅ Vhodné i pro menší děti a seniory (vláček, rovný terén)</li>
+<li>Kočárek NE (ale nosítko/šátek ano)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — jeskyně je otevřená každý den v roce</li>
+<li><strong>Léto</strong> (červen–září): prohlídky každou hodinu 9–17, ale davy</li>
+<li><strong>Jaro/podzim</strong>: ideální kompromis (méně lidí, stále časté prohlídky)</li>
+<li><strong>Zima</strong>: 2–3 prohlídky denně, minimální fronty</li>
+<li><strong>Tip</strong>: kombinovaný lístek jeskyně + Predjamský hrad ušetří ~15 %</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Kombi lístek</strong> s <a href="../si-predjamsky-hrad/">Predjamským hradem</a> (9 km) — oboje za ~40 € dospělý</li>
+<li>Jeskyně má podzemní <strong>poštu</strong> (od 1899!) — razítko do deníku/pohlednice</li>
+<li>Výstava EXPO Postojna Cave Karst (v ceně vstupenky)</li>
+<li>Srovnání s <a href="../si-skocjanske-jeskyne/">Škocjanem</a>: Postojna = pohodlná, velkolepá, vhodná pro rodiny; Škocjan = dramatičtější, syrovější, méně turistů</li>
+<li>Vivarium s olmy — živé exempláře „lidské ryby&quot;</li>
+</ul>
+<h3>Pro děti ★★★★★</h3>
+<ul>
+<li>Jízda vláčkem = magický zážitek</li>
+<li>Olm vivarium — „dráčci&quot; z pohádky</li>
+<li>Rovný terén, krátká pěší část</li>
+<li>Vhodné od cca 4 let (mladší mohou mít strach z tmy/hluku)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lublaň → Postojna</td>
+<td>55 km</td>
+<td>0:45</td>
+</tr>
+<tr>
+<td><a href="../si-skocjanske-jeskyne/">Škocjan</a> → Postojna</td>
+<td>35 km</td>
+<td>0:30</td>
+</tr>
+<tr>
+<td>Koper → Postojna</td>
+<td>60 km</td>
+<td>0:50</td>
+</tr>
+<tr>
+<td>Terst → Postojna</td>
+<td>65 km</td>
+<td>1:00</td>
+</tr>
+<tr>
+<td>Brno → Postojna</td>
+<td>480 km</td>
+<td>4:45</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trasa z Moravy</strong>: Brno → Vídeň → Graz → Maribor → Lublaň → sjezd Postojna (A1).</p>
+<p>Vlak z Lublaně do Postojny: ~1 hod, přímé spojení.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../si-predjamsky-hrad/">Predjamský hrad</a></strong> (9 km) — hrad ve skále, kombi lístek</li>
+<li><strong><a href="../si-skocjanske-jeskyne/">Škocjanské jeskyně</a></strong> (35 km) — UNESCO podzemní kaňon</li>
+<li><strong>Planinska jama</strong> (10 km) — soutok dvou podzemních řek (pro speleology)</li>
+<li><strong><a href="../si-lipica/">Lipica</a></strong> (30 km) — hřebčín lipicánů</li>
+<li><strong>Lublaň</strong> (55 km) — hlavní město, hrad, tržnice, řeka Ljubljanica</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.postojnska-jama.eu/">Postojnska jama — oficiální web</a></li>
+<li><a href="https://www.postojnska-jama.eu/">Kombi lístek Postojna + Predjama</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNElEQVR42tzUMY6rMBAG4D+icMkFRplrUDyJK0FHFZyKLlzJ0iu4BpEv4HQurPxP1tvdpAIv3e5UfB36x/Pj140hH55i8kc4YoveUwYxQJHn1NOu8IvGQncyemq5ex/SeNgWnSANfvn6/23nPGYZ/PKWz4bzSJ2G9LaDLZsrSauTxnMbDhiorgxqBecWJe7ah6dGGDQlNs9qplV6d3KhwOhd3pbVZcURm9nVnDWun+9vz/bPBaNaadCUGJdqXlFZaZ5lrlOnFKi7Oxyw4d+b1N6mj/x3/XA9Q0XB/X++u+ZNg8DzHlHmgJoTSR4xgFOCTnTqSpzvYx016lLo3CdBjLrzq1+2nO/bpkHJBQe91t5W8dVfO+7QcWJ8tkXOfTJiQMtY5NwnNkG5vvr7G/7Z8y8AAP//rUJmKABUv3AAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
