@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovensko / Maďarsko — Slovenský a Aggtelecký kras (přeshraniční jeskynní systém UNESCO) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovensko / Maďarsko — Slovenský a Aggtelecký kras (přeshraniční jeskynní systém UNESCO)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovensko</span> <span class="tag">madarsko</span> <span class="tag">priroda</span> <span class="tag">jeskyne</span> <span class="tag">unesco</span> </div>
+<div class="meta"><p class="meta-item">📍 Dlhá Ves 049 55, Slovensko (jeskyně Domica)</p><p class="meta-item">🌐 <a href="https://www.ssj.sk/en/jaskyna/4-domica" target="_blank">www.ssj.sk/en/jaskyna/4-domica</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([48.4778, 20.4703], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([48.4778, 20.4703]).addTo(dmap);
+</script>
+<div class="content"><h2>Slovenský a Aggtelecký kras — přeshraniční jeskynní systém UNESCO</h2>
+<p>Unikátní přeshraniční chráněné území na pomezí jižního Slovenska a severního Maďarska. Přes 1000 jeskyní v krasovém systému, z nichž nejznámější je propojený komplex <strong>Baradla–Domica</strong> (25 km). Od roku 1995 zapsáno na seznam světového dědictví UNESCO. Na slovenské straně Národní park Slovenský kras (od 2002), na maďarské Aggtelecký národní park (od 1985).</p>
+<p>Oblast nabízí výjimečnou geologickou rozmanitost — od ledových jeskyní přes aragonitové formace po podzemní řeky s možností plavby na loďce. Celkem 5 zpřístupněných jeskyní na slovenské straně + Baradla na maďarské.</p>
+<h3>Zpřístupněné jeskyně</h3>
+<h4>🇸🇰 Slovenská strana (SSJ — Správa slovenských jeskyní)</h4>
+<table>
+<thead>
+<tr>
+<th>Jeskyně</th>
+<th>Délka trasy</th>
+<th>Doba</th>
+<th>Teplota</th>
+<th>Speciální</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Domica</strong></td>
+<td>780 m / 1 180 m</td>
+<td>45 / 60 min</td>
+<td>10–12 °C</td>
+<td>Plavba na podzemní řece Styx!</td>
+</tr>
+<tr>
+<td><strong>Gombasecká</strong></td>
+<td>530 m</td>
+<td>~30 min</td>
+<td>9 °C</td>
+<td>Speleoterapie (léčba astmatu)</td>
+</tr>
+<tr>
+<td><strong>Jasovská</strong></td>
+<td>720 m</td>
+<td>~45 min</td>
+<td>~10 °C</td>
+<td>Nejstarší zpřístupněná jeskyně na SK (1846)</td>
+</tr>
+<tr>
+<td><strong>Ochtinská aragonitová</strong></td>
+<td>230 m</td>
+<td>~30 min</td>
+<td>7 °C</td>
+<td>Jediná aragonitová v Evropě!</td>
+</tr>
+<tr>
+<td><strong>Dobšinská ledová</strong></td>
+<td>~500 m</td>
+<td>~30 min</td>
+<td>−1 °C</td>
+<td>Led až 25 m silný, sezóna V–IX</td>
+</tr>
+</tbody>
+</table>
+<h4>🇭🇺 Maďarská strana (Aggteleki Nemzeti Park)</h4>
+<table>
+<thead>
+<tr>
+<th>Jeskyně</th>
+<th>Délka trasy</th>
+<th>Doba</th>
+<th>Teplota</th>
+<th>Speciální</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Baradla</strong> (Aggtelek / Jósvafő)</td>
+<td>1–7 km</td>
+<td>1–5 hod</td>
+<td>10–11 °C</td>
+<td>Největší v systému, koncertní sál</td>
+</tr>
+</tbody>
+</table>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné SK</strong></td>
+<td>Dospělí ~12–15 €, děti/studenti ~6–8 € (dle jeskyně)</td>
+</tr>
+<tr>
+<td><strong>Vstupné HU (Baradla)</strong></td>
+<td>Dospělí 4 000–8 000 HUF (~10–20 €), dle okruhu</td>
+</tr>
+<tr>
+<td><strong>Rezervace</strong></td>
+<td>Doporučena v sezóně (červenec–srpen)</td>
+</tr>
+<tr>
+<td><strong>GPS Domica</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.4778,20.4703">48.4778, 20.4703</a></td>
+</tr>
+<tr>
+<td><strong>GPS Baradla (Aggtelek)</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.4695,20.4975">48.4695, 20.4975</a></td>
+</tr>
+<tr>
+<td><strong>GPS Baradla (Jósvafő)</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.4819,20.5500">48.4819, 20.5500</a></td>
+</tr>
+<tr>
+<td><strong>GPS Ochtinská arag.</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.6697,20.3036">48.6697, 20.3036</a></td>
+</tr>
+<tr>
+<td><strong>GPS Dobšinská ledová</strong></td>
+<td><a href="https://maps.apple.com/?ll=48.8714,20.3064">48.8714, 20.3064</a></td>
+</tr>
+<tr>
+<td><strong>Kontakt Domica</strong></td>
+<td>+421 58 788 20 10</td>
+</tr>
+<tr>
+<td><strong>Kontakt Baradla</strong></td>
+<td>+36 48 503 003, informacio@anp.hu</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma u všech jeskyní</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — v jeskyních je 7–12 °C (celoročně!), Dobšinská −1 °C</li>
+<li>Pevná obuv (mokré, kluzké povrchy)</li>
+<li>Svítilna není potřeba (prohlídky s průvodcem)</li>
+<li>Pláštěnka (v některých jeskyních kape)</li>
+<li>Fotoaparát (bez blesku)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: květen–září (všechny jeskyně otevřené)</li>
+<li><strong>Dobšinská ledová</strong>: POUZE květen–září</li>
+<li><strong>Domica, Gombasecká, Jasovská</strong>: celoročně (omezený zimní režim)</li>
+<li><strong>Ochtinská aragonitová</strong>: duben–listopad (omezené kapacity — rezervovat!)</li>
+<li>Mimo sezónu (říjen–březen): omezené prohlídky, jen víkendy u menších jeskyní</li>
+<li><strong>Tip</strong>: v létě se tvoří fronty u Domice — přijeďte ráno nebo rezervujte</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Jeskyně <strong>Domica</strong> a <strong>Baradla</strong> jsou propojené — existuje speciální přeshraniční prohlídka (3–5 hod, nutná rezervace, pas s sebou!)</li>
+<li><strong>Ochtinská aragonitová</strong> jeskyně je unikát — jedna ze tří aragonitových jeskyní na světě přístupných veřejnosti</li>
+<li>V <strong>Miskolctapolca</strong> (40 km od Aggteleku) jsou termální jeskynní lázně — skvělá kombinace → viz <a href="../hu-miskolctapolca/">hu-miskolctapolca</a></li>
+<li>Na maďarské straně v Jósvafő je vstup do jeskyně přímo z vesnice (kratší fronta než Aggtelek)</li>
+<li>Vstup do Baradla je možný ze dvou stran: <strong>Aggtelek</strong> (západní, hlavní) nebo <strong>Jósvafő</strong> (východní)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Košice → Domica</td>
+<td>95 km</td>
+<td>1:20</td>
+</tr>
+<tr>
+<td>Rožňava → Domica</td>
+<td>40 km</td>
+<td>0:40</td>
+</tr>
+<tr>
+<td>Miskolc → Aggtelek</td>
+<td>60 km</td>
+<td>1:00</td>
+</tr>
+<tr>
+<td>Budapešť → Aggtelek</td>
+<td>260 km</td>
+<td>3:00</td>
+</tr>
+<tr>
+<td>Brno → Domica</td>
+<td>390 km</td>
+<td>4:00</td>
+</tr>
+<tr>
+<td>Ostrava → Domica</td>
+<td>400 km</td>
+<td>4:15</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trasa z Moravy</strong>: Brno → Trenčín → Žilina → Ružomberok → Rožňava → Domica (dálnice + R2/R4 do Rožňavy, pak místní silnice). Alternativně přes Maďarsko: Bratislava → Gyöngyös → Miskolc → Aggtelek.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../hu-miskolctapolca/">Miskolctapolca</a></strong> (40 km od Aggteleku) — unikátní jeskynní termální lázně</li>
+<li><strong>Rožňava</strong> (40 km) — historické hornické město, gotický kostel, náměstí s věží</li>
+<li><strong>Betliar</strong> (35 km) — zámek s parkem a loveckým muzeem (Andrássyovci)</li>
+<li><strong>Krásna Hôrka</strong> (30 km) — ikonický hrad na kopci (po požáru 2012 postupně restaurován)</li>
+<li><strong>Zádielska tiesňava</strong> (15 km) — nejužší kaňon na Slovensku (300 m hluboký, 10 m široký)</li>
+<li><strong>Eger</strong> (100 km) — hrad, víno (Údolí krásnožen), historické termy → viz <a href="../eger/">eger</a></li>
+<li><strong>Dobšinská ledová</strong> (50 km od Domice) — kombinace se Slovenským rájem</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.ssj.sk/">SSJ — Správa slovenských jeskyní</a></li>
+<li><a href="https://anp.hu/">Aggteleki Nemzeti Park</a></li>
+<li><a href="https://whc.unesco.org/en/list/725">UNESCO — Caves of Aggtelek Karst and Slovak Karst</a></li>
+<li><a href="https://www.npsk.sk/">Slovenský kras — NP</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABZklEQVR42tTUsY3kMAwFUBoKlEkNGHAbytSS3YDGasBqiZnaMKAG7IyB4H+Ynbm9ZDHmhavsMTHx8U369c8DufB0BQZEYUdmXRgnwk5B49g2sjQIt0trR221/+EFKKw1mW0Rk5m+9/1oD2xLHZcavvP46OfosOMA/hfxJ7uInGUqNeDS2DP5LKMX6Sn8ZMHhIk5QK6ywC92fMi6o7fW9G3sxyHVaLaZTFB6EHlfYE9V9URlYXexDte1kjaXPFPc51p5IYQ9TrtA2G6cjaMz7kEGe+W/en+3IXM7ucwx45XvjodLj5O6lTl/9ubOzOJI1pQZzkMK+dpqpe+H9te+NHWFN1pyVkFljS2m2YwrR4GcjH9ZsNmINCj9Hvo4uBFNEYQ+sw/PeyLvfN3ZkSpHuorz3u3NspdR22IivPiu8UdgfbA2ULhnIwq9+3prMmuKYon3/nzd+3icXTa4YB1b4d70/AQAA//+WQGv6YL75swAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
