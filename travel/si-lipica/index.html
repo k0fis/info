@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovinsko — Lipica (hřebčín lipicánů od roku 1580) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovinsko — Lipica (hřebčín lipicánů od roku 1580)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">kone</span> <span class="tag">historie</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Lipica 5, 6210 Sežana, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.lipica.org/" target="_blank">www.lipica.org</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.6669, 13.8828], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.6669, 13.8828]).addTo(dmap);
+</script>
+<div class="content"><h2>Lipica — kolébka lipicánských koní</h2>
+<p>Nejstarší evropský hřebčín, založený roku <strong>1580</strong> rakouským arcivévodou Karlem II. Odtud pochází slavný plemeno <strong>lipicánů</strong> — bílí koně proslulí z vídeňské Španělské jezdecké školy. Původní stádo: 24 klisen a 6 hřebců ze Španělska.</p>
+<p>Dnes otevřený areál s prohlídkami stájí, muzeem, ukázkami drezury a možností svézt se na koni. Nádherné prostředí krasové krajiny na hranici s Itálií.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Dospělí ~18–22 €, děti ~12 €, rodinné ~50 € (vč. prohlídky + ukázka)</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně 9–17 (léto), 10–16 (zima); ukázky drezury úterý–neděle (sezónně)</td>
+</tr>
+<tr>
+<td><strong>Doba prohlídky</strong></td>
+<td>~60–90 min (stáje + muzeum + výběhy)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Zdarma, velké parkoviště</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=45.6669,13.8828">45.6669, 13.8828</a></td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td>+386 5 739 17 00</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Stáje</strong> — prohlídka s průvodcem, koně zblízka</li>
+<li><strong>Muzeum Lipikum</strong> — historie chovu od 1580, sedla, kočáry</li>
+<li><strong>Ukázky drezury</strong> — klasická haute-école (v sezóně)</li>
+<li><strong>Výběhy</strong> — stáda v krasové krajině (fotogenické!)</li>
+<li><strong>Jízda na koni</strong> — možnost projížďky (za příplatek, rezervace)</li>
+<li><strong>Golfové hřiště</strong> — 9 jamek v areálu</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlná obuv (procházka po areálu, tráva)</li>
+<li>Mrkev/jablko pro koně (zeptat se průvodce!)</li>
+<li>Fotoaparát — bílí koně na zelené louce = nádherné</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: duben–říjen (koně ve výbězích, ukázky drezury)</li>
+<li><strong>Hříbata</strong>: březen–květen (roztomilá tmavá hříbata, postupně bělají)</li>
+<li><strong>Tip</strong>: v létě kombinovat s koupáním v Piranu (50 km)</li>
+</ul>
+<h3>Pro děti ★★★★★</h3>
+<ul>
+<li>Koně zblízka — hladění, krmení (dle programu)</li>
+<li>Možnost projížďky na pony/koni</li>
+<li>Rozlehlý park na běhání</li>
+<li>Vzdělávací program pro školy (i individuálně)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Lipicáni se rodí <strong>tmavě hnědí/černí</strong> a bělají až do 6–10 let!</li>
+<li>Areál je rozlehlý — počítejte 2–3 hodiny na vše</li>
+<li>Kombinujte s <a href="../si-skocjanske-jeskyne/">Škocjanem</a> (10 km) nebo <a href="../it-terst/">Terstem</a> (25 km)</li>
+<li>Královna Alžběta II. tu byla na návštěvě (2008) a dostala lipicána darem</li>
+<li>Hotel v areálu — lze přenocovat přímo mezi koňmi</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../si-skocjanske-jeskyne/">Škocjan</a> → Lipica</td>
+<td>10 km</td>
+<td>0:10</td>
+</tr>
+<tr>
+<td><a href="../it-terst/">Terst</a> → Lipica</td>
+<td>25 km</td>
+<td>0:25</td>
+</tr>
+<tr>
+<td>Lublaň → Lipica</td>
+<td>85 km</td>
+<td>1:00</td>
+</tr>
+<tr>
+<td><a href="../si-postojna/">Postojna</a> → Lipica</td>
+<td>35 km</td>
+<td>0:30</td>
+</tr>
+<tr>
+<td>Brno → Lipica</td>
+<td>510 km</td>
+<td>5:00</td>
+</tr>
+</tbody>
+</table>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../si-skocjanske-jeskyne/">Škocjanské jeskyně</a></strong> (10 km) — UNESCO podzemní kaňon</li>
+<li><strong>Štanjel</strong> (15 km) — krasové městečko, Ferrariho zahrada</li>
+<li><strong><a href="../it-terst/">Terst</a></strong> (25 km) — italské město, kavárny, Miramare</li>
+<li><strong><a href="../si-piran/">Piran</a></strong> (50 km) — benátské přímořské městečko</li>
+<li><strong>Sežana</strong> (5 km) — botanická zahrada, centrum Krasu</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.lipica.org/">Lipica — oficiální web</a></li>
+<li><a href="https://www.lipica.org/">Lipikum muzeum</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUMc7bIBwF8BcxsNUXQPlfw8Mn+Up48/RBpmz1lZA6+BpEXIBsDMivchulmWLqTv3+E78NHvDw5UaT95Sr3hb5iD3G6OpkNNDkuY61q1NapDTaqlydtHtM/2IPa7qKtDz3/95bHrOZ0vKSzxtvYxBRX+7gnfWFjDY6KechHzC+qUt19AbnAU0eVpmTh0bfZIuOOboUTiG3+PPDMScvS8QhnwJgWeLj/e1Zr2oVJm969C0GPrqUMZl+bfOJ9+oMJNwCDljzx3fl6esj/11nfEpWNLj9ynPXK6BopsRbQYsZrPLVkeQRbyeMnVwZJLT49/+QIkujPcZqjZZwRpO3PkGdhAz5oJmVV+VPf+3YKvLKsg5N9rAyY8LA0mTyHq2BMD77+2/8f8/PAAAA///plGQEAlQa1QAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
