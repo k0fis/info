@@ -42,80 +42,80 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">127 / 127</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">128 / 128</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
 </header>
 <div id="map"></div>
-<div class="filters"><button class="tag-btn" onclick="toggleFilter('more')">more</button>
-<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
-<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
-<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
-<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
-<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
-<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
-<button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
-<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
-<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
-<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button>
-<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
-<button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
-<button class="tag-btn" onclick="toggleFilter('ostravsko')">ostravsko</button>
-<button class="tag-btn" onclick="toggleFilter('hana')">hana</button>
-<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
-<button class="tag-btn" onclick="toggleFilter('dinosauri')">dinosauri</button>
+<div class="filters"><button class="tag-btn" onclick="toggleFilter('cz')">cz</button>
 <button class="tag-btn" onclick="toggleFilter('hrady')">hrady</button>
-<button class="tag-btn" onclick="toggleFilter('pamatnik')">pamatnik</button>
-<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
-<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
-<button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
-<button class="tag-btn" onclick="toggleFilter('aquapark')">aquapark</button>
-<button class="tag-btn" onclick="toggleFilter('plaz')">plaz</button>
-<button class="tag-btn" onclick="toggleFilter('slovacko')">slovacko</button>
-<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
-<button class="tag-btn" onclick="toggleFilter('archeologie')">archeologie</button>
-<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
-<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
 <button class="tag-btn" onclick="toggleFilter('budapest')">budapest</button>
-<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
-<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
-<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
-<button class="tag-btn" onclick="toggleFilter('rozhledna')">rozhledna</button>
-<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
-<button class="tag-btn" onclick="toggleFilter('zoo')">zoo</button>
-<button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
-<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
-<button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
-<button class="tag-btn" onclick="toggleFilter('cz')">cz</button>
-<button class="tag-btn" onclick="toggleFilter('muzeum')">muzeum</button>
-<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
-<button class="tag-btn" onclick="toggleFilter('info')">info</button>
-<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
 <button class="tag-btn" onclick="toggleFilter('adrenalin')">adrenalin</button>
+<button class="tag-btn" onclick="toggleFilter('umeni')">umeni</button>
+<button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
+<button class="tag-btn" onclick="toggleFilter('slovinsko')">slovinsko</button>
+<button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
+<button class="tag-btn" onclick="toggleFilter('architektura')">architektura</button>
+<button class="tag-btn" onclick="toggleFilter('pamatnik')">pamatnik</button>
+<button class="tag-btn" onclick="toggleFilter('archeologie')">archeologie</button>
+<button class="tag-btn" onclick="toggleFilter('bazen')">bazen</button>
+<button class="tag-btn" onclick="toggleFilter('moravsky-kras')">moravsky-kras</button>
+<button class="tag-btn" onclick="toggleFilter('more')">more</button>
+<button class="tag-btn" onclick="toggleFilter('ostravsko')">ostravsko</button>
+<button class="tag-btn" onclick="toggleFilter('jezero')">jezero</button>
+<button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('slovacko')">slovacko</button>
+<button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
+<button class="tag-btn" onclick="toggleFilter('poutni-misto')">poutni-misto</button>
+<button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
+<button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
+<button class="tag-btn" onclick="toggleFilter('zoo')">zoo</button>
 <button class="tag-btn" onclick="toggleFilter('hiking')">hiking</button>
+<button class="tag-btn" onclick="toggleFilter('veda')">veda</button>
+<button class="tag-btn" onclick="toggleFilter('cyklo')">cyklo</button>
+<button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
+<button class="tag-btn" onclick="toggleFilter('zamek')">zamek</button>
+<button class="tag-btn" onclick="toggleFilter('balaton')">balaton</button>
 <button class="tag-btn" onclick="toggleFilter('cyklistika')">cyklistika</button>
-<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
 <button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
+<button class="tag-btn" onclick="toggleFilter('termy')">termy</button>
+<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
+<button class="tag-btn" onclick="toggleFilter('aquapark')">aquapark</button>
+<button class="tag-btn" onclick="toggleFilter('jezera')">jezera</button>
+<button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
+<button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
+<button class="tag-btn" onclick="toggleFilter('rodina')">rodina</button>
+<button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
+<button class="tag-btn" onclick="toggleFilter('hory')">hory</button>
+<button class="tag-btn" onclick="toggleFilter('muzeum')">muzeum</button>
+<button class="tag-btn" onclick="toggleFilter('cesko')">cesko</button>
+<button class="tag-btn" onclick="toggleFilter('nemecko')">nemecko</button>
+<button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
+<button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
+<button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
+<button class="tag-btn" onclick="toggleFilter('rozhledna')">rozhledna</button>
+<button class="tag-btn" onclick="toggleFilter('viden')">viden</button>
+<button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
+<button class="tag-btn" onclick="toggleFilter('spanelsko')">spanelsko</button>
+<button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
+<button class="tag-btn" onclick="toggleFilter('historie')">historie</button>
+<button class="tag-btn" onclick="toggleFilter('dinosauri')">dinosauri</button>
+<button class="tag-btn" onclick="toggleFilter('plaz')">plaz</button>
+<button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
 <button class="tag-btn" onclick="toggleFilter('aktivni')">aktivni</button>
-<button class="tag-btn" onclick="toggleFilter('klaster')">klaster</button>
-<button class="tag-btn" onclick="toggleFilter('rakousko')">rakousko</button>
 <button class="tag-btn" onclick="toggleFilter('olomouc')">olomouc</button>
 <button class="tag-btn" onclick="toggleFilter('slovensko')">slovensko</button>
-<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
-<button class="tag-btn" onclick="toggleFilter('nemecko')">nemecko</button>
-<button class="tag-btn" onclick="toggleFilter('architektura')">architektura</button>
-<button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
+<button class="tag-btn" onclick="toggleFilter('sport')">sport</button>
 <button class="tag-btn" onclick="toggleFilter('archiv')">archiv</button>
-<button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
-<button class="tag-btn" onclick="toggleFilter('veda')">veda</button>
-<button class="tag-btn" onclick="toggleFilter('moravsky-kras')">moravsky-kras</button>
-<button class="tag-btn" onclick="toggleFilter('zamek')">zamek</button>
-<button class="tag-btn" onclick="toggleFilter('poutni-misto')">poutni-misto</button>
-<button class="tag-btn" onclick="toggleFilter('viden')">viden</button>
-<button class="tag-btn" onclick="toggleFilter('morava')">morava</button>
-<button class="tag-btn" onclick="toggleFilter('cesko')">cesko</button>
-<button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button></div>
+<button class="tag-btn" onclick="toggleFilter('brno')">brno</button>
+<button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
+<button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
+<button class="tag-btn" onclick="toggleFilter('klaster')">klaster</button>
+<button class="tag-btn" onclick="toggleFilter('rakousko')">rakousko</button>
+<button class="tag-btn" onclick="toggleFilter('unesco')">unesco</button>
+<button class="tag-btn" onclick="toggleFilter('hana')">hana</button></div>
 <div class="cards" id="cards"><div class="card" data-tags="travel vylety" data-lat="49.30247" data-lng="17.023542">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
   <p class="desc">Muzeum letecké a pozemní techniky Vyškov</p>
@@ -631,6 +631,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Sečovlje — solné pánve (Krajinský park)</p>
   <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="historie">#historie</span> </div>
 </div>
+<div class="card" data-tags="travel vylety slovinsko priroda jeskyne unesco" data-lat="45.6631" data-lng="13.9931">
+  <h3><a href="si-skocjanske-jeskyne/">Slovinsko — Škocjanské jeskyně (podzemní kaňon UNESCO)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=45.6631&x=13.9931&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Škocjanské jeskyně — největší podzemní kaňon v Evropě</p>
+  <div class="tags"><span class="tag" data-tag="slovinsko">#slovinsko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="jeskyne">#jeskyne</span> <span class="tag" data-tag="unesco">#unesco</span> </div>
+</div>
 <div class="card" data-tags="travel vylety slovensko madarsko priroda jeskyne unesco" data-lat="48.4778" data-lng="20.4703">
   <h3><a href="sk-slovensky-aggtelecky-kras/">Slovensko / Maďarsko — Slovenský a Aggtelecký kras (přeshraniční jeskynní systém UNESCO)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.4778&x=20.4703&z=14" target="_blank">📍</a></h3>
   <p class="desc">Slovenský a Aggtelecký kras — přeshraniční jeskynní systém UNESCO</p>
@@ -856,6 +861,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:50.6700,lng:16.4100,title:"Rzeczka - Riese",slug:"rzeczka-riese",tags:"travel, vylety, polsko, historie"},
 {lat:43.9424,lng:12.4578,title:"San Marino — Nejstarší republika světa",slug:"san-marino",tags:"info, travel, vylety, italie, mesto"},
 {lat:45.4847,lng:13.6028,title:"Sečovlje — solné pánve s 800letou historií",slug:"secovlje",tags:"travel, vylety, slovinsko, priroda, historie"},
+{lat:45.6631,lng:13.9931,title:"Slovinsko — Škocjanské jeskyně (podzemní kaňon UNESCO)",slug:"si-skocjanske-jeskyne",tags:"travel, vylety, slovinsko, priroda, jeskyne, unesco"},
 {lat:48.4778,lng:20.4703,title:"Slovensko / Maďarsko — Slovenský a Aggtelecký kras (přeshraniční jeskynní systém UNESCO)",slug:"sk-slovensky-aggtelecky-kras",tags:"travel, vylety, slovensko, madarsko, priroda, jeskyne, unesco"},
 {lat:50.6450,lng:16.3600,title:"Sobon Sokolec - Riese",slug:"sobon-sokolec-riese",tags:"travel, vylety, polsko, historie"},
 {lat:51.9606,lng:20.5089,title:"Suntago",slug:"suntago",tags:"travel, vylety"},
