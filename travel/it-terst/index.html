@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itálie — Terst / Trieste (káva, Miramare a středoevropský šarm) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Itálie — Terst / Trieste (káva, Miramare a středoevropský šarm)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">italie</span> <span class="tag">mesto</span> <span class="tag">more</span> <span class="tag">historie</span> <span class="tag">kavarna</span> </div>
+<div class="meta"><p class="meta-item">📍 Trieste, Itálie</p><p class="meta-item">🌐 <a href="https://www.discover-trieste.it/" target="_blank">www.discover-trieste.it</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.6503, 13.7703], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.6503, 13.7703]).addTo(dmap);
+</script>
+<div class="content"><h2>Terst (Trieste) — kde se střetává Středomoří se střední Evropou</h2>
+<p>Italské přístavní město na hranici se Slovinskem, kde se potkává latinská, slovanská a germánská kultura. „Město kávy&quot; — hlavní kávový přístav Evropy, unikátní kavárenská kultura (jiný slovník než zbytek Itálie!). Lonely Planet ho označil za „nejpodceňovanější cestovatelskou destinaci světa&quot; (2012).</p>
+<p>Habsburská elegance, přímořská atmosféra, vynikající jídlo (mix italské a středoevropské kuchyně), a přitom zlomek cen oproti Benátkám nebo Florencii. Ideální na jednodenní výlet z Krasu.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Město zdarma; Miramare ~10 €, Grotta Gigante ~13 €</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Garáže v centru (~2 €/hod); volná místa na Riva/nábřeží</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=45.6503,13.7703">45.6503, 13.7703</a></td>
+</tr>
+<tr>
+<td><strong>Jazyk</strong></td>
+<td>Italsky (ale mnozí mluví slovinsky/německy)</td>
+</tr>
+<tr>
+<td><strong>Měna</strong></td>
+<td>EUR</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Piazza Unità d'Italia</strong> — největší náměstí u moře v Evropě, velkolepá architektura</li>
+<li><strong>Zámek Miramare</strong> (8 km) — pohádkový zámek na útesu nad mořem (arcivévoda Maxmilián), park zdarma</li>
+<li><strong>Canal Grande</strong> — přístav v centru města, kavárny podél kanálu</li>
+<li><strong>Castello di San Giusto</strong> — hrad s výhledem na celý záliv</li>
+<li><strong>Grotta Gigante</strong> (10 km) — jedna z největších jeskyní přístupných turistům (107 m vysoká komora!)</li>
+<li><strong>Risiera di San Sabba</strong> — koncentrační tábor (památník, zdarma)</li>
+<li><strong>Kavárenská kultura</strong> — Caffè San Marco, Caffè degli Specchi, Antico Caffè Torinese</li>
+</ul>
+<h3>Kávový slovník (Terst ≠ zbytek Itálie!)</h3>
+<table>
+<thead>
+<tr>
+<th>V Terstu</th>
+<th>Jinde v IT</th>
+<th>Význam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>nero</em></td>
+<td>espresso</td>
+<td>malé espresso</td>
+</tr>
+<tr>
+<td><em>capo</em></td>
+<td>macchiato</td>
+<td>espresso s trochou mléka</td>
+</tr>
+<tr>
+<td><em>capo in B</em></td>
+<td>—</td>
+<td>capo ve skleničce</td>
+</tr>
+<tr>
+<td><em>caffelatte</em></td>
+<td>—</td>
+<td>velký s mlékem</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlná obuv (kopce ke hradu, Miramare)</li>
+<li>Průvodce kavárnou (viz tabulka výše 😄)</li>
+<li>Pas/OP (přejezd hranice SI→IT)</li>
+<li>Euro (ne slovinská, ale je to stejná měna)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — město žije vždy</li>
+<li><strong>Jaro/podzim</strong>: ideální teploty pro procházky (15–22 °C)</li>
+<li><strong>Léto</strong>: koupání v Barcolana zálivu, ale horko ve městě</li>
+<li><strong>Prosinec</strong>: vánoční trhy (středoevropský styl)</li>
+<li><strong>Říjen</strong>: Barcolana — největší plachetní regata na světě (2000+ lodí!)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Miramare</strong> — park je zdarma, zámek ~10 €; přijeďte za slunečného dne!</li>
+<li>Objednejte „nero&quot; místo „espresso&quot; — budete znít jako místní</li>
+<li>Aperitivo na Piazza Unità při západu slunce = nezapomenutelný</li>
+<li>Jídlo je mix IT + AT: strudel, jota (polévka), čevapčiči, tiramisu (z Terstu pochází!)</li>
+<li><strong>Grotta Gigante</strong> — alternativa k Postojné, méně turistů, obrovská komora</li>
+<li>Zámek <strong>Duino</strong> (20 km) — Rilkovy elegie, stezka po útesech</li>
+</ul>
+<h3>Pro děti ★★★☆☆</h3>
+<ul>
+<li>Miramare park — labutě, lotos, výhled na moře</li>
+<li>Grotta Gigante — obrovská jeskyně</li>
+<li>Zmrzlina + pizza na nábřeží</li>
+<li>Aquarium (malý, v centru)</li>
+<li>Pro starší děti: hrad San Giusto, vojenské muzeum</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../si-skocjanske-jeskyne/">Škocjan</a> → Terst</td>
+<td>30 km</td>
+<td>0:30</td>
+</tr>
+<tr>
+<td><a href="../si-piran/">Piran</a> → Terst</td>
+<td>40 km</td>
+<td>0:40</td>
+</tr>
+<tr>
+<td><a href="../si-lipica/">Lipica</a> → Terst</td>
+<td>25 km</td>
+<td>0:25</td>
+</tr>
+<tr>
+<td>Lublaň → Terst</td>
+<td>100 km</td>
+<td>1:15</td>
+</tr>
+<tr>
+<td>Benátky → Terst</td>
+<td>160 km</td>
+<td>1:45</td>
+</tr>
+<tr>
+<td>Vídeň → Terst</td>
+<td>470 km</td>
+<td>4:30</td>
+</tr>
+<tr>
+<td>Brno → Terst</td>
+<td>530 km</td>
+<td>5:15</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trasa z Moravy</strong>: Brno → Vídeň → Graz → Maribor → Lublaň → Terst (A1+A3+E70). Hranice SI/IT bez kontroly (Schengen).</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../si-skocjanske-jeskyne/">Škocjanské jeskyně</a></strong> (30 km) — UNESCO podzemní kaňon</li>
+<li><strong><a href="../si-lipica/">Lipica</a></strong> (25 km) — hřebčín lipicánů</li>
+<li><strong><a href="../si-piran/">Piran</a></strong> (40 km) — benátské městečko na SI pobřeží</li>
+<li><strong>Grotta Gigante</strong> (10 km) — obří jeskyně (107 m vysoký dóm)</li>
+<li><strong>Zámek Duino</strong> (20 km) — Rilke, útesy, stezka</li>
+<li><strong>Miramare</strong> (8 km) — pohádkový zámek nad mořem</li>
+<li><strong>Muggia</strong> (10 km) — poslední italské městečko před Slovinskem, rybí restaurace</li>
+<li><strong>Prosecco</strong> (5 km) — ANO, odsud pochází Prosecco! Vinařství s degustací</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.discover-trieste.it/">Discover Trieste — turistický portál</a></li>
+<li><a href="https://www.miramare.beniculturali.it/">Castello di Miramare</a></li>
+<li><a href="https://www.grottagigante.it/">Grotta Gigante</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABOUlEQVR42tzUMa7jIBAG4N+aYrr4AihcI0UkX4l0rha22i6+kqUUXIOIC+COAmVWdvKiV9nE3XtT8RUIZgYGvy5YJMFIVstihx2MdiLRA1UeitFJsXidqy0xB/7ASWfyO+1wKSBR/L7/ukWmOKg++nd9Vr2ECZbGb01YMf+9zftBOezz9dyIBBvlPqYau24qKKy6u6DCsDdHLkB1j67KB5LQKiZpfNphHm6DpMI6v+qz5StNMRUG7s9+bFnKQYEk+sajwmiKQRuYMniXQUOwxdKr/lvm6/kPWtXjBK4xcD5op/8pHKvMjiQOQJTHCTs8Zxis6mk8dqnCyxixsOSPjBov/0/nOD47vOllPpCQPDjt8yVY9PO8Q52NMsHO56caOxi0JDLiK791i0wBwdL7PX7mnx3/AwAA///1xS3hZf65jAAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
