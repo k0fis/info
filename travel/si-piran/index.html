@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovinsko — Piran (benátské městečko na Jadranu) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovinsko — Piran (benátské městečko na Jadranu)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovinsko</span> <span class="tag">more</span> <span class="tag">mesto</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Piran, Slovinsko</p><p class="meta-item">🌐 <a href="https://www.portoroz.si/en/piran" target="_blank">www.portoroz.si/en/piran</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([45.5283, 13.5683], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([45.5283, 13.5683]).addTo(dmap);
+</script>
+<div class="content"><h2>Piran — nejkrásnější městečko slovinského pobřeží</h2>
+<p>Malebné přímořské město na špičce poloostrova v Piranském zálivu. Úzké středověké uličky, benátská architektura (město bylo pod Benátkami 1283–1797), rudé střechy, tyrkysové moře. Často přirovnáváno k menším italským pobřežním městům — ale bez davů a za zlomek ceny.</p>
+<p>Rodiště slavného houslisty <strong>Giuseppe Tartiniho</strong> (1692–1770), jehož socha dominuje hlavnímu náměstí.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Město zdarma; hradby ~2 €, kostel sv. Jiří ~2 €</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>⚠️ PROBLÉM — v centru zákaz vjezdu! Parkoviště Fornače (10 min pěšky, ~1,50 €/hod) nebo garáž Arze</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=45.5283,13.5683">45.5283, 13.5683</a></td>
+</tr>
+<tr>
+<td><strong>Pláže</strong></td>
+<td>Kamenité / betonové mola; nejlepší: Fiesa (písek, 15 min pěšky)</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<ul>
+<li><strong>Tartiniho náměstí</strong> — srdce města, socha Tartiniho, kavárny</li>
+<li><strong>Kostel sv. Jiří</strong> — na kopci nad městem, kampanila s výhledem na celý záliv</li>
+<li><strong>Městské hradby</strong> — zachovalé středověké opevnění, procházka po koruně</li>
+<li><strong>Benátský dům</strong> — gotická fasáda s „Lassa pur dir&quot; nápisem (15. stol.)</li>
+<li><strong>Sečoveljské solné pánve</strong> (5 km) — tradiční výroba soli, krajinný park, plameňáci</li>
+<li><strong>Přístavní promenáda</strong> — podél moře do Portorože a Fiesy</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Plavky + ručník (koupání přímo v městě z mol)</li>
+<li>Opalovací krém</li>
+<li>Pohodlnou obuv (kopce, dlažba, schody ke hradbám)</li>
+<li>Hotovost na parkování</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Koupání</strong>: červen–září (moře 22–26 °C)</li>
+<li><strong>Bez davů</strong>: květen, říjen (příjemné teploty, prázdné uličky)</li>
+<li><strong>Zima</strong>: město žije, kavárny otevřené, ale koupání ne</li>
+<li><strong>Sunset</strong>: západ slunce z hrotu poloostrova = nezapomenutelný</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Parkujte na <strong>Fornače</strong> a jděte pěšky podél moře (10 min, krásná cesta)</li>
+<li>Večeře s výhledem: restaurace na Punti (špička poloostrova)</li>
+<li>Zmrzlina na Tartiniho náměstí</li>
+<li><strong>Fiesa</strong> — maličká zátoka s pískem, 15 min pěšky přes kopec (rodinná pláž!)</li>
+<li>Kombinovat s Portorožem (2 km) — větší pláže, kasino, wellness</li>
+<li>Solné pánve Sečovlje — unikátní prostředí, pelikáni, procházka po hrázích</li>
+</ul>
+<h3>Pro děti ★★★☆☆</h3>
+<ul>
+<li>Koupání z mol (pozor — hluboká voda hned u kraje)</li>
+<li>Fiesa — mělčí vstup, písek</li>
+<li>Hradby — dobrodružství</li>
+<li>Zmrzlina + pizza u moře</li>
+<li>Pro menší děti lepší Portorož (širší pláže)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../si-skocjanske-jeskyne/">Škocjan</a> → Piran</td>
+<td>50 km</td>
+<td>0:45</td>
+</tr>
+<tr>
+<td>Koper → Piran</td>
+<td>20 km</td>
+<td>0:25</td>
+</tr>
+<tr>
+<td><a href="../it-terst/">Terst</a> → Piran</td>
+<td>40 km</td>
+<td>0:40</td>
+</tr>
+<tr>
+<td>Lublaň → Piran</td>
+<td>120 km</td>
+<td>1:30</td>
+</tr>
+<tr>
+<td>Brno → Piran</td>
+<td>560 km</td>
+<td>5:30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trasa z Moravy</strong>: Brno → Vídeň → Graz → Maribor → Koper → Piran. Nebo přes Itálii: Vídeň → Udine → Terst → pobřežní cesta → Piran.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Portorož</strong> (2 km) — větší pláže, wellness, kasino</li>
+<li><strong>Sečoveljské solné pánve</strong> (5 km) — krajinný park, tradiční výroba soli</li>
+<li><strong><a href="../it-terst/">Terst</a></strong> (40 km) — italské město, Miramare, kavárny</li>
+<li><strong>Koper</strong> (20 km) — historické centrum, přístav</li>
+<li><strong>Izola</strong> (10 km) — rybářské městečko, méně turistů než Piran</li>
+<li><strong><a href="../si-skocjanske-jeskyne/">Škocjan</a></strong> (50 km) — UNESCO jeskyně</li>
+<li><strong><a href="../si-lipica/">Lipica</a></strong> (40 km) — lipicáni</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.portoroz.si/en/">Portorož &amp; Piran — turistický portál</a></li>
+<li><a href="https://www.kpss.si/en">Sečovlje Salina Park</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUIY7DMBAF0B8ZmDUXsOprFFTKlRIW1ExR2fpKkQp8Da98AZcFWPmraLNblrphu8Mesb5mxoN/V5pMNgVYT6Y9FrRKKMoDRXa5o5ie3k6ljgJt9DsO/W4LujyQ8Zl/2+QjOtPHZ382DaAKdZQ4/o5g09oxYbA35TntMu8fqNFbHte820Y9dqS6KR++A7ywdndHZxD56UsMnC+mVQSqaY+1Gw825Z6c133aNio+KJzQrO+9cns+GESxftYl1tLMlkabn3zv+joerGDIzXxKJRZcFNXyn04oseOVYiXroIt8XdZUMXJu0g4vHY0pDxwtS7zcE+VI6+2EEgu60MbJjkcU2eUuwGjF+bTXkYBBxVRoJjKSRIkFLWqKGumLTD4CoE2zzvdN/+36CgAA//+FYEODBkmeywAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
