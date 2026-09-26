@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Bradlo (kvarcitový vrch s vyhlídkou, „Moravský Blaník&#34;) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Bradlo (kvarcitový vrch s vyhlídkou, „Moravský Blaník&#34;)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">jeseniky</span> <span class="tag">skaly</span> <span class="tag">vyhledy</span> <span class="tag">lezeni</span> </div>
+<div class="meta"><p class="meta-item">📍 Bradlo, Nová Hradečná / Libina, okres Šumperk, Olomoucký kraj</p><p class="meta-item">🌐 <a href="https://www.ok-tourism.cz/cil/bradlo/" target="_blank">www.ok-tourism.cz/cil/bradlo</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.854, 17.054], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.854, 17.054]).addTo(dmap);
+</script>
+<div class="content"><h2>Bradlo — kvarcitové skály s vyhlídkou na Úsovské vrchovině</h2>
+<p>Bradlo (599 m n.m.) je nejvyšší bod Úsovské vrchoviny, přezdívaný „Moravský Blaník&quot;. Na vrcholu vystupují mohutné skalní suky z krystalického křemence starého asi 380 milionů let (devon), vysoké až 23 metrů. Na nejvyšší skálu vedou schody vytesané přímo do kamene a zábradlím jištěná vyhlídka nabízí kruhový rozhled po Moravě — od Jeseníků přes Hanou až k Drahanské vrchovině.</p>
+<p>Kromě výhledů je Bradlo známé i jako lezecká oblast — kolmé stěny mají vyznačené cesty různé obtížnosti, označené šipkami a čísly, s nýty a kotevními body. Místo má bohatou historii — 20. června 1897 se tu konal první český tábor lidu s tisícovkami účastníků a několika sbory. Podle pověsti se na Bradle pokoušeli čerti postavit za jednu noc hrad pro bohatého sedláka z Lipinky — ale zakokrhal kohout a dílo zůstalo nedokončené.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma</td>
+</tr>
+<tr>
+<td><strong>Přístupnost</strong></td>
+<td>Celoročně</td>
+</tr>
+<tr>
+<td><strong>Časová náročnost</strong></td>
+<td>2–3 hodiny (výstup + naučná stezka)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V obcích Lipinka, Nedvězí, Kamenná</td>
+</tr>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>599 m n.m.</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.854,17.054">49.854, 17.054</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Turistické boty (skalnatý terén, schody ve skále)</li>
+<li>Lezecké vybavení (pokud chcete zkusit horolezecké cesty)</li>
+<li>Svačinu a vodu (žádné občerstvení na vrcholu)</li>
+<li>Foťák (panoramatické výhledy)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: Duben–říjen</li>
+<li><strong>Jaro/podzim</strong>: Nejlepší viditelnost pro výhledy</li>
+<li><strong>Léto</strong>: Příjemný stín v lese při výstupu</li>
+<li><strong>Zima</strong>: Přístupné, ale schody ve skále mohou být kluzké</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Naučná stezka „Putovat krajinou kolem Bradla&quot; (7 km) vede z vlakové zastávky Libina na zastávku Nová Hradečná — dá se jít i opačně</li>
+<li>Nejkratší výstup z Lipinky nebo Kamenné (~30 min)</li>
+<li>Na skalách jsou čertovské dřevěné sochy odkazující na místní pověst</li>
+<li>Horolezecké cesty jsou značené šipkami a čísly — vhodné i pro začátečníky (s jištěním)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Ze Šumperka</strong>: ~20 km (cca 25 min autem přes Libinu)</li>
+<li><strong>Z Olomouce</strong>: ~45 km (cca 45 min)</li>
+<li><strong>Z Ostravy</strong>: ~100 km (cca 1:20 h)</li>
+<li><strong>Vlakem</strong>: zastávka Libina (trať Šternberk–Šumperk), odtud naučná stezka 7 km</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><a href="../cz-rabstejn-oskava/">Rabštejn u Oskavy</a> (~15 km) — skalní město, 200+ lezeckých tras, zřícenina hradu</li>
+<li><a href="../cz-ztracene-kameny/">Ztracené kameny</a> (~25 km) — kvarcitový skalní výchoz 1250 m na hřebeni Jeseníků</li>
+<li><a href="../cz-raseliniste-skritek/">Rašeliniště Skřítek</a> (~20 km) — NPR, rašelinný les u sedla Skřítek</li>
+<li><strong>Úsov</strong> (~8 km) — renesanční zámek, muzeum přírody</li>
+<li><strong>Třemešek</strong> (~5 km) — zámek s parkem</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.ok-tourism.cz/cil/bradlo/">OK Tourism — Bradlo</a></li>
+<li><a href="https://www.sumperk.cz/dr-cs/1005-bradlo.html">Šumperk.cz — Bradlo</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABO0lEQVR42tzUMa7jIBAG4N+ioFsugB7XeEUkX4l0rmJSuQtXspSCa7DiAqRzgfhXTrKbLibu9k3F16BfMzD4cSXJjDEOJqyHHXawgnQiAE325RhHszCYpdXFRqllu+njsNsOx5Q5pVf+9yZvyeshvfrz1gC6osyS5n8jeGvpmaHEJAKXPcav/lxUHAy/7nk3bftqMilCfATYsHTCAckl/g5NvhxOsGYCumWPoa4XrTCQ9ZF3w7IeTloJh/5534bR0UerYUKVTbYYmQX133wfWrJ0zGUsff3OLT7PVvj7f/pGi/3cFRtRZJRtvlaTzZRY+7zD9/c7YuRs2OJ1n2graIJZ0GKHY4RZzPwlc4vXfaIgBeuzH5+7KI2CjrnREWJKJNHidT96QMwMTSZvUelR98/5fuj/u/4EAAD//7XhO86iZ/eGAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

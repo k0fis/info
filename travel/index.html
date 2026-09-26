@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">136 / 136</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">137 / 137</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -196,6 +196,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-boskovice/">Česko — Boskovice (hrad, zámek, židovská čtvrť)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4877&x=16.6600&z=14" target="_blank">📍</a></h3>
   <p class="desc">Boskovice — hrad, zámek a unikátní židovská čtvrť</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="hrad">#hrad</span> <span class="tag" data-tag="zamek">#zamek</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="mesto">#mesto</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cesko priroda jeseniky skaly vyhledy lezeni" data-lat="49.854" data-lng="17.054">
+  <h3><a href="cz-bradlo/">Česko — Bradlo (kvarcitový vrch s vyhlídkou, „Moravský Blaník&#34;)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.854&x=17.054&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Bradlo — kvarcitové skály s vyhlídkou na Úsovské vrchovině</p>
+  <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="skaly">#skaly</span> <span class="tag" data-tag="vyhledy">#vyhledy</span> <span class="tag" data-tag="lezeni">#lezeni</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz muzeum dinosauri deti" data-lat="49.5642" data-lng="17.3375">
   <h3><a href="cz-dinosauri-muzeum-certoryje/">Česko — Dinosauří muzeum Čertoryje (repliky koster a fosilie u Olomouce)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5642&x=17.3375&z=14" target="_blank">📍</a></h3>
@@ -819,6 +824,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.3769,lng:16.7572,title:"Česko — Jeskyně Balcarka (nejbohatší krápníková výzdoba v Moravském krasu)",slug:"cz-balcarka",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:49.3631,lng:16.6432,title:"Česko — Blansko (brána do Moravského krasu)",slug:"cz-blansko",tags:"travel, vylety, cz, mesto, muzeum, priroda, moravsky-kras"},
 {lat:49.4877,lng:16.6600,title:"Česko — Boskovice (hrad, zámek, židovská čtvrť)",slug:"cz-boskovice",tags:"travel, vylety, cz, hrad, zamek, historie, mesto"},
+{lat:49.854,lng:17.054,title:"Česko — Bradlo (kvarcitový vrch s vyhlídkou, „Moravský Blaník\")",slug:"cz-bradlo",tags:"travel, vylety, cesko, priroda, jeseniky, skaly, vyhledy, lezeni"},
 {lat:49.5642,lng:17.3375,title:"Česko — Dinosauří muzeum Čertoryje (repliky koster a fosilie u Olomouce)",slug:"cz-dinosauri-muzeum-certoryje",tags:"travel, vylety, cz, muzeum, dinosauri, deti"},
 {lat:49.3607,lng:16.7103,title:"Česko — Kateřinská jeskyně (největší podzemní dóm v ČR)",slug:"cz-katerinska-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:48.8436,lng:16.6350,title:"Česko — Klentnice a Sirotčí hrádek (Pálava, vyhlídky, víno)",slug:"cz-klentnice",tags:"travel, vylety, cesko, priroda, hrady, vino, palava"},
