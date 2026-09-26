@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Ztracené kameny (skalní výchoz v Jeseníkách, 1250 m) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Ztracené kameny (skalní výchoz v Jeseníkách, 1250 m)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">skaly</span> <span class="tag">jeseniky</span> <span class="tag">hory</span> </div>
+<div class="meta"><p class="meta-item">📍 Ztracené kameny, 788 16 Sobotín, Olomoucký kraj</p><p class="meta-item">🌐 <a href="https://www.kudyznudy.cz/aktivity/ztracene-kameny" target="_blank">www.kudyznudy.cz/aktivity/ztracene-kameny</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0567, 17.1128], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0567, 17.1128]).addTo(dmap);
+</script>
+<div class="content"><h2>Ztracené kameny — kvarcitový skalní výchoz v hřebeni Jeseníků</h2>
+<p>Ztracené kameny jsou působivý kvarcitový skalní výchoz s balvanovými proudy ve výšce 1250 m n.m. v Hrubém Jeseníku. Tvoří první vrchol oblíbené hřebenové trasy a nabízejí panoramatické výhledy na Sobotínsko, Šumpersko, Králický Sněžník a Orlické hory. Podle pověsti kameny vysypal čert ze svých bot, když honil místního sedláka.</p>
+<p>Místo leží v CHKO Jeseníky a je přístupné od sedla Skřítek — krátký (3 km), ale stoupavý výstup odměněný jedním z nejkrásnějších výhledů v Jeseníkách.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (volně přístupné)</td>
+</tr>
+<tr>
+<td><strong>Časová náročnost</strong></td>
+<td>cca 2 hodiny (tam a zpět ze Skřítku)</td>
+</tr>
+<tr>
+<td><strong>Obtížnost</strong></td>
+<td>Středně náročný terén</td>
+</tr>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>1250 m n.m.</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U sedla Skřítek (motorest)</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.0567,17.1128">50.0567, 17.1128</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Kvalitní turistické boty (skalnatý horský terén)</li>
+<li>Větrovku / bundu (ve výšce 1250 m bývá vítr i v létě)</li>
+<li>Dostatek vody a svačinu</li>
+<li>V zimě sněžnice nebo skialpové lyže</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: Červen–říjen (jasné dny pro výhledy)</li>
+<li><strong>Zima</strong>: Součást Jesenické lyžařské magistrály — krásné i na sněžnicích</li>
+<li><strong>Jaro/podzim</strong>: Méně lidí, ale počasí v hřebenech bývá nevyzpytatelné</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Výstup od Skřítku po zelené značce — 3 km, stoupání cca 250 výškových metrů</li>
+<li>Pokračujte po hřebeni na Petrovy kameny a k Ovčárně — celodenní hřebenová trasa</li>
+<li>U sedla Skřítek je motorest s parkováním a občerstvením</li>
+<li>V CHKO Jeseníky — držte se značených cest, neopouštějte stezky</li>
+</ul>
+<h3>Jak se dostat</h3>
+<ul>
+<li><strong>Ze Šumperka</strong>: ~25 km (cca 35 min autem k sedlu Skřítek)</li>
+<li><strong>Z Olomouce</strong>: ~65 km (cca 1:10 h)</li>
+<li><strong>Z Ostravy</strong>: ~100 km (cca 1:30 h)</li>
+<li><strong>Z Brna</strong>: ~160 km (cca 2 h)</li>
+<li>Start: sedlo Skřítek (silnice Šumperk–Rýmařov), poté 3 km po zelené</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Petrovy kameny</strong> (2 km dál po hřebeni) — další skalní útvar, 1438 m n.m.</li>
+<li><strong>Ovčárna</strong> (5 km po hřebeni) — horská chata, výchozí bod na Praděd</li>
+<li><strong>Rašeliniště Skřítek</strong> (u sedla) — národní přírodní rezervace</li>
+<li><a href="../cz-rabstejn-oskava/">Rabštejn u Oskavy</a> (~7 km od Skřítku) — skalní město, lezení</li>
+<li><a href="../kouty/">Kouty</a> (~15 km) — bikepark a koloběžky</li>
+<li><a href="../kralicak/">Kraličák</a> (~30 km) — lyže a koloběžky u Králického Sněžníku</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.kudyznudy.cz/aktivity/ztracene-kameny">Kudyznudy.cz — Ztracené kameny</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUMY7lIAwGYCMKunCBSFyDjislF3iQC8CV3PkaSFxg0rmI4lXe252VVqvE7bj7Giv682P48eNFiqf5BSjCCk9gywLHSrFD1DiNuhIYxnEq3QT74ljvkmQjVBpszWwrwPf33tqL1JXmleJ3Hre+Vqw4e/kb8a2nJCWzbRTl1NhT98KhIR+Z/2cOX1OSjZ1tqHLPjcMuZD/7HwxJpLjZIIcdFZ5cXzL3BbB7VtjQaDsfhpxsqPAEs2nUl+TGJ68np7HtMoqTUKLGbs4NwSN+8n2yQSv71c8k73wfLeCrO7xQePfz0Xj9P3jFFL40ntJsSjwMY59UjuH0ZE8HPaPGrk+vNGdO8DuPfz3aJra6q3MKX5VrEipE2zS+7pNB2YjHp88Pfr9vlBPYispp1EyHkSQ769xq6gs4W6POFUA2xmMBjcGWLH1J8Kff937fJx4byWFQ4Z81vwIAAP//eh9oDL7PoU4AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">134 / 134</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">135 / 135</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -264,6 +264,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-znojmo/">&#34;Znojmo — historické město, podzemí, víno&#34;</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.8556&x=16.0489&z=14" target="_blank">📍</a></h3>
   <p class="desc">Znojmo — historické město, podzemí a vinařský region</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="mesto">#mesto</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="vino">#vino</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cesko priroda skaly jeseniky hory" data-lat="50.0567" data-lng="17.1128">
+  <h3><a href="cz-ztracene-kameny/">Česko — Ztracené kameny (skalní výchoz v Jeseníkách, 1250 m)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0567&x=17.1128&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Ztracené kameny — kvarcitový skalní výchoz v hřebeni Jeseníků</p>
+  <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="skaly">#skaly</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
 <div class="card" data-tags="travel vylety nemecko cyklo jezera priroda" data-lat="47.5670" data-lng="10.7000">
   <h3><a href="de-fuessen/">Německo — Füssen / Allgäu (cyklovýlety kolem jezer)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.5670&x=10.7000&z=14" target="_blank">📍</a></h3>
@@ -821,6 +826,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.4111,lng:16.7381,title:"Česko — Sloupsko-šošůvské jeskyně (nejdelší zpřístupněný systém v ČR)",slug:"cz-sloupsko-sosuvske-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:49.1056,lng:17.3942,title:"Česko — Velehrad (poutní bazilika a klášter)",slug:"cz-velehrad",tags:"travel, vylety, cesko, pamatky, poutni-misto"},
 {lat:48.8556,lng:16.0489,title:"\"Znojmo — historické město, podzemí, víno\"",slug:"cz-znojmo",tags:"travel, vylety, cz, mesto, historie, vino"},
+{lat:50.0567,lng:17.1128,title:"Česko — Ztracené kameny (skalní výchoz v Jeseníkách, 1250 m)",slug:"cz-ztracene-kameny",tags:"travel, vylety, cesko, priroda, skaly, jeseniky, hory"},
 {lat:47.5670,lng:10.7000,title:"Německo — Füssen / Allgäu (cyklovýlety kolem jezer)",slug:"de-fuessen",tags:"travel, vylety, nemecko, cyklo, jezera, priroda"},
 {lat:47.5575,lng:10.7494,title:"Německo — Neuschwanstein (pohádkový zámek Ludvíka II.)",slug:"de-neuschwanstein",tags:"travel, vylety, nemecko, hrad, historie"},
 {lat:49.2800,lng:16.9900,title:"DinoPark Vyškov — 100+ robotických dinosaurů",slug:"dinopark-vyskov",tags:"travel, vylety, morava, deti, zabava"},
