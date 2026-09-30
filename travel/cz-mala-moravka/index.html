@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Malá Morávka (horská obec u Pradědu, brána Jeseníků) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Malá Morávka (horská obec u Pradědu, brána Jeseníků)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">hory</span> <span class="tag">lyzovani</span> <span class="tag">turistika</span> </div>
+<div class="meta"><p class="meta-item">📍 Malá Morávka 54, 793 36 Malá Morávka</p><p class="meta-item">🌐 <a href="https://www.malamoravka.cz/" target="_blank">www.malamoravka.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0211, 17.3119], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0211, 17.3119]).addTo(dmap);
+</script>
+<div class="content"><h2>Malá Morávka — brána k Pradědu</h2>
+<p>Malá Morávka je horská obec v 660 m n.m. v podhůří Hrubého Jeseníku, přímo na přístupové cestě k <strong>Pradědu</strong> (1 491 m) — nejvyššímu vrcholu Moravy a Slezska. Obec s necelými 650 obyvateli zahrnuje i místní část <strong>Karlov pod Pradědem</strong>, odkud vede silnice až na <strong>Ovčárnu</strong> (1 200 m). Oblast leží v CHKO Jeseníky a nabízí celoroční vyžití — od letní turistiky a cyklistiky po zimní lyžování.</p>
+<p>Historicky šlo o hornickou osadu (první zmínka 1594), odkud se ruda vozila do bruntálského hamru. Dnes je to klidné výchozí místo pro výlety do nejvyšších partií Jeseníků.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>660 m (obec), až 1 491 m (Praděd)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U rozcestí Karlov, u skiareálu, P Ovčárna (v zimě kyvadlová doprava)</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Restaurace, penziony, infocentrum, obchod</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.0211,17.3119">50.0211, 17.3119</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět a dělat</h3>
+<p><strong>Praděd a TV vysílač</strong> — z Karlova po červené přes Ovčárnu na vrchol (cca 2,5 h). Na Pradědu TV věž (162 m) s restaurací a vyhlídkovou plošinou — za dobré viditelnosti výhled až na Vysoké Tatry. Národní přírodní rezervace Praděd (2 030 ha).</p>
+<p><strong>Turistika</strong> — síť značených tras po hřebenech Jeseníků. Oblíbené okruhy:</p>
+<ul>
+<li>Karlov → Ovčárna → Praděd → Švýcárna → Karlov (5–6 h)</li>
+<li>Karlov → Velký Kotel (přírodní rezervace, ledovcový kotel)</li>
+<li>Malá Morávka → Kapličkový vrch (barokní kaple z 1690, muzeum)</li>
+</ul>
+<p><strong>Lyžování</strong> — Skiareál Malá Morávka–Karlov, sjezdovky pro rodiny i pokročilé. Na Ovčárně běžkařské trasy po hřebenech (upravované stopy).</p>
+<p><strong>Cyklistika</strong> — horské trasy v okolí, napojení na cyklotrasy Jeseníků.</p>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (červen–září)</strong>: turistika, cyklo, ideální teploty v horách (15–22 °C v údolí)</li>
+<li><strong>Zima (prosinec–březen)</strong>: lyžování, běžky, sněhu dostatek (Praděd průměr 5,5 m sněhu ročně!)</li>
+<li><strong>Podzim (říjen)</strong>: nádherné barvy listnatých lesů</li>
+<li><strong>Pozor</strong>: na hřebenech bývá mlha a vítr i v létě — počasí se mění rychle</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pevné boty (na Praděd i v létě terén, kamení)</li>
+<li>Větrovka a fleece (i v létě na hřebenech okolo 10 °C)</li>
+<li>V zimě: řetězy na auto (cesta na Ovčárnu bývá uzavřena, kyvadlová doprava)</li>
+<li>Pláštěnka, dostatek vody</li>
+<li>Dalekohled (vyhlídky z Pradědu)</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Kyvadlová doprava</strong> na Ovčárnu funguje v zimní sezóně (auta se nechávají v Karlově)</li>
+<li>Z Pradědu je vidět až do Polska, za jasného počasí i Tatry</li>
+<li>Kapličkový vrch nad Malou Morávkou — nenáročná procházka s výhledem, barokní kaple z roku 1690</li>
+<li>Kostel Nejsvětější Trojice (1790–1793) přímo v obci</li>
+<li>Průměrná roční teplota na Pradědu je jen 1 °C — vhodné oblečení je nutnost</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ostrava</td>
+<td>85 km</td>
+<td>1:20 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>100 km</td>
+<td>1:30 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>185 km</td>
+<td>2:30 h</td>
+</tr>
+<tr>
+<td>Bruntál</td>
+<td>25 km</td>
+<td>0:30 h</td>
+</tr>
+<tr>
+<td>Rýmařov</td>
+<td>20 km</td>
+<td>0:25 h</td>
+</tr>
+</tbody>
+</table>
+<p>Příjezd po silnici přes Bruntál nebo Rýmařov. Vlak do stanice Malá Morávka (omezeně — od 2009 jen sezónní spoje), lépe autem.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-slezska-harta/">Slezská Harta</a></strong> (20 km) — přehrada, cyklo, lodě</li>
+<li><strong>Karlova Studánka</strong> (8 km) — lázně v 775 m n.m., léčivé prameny, bazén, procházky. New York Times ji zařadil mezi 46 míst na světě, která stojí za návštěvu</li>
+<li><strong>Hvězda</strong> (12 km pěšky) — rozcestí hřebenových tras, horská chata</li>
+<li><strong><a href="../cz-rymarov/">Rýmařov</a></strong> (20 km) — historické město, brána Jeseníků</li>
+<li><strong><a href="../cz-sobotin/">Sobotín</a></strong> (30 km) — mauzoleum Kleinů, průmyslové dědictví</li>
+<li><strong><a href="../cz-resovske-vodopady/">Rešovské vodopády</a></strong> (35 km) — skalní kaňon</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.malamoravka.cz/">Oficiální web obce</a></li>
+<li><a href="https://jeseniky.nature.cz/">CHKO Jeseníky</a></li>
+<li><a href="https://www.malamoravka-karlov.cz/">Skiareál Malá Morávka–Karlov</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Prad%C4%9Bd">Praděd na Wikipedii</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUsa31KgwHcCMKOrJApKzhjpVOFkjCArCSO9ZAYoGkc4HiJ85936muTtxed78Ukf0HDH++JpF4h+UGEmGFPdh4BokFK6DGoeXI9iJqt9JpKt0Iq50vbieg0mDzxRIJPv1+9SSS1jKvBT95fPX4hYcKgT4Rf7UPEjO3WFhujSeGDWCemPuGv9g7SYb6ymAzKWykwuZmI9RE5bLcE8ELxZ6gsA/gjXRTuK6sMKBIJvDOtXd/T/aubjvNu4T2k9eDwcm5FptcWA7UOMzmHFnRT75PnkRyLu1wuLz7ezIE8LuIUFlEY+9a2nmeJCwXaxxm8FhfWKpHjZ1NLydXgbqTxlhfK9Vx3gl+s2v5GvOKRFZ4fFpp9og2ocLv/QR9ZW7/8v3q8b5j6T6wFZXHfhrzBPk/z2cfoZvi7Ik6Jwg2IfUNNAZ7GJl3cfbWeNy3w9lcuBtS+G/VfwEAAP//ZgRediefguoAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
