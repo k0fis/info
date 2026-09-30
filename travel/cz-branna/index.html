@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Branná (Kolštejn — gotický hrad, renesanční zámek, zlatokopecká historie) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Branná (Kolštejn — gotický hrad, renesanční zámek, zlatokopecká historie)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">zamek</span> <span class="tag">hrad</span> <span class="tag">priroda</span> <span class="tag">historie</span> </div>
+<div class="meta"><p class="meta-item">📍 Branná, 788 25 Branná</p><p class="meta-item">🌐 <a href="https://www.branna.eu/" target="_blank">www.branna.eu</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.1533, 17.0117], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.1533, 17.0117]).addTo(dmap);
+</script>
+<div class="content"><h2>Branná — Kolštejn, zlatý kámen v Jeseníkách</h2>
+<p><strong>Branná</strong> (dříve Kolštejn, německy Goldenstein — „zlatý kámen&quot;) je malebná horská vesnička s 284 obyvateli v 633 m n.m. na okraji Hrubého Jeseníku. Původní jméno odkazuje na historickou <strong>těžbu zlata</strong> v okolí. Celé historické jádro je od roku 1992 <strong>městskou památkovou zónou</strong> — a právem: na tak malou obec je tu překvapivě mnoho historických staveb.</p>
+<p>Dominantou je <strong>zámecký areál</strong> s pozůstatky gotického hradu Kolštejn ze 14. století a renesanční přestavbou. K tomu <strong>kostel sv. Michaela Archanděla</strong> (1612–1614), vodní mlýn a řada dalších památek. Branná leží přímo na trati Šumperk–Jeseník, takže se sem dostanete i vlakem — a je to ideální zastávka na cestě do hor.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>633 m</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zámek/tvrz — ověřit aktuální stav (areál procházel rekonstrukcí)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V obci</td>
+</tr>
+<tr>
+<td><strong>Vlak</strong></td>
+<td>Trať 292 Šumperk–Krnov (–Jeseník), zastávka Branná</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.1533,17.0117">50.1533, 17.0117</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<p><strong>Zámecký areál Kolštejn</strong> — kombinace gotické tvrze ze 14. století a renesančního zámku. Ruiny hradu s atmosférou středověku. Areál je kulturní památka.</p>
+<p><strong>Kostel sv. Michaela Archanděla</strong> — renesanční kostel z let 1612–1614, dominanta obce.</p>
+<p><strong>Městská památková zóna</strong> — historické jádro s lidovou architekturou, vodním mlýnem a řadou památkově chráněných staveb. Na tak malou obec nezvykle koncentrovaný soubor.</p>
+<p><strong>Údolí Branné</strong> — řeka Branná protéká obcí, příjemné procházky podél toku.</p>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv na procházku obcí a okolím</li>
+<li>Fotoaparát — památková zóna je fotogenická</li>
+<li>Svačinu (zázemí v obci je omezené)</li>
+<li>V zimě teplé oblečení (633 m, horské klima)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (květen–září)</strong>: ideální pro prohlídku památek a procházky</li>
+<li><strong>Podzim</strong>: krásné barvy v okolních lesích</li>
+<li><strong>Celoročně</strong>: průjezd na cestě do Jeseníků — zastávka na trati</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Branná je maličká — nečekejte restaurace a obchody na každém rohu, ale právě v tom je kouzlo</li>
+<li><strong>Název Goldenstein</strong> (zlatý kámen) odkazuje na středověkou těžbu zlata — zajímavé i pro děti</li>
+<li>Ideální zastávka na <strong>cestě vlakem</strong> do Ramzové nebo Jeseníku</li>
+<li>Z Branné se dá pokračovat po turistických trasách do Hrubého Jeseníku</li>
+<li>Obec měla v roce 1930 přes 1 300 (převážně německých) obyvatel — po válce a odsunu zůstalo jen pár set lidí</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Šumperk</td>
+<td>22 km</td>
+<td>0:25 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>80 km</td>
+<td>1:15 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>115 km</td>
+<td>1:45 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>180 km</td>
+<td>2:25 h</td>
+</tr>
+<tr>
+<td>Jeseník</td>
+<td>15 km</td>
+<td>0:15 h</td>
+</tr>
+<tr>
+<td>Ramzová</td>
+<td>8 km</td>
+<td>0:10 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem po silnici 369 (Šumperk–Jeseník). Vlakem: trať 292 Šumperk–Krnov, zastávka Branná.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-ramzova/">Ramzová</a></strong> (8 km) — lanovka na Šerák, lyžování, bazén</li>
+<li><strong><a href="../cz-serak/">Šerák + Jiřího chata</a></strong> (8 km + lanovka) — 1 351 m, hřebenovky</li>
+<li><strong><a href="../cz-keprnik/">Keprník</a></strong> (15 km + turistika) — 1 423 m, rozvodí dvou moří</li>
+<li><strong><a href="../cz-velke-losiny/">Velké Losiny</a></strong> (15 km) — zámek, ruční papírna, termální koupaliště</li>
+<li><strong>Jeseník</strong> (15 km) — Priessnitzovy lázně, město</li>
+<li><strong>Rejvíz</strong> (25 km) — rašeliniště, Mechové jezírko</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.branna.eu/">Obec Branná</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Brann%C3%A1">Branná na Wikipedii</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMElEQVR42tzUMY7DIBAF0G9R0CUXQJlrpFjJV4o7d5DK3XIlSy64BisuQDoXyH/lTbTpYuJud7pXIH0YZvDvSpNZPHoJZN5jh4vKyqkAVNmXjs70DDLXOiJqo+tdbOx326ErlkN65n9t8pa86dPzfV4aQBNh+jT+tuCltWcWQqvAeY/RjQfF2AtPP3k3bSeupUK8B9iwzjjSJ5f4FWqMw4clZQCaeZeb6UqHnlzuebcMlZVXDu3j/Ia1LwdjDSQsusqcWKBoHvnetp8+gWJLu5xzjZ26kVzn6YwqA5Ijio66ytf1m8qQuLR5h9cOFMByFNZ43ScGihJkRo0dOlJmGU8619iXLq3zwOWMnS6XgoKGudLxmIZEEjV2uMh6w5Ghyvd9Yk376O+b/tv1HQAA//8p80l+vzuXZwAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
