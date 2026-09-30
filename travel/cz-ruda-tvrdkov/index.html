@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Ruda u Tvrdkova (barokní křížová cesta, národní kulturní památka) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Ruda u Tvrdkova (barokní křížová cesta, národní kulturní památka)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">poutni-misto</span> <span class="tag">pamatky</span> <span class="tag">historie</span> <span class="tag">jeseniky</span> </div>
+<div class="meta"><p class="meta-item">📍 Ruda, 793 44 Tvrdkov</p><p class="meta-item">🌐 <a href="https://www.rymarovsko.cz" target="_blank">www.rymarovsko.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.8639, 17.1865], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.8639, 17.1865]).addTo(dmap);
+</script>
+<div class="content"><h2>Ruda u Tvrdkova — barokní křížová cesta se srdcovými zastavením</h2>
+<p>Ruda je malá vesnice (78 obyvatel) ukrytá v kopcích Nízkého Jeseníku, místní část obce Tvrdkov. Její název prozrazuje hornickou minulost — těžilo se tu železo, zlato i stříbro už od 13. století (první zmínka 1258, kolonizace za biskupa Bruna z Olomouce).</p>
+<p>Důvod k návštěvě je unikátní komplex <strong>barokního kostela Panny Marie Sněžné</strong> a <strong>křížové cesty na Křížový vrch</strong> (589 m) — od roku 2018 <strong>národní kulturní památka</strong>. Čtrnáct zastavení z olomouckého pískovce má neobvyklý tvar srdce s reliéfy Pašijových výjevů.</p>
+<h3>Kostel Panny Marie Sněžné</h3>
+<p>Barokní jednolodní kostel postavený v letech <strong>1756–1758</strong> místním hejtmanem Jiřím Gröschelsbergerem jako díkůvzdání za přežití nehody s koňmi (1755). Uvnitř:</p>
+<ul>
+<li><strong>Mramorový oltář</strong> s kopií ikony z římské baziliky Santa Maria Maggiore</li>
+<li><strong>Sochy sv. Jáchyma a sv. Anny</strong> po stranách oltáře</li>
+<li><strong>Varhany z roku 1762</strong> — poslední dílo varhanáře Jana Schwarzeho z Města Libavé</li>
+<li><strong>Obraz nehody</strong> zachycující pád zakladatele z kočáru</li>
+</ul>
+<h3>Křížová cesta na Křížový vrch</h3>
+<p>Vybudována <strong>1760</strong>, dva roky po kostele. Z maleťínského a mladějovického pískovce.</p>
+<ul>
+<li><strong>14 zastavení</strong> — ozdobné sloupy cca 3,5 m vysoké</li>
+<li><strong>Srdcové kartuše</strong> s kamennými reliéfy Pašijí — unikátní tvar, nemá v ČR obdoby</li>
+<li><strong>XII. zastavení (Ukřižování)</strong> — dominanta celé cesty, figurální sousoší 7 m vysoké</li>
+<li><strong>XIII.–XIV. zastavení</strong> — na vrcholu Křížového vrchu (589 m), malý Kalvárie</li>
+<li><strong>Restaurováno</strong> 2008–2009 (Ladislav Werkman, Olomouc)</li>
+</ul>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (křížová cesta volně přístupná celoročně)</td>
+</tr>
+<tr>
+<td><strong>Kostel</strong></td>
+<td>Otevřen při poutích a po domluvě (farnost, tel. +420 554 212 381)</td>
+</tr>
+<tr>
+<td><strong>Hlavní pouť</strong></td>
+<td>První neděle v srpnu</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U kostela v obci</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.8639,17.1865">49.8639, 17.1865</a></td>
+</tr>
+<tr>
+<td><strong>Křížový vrch</strong></td>
+<td>589 m n. m.</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlné boty (křížová cesta vede do kopce)</li>
+<li>Svačinu — v Rudě není žádné občerstvení</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — křížová cesta je venkovní, volně přístupná</li>
+<li><strong>První neděle v srpnu</strong> — tradiční pouť, kostel otevřen</li>
+<li><strong>Podzim</strong> — krásné barvy v lesích kolem Křížového vrchu</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../cz-rymarov/">Rýmařov</a></td>
+<td>12 km</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>Šumperk</td>
+<td>25 km</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>65 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>135 km</td>
+<td>1:45 h</td>
+</tr>
+</tbody>
+</table>
+<p>Pozor: Ruda je malá vesnice s omezenou veřejnou dopravou. <strong>Auto je nutnost.</strong></p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-rymarov/">Rýmařov</a></strong> (12 km) — historické centrum, městská památková zóna</li>
+<li><strong><a href="../cz-janovice-rymarov/">Janovice</a></strong> (10 km) — renesanční zámek, křížová cesta z litinových náhrobků</li>
+<li><strong>Rešovské vodopády</strong> (~8 km) — skalní soutěska</li>
+<li><strong>Kostel sv. Antonína Paduánského</strong> (Tvrdkov, 2 km) — 1768–1776, kulturní památka</li>
+<li><strong>Polské kameny</strong> (Mirotínek) — pamětní kameny padlých polských vojáků</li>
+</ul>
+<h3>Zajímavosti</h3>
+<ul>
+<li>Obec měla v roce 1869 celkem <strong>869 obyvatel</strong> — dnes 78. Odraz poválečného odsunu</li>
+<li>Název <strong>Ruda</strong> = ruda (ore) — připomínka středověké těžby</li>
+<li>Malíř <strong>Jan Kryštof Handke</strong> (1694–1774) se narodil v nedaleké Janovicích</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/Kostel_Panny_Marie_Sn%C4%9B%C5%BEn%C3%A9_(Ruda)">Kostel Panny Marie Sněžné — Wikipedia</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/K%C5%99%C3%AD%C5%BEov%C3%BD_vrch_(Ruda)">Křížový vrch — Wikipedia</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Tvrdkov">Tvrdkov — Wikipedia</a></li>
+<li><a href="https://www.kudyznudy.cz/aktivity/ubytovani-38">Kudyznudy.cz</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUsY3sIBAG4N8iIIMGLNEGGS0tDaxNA9ASGW1YogE7mwB5nnb33V1ysic9sm+iYf7R4M8/y7wCiA3MJLCByo/gEvsNXuLQ80TqqLWfQpdSAZDYqVDf4YWGWiO5RPju99KWOcc2x+a/53HpVykD0PVnxFc2UKVQT423pQo8tS3uejOa1IlfbJvKsY5IUO8x3RkeU9ZjapVZ4on6K1/+yvfOJsAWniemsZDA8HysgNGB//d3baOxpLY90dwn3xsj8Lo0lXVwq8TGz9Pue6G6ffq9sW3uSDRspfH0EtNsCzumqk6JgV7OMFvWaofAlsayhjm26rLExqv80Hw0jM/+3XpbjooH2mzwi21z6f3fwLvEr9JRh4FXhQR+3ScTRiTqn/2+sYFKB8FWUl/37Nqhr5G3hw98SP3088Ta7V7oB94uJDFUKjyWBj4hsGUuq1al8YhV4L/1/gUAAP//1vhRY2zBuqMAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
