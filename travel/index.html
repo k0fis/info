@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">141 / 141</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">142 / 142</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -117,6 +117,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('veda')">veda</button>
 <button class="tag-btn" onclick="toggleFilter('viden')">viden</button>
 <button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
+<button class="tag-btn" onclick="toggleFilter('vodopad')">vodopad</button>
 <button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
 <button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
 <button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
@@ -256,6 +257,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-raseliniste-skritek/">Česko — Rašeliniště Skřítek (národní přírodní rezervace v Jeseníkách)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9806&x=17.0878&z=14" target="_blank">📍</a></h3>
   <p class="desc">Rašeliniště Skřítek — prastarý rašelinný les na horském sedle</p>
   <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="rezervace">#rezervace</span> <span class="tag" data-tag="raseliniste">#raseliniste</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cz priroda vodopad rezervace hiking jeseniky" data-lat="49.9167" data-lng="17.1833">
+  <h3><a href="cz-resovske-vodopady/">Česko — Rešovské vodopády (kaňon řeky Huntavy, 4 přístupové cesty)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9167&x=17.1833&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Rešovské vodopády — skalní kaňon v Nízkém Jeseníku</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="vodopad">#vodopad</span> <span class="tag" data-tag="rezervace">#rezervace</span> <span class="tag" data-tag="hiking">#hiking</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz poutni-misto pamatky historie jeseniky" data-lat="49.8639" data-lng="17.1865">
   <h3><a href="cz-ruda-tvrdkov/">Česko — Ruda u Tvrdkova (barokní křížová cesta, národní kulturní památka)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.8639&x=17.1865&z=14" target="_blank">📍</a></h3>
@@ -856,6 +862,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.3698,lng:16.7254,title:"Česko — Punkevní jeskyně (plavba na podzemní řece + dno Macochy)",slug:"cz-punkevni-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:49.9481,lng:17.1500,title:"Česko — Rabštejn u Oskavy (skalní město v Jeseníkách)",slug:"cz-rabstejn-oskava",tags:"travel, vylety, cesko, priroda, lezeni, skaly, jeseniky"},
 {lat:49.9806,lng:17.0878,title:"Česko — Rašeliniště Skřítek (národní přírodní rezervace v Jeseníkách)",slug:"cz-raseliniste-skritek",tags:"travel, vylety, cesko, priroda, jeseniky, rezervace, raseliniste"},
+{lat:49.9167,lng:17.1833,title:"Česko — Rešovské vodopády (kaňon řeky Huntavy, 4 přístupové cesty)",slug:"cz-resovske-vodopady",tags:"travel, vylety, cz, priroda, vodopad, rezervace, hiking, jeseniky"},
 {lat:49.8639,lng:17.1865,title:"Česko — Ruda u Tvrdkova (barokní křížová cesta, národní kulturní památka)",slug:"cz-ruda-tvrdkov",tags:"travel, vylety, cz, poutni-misto, pamatky, historie, jeseniky"},
 {lat:49.9323,lng:17.2714,title:"Česko — Rýmařov (historické město v podhůří Jeseníků)",slug:"cz-rymarov",tags:"travel, vylety, cz, mesto, historie, architektura, jeseniky"},
 {lat:49.1533,lng:16.8764,title:"Česko — Slavkov u Brna (barokní zámek, bitva tří císařů)",slug:"cz-slavkov",tags:"travel, vylety, cz, zamek, historie, mesto"},
