@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Paprsek (skiareál a letní resort u Starého Města pod Sněžníkem) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Paprsek (skiareál a letní resort u Starého Města pod Sněžníkem)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">lyzovani</span> <span class="tag">priroda</span> <span class="tag">hory</span> <span class="tag">rodina</span> </div>
+<div class="meta"><p class="meta-item">📍 Staré Město pod Sněžníkem, 788 32</p><p class="meta-item">🌐 <a href="https://www.paprsek.com/" target="_blank">www.paprsek.com</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.2050, 16.9750], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.2050, 16.9750]).addTo(dmap);
+</script>
+<div class="content"><h2>Paprsek — lyžování a letní zábava pod Králickým Sněžníkem</h2>
+<p><strong>Paprsek</strong> je horský resort a skiareál na svazích nad <strong>Starým Městem pod Sněžníkem</strong> v Jeseníkách, na rozhraní Hrubého Jeseníku, Králického Sněžníku a Rychlebských hor. V zimě lyžařský areál se sjezdovkami pro rodiny i pokročilé, v létě nabízí <strong>bobovou dráhu</strong>, <strong>lanový park</strong> a výchozí bod pro turistiku na <strong>Králický Sněžník</strong> (1 424 m) — třetí nejvyšší horu Česka.</p>
+<p>Staré Město pod Sněžníkem (538 m, 1 678 obyvatel) je historické městečko založené ve 13. století jako Goldek („zlatý kout&quot;) — opět odkaz na těžbu zlata v Jeseníkách. Má renesanční radnici (1618–1619), pozdně renesanční kostel (1608) a je branou do tří pohoří najednou.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lyžování</strong></td>
+<td>Sjezdovky různých obtížností, vleky</td>
+</tr>
+<tr>
+<td><strong>Letní aktivity</strong></td>
+<td>Bobová dráha, lanový park, turistika</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U skiareálu</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Hotel, restaurace, půjčovna vybavení</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.2050,16.9750">50.2050, 16.9750</a></td>
+</tr>
+<tr>
+<td><strong>Web</strong></td>
+<td><a href="https://www.paprsek.com/">paprsek.com</a> (ověřit aktuální stav webu)</td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět a dělat</h3>
+<p><strong>Zimní sezóna:</strong></p>
+<ul>
+<li>Sjezdovky pro rodiny i pokročilé</li>
+<li>Upravované běžkařské trasy v okolí</li>
+<li>Blízkost Králického Sněžníku pro skialpinismus</li>
+</ul>
+<p><strong>Letní sezóna:</strong></p>
+<ul>
+<li><strong>Bobová dráha</strong> — zábava pro děti i dospělé</li>
+<li><strong>Lanový park</strong> — překážkové trasy v korunách stromů</li>
+<li>Turistika na <strong>Králický Sněžník</strong> (1 424 m) — třetí nejvyšší hora ČR, tripoint CZ/PL hranic</li>
+<li>Cyklotrasy v okolí tří pohoří</li>
+</ul>
+<p><strong>Staré Město pod Sněžníkem:</strong></p>
+<ul>
+<li>Renesanční radnice (1618–1619)</li>
+<li>Pozdně renesanční kostel (1608)</li>
+<li>Historické jádro s barokními stavbami</li>
+<li>Partnerské město Stronie Śląskie (Polsko) — přeshraniční výlety</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>V zimě: lyžařské vybavení (nebo půjčovna na místě)</li>
+<li>V létě: turistické boty na Králický Sněžník, lehké oblečení na bobovku/lanový park</li>
+<li>Plavky (v okolí termální koupaliště ve <a href="../cz-velke-losiny/">Velkých Losinách</a>)</li>
+<li>Svačina a voda na delší túry</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Zima (prosinec–březen)</strong>: lyžování — hlavní sezóna</li>
+<li><strong>Léto (červen–září)</strong>: bobová dráha, lanový park, turistika na Sněžník</li>
+<li><strong>Podzim</strong>: krásné barvy, výstup na Sněžník bez davů</li>
+<li><strong>Celoročně</strong>: výchozí bod pro hory</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Králický Sněžník</strong> (1 424 m) — výstup z okolí Starého Města, na vrcholu tripoint CZ/PL (+ historicky Slezsko). Třetí nejvyšší hora Česka po Sněžce a Luční hoře</li>
+<li>Bobová dráha je ideální pro děti — kombinujte s lanovým parkem na celý den</li>
+<li>Ze Starého Města se dá přejít do <strong>Polska</strong> (Stronie Śląskie) pěšky nebo na kole</li>
+<li>Název Goldek (zlatý kout) i blízký Goldenstein (<a href="../cz-branna/">Branná</a>) odkazují na středověkou těžbu zlata v Jeseníkách</li>
+<li>Areál je menší a klidnější než Ramzová — ideální pro rodiny</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Šumperk</td>
+<td>30 km</td>
+<td>0:35 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>85 km</td>
+<td>1:20 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>130 km</td>
+<td>2:00 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>185 km</td>
+<td>2:30 h</td>
+</tr>
+<tr>
+<td>Jeseník</td>
+<td>25 km</td>
+<td>0:30 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem přes Šumperk a Hanušovice, nebo ze směru Jeseník. Vlakem: trať do Hanušovic, pak autobus.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Králický Sněžník</strong> (výstup z okolí) — 1 424 m, třetí nejvyšší hora ČR</li>
+<li><strong><a href="../cz-velke-losiny/">Velké Losiny</a></strong> (20 km) — zámek, ruční papírna, termální koupaliště</li>
+<li><strong><a href="../cz-branna/">Branná (Kolštejn)</a></strong> (15 km) — gotický hrad, památková zóna</li>
+<li><strong><a href="../cz-ramzova/">Ramzová</a></strong> (20 km) — lanovka na Šerák, lyžování</li>
+<li><strong><a href="../cz-serak/">Šerák</a></strong> (25 km) — Jiřího chata, hřebenovky</li>
+<li><strong>Stronie Śląskie</strong> (Polsko, 15 km) — přeshraniční výlet, partnerské město</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.paprsek.com/">Skiareál Paprsek</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Star%C3%A9_M%C4%9Bsto_pod_Sn%C4%9B%C5%BEn%C3%ADkem">Staré Město pod Sněžníkem na Wikipedii</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Kr%C3%A1lick%C3%BD_Sn%C4%9B%C5%BEn%C3%ADk">Králický Sněžník na Wikipedii</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABN0lEQVR42tzUPe6jMBAF8IemcMkFrL+vQceVnI5q7VR08ZWQUnANR76A6Sgs3grlYzvWodudil+BbM0bD/67UmRGW9Tz44Q9LqXVg8xAlUO5JGpwNmuti43K1NtqGwetTtrDSogq/bn/scklBT2k+dOfQwNoijU+TZ8IDr33jz5R2PCUb3LTjl7jp68xHFkcR5kjaqyuvMZWI82PqcpLuaRAb+b47N+XhrsHhrRy3lSNFe/ZZK7omxUVhuNNQhl0t3W5xlaW6Myo8fr/Syvfe8nCorY+13iTbc9A4zFVORQYr1H6V15/s8cvoTDxff533uc3tmnkZN4Tfeh9jQjJ/f1W2cMaHwcz/ahc41Cs7Can087iS9estYaVMZFEjT2sdmlFz8/+OTS5FAene3Q44X+7fgcAAP//lPpgot85yrgAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
