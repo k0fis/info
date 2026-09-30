@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Sobotín (průmyslové dědictví, mauzoleum Kleinů, brána Jeseníků) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Sobotín (průmyslové dědictví, mauzoleum Kleinů, brána Jeseníků)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">historie</span> <span class="tag">architektura</span> <span class="tag">jeseniky</span> <span class="tag">pamatky</span> </div>
+<div class="meta"><p class="meta-item">📍 Sobotín, 788 16</p><p class="meta-item">🌐 <a href="https://www.sobotin.cz" target="_blank">www.sobotin.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0031, 17.0928], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0031, 17.0928]).addTo(dmap);
+</script>
+<div class="content"><h2>Sobotín — železářský příběh rodiny Kleinů v údolí Desné</h2>
+<p>Sobotín leží v malebném údolí řeky Desné v podhůří Jeseníků (okres Šumperk). První zmínka pochází z roku 1351 a dějiny obce jsou neodmyslitelně spjaty s <strong>těžbou železné rudy</strong>. V 19. století tu bratři Kleinové — kteří se z selského rodu vypracovali až ke šlechtictví — vybudovali jedny z nejvýznamnějších železáren a strojíren své doby.</p>
+<p>Dnes je Sobotín klidná obec (1 141 obyvatel) s unikátními industriálními památkami a skvělou polohou jako výchozí bod do Jeseníků.</p>
+<h3>Co vidět</h3>
+<table>
+<thead>
+<tr>
+<th>Památka</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mauzoleum rodiny Kleinů</strong></td>
+<td>Monumentální hrobka z roku 1881 v historicistním stylu — symbol vzestupu průmyslové dynastie</td>
+</tr>
+<tr>
+<td><strong>Kostel sv. Vavřince</strong></td>
+<td>Renesanční kostel z roku 1605, spojený s čarodějnickými procesy losinského panství</td>
+</tr>
+<tr>
+<td><strong>Zámek (hotel)</strong></td>
+<td>Přestavěná zbrojnice z 19. století, dnes hotel</td>
+</tr>
+<tr>
+<td><strong>Industriální dědictví</strong></td>
+<td>Pozůstatky železáren a strojíren Kleinů v údolí</td>
+</tr>
+</tbody>
+</table>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Mauzoleum — dle aktuálního programu. Procházka obcí zdarma</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V centru obce</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.0031,17.0928">50.0031, 17.0928</a></td>
+</tr>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>365 m</td>
+</tr>
+<tr>
+<td><strong>Úřad</strong></td>
+<td>Po, St 8–11, 12–17; Út, Čt 8–11, 12–15</td>
+</tr>
+</tbody>
+</table>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — industriální památky, procházky údolím</li>
+<li><strong>Léto</strong> — ideální pro kombinaci s turistikou v Jeseníkách</li>
+<li><strong>Zima</strong> — blízko <a href="../kouty/">Koutů nad Desnou</a> (lyžování)</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Šumperk</td>
+<td>12 km</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>65 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>150 km</td>
+<td>2 h</td>
+</tr>
+</tbody>
+</table>
+<p>Po silnici z Šumperku údolím Desné (směr Kouty nad Desnou). Vlakové spojení na trati 293 (Šumperk – Kouty).</p>
+<h3>Místní části</h3>
+<ul>
+<li><strong>Sobotín</strong> — centrum, zámek, kostel, mauzoleum</li>
+<li><strong>Klepáčov</strong> — malá osada v horách</li>
+<li><strong>Rudoltice</strong> — rekreační zázemí</li>
+</ul>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Velké Losiny</strong> (5 km) — renesanční zámek, ruční papírna (UNESCO), lázně, čarodějnické procesy</li>
+<li><strong><a href="../kouty/">Kouty nad Desnou</a></strong> (8 km) — skiareál, výchozí bod na Praděd</li>
+<li><strong>Šumperk</strong> (12 km) — město s muzeem a historickým centrem</li>
+<li><strong>Petrov nad Desnou</strong> (3 km) — železniční křižovatka, kostel</li>
+<li><strong>Loučná nad Desnou</strong> (6 km) — Přečerpávací vodní elektrárna Dlouhé Stráně (technický unikát)</li>
+</ul>
+<h3>Zajímavosti</h3>
+<ul>
+<li>Bratři <strong>Kleinové</strong> začali jako sedláci a stali se jedněmi z nejvýznamnějších průmyslníků Moravy — jejich železárny patřily k nejdůležitějším podnikům doby</li>
+<li>Kostel sv. Vavřince je spojen s <strong>čarodějnickými procesy</strong> 17. století na losinském panství — jedněmi z nejrozsáhlejších v českých zemích</li>
+<li>Obec má 3 části na rozloze 32 km² — většinu tvoří lesy Jeseníků</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/Sobot%C3%ADn">Sobotín — Wikipedia</a></li>
+<li><a href="https://www.sobotin.cz">Obec Sobotín</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNklEQVR42tzUPa7jIBQF4BPdgi7ZAArbSOct2Z2rgVTphi1ZmoJtMGIDuKNAPiOPM5POIe7eu91XIB3dH/DtSpHZuDiaQOYjdujRi5MANNnXgdkUBlNaXS+kVu0m43jYDkO1ZHrl3zc5J6/H9OrPrgGcmDGm6f8Idq08s/ioJLAc8tLdE+NoeN3yvjFs/SGODwlxC/DOvfhqNRJ/hxYr/yvDygM4lUNecNY2juTyzL9vXDhXy4Jue//Ww3Sq/brfi2qxunOuvVb6X76PPZ2FsLVbbrnFrpuTkyIBN7T4J2CoUVVUTXawpDBx6fIBr/ubfLWcDFu8/ifiSRNMQYvX+7ukYqbr6x737OuQnFbCZevHAcc+ov49y0bDPBJJtNihl1whE0OTyZm5Wt095/uhv3b9CQAA///ILmZsStNFsQAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
