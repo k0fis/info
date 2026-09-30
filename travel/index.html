@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">152 / 152</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">153 / 153</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -123,9 +123,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('vino')">vino</button>
 <button class="tag-btn" onclick="toggleFilter('vodopad')">vodopad</button>
 <button class="tag-btn" onclick="toggleFilter('vyhledy')">vyhledy</button>
+<button class="tag-btn" onclick="toggleFilter('wellness')">wellness</button>
 <button class="tag-btn" onclick="toggleFilter('zabava')">zabava</button>
 <button class="tag-btn" onclick="toggleFilter('zakopane')">zakopane</button>
 <button class="tag-btn" onclick="toggleFilter('zamek')">zamek</button>
+<button class="tag-btn" onclick="toggleFilter('zdravi')">zdravi</button>
 <button class="tag-btn" onclick="toggleFilter('zoo')">zoo</button></div>
 <div class="cards" id="cards"><div class="card" data-tags="travel vylety" data-lat="49.30247" data-lng="17.023542">
   <h3><a href="air-museum-vyskov/">Air museum vyskov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.30247&x=17.023542&z=14" target="_blank">📍</a></h3>
@@ -341,6 +343,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-sobotin/">Česko — Sobotín (průmyslové dědictví, mauzoleum Kleinů, brána Jeseníků)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0031&x=17.0928&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sobotín — železářský příběh rodiny Kleinů v údolí Desné</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="architektura">#architektura</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> <span class="tag" data-tag="pamatky">#pamatky</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cesko lazne wellness zdravi" data-lat="49.5286" data-lng="17.7444">
+  <h3><a href="cz-teplice-nad-becvou/">Česko — Lázně Teplice nad Bečvou (kardiorehabilitace, minerální prameny, 470 let tradice)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5286&x=17.7444&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Lázně Teplice nad Bečvou — srdce léčí přírodou</p>
+  <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="lazne">#lazne</span> <span class="tag" data-tag="wellness">#wellness</span> <span class="tag" data-tag="zdravi">#zdravi</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cesko pamatky poutni-misto" data-lat="49.1056" data-lng="17.3942">
   <h3><a href="cz-velehrad/">Česko — Velehrad (poutní bazilika a klášter)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1056&x=17.3942&z=14" target="_blank">📍</a></h3>
@@ -932,6 +939,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.8903,lng:17.5814,title:"\"Slezská Harta — přehrada v Jeseníkách\"",slug:"cz-slezska-harta",tags:"travel, vylety, cz, priroda, jezera, cyklo"},
 {lat:49.4111,lng:16.7381,title:"Česko — Sloupsko-šošůvské jeskyně (nejdelší zpřístupněný systém v ČR)",slug:"cz-sloupsko-sosuvske-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:50.0031,lng:17.0928,title:"Česko — Sobotín (průmyslové dědictví, mauzoleum Kleinů, brána Jeseníků)",slug:"cz-sobotin",tags:"travel, vylety, cz, historie, architektura, jeseniky, pamatky"},
+{lat:49.5286,lng:17.7444,title:"Česko — Lázně Teplice nad Bečvou (kardiorehabilitace, minerální prameny, 470 let tradice)",slug:"cz-teplice-nad-becvou",tags:"travel, vylety, cesko, lazne, wellness, zdravi"},
 {lat:49.1056,lng:17.3942,title:"Česko — Velehrad (poutní bazilika a klášter)",slug:"cz-velehrad",tags:"travel, vylety, cesko, pamatky, poutni-misto"},
 {lat:50.0317,lng:17.0403,title:"Česko — Velké Losiny (renesanční zámek, ruční papírna, termální koupaliště)",slug:"cz-velke-losiny",tags:"travel, vylety, cesko, zamek, termy, muzeum, priroda"},
 {lat:48.8556,lng:16.0489,title:"\"Znojmo — historické město, podzemí, víno\"",slug:"cz-znojmo",tags:"travel, vylety, cz, mesto, historie, vino"},

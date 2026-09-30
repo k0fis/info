@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Lázně Teplice nad Bečvou (kardiorehabilitace, minerální prameny, 470 let tradice) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Lázně Teplice nad Bečvou (kardiorehabilitace, minerální prameny, 470 let tradice)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">lazne</span> <span class="tag">wellness</span> <span class="tag">zdravi</span> </div>
+<div class="meta"><p class="meta-item">📍 Teplice nad Bečvou 47, 753 01</p><p class="meta-item">🌐 <a href="https://www.ltnb.cz/" target="_blank">www.ltnb.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.5286, 17.7444], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.5286, 17.7444]).addTo(dmap);
+</script>
+<div class="content"><h2>Lázně Teplice nad Bečvou — srdce léčí přírodou</h2>
+<p><strong>Lázně Teplice nad Bečvou</strong> (dříve Zbrašov) jsou malé, ale významné lázně s <strong>více než 470letou tradicí</strong>, ležící v údolí Bečvy u Hranic na Moravě. Specializují se na <strong>kardiorehabilitaci</strong> — léčbu a prevenci srdečních a mozkových příhod — a patří k předním kardiologickým lázním v Česku.</p>
+<p>Základem léčby je <strong>Teplická kyselka</strong> — uhličitá minerální voda ze čtyř pramenů, jejíž příznivé účinky na srdce byly vědecky prokázány už ve 30. letech 20. století. Voda pochází ze stejného termálního systému jako nedaleká <a href="../cz-hranicka-propast/">Hranická propast</a> — nejhlubší zatopená propast světa.</p>
+<h3>Minerální prameny</h3>
+<table>
+<thead>
+<tr>
+<th>Pramen</th>
+<th>Pojmenování</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kropáčův pramen</td>
+<td>historický hlavní pramen</td>
+</tr>
+<tr>
+<td>Galašův pramen</td>
+<td></td>
+</tr>
+<tr>
+<td>Jurikův pramen</td>
+<td></td>
+</tr>
+<tr>
+<td>Janáčkův pramen</td>
+<td>pojmenován po skladateli</td>
+</tr>
+</tbody>
+</table>
+<p>Uhličitá minerální voda bohatá na CO₂ — stejný termální systém, který vytvořil Hranickou propast a Zbrašovské jeskyně.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Léčebné lázně, wellness, rehabilitace</td>
+</tr>
+<tr>
+<td><strong>Specializace</strong></td>
+<td>Kardiorehabilitace, oběhový systém, nervový systém, pohybový aparát, diabetes, onkologie</td>
+</tr>
+<tr>
+<td><strong>Lázeňské domy</strong></td>
+<td>Bečva, Moravan, Janáček, Slovenka, Praha, Radost</td>
+</tr>
+<tr>
+<td><strong>Pro veřejnost</strong></td>
+<td>Bazén, sauna, solná jeskyně, wellness procedury</td>
+</tr>
+<tr>
+<td><strong>Pobyty</strong></td>
+<td>Od 5 800 Kč / 3 dny (šité na míru diagnóze)</td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td>+420 581 818 181, lazne@ltnb.cz</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.5286,17.7444">49.5286, 17.7444</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co nabízí pro turisty (nejen pacienty)</h3>
+<ul>
+<li><strong>Bazén</strong> — vyhřívaný, přístupný i veřejnosti</li>
+<li><strong>Sauna</strong> — relaxace po túře nebo výletě</li>
+<li><strong>Solná jeskyně</strong> — léčba astmatu a dýchacích potíží</li>
+<li><strong>Wellness procedury</strong> — masáže, koupele, zábal</li>
+<li><strong>Lázeňský park</strong> — procházky podél Bečvy</li>
+<li><strong>Kulturní program</strong> — koncerty, přednášky v lázeňských domech</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Plavky a ručník (bazén)</li>
+<li>Pohodlné oblečení na procházky v parku</li>
+<li>Rezervaci — procedury a wellness lepší objednat předem</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong>: lázně fungují celý rok</li>
+<li><strong>Léto</strong>: kombinace lázní + výlet k <a href="../cz-hranicka-propast/">Hranické propasti</a> a Zbrašovským jeskyním</li>
+<li><strong>Podzim/zima</strong>: ideální na wellness a regeneraci</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Ideální kombinace na celý den</strong>: dopoledne <a href="../cz-hranicka-propast/">Hranická propast + Zbrašovské jeskyně</a> → odpoledne wellness v lázních</li>
+<li>Teplická kyselka je k ochutnání — uhličitá minerální voda přímo z pramene</li>
+<li>Dům <strong>Bečva</strong> (1931–1949) je architektonicky zajímavý — funkcionalistický projekt</li>
+<li><strong>Janáčkův pramen</strong> je pojmenován po skladateli Leoši Janáčkovi, který tu pobýval</li>
+<li>Pobyty „šité na míru&quot; — není nutné být pacient, wellness pobyty pro každého</li>
+<li>Z lázní je to jen <strong>500 m</strong> k Hranické propasti a Zbrašovským jeskyním</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Olomouc</td>
+<td>45 km</td>
+<td>0:40 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>75 km</td>
+<td>1:00 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>110 km</td>
+<td>1:20 h</td>
+</tr>
+<tr>
+<td>Hranice na Moravě</td>
+<td>5 km</td>
+<td>0:05 h</td>
+</tr>
+<tr>
+<td>Valašské Meziříčí</td>
+<td>20 km</td>
+<td>0:20 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem k Teplicím nad Bečvou. Vlakem: trať Hranice–Valašské Meziříčí, zastávka Teplice nad Bečvou.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-hranicka-propast/">Hranická propast + Zbrašovské jeskyně</a></strong> (500 m!) — nejhlubší zatopená propast světa, aragonitové jeskyně</li>
+<li><strong>Hranice na Moravě</strong> (5 km) — renesanční zámek, historické náměstí</li>
+<li><strong>Helfštýn</strong> (15 km) — jeden z největších hradů Moravy</li>
+<li><strong>Štramberk</strong> (30 km) — „Moravský Betlém&quot;, Trúba</li>
+<li><strong>Rožnov pod Radhoštěm</strong> (35 km) — Valašské muzeum v přírodě</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.ltnb.cz/">Lázně Teplice nad Bečvou — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Teplice_nad_Be%C4%8Dvou">Teplice nad Bečvou na Wikipedii</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABW0lEQVR42tTUsa0kIQwGYI8InEEDSLRBRkuPBt4yDQwtOaMNJBqYyRyg8Wl2de9Jp9Os03X2ObJ+W4aPLydSHEEWEGGFLZi6pbC22CFqnEY9ozmExqn09gUAkdVeSxw7kNJgio1h5d95b+1Ettx8bvEnj1tfrYMAkH8jvvOVV+WxttQfpPBCHVzrFtnI/+xEdgszE46qcuuu4FxaC6IxoGxZglCcz3zeeRGft+QXoe5Y5VCygEXsjhSGBI+V+zdgeO73rSHImcyGEorGNvlceVSi/q0xwNizTEfsle72QUGIxgkKOx5yoreYwkEat75s0efGYQeFLYTTJjlafN3HW6N30uBBCK88/rHjsUGcC4kcrPDVKjhtjKZqfP0nizM3/rnvW1sw647giM3ff3bvNIpN/QvTaz6VwduEYdV64aerymCK45kbhBMUdiL1aGZt4hdS+LPqTwAAAP//gRtD+Kx3SC0AAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
