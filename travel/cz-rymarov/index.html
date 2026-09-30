@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Rýmařov (historické město v podhůří Jeseníků) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Rýmařov (historické město v podhůří Jeseníků)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">mesto</span> <span class="tag">historie</span> <span class="tag">architektura</span> <span class="tag">jeseniky</span> </div>
+<div class="meta"><p class="meta-item">📍 Rýmařov, 795 01</p><p class="meta-item">🌐 <a href="https://www.rymarov.cz" target="_blank">www.rymarov.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.9323, 17.2714], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.9323, 17.2714]).addTo(dmap);
+</script>
+<div class="content"><h2>Rýmařov — brána Jeseníků s historickým centrem</h2>
+<p>Rýmařov je nejzápadnější město okresu Bruntál, zasazené do podhůří Jeseníků v nadmořské výšce kolem 500 m. První písemná zmínka pochází z roku 1351. Po ničivém požáru v roce 1790 bylo město přestavěno v klasicistním a empírovém stylu — historické centrum je od roku 2003 městskou památkovou zónou.</p>
+<p>Město je přirozeným výchozím bodem pro výlety do okolí: <a href="../cz-janovice-rymarov/">Janovice</a> se zámkem, <a href="../cz-ruda-tvrdkov/">Ruda u Tvrdkova</a> s barokní křížovou cestou, Rešovské vodopády i <a href="../cz-raseliniste-skritek/">rašeliniště Skřítek</a>.</p>
+<h3>Co vidět ve městě</h3>
+<table>
+<thead>
+<tr>
+<th>Památka</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Náměstí</strong></td>
+<td>Nově zrekonstruované, památková zóna</td>
+</tr>
+<tr>
+<td><strong>Radnice</strong></td>
+<td>Unikátní mix gotiky, renesance, baroka a klasicismu</td>
+</tr>
+<tr>
+<td><strong>Kaple Navštívení Panny Marie</strong></td>
+<td>Barokní (1711–1715), malby od Ferdinanda Nabotha</td>
+</tr>
+<tr>
+<td><strong>Mariánský sloup</strong></td>
+<td>Z roku 1683, sochař Franz Leblos</td>
+</tr>
+<tr>
+<td><strong>Městské muzeum</strong></td>
+<td>Dějiny města a regionu</td>
+</tr>
+<tr>
+<td><strong>Muzeum textilní historie</strong></td>
+<td>Pivovarská a textilní tradice kraje</td>
+</tr>
+</tbody>
+</table>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Centrum volně přístupné, muzea placená</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Na náměstí a v okolních ulicích</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.9323,17.2714">49.9323, 17.2714</a></td>
+</tr>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>~500 m</td>
+</tr>
+</tbody>
+</table>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong> — město je hezké v každém období. Léto pro kombinaci s okolní přírodou, zima pro atmosféru podhůří.</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Šumperk</td>
+<td>30 km</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>70 km</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>145 km</td>
+<td>1:50 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>95 km</td>
+<td>1:20 h</td>
+</tr>
+</tbody>
+</table>
+<p>Po silnici I/11 (Šumperk ↔ Bruntál). Vlakové spojení z Valšova (trať 311).</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-janovice-rymarov/">Janovice</a></strong> (3 km) — renesanční zámek, křížová cesta z litinových náhrobků, historický pivovar</li>
+<li><strong><a href="../cz-ruda-tvrdkov/">Ruda u Tvrdkova</a></strong> (12 km) — barokní kostel Panny Marie Sněžné, křížová cesta na Křížový vrch (národní kulturní památka)</li>
+<li><strong>Rešovské vodopády</strong> (~10 km) — skalní soutěska s vodopády, naučná stezka</li>
+<li><strong><a href="../cz-raseliniste-skritek/">Rašeliniště Skřítek</a></strong> (~25 km) — NPR, prastarý rašelinný les</li>
+<li><strong>Horní Město</strong> (8 km) — kostel sv. Máří Magdalény (1611), historická hornická obec</li>
+</ul>
+<h3>Zajímavosti</h3>
+<ul>
+<li>Rýmařov je známý svými <strong>domy s černými střechami</strong> — typický ráz města</li>
+<li>Má partnerská města v Itálii, Francii, Německu, Polsku, Belgii i na Slovensku</li>
+<li>Obyvatelé do roku 1945 byli převážně německojazyční</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/R%C3%BDma%C5%99ov">Rýmařov — Wikipedia</a></li>
+<li><a href="https://www.rymarovsko.cz">Rýmařovsko — turistika</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMklEQVR42tzUMW7DMAwF0G9o0NZcQIiukSGAr+Rsnmpu2aorGeiga7jgBZTNg6BfuEmTzVG8tdzeYJjmN4l/V5ZMDlPvI5m2WNBhRzERqHLIJ4oDo59rPQ2ks/XOcP1mC04kqY/+101eNLheH/NZNYBGxYiO9whWbQOTD3o2kfMmlzaoTL3n/trvMwdelu8zcfp9/6rR5DdPPyu/Yp2ZXAcLNPMWWzk2E6aeLLc8nriY4nac0d6ef2I0FAwqPhZb589i6AZ37/c1W47wCUNuyyHV+AODBrPs0wF1bhgcsp1sleX4jp2hsrRpg38S7/LA0bPGyz1BR/roZ9RYcFLq7Mf9fR9XvdyHzlnDcp3HBiuBvPyItQ7mrCRRY0HnU4YZGatMXihucO0t3xf9t+s7AAD//1SGUQpjQrz1AAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
