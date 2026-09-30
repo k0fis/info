@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Mladečské jeskyně a Třesín (pravěké jeskyně, krasové vyvěračky, naučná stezka) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Mladečské jeskyně a Třesín (pravěké jeskyně, krasové vyvěračky, naučná stezka)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">historie</span> <span class="tag">archeologie</span> </div>
+<div class="meta"><p class="meta-item">📍 Mladeč 64, 783 21 Mladeč</p><p class="meta-item">🌐 <a href="https://mladecske.caves.cz/" target="_blank">mladecske.caves.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.7094, 17.0117], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.7094, 17.0117]).addTo(dmap);
+</script>
+<div class="content"><h2>Mladečské jeskyně — nejstarší kromaňonci střední Evropy</h2>
+<p><strong>Mladečské jeskyně</strong> v kopci <strong>Třesín</strong> (345 m) u Litovle jsou jedním z nejdůležitějších pravěkých nalezišť v Evropě. Ukrývají <strong>největší a nejstarší osídlení kromaňonců (Homo sapiens) ve střední Evropě</strong> — nálezy z doby přes 30 000 let. V <strong>Síni mrtvých</strong> bylo objeveno přes 100 lidských kostí od 7–8 jedinců spolu s fosiliemi jeskynních lvů, medvědů, sobů a praturů.</p>
+<p>Jeskyně jsou vytesány v devonských vápencích a celý kopec Třesín je krasovým systémem — voda, která do něj vteče, vyvěrá o kus dál jako <strong>Řimické vyvěračky</strong> (krasové prameny). Vedle jeskyní tu najdete <strong>romantické stavby</strong> Liechtensteinů, <strong>speleoterapeutickou jeskyni</strong> a <strong>naučnou stezku</strong> po celém kopci.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prohlídka</strong></td>
+<td>400 m, cca <strong>40 minut</strong>, s průvodcem</td>
+</tr>
+<tr>
+<td><strong>Teplota v jeskyni</strong></td>
+<td>10–11 °C, vlhkost 99 %</td>
+</tr>
+<tr>
+<td><strong>Schody</strong></td>
+<td>92 schodů</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>Duben–září (otevírací doba 9:00–16:00)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Placené, online vstupenky na webu</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Malé P (340 m od jeskyní), větší P (700 m)</td>
+</tr>
+<tr>
+<td><strong>Vlak</strong></td>
+<td>Zastávka 750 m od jeskyní</td>
+</tr>
+<tr>
+<td><strong>Autobus</strong></td>
+<td>Zastávka 400 m</td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td>+420 730 574 627, mladec@caves.cz</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.7094,17.0117">49.7094, 17.0117</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět</h3>
+<p><strong>Mladečské jeskyně</strong> — krápníky (stalaktity, stalagmity, sintrové náteky), dominantní stalagmit <strong>„Mumie&quot;</strong> (přes 2 m). Síň mrtvých s pravěkými nálezy. Elektrické osvětlení, průvodce.</p>
+<p><strong>Třesín</strong> (345 m) — vápencový zalesněný kopec, <strong>národní přírodní památka</strong>. Naučná stezka po celém vrchu:</p>
+<ul>
+<li>Romantické stavby Liechtensteinů (historický most aj.)</li>
+<li>Jeskyně Ve štole (jižní svah) — slouží ke <strong>speleoterapii</strong> (léčba dýchacích cest)</li>
+<li>Výhledy z hřebene</li>
+</ul>
+<p><strong>Řimické vyvěračky</strong> — krasové prameny na úpatí Třesína. Voda, která se vsakuje do kopce, vyvěrá jako silné prameny — fascinující přírodní jev. Přístupné po naučné stezce.</p>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — v jeskyni jen 10–11 °C, i v létě!</li>
+<li>Pevnou obuv (92 schodů, vlhký terén v jeskyni + naučná stezka)</li>
+<li>Svítilnu nepotřebujete (elektrické osvětlení)</li>
+<li>Svačinu na procházku po Třesínu</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Duben–září</strong>: jeskyně otevřené</li>
+<li><strong>Nejlepší</strong>: květen–červen (příjemné počasí na naučnou stezku, vyvěračky mají dostatek vody)</li>
+<li><strong>Léto</strong>: ideální kombinace jeskyně (chlad 10 °C) + procházka po Třesínu</li>
+<li><strong>Mimo sezónu</strong>: jeskyně zavřené, ale Třesín a vyvěračky přístupné celoročně</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Naplánujte <strong>půlden</strong>: jeskyně (40 min) + naučná stezka po Třesínu + vyvěračky (celkem 2–3 h)</li>
+<li><strong>Online vstupenky</strong> — v sezóně bývá plno, rezervujte předem</li>
+<li>Jeskyně jsou vhodné i pro <strong>děti</strong> — prohlídka není dlouhá a příběh kromaňonců je fascinující</li>
+<li>Na Třesínu hledejte <strong>Liechtensteinské romantické stavby</strong> — most a další architektonické prvky v lese</li>
+<li>Speleoterapie v jeskyni Ve štole — pro zájemce s dýchacími potížemi (na objednání)</li>
+<li>Litovel je jen 4 km — kombinujte s návštěvou pivovaru Litovel</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Olomouc</td>
+<td>25 km</td>
+<td>0:25 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>110 km</td>
+<td>1:20 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>85 km</td>
+<td>1:10 h</td>
+</tr>
+<tr>
+<td>Šumperk</td>
+<td>35 km</td>
+<td>0:35 h</td>
+</tr>
+<tr>
+<td>Litovel</td>
+<td>4 km</td>
+<td>0:05 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem po silnici z Litovle směr Mladeč. Vlakem: zastávka Mladeč (trať Olomouc–Litovel–Šumperk), 750 m od jeskyní. Autobusem: zastávka 400 m.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Litovel</strong> (4 km) — historické město, pivovar Litovel, Hanácké náměstí</li>
+<li><strong>Litovelské Pomoraví</strong> (přímo v CHKO) — lužní lesy, cyklotrasy podél Moravy</li>
+<li><strong>Javoříčské jeskyně</strong> (15 km) — další jeskynní systém s bohatou krápníkovou výzdobou</li>
+<li><strong>Bouzov</strong> (12 km) — pohádkový hrad (Liechtensteinská přestavba)</li>
+<li><strong>Olomouc</strong> (25 km) — UNESCO sloup Nejsvětější Trojice, historické centrum</li>
+<li><strong><a href="../cz-dinosauri-muzeum-certoryje/">Dinosauří muzeum Čertoryje</a></strong> (30 km) — repliky koster</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://mladecske.caves.cz/">Mladečské jeskyně — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Mlade%C4%8Dsk%C3%A9_jeskyn%C4%9B">Mladečské jeskyně na Wikipedii</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/T%C5%99es%C3%ADn">Třesín na Wikipedii</a></li>
+<li><a href="https://www.caves.cz/">Správa jeskyní ČR</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABYUlEQVR42tTUsY3sIBAG4EEEk+EGkGhjMlrCDWC7AdwSGW0guYHbjMBintj1u+h0THpknwM0+gf/8OfPwrwD2giZuQlsQO8G7jVTBZLYX2dHUJyvLnQKUAM2sc/d81Gy0KATkE4A3/P+6oU5rcWuhb7z+NXvK8Au/zGz8byvTZ+FuEu85BqB3JnbHekHG3DnwXw0uM4ssCr3ejT34nK975/ZIL9exapS3KsJrHKNW6sBcl0kBq+7KrcqeHGWGO26Uw0e7wgCj/0GvHb0bieBx66+Rsz5k+/MBq+uuAb07pP3xEuxxsC9tOJY4rHrs0FE0u98ZzYeti+6Vcv1M9/MpFP0uiM972VmsCGS3Rrb7UeT243XCUePCDw+RXCJSCcSePTTmvng9pln5rHf6Ln7plnkd3/cAJ6fPOdOUAOgZqFTID5aft7nzKCPTnVjfP7HiUc/AV1nYauywH/r/AsAAP//2dM94KOIbVsAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
