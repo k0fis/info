@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Šerák a Jiřího chata (kamenná horská chata v 1 323 m, lanovka z Ramzové) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Šerák a Jiřího chata (kamenná horská chata v 1 323 m, lanovka z Ramzové)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">hory</span> <span class="tag">turistika</span> <span class="tag">lyzovani</span> <span class="tag">chata</span> </div>
+<div class="meta"><p class="meta-item">🌐 <a href="https://www.serak.cz/" target="_blank">www.serak.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.1567, 17.1083], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.1567, 17.1083]).addTo(dmap);
+</script>
+<div class="content"><h2>Šerák — Jiřího chata a hřebenové výhledy Jeseníků</h2>
+<p><strong>Šerák</strong> (1 351 m) je desátá nejvyšší hora Česka a jeden z nejkrásnějších vrcholů Hrubého Jeseníku. Těsně pod ním v 1 323 m stojí <strong>Jiřího chata</strong> (Chata Jiřího) — kamenná horská chata s restaurací, ubytováním a legendárním pivem „Šerák&quot; z místního pivovaru. Chata byla postavena v roce 1888 a po požáru obnovena 1894. Masivní kamenná stavba dodnes funguje jako klasická horská útulna.</p>
+<p>Šerák leží na historické hranici Moravy a Slezska, uprostřed <strong>Národní přírodní rezervace Šerák–Keprník</strong> a v CHKO Jeseníky. Z vrcholu se otevírají panoramatické výhledy na hřebeny Jeseníků, Králický Sněžník a za dobré viditelnosti až na Tatry. Největší bonus: na Šerák vede <strong>dvoustupňová sedačková lanovka z Ramzové</strong> — dostanete se nahoru pohodlně i s dětmi.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>1 351 m (vrchol), 1 323 m (chata)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (příroda); lanovka placená</td>
+</tr>
+<tr>
+<td><strong>Lanovka</strong></td>
+<td>Dvoustupňová sedačka z Ramzové — provoz celoročně (ověřit sezónu na webu Ski Parku Ramzová)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>P Ramzová (u lanovky a vlakové stanice)</td>
+</tr>
+<tr>
+<td><strong>Ubytování</strong></td>
+<td>Jiřího chata — pokoje i turistická noclehárna (rezervace nutná!)</td>
+</tr>
+<tr>
+<td><strong>Restaurace</strong></td>
+<td>Jiřího chata — teplá jídla, pivo Šerák</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.1567,17.1083">50.1567, 17.1083</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět a dělat</h3>
+<p><strong>Jiřího chata</strong> — oběd s výhledem, ochutnávka piva Šerák, nocleh vysoko v horách. Atmosféra autentické horské chaty, ne hotelového resortu.</p>
+<p><strong>Hřebenovka Šerák → Keprník</strong> — klasická jesenická hřebenovka přes Národní přírodní rezervaci. Subalpínské louky, zakrslé smrky, rašeliniště. Nenáročná trasa po hřebeni (cca 1,5 h na Keprník, 1 423 m).</p>
+<p><strong>Lanovka z Ramzové</strong> — dvoustupňová sedačková lanovka, pohodlný výstup. Ideální pro rodiny, starší turisty nebo prostě když nechcete šlapat 700 výškových metrů.</p>
+<p><strong>Ski Park Ramzová</strong> — zimní lyžování: 10 vleků, 9,6 km sjezdovek všech obtížností. Běžky po Jesenické lyžařské magistrále (upravované stopy po hřebenech).</p>
+<p><strong>Obří skály</strong> — skalní útvary nedaleko vrcholu.</p>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pevné boty (i při výstupu lanovkou — terén kolem chaty je horský)</li>
+<li>Větrovka + fleece (průměrná roční teplota na Šeráku jen 2,2 °C!)</li>
+<li>Pláštěnka (1 200 mm srážek ročně, počasí se mění rychle)</li>
+<li>Hotovost (na chatě nemusí brát karty — ověřit)</li>
+<li>V zimě: vhodné oblečení na sníh (sníh leží 180 dní v roce)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (červen–září)</strong>: hřebenovky, výhledy, lanovka. Ideální počasí, ale i v létě může být na vrcholu 5–10 °C</li>
+<li><strong>Zima (prosinec–březen)</strong>: lyžování v Ramzové, běžky na hřebenech, zasněžená chata</li>
+<li><strong>Podzim (říjen)</strong>: nádherné barvy, méně lidí, ale pozor na mlhy</li>
+<li><strong>Pozor na vítr</strong>: Šerák je exponovaný vrchol — v nepříznivém počasí lanovka nejede</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Pivo Šerák</strong> — místní speciál, vařený pro chatu. Dát si ho v 1 323 m s výhledem na Jeseníky je zážitek</li>
+<li>Z Ramzové jede <strong>vlak</strong> (nejvýše položená zastávka expresu v ČR, 760 m) — dá se přijet i bez auta</li>
+<li>Kombinujte s <strong>hřebenovkou na Keprník</strong> (1 423 m) — snadný hřeben, rašeliniště, vzácná květena</li>
+<li>Nocleh na chatě rezervujte předem, kapacita je omezená</li>
+<li>Ski Park Ramzová je rodinný areál — vhodný pro děti i začátečníky</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ostrava</td>
+<td>110 km</td>
+<td>1:40 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>75 km</td>
+<td>1:15 h</td>
+</tr>
+<tr>
+<td>Šumperk</td>
+<td>25 km</td>
+<td>0:30 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>175 km</td>
+<td>2:20 h</td>
+</tr>
+<tr>
+<td>Jeseník</td>
+<td>20 km</td>
+<td>0:25 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem do <strong>Ramzové</strong> (sedlo mezi Šumperkem a Jeseníkem), parkování u lanovky. Alternativně vlakem — trať Šumperk–Hanušovice–Jeseník, zastávka Ramzová.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Keprník</strong> (3 km po hřebeni) — 1 423 m, subalpínské louky, NPR</li>
+<li><strong>Červenohorské sedlo</strong> (10 km) — lyžařský areál, rozcestí tras</li>
+<li><strong><a href="../cz-ztracene-kameny/">Ztracené kameny</a></strong> (15 km po hřebeni) — skalní výchoz 1 250 m</li>
+<li><strong>Rejvíz</strong> (20 km) — rašeliniště, Mechové jezírko, naučná stezka</li>
+<li><strong>Velké Losiny</strong> (20 km) — zámek, ruční papírna (UNESCO), termální koupaliště</li>
+<li><strong><a href="../cz-raseliniste-skritek/">Rašeliniště Skřítek</a></strong> (25 km) — NPR, prastarý rašelinný les</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.serak.cz/">Jiřího chata na Šeráku</a></li>
+<li><a href="https://www.skipark-ramzova.cz/">Ski Park Ramzová</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/%C5%A0er%C3%A1k">Šerák na Wikipedii</a></li>
+<li><a href="https://jeseniky.nature.cz/">CHKO Jeseníky</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42tzUMa6jMBAG4B+5oOQCVnwNipW4kuno7K3olishpeAajnwB01GM8q+CsmzHm9C9NxVfgWz9Mx78uKrJ4ooN+8cVR/QCGcwCqDxJz8mCi9u0zpOj09u7mAZbX3SEd5OE/P/+5ybXPNkhL0c+pwZQpZCQ56MFp37lR7rRsOIVI9z/2OCixa3TuP4t3tGMZklQeZVG4GJeHrPGCPeVZHRL2vP72PhV5cKNy7NWuZ97Fm7oqg0aw0yMAts+26JxI3veFu//P3Qd0WQaSv3sisYFfQJHi8escuz2/kr37teXRi/BMPM4/yO/5leQR87u30Sfet8n5P5+VY7waNLg5lut8iQePg2OnMtF25CjtNWmNbwZM0loHOENX/PHY/+cmlwlpGA7tLjg711/AwAA//93amDlXqOMIgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
