@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Hranická propast + Zbrašovské jeskyně (nejhlubší zatopená propast světa, aragonitové jeskyně) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Hranická propast + Zbrašovské jeskyně (nejhlubší zatopená propast světa, aragonitové jeskyně)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">jeskyne</span> <span class="tag">priroda</span> <span class="tag">geologie</span> </div>
+<div class="meta"><p class="meta-item">📍 Teplice nad Bečvou, 753 01</p><p class="meta-item">🌐 <a href="https://zbrasovske.caves.cz/" target="_blank">zbrasovske.caves.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.5297, 17.7647], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.5297, 17.7647]).addTo(dmap);
+</script>
+<div class="content"><h2>Hranická propast — nejhlubší zatopená propast na světě</h2>
+<p>V nenápadných <strong>Teplicích nad Bečvou</strong> u Hranic se skrývá světový unikát: <strong>Hranická propast</strong> — nejhlubší zatopená sladkovodní jeskyně na planetě. Suchá část měří 69,5 m, zatopená dalších <strong>450+ m</strong> (stav 2022), celkem přes <strong>519,5 m</strong> — a <strong>dno stále nebylo dosaženo</strong>. Vědci odhadují skutečnou hloubku na 800–1 200 m na základě teploty a chemického složení vody.</p>
+<p>Hned vedle leží <strong>Zbrašovské aragonitové jeskyně</strong> — nejteplejší jeskyně v Česku (14 °C) s unikátními <strong>vorovými stalagmity</strong> a CO₂ gejzíry. Dvě geologické superlativy na jednom místě, vzdálené od sebe pár set metrů.</p>
+<h3>Hranická propast</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hloubka</strong></td>
+<td>519,5+ m (69,5 m suchá + 450+ m zatopená), dno neobjeveno</td>
+</tr>
+<tr>
+<td><strong>Přístup</strong></td>
+<td>Značená stezka z Teplic nad Bečvou (cca 500 m od nádraží)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma — vyhlídková plošina nad propastí</td>
+</tr>
+<tr>
+<td><strong>Omezení</strong></td>
+<td>Národní přírodní rezervace — pouze po značené cestě</td>
+</tr>
+</tbody>
+</table>
+<p>Z vyhlídkové plošiny se podíváte 69,5 m dolů na <strong>Hranické jezírko</strong> — hladinu termální vody, pod kterou propast pokračuje do neznámých hlobin. V roce 2016 dosáhl robot hloubky 404 m, potápěč Krzysztof Starnawski v roce 2022 potvrdil 450+ m — a stále ne dno.</p>
+<h3>Zbrašovské aragonitové jeskyně</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prohlídka</strong></td>
+<td>375 m, cca <strong>50 minut</strong>, s průvodcem</td>
+</tr>
+<tr>
+<td><strong>Teplota</strong></td>
+<td><strong>14 °C</strong> — nejteplejší jeskyně v ČR</td>
+</tr>
+<tr>
+<td><strong>Vlhkost</strong></td>
+<td>98 %</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Placené (online vstupenky)</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>Celoročně (ověřit aktuální otevírací dobu)</td>
+</tr>
+<tr>
+<td><strong>Návštěvnost</strong></td>
+<td>~60 000 turistů ročně</td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td><a href="https://zbrasovske.caves.cz/">zbrasovske.caves.cz</a></td>
+</tr>
+</tbody>
+</table>
+<p>Unikátní <strong>vorové stalagmity</strong> (dříve gejzírové) — kuželovitý tvar, desítky cm vysoké, <strong>jediné v Evropě</strong>. Jeskyně vznikly hydrotermálním krasem — teplá minerální voda rozpouštěla vápence zdola. V dolních částech nebezpečná koncentrace <strong>CO₂</strong> (až 40 % — trvale nepřístupné). Jeskyně objeveny v roce 1912 při lámání kamene.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>V Teplicích nad Bečvou</td>
+</tr>
+<tr>
+<td><strong>Vlak</strong></td>
+<td>Zastávka Teplice nad Bečvou (trať Hranice–Valašské Meziříčí), 500 m</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Restaurace v Teplicích, lázně Teplice nad Bečvou</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.5297,17.7647">49.5297, 17.7647</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Teplé oblečení</strong> — v aragonitových jeskyních je 14 °C (teplejší než běžné jeskyně, ale přesto chlad)</li>
+<li>Pevnou obuv (vlhký terén v jeskyních + stezka k propasti)</li>
+<li>Fotoaparát (propast je fotogenická)</li>
+<li>Děti v pohodě — obě atrakce jsou přístupné</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Celoročně</strong>: aragonitové jeskyně jsou otevřené po celý rok</li>
+<li><strong>Jaro–podzim</strong>: propast + jeskyně + procházka podél Bečvy</li>
+<li><strong>Léto</strong>: příjemný chlad jeskyní (14 °C) jako únik z vedra</li>
+<li><strong>Pozor</strong>: propast je volně přístupná, ale jeskyně mají omezenou kapacitu prohlídek</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Naplánujte <strong>2–3 hodiny</strong>: jeskyně (50 min) + procházka k propasti (30 min) + okolí</li>
+<li><strong>Propast je zdarma</strong> — stačí dojít po stezce k vyhlídkové plošině</li>
+<li>Fascinující pro děti: „nejhlubší na světě&quot; a „dno nikdo nikdy neviděl&quot; zapůsobí</li>
+<li><strong>Lázně Teplice nad Bečvou</strong> — minerální voda ze stejného termálního systému jako propast</li>
+<li>Aragonitové jeskyně bývají méně navštěvované než Moravský kras — kratší fronty</li>
+<li>Robot dosáhl 404 m v roce 2016 — od té doby se hloubka stále zvětšuje s novými výzkumy</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Olomouc</td>
+<td>45 km</td>
+<td>0:40 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>75 km</td>
+<td>1:00 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>110 km</td>
+<td>1:20 h</td>
+</tr>
+<tr>
+<td>Hranice na Moravě</td>
+<td>5 km</td>
+<td>0:05 h</td>
+</tr>
+<tr>
+<td>Valašské Meziříčí</td>
+<td>20 km</td>
+<td>0:20 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem k Teplicím nad Bečvou (u Hranic na Moravě). Vlakem: trať Hranice–Valašské Meziříčí, zastávka Teplice nad Bečvou.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Hranice na Moravě</strong> (5 km) — renesanční zámek, historické náměstí</li>
+<li><strong>Teplice nad Bečvou</strong> (přímo) — lázně s minerální vodou</li>
+<li><strong>Helfštýn</strong> (15 km) — jeden z největších hradů Moravy, kovářské sympozium</li>
+<li><strong>Štramberk</strong> (30 km) — „Moravský Betlém&quot;, Trúba, Štramberské uši</li>
+<li><strong>Rožnov pod Radhoštěm</strong> (35 km) — Valašské muzeum v přírodě</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://zbrasovske.caves.cz/">Zbrašovské aragonitové jeskyně — oficiální web</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Hranick%C3%A1_propast">Hranická propast na Wikipedii</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Zbra%C5%A1ovsk%C3%A9_aragonitov%C3%A9_jeskyn%C4%9B">Zbrašovské jeskyně na Wikipedii</a></li>
+<li><a href="https://www.caves.cz/">Správa jeskyní ČR</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABZElEQVR42tTUsa3kIBAG4B8RTAYNINEGGS3ZDdimAbulyWjDEg2sMwLkOe3t3XvJ0+6kb7KPhNEPM/j15UU2ALNApCvsYI89x8LpRNI4t2NP9hJut9K7YSB1tTek9iBWGnabUiz9u9+39iL7XMNc01ceb/08Ohig9B3xOz/zKr2Vms+VFfZ1LAudjrq98ZO7fXgeM8MerLCjc5lomFrjK58PNl0eq0RhGqYrjAQ3UTDCw2vsqO1TgiNqwgp7BlY5F1QsSWFTRW7YnSRuGgPnelM7mM+1K2y43VMevvfwuu+DvYQJiML13/t9crVlz8Fzjo+ksQRnJMy1xgcUdoi3EblqaoU1zsNfjAmCBT/Yi70uHp5Frq7w3/mow6Vk96SwFyk3jbn29vrfH/ycb5fhudv/++y9c9sWOqeUX/0pXLYcTKdYtL4RjFA8VIYth4y1cryh8HM/ObJH7cGwwr+r/gQAAP//jV1ED0cF5BAAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
