@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Keprník (4. nejvyšší hora Jeseníků, subalpínské louky, rozvodí dvou moří) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Keprník (4. nejvyšší hora Jeseníků, subalpínské louky, rozvodí dvou moří)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">priroda</span> <span class="tag">hory</span> <span class="tag">turistika</span> </div>
+<div class="meta"></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.1614, 17.1186], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.1614, 17.1186]).addTo(dmap);
+</script>
+<div class="content"><h2>Keprník — periglaciální svět na hřebeni Jeseníků</h2>
+<p><strong>Keprník</strong> (1 423 m) je čtvrtá nejvyšší hora Hrubého Jeseníku a nejvyšší bod Keprnické hornatiny. Na vrcholu stojí <strong>kamenný směrník</strong> (od roku 1946) s kruhovým rozhledem na celé Jeseníky. Hora leží v <strong>Národní přírodní rezervaci Šerák–Keprník</strong>, která chrání unikátní subalpínské louky, periglaciální tvary reliéfu z doby ledové a mrazové sruby na vrcholu.</p>
+<p>Geologicky je Keprník fascinující — je tvořen rulami a svory, na vrcholu se zachovala <strong>kryoplanační terasa</strong> a mrazový srub. Vrchol leží na <strong>hlavním evropském rozvodí</strong> mezi Baltským a Černým mořem — voda z jedné strany teče přes Odru do Baltu, z druhé přes Moravu a Dunaj do Černého moře.</p>
+<p>Nejkrásnější přístup je <strong>hřebenovkou ze Šeráku</strong> — snadná trasa po holých hřebenech s neustálými výhledy.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>1 423 m</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Zdarma (volná příroda)</td>
+</tr>
+<tr>
+<td><strong>Zázemí na vrcholu</strong></td>
+<td>Žádné — nejbližší chata je <a href="../cz-serak/">Jiřího chata na Šeráku</a> (cca 1,5 h)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Ramzová (lanovka + pěšky), Kouty nad Desnou, Filipovice</td>
+</tr>
+<tr>
+<td><strong>Ochrana</strong></td>
+<td>NPR Šerák–Keprník — povinnost zůstat na značených cestách!</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.1614,17.1186">50.1614, 17.1186</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Přístupové trasy</h3>
+<table>
+<thead>
+<tr>
+<th>Trasa</th>
+<th>Délka</th>
+<th>Čas</th>
+<th>Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../cz-serak/">Šerák</a> → Keprník</td>
+<td>4 km</td>
+<td>1–1,5 h</td>
+<td>Hřebenovka, nejkrásnější varianta — holé hřebeny, louky</td>
+</tr>
+<tr>
+<td><a href="../cz-ramzova/">Ramzová</a> → Šerák → Keprník</td>
+<td>lanovka + 4 km</td>
+<td>1,5–2 h</td>
+<td>Pohodlný start lanovkou</td>
+</tr>
+<tr>
+<td>Kouty nad Desnou → Keprník</td>
+<td>9 km</td>
+<td>3–3,5 h</td>
+<td>Stoupání z údolí, lesem</td>
+</tr>
+<tr>
+<td>Červenohorské sedlo → Keprník</td>
+<td>8 km</td>
+<td>2,5–3 h</td>
+<td>Přes Vřesovou studánku</td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Pevné boty</strong> — terén na hřebeni je kamenitý, mrazové sruby</li>
+<li><strong>Větrovka + fleece</strong> — na holém hřebeni vždy fouká, i v létě pod 10 °C</li>
+<li><strong>Dostatek vody a jídla</strong> — na Keprníku není žádné zázemí</li>
+<li><strong>Pláštěnka</strong> — počasí se na hřebenech mění za minuty</li>
+<li><strong>Dalekohled</strong> — kruhový rozhled, za jasna vidět daleko</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (červen–září)</strong>: ideální pro hřebenovky, subalpínské louky v květu (červen–červenec)</li>
+<li><strong>Podzim (říjen)</strong>: zlaté barvy, čistý vzduch, výhledy</li>
+<li><strong>Zima</strong>: hřeben pokrytý sněhem, krásné ale náročné — jen se zkušenostmi</li>
+<li><strong>Jaro (květen)</strong>: sníh na hřebenech může ležet do května</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li><strong>Nejlepší okruh</strong>: <a href="../cz-ramzova/">Ramzová</a> (lanovka) → <a href="../cz-serak/">Šerák</a> → Keprník → zpět na Šerák → lanovka dolů (5–6 h celkem, nenáročné)</li>
+<li>Na hřebeni mezi Šerákem a Keprníkem potkáte <strong>zakrslé smrky</strong> ohýbané větrem — „vlajkové formy&quot;</li>
+<li>Vrcholový směrník z roku 1946 ukazuje směry a vzdálenosti okolních hor</li>
+<li><strong>Zůstaňte na cestách</strong> — NPR Šerák–Keprník chrání vzácné periglaciální tvary a subalpínskou flóru</li>
+<li>Rozvodí Baltu a Černého moře — na Keprníku stojíte doslova na hraně dvou povodí</li>
+</ul>
+<h3>Jak se dostat</h3>
+<p>Keprník nemá vlastní parkování — výchozí body:</p>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost do výchozího bodu</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ostrava → Ramzová</td>
+<td>110 km</td>
+<td>1:40 h</td>
+</tr>
+<tr>
+<td>Olomouc → Ramzová</td>
+<td>75 km</td>
+<td>1:15 h</td>
+</tr>
+<tr>
+<td>Šumperk → Ramzová</td>
+<td>25 km</td>
+<td>0:30 h</td>
+</tr>
+<tr>
+<td>Brno → Ramzová</td>
+<td>175 km</td>
+<td>2:20 h</td>
+</tr>
+</tbody>
+</table>
+<p>Nejpohodlnější: autem/vlakem do <strong><a href="../cz-ramzova/">Ramzové</a></strong>, lanovkou na <a href="../cz-serak/">Šerák</a>, po hřebeni na Keprník.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-serak/">Šerák + Jiřího chata</a></strong> (1,5 h pěšky) — kamenná chata, pivo Šerák, lanovka</li>
+<li><strong><a href="../cz-ramzova/">Ramzová</a></strong> (2,5 h pěšky / lanovka) — lyžování, bazén, vlak</li>
+<li><strong><a href="../cz-ztracene-kameny/">Ztracené kameny</a></strong> (po hřebeni jihozápadně) — skalní výchoz 1 250 m</li>
+<li><strong>Červenohorské sedlo</strong> (2,5 h pěšky) — lyžařský areál, rozcestí tras</li>
+<li><strong>Rejvíz</strong> (20 km autem) — rašeliniště, Mechové jezírko</li>
+<li><strong>Velké Losiny</strong> (25 km autem) — zámek, ruční papírna, termální koupaliště</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://cs.wikipedia.org/wiki/Keprn%C3%ADk">Keprník na Wikipedii</a></li>
+<li><a href="https://jeseniky.nature.cz/">NPR Šerák–Keprník</a></li>
+<li><a href="https://jeseniky.nature.cz/">CHKO Jeseníky</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABMUlEQVR42tzUMY7cMAwF0D9QodIXEJbXmM5Xsjt3Uip39pUMpNA1FPACmk6F4B84m8x2Ho27LLtXEPggReHblSWz69IkkcxXHDAITTARaPJaR81uYpTS6opqnW03c5ouO2BMXmf9yn9u8qGrm/RrPqcGcNPsoNtzBae26zFvpYksVwzPICFNwo8/eV+6qyMDZxPTZ4CX5o80SFD+ik0eq9dsCNzKFdvFLJLTRO6f83/tRx1Y0D/7z300DVok7rbNfQZkdv/yvevFBNfB136/5xaHPqMzxUTc0eL15yLZodpk21zH5GGVe58v+Hi/tauem7DFx38iKylRClocMCq1yPbxvMdTH/dNZw33Oy66Aqi4MTdaqbOSRIsDBnjAbIxNJh/Mybv+737f9P9dvwMAAP//2NxbLDJchmsAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
