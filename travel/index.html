@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">147 / 147</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">148 / 148</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -325,6 +325,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-velehrad/">Česko — Velehrad (poutní bazilika a klášter)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.1056&x=17.3942&z=14" target="_blank">📍</a></h3>
   <p class="desc">Velehrad — nejslavnější poutní místo Moravy</p>
   <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="pamatky">#pamatky</span> <span class="tag" data-tag="poutni-misto">#poutni-misto</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cesko zamek termy muzeum priroda" data-lat="50.0317" data-lng="17.0403">
+  <h3><a href="cz-velke-losiny/">Česko — Velké Losiny (renesanční zámek, ruční papírna, termální koupaliště)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0317&x=17.0403&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Velké Losiny — tři atrakce na jednom místě</p>
+  <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="zamek">#zamek</span> <span class="tag" data-tag="termy">#termy</span> <span class="tag" data-tag="muzeum">#muzeum</span> <span class="tag" data-tag="priroda">#priroda</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz mesto historie vino" data-lat="48.8556" data-lng="16.0489">
   <h3><a href="cz-znojmo/">&#34;Znojmo — historické město, podzemí, víno&#34;</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.8556&x=16.0489&z=14" target="_blank">📍</a></h3>
@@ -903,6 +908,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.4111,lng:16.7381,title:"Česko — Sloupsko-šošůvské jeskyně (nejdelší zpřístupněný systém v ČR)",slug:"cz-sloupsko-sosuvske-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:50.0031,lng:17.0928,title:"Česko — Sobotín (průmyslové dědictví, mauzoleum Kleinů, brána Jeseníků)",slug:"cz-sobotin",tags:"travel, vylety, cz, historie, architektura, jeseniky, pamatky"},
 {lat:49.1056,lng:17.3942,title:"Česko — Velehrad (poutní bazilika a klášter)",slug:"cz-velehrad",tags:"travel, vylety, cesko, pamatky, poutni-misto"},
+{lat:50.0317,lng:17.0403,title:"Česko — Velké Losiny (renesanční zámek, ruční papírna, termální koupaliště)",slug:"cz-velke-losiny",tags:"travel, vylety, cesko, zamek, termy, muzeum, priroda"},
 {lat:48.8556,lng:16.0489,title:"\"Znojmo — historické město, podzemí, víno\"",slug:"cz-znojmo",tags:"travel, vylety, cz, mesto, historie, vino"},
 {lat:50.0567,lng:17.1128,title:"Česko — Ztracené kameny (skalní výchoz v Jeseníkách, 1250 m)",slug:"cz-ztracene-kameny",tags:"travel, vylety, cesko, priroda, skaly, jeseniky, hory"},
 {lat:47.5670,lng:10.7000,title:"Německo — Füssen / Allgäu (cyklovýlety kolem jezer)",slug:"de-fuessen",tags:"travel, vylety, nemecko, cyklo, jezera, priroda"},

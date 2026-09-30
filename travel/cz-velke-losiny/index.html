@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Velké Losiny (renesanční zámek, ruční papírna, termální koupaliště) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Velké Losiny (renesanční zámek, ruční papírna, termální koupaliště)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">zamek</span> <span class="tag">termy</span> <span class="tag">muzeum</span> <span class="tag">priroda</span> </div>
+<div class="meta"><p class="meta-item">📍 Komenského 235, 788 15 Velké Losiny</p><p class="meta-item">🌐 <a href="https://www.termaly-losiny.cz/" target="_blank">www.termaly-losiny.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0317, 17.0403], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0317, 17.0403]).addTo(dmap);
+</script>
+<div class="content"><h2>Velké Losiny — tři atrakce na jednom místě</h2>
+<p>Velké Losiny jsou městečko (2 500 obyvatel) 9 km od Šumperka v podhůří Jeseníků, které nabízí unikátní trojkombinaci: <strong>renesanční zámek</strong> s čarodějnickými procesy, <strong>poslední ruční papírnu v Evropě</strong> a <strong>termální koupaliště</strong> s vodou z hlubin přes 1 000 metrů. Za jeden den stihnete kulturu, historii i relaxaci — ideální výlet pro celou rodinu.</p>
+<h3>Zámek Velké Losiny</h3>
+<p>Renesanční zámek z let 1580–1589, postavený rodem Žerotínů na místě starší tvrze. Fasáda pokrytá <strong>sgrafitovou výzdobou</strong>, uvnitř barokní fresky od Jana Kryštofa Handkeho. Zámek je smutně proslulý <strong>čarodějnickými procesy</strong> (1678–1692), při kterých bylo popraveno asi 56 lidí — expozice v zámku tuto temnou kapitolu dokumentuje.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prohlídky</strong></td>
+<td>Několik okruhů (rod Žerotínů, čarodějnické procesy aj.)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Placené, slevy pro děti/seniory</td>
+</tr>
+<tr>
+<td><strong>Park</strong></td>
+<td>Bezbariérový, francouzská + anglická zahrada</td>
+</tr>
+<tr>
+<td><strong>Kavárna</strong></td>
+<td>V zámeckém podhradí</td>
+</tr>
+<tr>
+<td><strong>Web</strong></td>
+<td><a href="https://www.zamek-velkelosiny.cz/">zamek-velkelosiny.cz</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Ruční papírna</h3>
+<p>Funguje <strong>nepřetržitě od roku 1550</strong> — je to <strong>poslední ruční papírna v Evropě</strong>, kde se dodnes vyrábí ručně čerpaný papír tradičními postupy. Prohlídka ukazuje celý proces výroby. Papírna je národní kulturní památka.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prohlídky</strong></td>
+<td>S průvodcem, ukázka výroby</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>Placené</td>
+</tr>
+<tr>
+<td><strong>Web</strong></td>
+<td><a href="https://www.rucnipapir.cz/">rucnipapir.cz</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Termály Losiny</h3>
+<p>Moderní termální koupaliště s přírodní léčivou vodou z hloubky přes 1 000 metrů. Ročně přes <strong>250 000 návštěvníků</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bazény</strong></td>
+<td>9 termálních bazénů, teplota vody až <strong>36 °C</strong></td>
+</tr>
+<tr>
+<td><strong>Atrakce</strong></td>
+<td>Tobogány, skluzavky, vodní atrakce</td>
+</tr>
+<tr>
+<td><strong>Wellness</strong></td>
+<td>Saunový svět, masáže</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>Celoročně (venkovní bazény zavírají koncem září)</td>
+</tr>
+<tr>
+<td><strong>Kontakt</strong></td>
+<td>+420 583 394 443, info@termaly-losiny.cz</td>
+</tr>
+<tr>
+<td><strong>Web</strong></td>
+<td><a href="https://www.termaly-losiny.cz/">termaly-losiny.cz</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>U termálů, u zámku</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Restaurace v termálech, kavárna v zámku, obchody ve městě</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.0317,17.0403">50.0317, 17.0403</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Plavky a ručník</strong> — termální koupaliště (nebo zapůjčení na místě)</li>
+<li>Pohodlnou obuv na prohlídku zámku a papírny</li>
+<li>V létě opalovací krém (venkovní bazény)</li>
+<li>Hotovost i karta</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (červen–září)</strong>: venkovní bazény + zámek + papírna — plný zážitek</li>
+<li><strong>Celoročně</strong>: kryté termální bazény a saunový svět fungují celý rok</li>
+<li><strong>Jaro/podzim</strong>: menší fronty, příjemnější prohlídky zámku</li>
+<li><strong>Zima</strong>: termály v zimě mají zvláštní kouzlo (horká voda + studený vzduch)</li>
+<li><strong>Svátojánské slavnosti</strong> (od 2003) — kulturní akce v létě</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Naplánujte celý den: <strong>dopoledne zámek + papírna, odpoledne termály</strong></li>
+<li>Termály bývají o víkendech plné — ve všední den je klid</li>
+<li>Čarodějnické procesy jsou silný zážitek — menším dětem může být expozice strašidelná</li>
+<li>V papírně si můžete <strong>koupit ručně čerpaný papír</strong> jako originální suvenýr</li>
+<li>Kombinujte s výletem do hor — <a href="../cz-ramzova/">Ramzová</a> a <a href="../cz-serak/">Šerák</a> jsou 20 km</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas autem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Šumperk</td>
+<td>9 km</td>
+<td>0:12 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>65 km</td>
+<td>1:00 h</td>
+</tr>
+<tr>
+<td>Ostrava</td>
+<td>120 km</td>
+<td>1:45 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>170 km</td>
+<td>2:15 h</td>
+</tr>
+<tr>
+<td>Ramzová</td>
+<td>20 km</td>
+<td>0:20 h</td>
+</tr>
+</tbody>
+</table>
+<p>Autem po silnici ze Šumperka směr Jeseník. Vlakem: trať Šumperk–Kouty nad Desnou, zastávka Velké Losiny.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-ramzova/">Ramzová</a></strong> (20 km) — horské sedlo, lanovka na Šerák, lyžování</li>
+<li><strong><a href="../cz-serak/">Šerák + Jiřího chata</a></strong> (20 km + lanovka) — 1 351 m, hřebenovky</li>
+<li><strong><a href="../cz-keprnik/">Keprník</a></strong> (25 km + turistika) — 1 423 m, rozvodí dvou moří</li>
+<li><strong>Kouty nad Desnou</strong> (10 km) — lyžařský areál, výchozí bod na Keprník</li>
+<li><strong>Červenohorské sedlo</strong> (20 km) — lyžování, rozcestí tras</li>
+<li><strong>Rejvíz</strong> (30 km) — rašeliniště, Mechové jezírko</li>
+<li><strong><a href="../cz-raseliniste-skritek/">Rašeliniště Skřítek</a></strong> (30 km) — NPR</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.termaly-losiny.cz/">Termály Losiny</a></li>
+<li><a href="https://www.zamek-velkelosiny.cz/">Zámek Velké Losiny</a></li>
+<li><a href="https://www.rucnipapir.cz/">Ruční papírna</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Velk%C3%A9_Losiny">Velké Losiny na Wikipedii</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABY0lEQVR42tTUsc3sKhAF4LEIyKABS9vGZLRkN2DjBqAlMtpAooHf2QTI52nfrlZXV1frSf/JvgShozNDv348ELfwuKgAorAjEyngqNyINQ49rWLOUvqldL7smCB6J+4/xEqTyRAchT7//WoPpLXOa+VPHl/9fMKXRqF8Iv5qF3Bk6UcVXBp7oT3S7EXGxv/wVHuayljF9lw0xpguO0+oHRr78vhxRAvjcWrs7Oy2MKaKtorCFHDmQs7a4YvCjptby7wj9FdeN6aAuFaTLB6RVR60sMmlvPK984SedunR8uOd752bhwCl4mKFyfbjotnDvvK9s+N52aUtXN79vnMwcbM4K7e1qNy2jdrC1bz7+pdtz6g9WuAQhZ8VOmV2zCZr7IHjCmMVefX5zs/9PmW4IAYq/3+f2sIBp+icE4+pWvPH/fnqRMEkLmMjjclEj3kH9aSxB3K0JlfMU1H4d81/AQAA//8QhHEn80yf5QAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
