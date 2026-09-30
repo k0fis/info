@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">143 / 143</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">144 / 144</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -80,6 +80,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('kavarna')">kavarna</button>
 <button class="tag-btn" onclick="toggleFilter('klaster')">klaster</button>
 <button class="tag-btn" onclick="toggleFilter('kone')">kone</button>
+<button class="tag-btn" onclick="toggleFilter('lazne')">lazne</button>
 <button class="tag-btn" onclick="toggleFilter('lezeni')">lezeni</button>
 <button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
 <button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
@@ -213,6 +214,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-janovice-rymarov/">Česko — Janovice u Rýmařova (křížová cesta, zámek, pivovar)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.9613&x=17.2433&z=14" target="_blank">📍</a></h3>
   <p class="desc">Janovice u Rýmařova — křížová cesta z litinových náhrobků</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="pamatky">#pamatky</span> <span class="tag" data-tag="historie">#historie</span> <span class="tag" data-tag="poutni-misto">#poutni-misto</span> <span class="tag" data-tag="jeseniky">#jeseniky</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cesko lazne priroda hory" data-lat="50.0772" data-lng="17.2986">
+  <h3><a href="cz-karlova-studanka/">Česko — Karlova Studánka (horské lázně v srdci Jeseníků)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.0772&x=17.2986&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Karlova Studánka — nejkrásnější lázně Moravy</p>
+  <div class="tags"><span class="tag" data-tag="cesko">#cesko</span> <span class="tag" data-tag="lazne">#lazne</span> <span class="tag" data-tag="priroda">#priroda</span> <span class="tag" data-tag="hory">#hory</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz jeskyne priroda moravsky-kras" data-lat="49.3607" data-lng="16.7103">
   <h3><a href="cz-katerinska-jeskyne/">Česko — Kateřinská jeskyně (největší podzemní dóm v ČR)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.3607&x=16.7103&z=14" target="_blank">📍</a></h3>
@@ -859,6 +865,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.854,lng:17.054,title:"Česko — Bradlo (kvarcitový vrch s vyhlídkou, „Moravský Blaník\")",slug:"cz-bradlo",tags:"travel, vylety, cesko, priroda, jeseniky, skaly, vyhledy, lezeni"},
 {lat:49.5642,lng:17.3375,title:"Česko — Dinosauří muzeum Čertoryje (repliky koster a fosilie u Olomouce)",slug:"cz-dinosauri-muzeum-certoryje",tags:"travel, vylety, cz, muzeum, dinosauri, deti"},
 {lat:49.9613,lng:17.2433,title:"Česko — Janovice u Rýmařova (křížová cesta, zámek, pivovar)",slug:"cz-janovice-rymarov",tags:"travel, vylety, cz, pamatky, historie, poutni-misto, jeseniky"},
+{lat:50.0772,lng:17.2986,title:"Česko — Karlova Studánka (horské lázně v srdci Jeseníků)",slug:"cz-karlova-studanka",tags:"travel, vylety, cesko, lazne, priroda, hory"},
 {lat:49.3607,lng:16.7103,title:"Česko — Kateřinská jeskyně (největší podzemní dóm v ČR)",slug:"cz-katerinska-jeskyne",tags:"travel, vylety, cz, jeskyne, priroda, moravsky-kras"},
 {lat:48.8436,lng:16.6350,title:"Česko — Klentnice a Sirotčí hrádek (Pálava, vyhlídky, víno)",slug:"cz-klentnice",tags:"travel, vylety, cesko, priroda, hrady, vino, palava"},
 {lat:49.2947,lng:16.7394,title:"Česko — Křtiny (Santiniho chrám, jeskyně Výpustek, arboretum)",slug:"cz-krtiny",tags:"travel, vylety, cz, architektura, jeskyne, priroda, poutni-misto"},

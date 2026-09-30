@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Česko — Karlova Studánka (horské lázně v srdci Jeseníků) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Česko — Karlova Studánka (horské lázně v srdci Jeseníků)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cesko</span> <span class="tag">lazne</span> <span class="tag">priroda</span> <span class="tag">hory</span> </div>
+<div class="meta"><p class="meta-item">📍 Karlova Studánka 6, 793 24 Karlova Studánka</p><p class="meta-item">🌐 <a href="https://www.karlovastudanka.cz/" target="_blank">www.karlovastudanka.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.0772, 17.2986], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.0772, 17.2986]).addTo(dmap);
+</script>
+<div class="content"><h2>Karlova Studánka — nejkrásnější lázně Moravy</h2>
+<p>Karlova Studánka je maličká lázeňská obec (172 obyvatel) v 800 m n.m., schoulená v údolí Bílé Opavy pod Pradědem. Jde o jedny z nejhezčích a <strong>nejvýše položených lázní v Česku</strong>. New York Times je zařadil mezi <strong>46 míst na světě, která stojí za návštěvu</strong> — a právem. Kombinace horského klimatu, minerálních pramenů, klasicistní lázeňské architektury a okolních jesenických lesů vytváří místo s jedinečnou atmosférou.</p>
+<p>Lázně byly založeny kolem roku 1785 po objevení léčivých pramenů. Dnes se specializují na léčbu dýchacích cest, kardiovaskulárních onemocnění a onkologických rekonvalescencí. Pro běžné turisty nabízejí bazén, wellness a procházky po lázeňských okruzích.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Horské lázně, wellness, turistika</td>
+</tr>
+<tr>
+<td><strong>Bazén/wellness</strong></td>
+<td>Vyhřívaný bazén, sauna, procedury — otevřeno i pro veřejnost (ověřit aktuální provoz na webu)</td>
+</tr>
+<tr>
+<td><strong>Minerální prameny</strong></td>
+<td>8 přírodních pramenů bohatých na CO₂, vápník, hořčík a železo — volně přístupné</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>Placené parkoviště v obci</td>
+</tr>
+<tr>
+<td><strong>Zázemí</strong></td>
+<td>Restaurace, kavárny, infocentrum, lázeňský hotel</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.0772,17.2986">50.0772, 17.2986</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co vidět a dělat</h3>
+<p><strong>Lázeňské okruhy</strong> — 4 značené procházkové trasy (bílá, zelená, modrá, červená) po okolních lesích. Různé délky a náročnosti, vhodné i pro rodiny s dětmi.</p>
+<p><strong>Geologická expozice</strong> — venkovní výstava hornin a minerálů z Jeseníků.</p>
+<p><strong>Kaple sv. Huberta</strong> — z 18. století, uprostřed lázeňského parku.</p>
+<p><strong>Umělý vodopád</strong> — na Bílé Opavě, přímo v areálu.</p>
+<p><strong>Hudební pavilon</strong> — koncerty v letní sezóně.</p>
+<p><strong>Chráněné stromy</strong> — 5 památných stromů v lázeňském parku.</p>
+<p><strong>Výlet na Praděd</strong> — z Karlovy Studánky vede trasa přes Bílou Opavu na Praděd (cca 3–4 h na vrchol).</p>
+<h3>Co s sebou</h3>
+<ul>
+<li>Pohodlnou obuv na procházky (okruhy jsou udržované, ale terén)</li>
+<li>Plavky a ručník (bazén/wellness)</li>
+<li>Lahev na minerální vodu z pramenů (volně přístupné)</li>
+<li>V horách vždy větrovka, i v létě</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Léto (červen–září)</strong>: procházky, turistika, bazén — nejlepší období</li>
+<li><strong>Podzim (říjen)</strong>: krásné barvy, klid, nižší ceny ubytování</li>
+<li><strong>Zima</strong>: běžky v okolí, blízko skiareálů, zasněžená romantika</li>
+<li><strong>Jaro (květen)</strong>: rozkvetlé louky, méně turistů</li>
+<li>Film <strong>„S tebou mě baví svět&quot;</strong> (1982) se natáčel právě tady — fanoušci poznají kulisy</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Ochutnejte vodu z jednotlivých pramenů — každý má jiné složení a chuť (železitá!)</li>
+<li>Ideální jako zastávka při výletě na <a href="../cz-mala-moravka/">Praděd z Malé Morávky</a> — odpočinek a oběd po túře</li>
+<li>Kombinujte s výletem údolím <strong>Bílé Opavy</strong> (naučná stezka, vodopády)</li>
+<li>Na bazén a wellness se objednejte předem v hlavní sezóně</li>
+<li>Obec je opravdu maličká — ubytování rezervujte s předstihem</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Odkud</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ostrava</td>
+<td>90 km</td>
+<td>1:30 h</td>
+</tr>
+<tr>
+<td>Olomouc</td>
+<td>105 km</td>
+<td>1:40 h</td>
+</tr>
+<tr>
+<td>Brno</td>
+<td>190 km</td>
+<td>2:40 h</td>
+</tr>
+<tr>
+<td>Bruntál</td>
+<td>30 km</td>
+<td>0:35 h</td>
+</tr>
+<tr>
+<td>Malá Morávka</td>
+<td>8 km</td>
+<td>0:10 h</td>
+</tr>
+</tbody>
+</table>
+<p>Příjezd autem přes Bruntál a Malou Morávku. Veřejná doprava omezená — lépe vlastním autem.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong><a href="../cz-mala-moravka/">Malá Morávka</a></strong> (8 km) — brána k Pradědu, skiareál, Kapličkový vrch</li>
+<li><strong>Praděd</strong> (cca 15 km / 3–4 h pěšky) — nejvyšší hora Moravy, TV vysílač s vyhlídkou</li>
+<li><strong>Bílá Opava</strong> (přímo z obce) — naučná stezka podél řeky s vodopády</li>
+<li><strong><a href="../cz-slezska-harta/">Slezská Harta</a></strong> (25 km) — přehrada, cyklo, vodní sporty</li>
+<li><strong><a href="../cz-rymarov/">Rýmařov</a></strong> (25 km) — historické město</li>
+<li><strong><a href="../cz-resovske-vodopady/">Rešovské vodopády</a></strong> (40 km) — skalní kaňon</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.karlovastudanka.cz/">Obec Karlova Studánka</a></li>
+<li><a href="https://cs.wikipedia.org/wiki/Karlova_Stud%C3%A1nka">Karlova Studánka na Wikipedii</a></li>
+<li><a href="https://jeseniky.nature.cz/">CHKO Jeseníky</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABX0lEQVR42tTUsQ2sMAwGYKMU6ZIFIrGGO68EC4SwAKzkzmsgZQGuSxHhp7t7uuY9HW7P3UeBrF+/Az8/UbVkGi9g1WZwAFcy6Sp4AFpMdQvoHo3rZfXk+yDN7qHVE9hocPuFujJ89v3qqLrNkmbBTx5f/foFHED4ifirA+m6troK6mVxbGneIEVufWn/MeD4UO4z+7qzwQNDnnwaVJza7MrAMHkdTzAYIEWVPrD02AwOVK+lQfB0DGxwlCPuLS3qewaDB1E9wW2exoIGB3/kTG5v3LPJ6Er2tSCOr3zvDAjzCaoqf/tz4+d9LZIi03iiwVF7LHRMKMdkcYCxAOlDQN/73hl7XviY0MMr33/sVXetxZMWi5+foqQA6DY0OKqum++ztHef7/y6b+qB2rvPt6a6b/6YkPTRbN4y9oG9s3pf1W3IfQKLwRWgtKi4y+Ln+xS826WlmQ3+rfkTAAD//9APSCQyww/PAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
