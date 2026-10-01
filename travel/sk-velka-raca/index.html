@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovensko — Snow Paradise Veľká Rača (lyžařský areál + letní zábava) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Slovensko — Snow Paradise Veľká Rača (lyžařský areál + letní zábava)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">slovensko</span> <span class="tag">lyzovani</span> <span class="tag">bobovka</span> <span class="tag">deti</span> </div>
+<div class="meta"><p class="meta-item">📍 Dedovka 40, 023 01 Oščadnica, Slovensko</p><p class="meta-item">🌐 <a href="https://www.snowparadise.sk" target="_blank">www.snowparadise.sk</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([49.353, 18.835], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([49.353, 18.835]).addTo(dmap);
+</script>
+<div class="content"><h2>Snow Paradise Veľká Rača</h2>
+<p>Lyžařský a celoroční rekreační areál v Kysuckých Beskydách, jen 30 km od Žiliny a necelou hodinu od Ostravy. Tři propojené zóny — <strong>Dedovka</strong>, <strong>Marguška</strong> a <strong>Lalíky</strong> — nabízí téměř 13 km sjezdovek (640–1 050 m n. m.) s umělým zasněžováním a večerním lyžováním. Veľká Rača (1 236 m) je nejvyšší hora Kysuckých Beskýd.</p>
+<p>V létě areál žije — <strong>nejdelší bobová dráha na Slovensku</strong> (1 800 m, 15 zatáček), X-jump trampolína ze 7 metrů, dětský lanový park, horské koloběžky, tříkolky, bikepark, lukostřelba a historický kolotoč. Lanovka vyveze na 934 m s výhledy na Beskydy a Malou Fatru.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Skipas (dospělý/den)</strong></td>
+<td>28 € pokladna / 25 € eshop</td>
+</tr>
+<tr>
+<td><strong>Skipas (junior 12–17 / senior 62+)</strong></td>
+<td>23 € / 20 € eshop</td>
+</tr>
+<tr>
+<td><strong>Skipas (děti 6–11)</strong></td>
+<td>19 € / 16 € eshop</td>
+</tr>
+<tr>
+<td><strong>Děti do 6 let</strong></td>
+<td>zdarma (s pojištěním)</td>
+</tr>
+<tr>
+<td><strong>Večerní lyžování</strong></td>
+<td>11–20 € dle sezóny</td>
+</tr>
+<tr>
+<td><strong>Bobová dráha</strong></td>
+<td>6–7 € / jízda</td>
+</tr>
+<tr>
+<td><strong>Lanovka (zpáteční)</strong></td>
+<td>12–14 €</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>prosinec–březen (lyže), léto: víkendy + prázdniny</td>
+</tr>
+<tr>
+<td><strong>Provoz</strong></td>
+<td>8:30–20:30 (zimní), 9:00–16:00 (letní)</td>
+</tr>
+<tr>
+<td><strong>Parkování</strong></td>
+<td>u dolní stanice, zdarma</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=49.353,18.835">49.353, 18.835</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Co s sebou</h3>
+<ul>
+<li><strong>Zima</strong>: lyžařské vybavení (nebo půjčovna na místě), teplé oblečení</li>
+<li><strong>Léto</strong>: pohodlné boty, sportovní oblečení, pláštěnku (hory), svačinu</li>
+<li>Čipovou kartu (záloha 3 €, vratná) — kupte skipas radši přes <strong>eshop</strong> (sleva 3 €/den)</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší pro lyže</strong>: leden–únor (umělé zasněžování celý areál)</li>
+<li><strong>Léto</strong>: červen–září (bobovka, lanovka, bikepark)</li>
+<li>Večerní lyžování je bonus — sjezdovky osvětlené do 20:30</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Skipas přes <strong>eshop</strong> ušetří 3 € na osobu/den</li>
+<li>Bobová dráha je hit i pro nelyžaře — 1 800 m, nejdelší na Slovensku</li>
+<li>Na vrcholu Veľké Rače (1 236 m) je turistická chata — výhled na Babiu Horu i Malou Fatru</li>
+<li>Lyžařská škola a dětský park pro úplné začátečníky</li>
+<li>Après ski bar přímo v areálu</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th>Z</th>
+<th>Vzdálenost</th>
+<th>Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Žilina</strong></td>
+<td>30 km</td>
+<td>~30 min</td>
+</tr>
+<tr>
+<td><strong>Ostrava</strong></td>
+<td>95 km</td>
+<td>~1:15 h</td>
+</tr>
+<tr>
+<td><strong>Frýdek-Místek</strong></td>
+<td>70 km</td>
+<td>~1:00 h</td>
+</tr>
+<tr>
+<td><strong>Brno</strong></td>
+<td>250 km</td>
+<td>~2:45 h</td>
+</tr>
+<tr>
+<td><strong>Bratislava</strong></td>
+<td>200 km</td>
+<td>~2:15 h</td>
+</tr>
+</tbody>
+</table>
+<p>Z Moravy: D1/D56 na Frýdek-Místek → Čadca → Oščadnica. Z Žiliny: silnice 11 přes Kysucké Nové Město.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Čadca</strong> (15 km) — okresní město, nákupy</li>
+<li><strong>Terchová</strong> (50 km) — rodiště Jánošíka, Vrátna dolina, Malá Fatra</li>
+<li><strong>Žilina</strong> (30 km) — historické centrum, Budatínský zámek</li>
+<li><strong>Velká Rača — vrchol</strong> (1 236 m) — túra z lanovky ~1 h, výhledy na tři země</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.snowparadise.sk">Oficiální web</a></li>
+<li><a href="https://www.bergfex.cz/snow-paradise-velka-raca/">Bergfex — Snow Paradise</a></li>
+<li><a href="https://www.snowparadise.sk/cennik-v-zime/">Cenník</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABQElEQVR42tzUMY7iMBgF4Be5+DtyAQtfgwIpVwodFTYV3eZKlih8DSNfIOlcWLxVloWZKph0M3+Vr0ry/Pvh142QoyGznh/W2KFHby4pAFUeSm+oLYPJtdatcVHqrVzKKqy0w6HAUMvr+5dNTmnQxxRe+Sx6HuVglf86gyXL+TqVllnluNJlY1y0iTc/VhjNdVSuiO5uRIWFpU1MWXf3rsZo/UkNiYpNGFdYJg9tISb/z+eNsdn32kYBbo/831jOpYktmUITUGOW0/w+lSFrjM2+KX2x6pn/G4vrWKCP2EFqjLZAOS0a2yrLn72NiEi877DC84ZE4Kj8thsrPNeIbmFV2Apq7HAgU07ePPtn2fP9HgwV74/9+NyHxGiLkJXuNQqS/9ZPS/7Xj0Xo8fy/ZZMTB17Ua/8+88+evwEAAP//xW08kLMErUIAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
