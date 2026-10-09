@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rakousko — Lachtal (rodinné lyžování ve Štýrsku) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>Rakousko — Lachtal (rodinné lyžování ve Štýrsku)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">rakousko</span> <span class="tag">lyze</span> <span class="tag">rodina</span> </div>
+<div class="meta"><p class="meta-item">📍 Lachtal 600, 8831 Schönberg-Lachtal, Österreich</p><p class="meta-item">🌐 <a href="https://www.lachtal.at/" target="_blank">www.lachtal.at</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([47.183, 14.283], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([47.183, 14.283]).addTo(dmap);
+</script>
+<div class="content"><h2>Lachtal — „Štýrský Arlberg&quot;</h2>
+<p>Lachtal je lyžařský areál ve Štýrsku (Steiermark), s nejvýše položenou stanicí v celém regionu na <strong>2 222 m n. m.</strong> Díky nadmořské výšce nabízí nadprůměrnou sněhovou jistotu — sezóna trvá od prosince do dubna. Areál je známý jako <strong>„Štýrský Arlberg&quot;</strong> díky rozlehlému terénu a alpskému charakteru.</p>
+<p>Pro rodiny s dětmi je Lachtal ideální volba — získal mezinárodní <strong>Gold Children's Land Trophy</strong> a ocenění za nejkvalitnější sjezdovky (International Piste Quality Seal Double Gold).</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nadmořská výška</strong></td>
+<td>1 600 – 2 222 m</td>
+</tr>
+<tr>
+<td><strong>Sjezdovky</strong></td>
+<td>36 km (7 km modré, 16 km červené, 3 km černé + 10 km skitrasy)</td>
+</tr>
+<tr>
+<td><strong>Vleky a lanovky</strong></td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Skipas dospělí</strong></td>
+<td>€ 59 / den</td>
+</tr>
+<tr>
+<td><strong>Skipas mládež</strong></td>
+<td>€ 47 / den</td>
+</tr>
+<tr>
+<td><strong>Skipas děti</strong></td>
+<td>€ 29,50 / den</td>
+</tr>
+<tr>
+<td><strong>Provozní doba</strong></td>
+<td>9:00 – 16:00</td>
+</tr>
+<tr>
+<td><strong>Sezóna</strong></td>
+<td>začátek prosince – začátek dubna</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=47.183,14.283">47.183, 14.283</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Proč s dětmi</h3>
+<ul>
+<li><strong>Kinder-Lachtal</strong> — dětský areál s pohyblivými koberci a lanovými vleky, chráněný od hlavních sjezdovek</li>
+<li><strong>Wildes Lachtal</strong> — zážitková trasa s figurínami lesních zvířat, ideální pro malé lyžaře</li>
+<li>Převážně modré a červené sjezdovky — ideální pro začátečníky a mírně pokročilé</li>
+<li>Lyžařská škola přímo v areálu</li>
+<li>Přehledný, kompaktní areál — děti se neztratí</li>
+</ul>
+<h3>Co s sebou</h3>
+<ul>
+<li>Lyžařské vybavení (nebo půjčit v areálu)</li>
+<li>Brýle a krém s UV filtrem — ve 2 200 m slunce pálí i v zimě</li>
+<li>Svačinu — v areálu jsou restaurace, ale fronty o víkendu</li>
+<li>Řetězy na kola / zimní pneumatiky — příjezdová silnice je horská</li>
+</ul>
+<h3>Kdy jet</h3>
+<ul>
+<li><strong>Nejlepší období</strong>: leden – březen (nejjistější sněhová pokrývka)</li>
+<li>Prosinec bývá na začátku sezóny s uměle zasněženými trasami</li>
+<li>Březen/duben — jarní lyžování, delší dny, teplejší počasí</li>
+</ul>
+<h3>Tipy</h3>
+<ul>
+<li>Areál je menší a klidnější než velká střediska — kratší fronty u vleků</li>
+<li>Dobrý poměr cena/výkon oproti Arlbergu nebo Schladmingu</li>
+<li>V okolí je Kreischberg (15 km) — možnost kombinace dvou středisek</li>
+<li>Oberwölz (nejbližší město) je nejmenší historické město Rakouska — stojí za procházku</li>
+</ul>
+<h3>Jak se dostat</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Z Brna</strong></td>
+<td>~450 km (cca 5 hodin přes Vídeň – Semmering – Murtal)</td>
+</tr>
+<tr>
+<td><strong>Z Ostravy</strong></td>
+<td>~500 km (cca 5,5 hodiny)</td>
+</tr>
+<tr>
+<td><strong>Z Vídně</strong></td>
+<td>~250 km (cca 3 hodiny)</td>
+</tr>
+<tr>
+<td><strong>Z Grazu</strong></td>
+<td>~130 km (cca 1,5 hodiny)</td>
+</tr>
+</tbody>
+</table>
+<p>Trasa vede přes <strong>A9 (Pyhrnautobahn)</strong> nebo přes <strong>Semmering (A2/S6)</strong> a dále údolím Mur přes Judenburg.</p>
+<h3>Okolí — co navštívit</h3>
+<ul>
+<li><strong>Kreischberg</strong> (15 km) — větší lyžařský areál, snowpark, noční lyžování</li>
+<li><strong>Oberwölz</strong> (10 km) — nejmenší historické město Rakouska, hradby z 13. století</li>
+<li><strong>Murau</strong> (25 km) — pivovar Murauer, historické centrum</li>
+<li><strong>Red Bull Ring / Spielberg</strong> (60 km) — závodní okruh, muzeum motorsportu</li>
+</ul>
+<hr>
+<h2>Odkazy</h2>
+<ul>
+<li><a href="https://www.lachtal.at/">Lachtal.at — oficiální web</a></li>
+<li><a href="https://www.kreischberg.at/">Kreischberg — sousední areál</a></li>
+</ul>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABNklEQVR42tzUMa6kMAwG4B+5SMkF0PM1XvEkrgQd1ZCtpnu5El2ukVUuELoUEf/qDauZDjJ0u67yFU4sWw7+uzBkAjCp3w9v22JQJ1Y8UGVXRibN9JprHWayM/WONkyXbTGGWe/xVf+xyTW6boqv/hwaQBOd2Lg8R3Bo45jUBSOe+ZKT/AoIk/Jjr/fMa7mpI8WH/f0To6Er6BD529fYcBlLK3egyZf8LVZTmMhtr/fEwNccwIx+zz+zWUtLF636zdQY+Lp1g947PO97y4alLS3m0m+fqcYWN7GPffpEnSFOczHBVPn7Jx8mcuvTBT8mzjJzUdb45z8RS6rXjBpbjDHFrMvHcx8P7cpY5s4It70fFxyGgIKGqdIFYiNJ1NhiEDLLQl9lci2DsOv/zvdN/9vxJwAA//9AnklL2rPYUgAAAABJRU5ErkJggg==" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

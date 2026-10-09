@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">154 / 154</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">155 / 155</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -86,6 +86,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('lazne')">lazne</button>
 <button class="tag-btn" onclick="toggleFilter('lezeni')">lezeni</button>
 <button class="tag-btn" onclick="toggleFilter('lod')">lod</button>
+<button class="tag-btn" onclick="toggleFilter('lyze')">lyze</button>
 <button class="tag-btn" onclick="toggleFilter('lyzovani')">lyzovani</button>
 <button class="tag-btn" onclick="toggleFilter('madarsko')">madarsko</button>
 <button class="tag-btn" onclick="toggleFilter('mesto')">mesto</button>
@@ -159,6 +160,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="archiv-vylet-u-mikolova/">Výlet u Mikolova</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=48.8069&x=16.6378&z=14" target="_blank">📍</a></h3>
   <p class="desc">Pohádkový Portz Insel</p>
   <div class="tags"><span class="tag" data-tag="archiv">#archiv</span> <span class="tag" data-tag="morava">#morava</span> <span class="tag" data-tag="palava">#palava</span> </div>
+</div>
+<div class="card" data-tags="travel vylety rakousko lyze rodina" data-lat="47.183" data-lng="14.283">
+  <h3><a href="at-lachtal/">Rakousko — Lachtal (rodinné lyžování ve Štýrsku)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=47.183&x=14.283&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Lachtal — „Štýrský Arlberg&#34;</p>
+  <div class="tags"><span class="tag" data-tag="rakousko">#rakousko</span> <span class="tag" data-tag="lyze">#lyze</span> <span class="tag" data-tag="rodina">#rodina</span> </div>
 </div>
 <div class="card" data-tags="travel vylety slovinsko jezero hory deti priroda" data-lat="46.2823" data-lng="13.8582">
   <h3><a href="bohinj/">Bohinjské jezero — nejkrásnější jezero ve Slovinsku</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=46.2823&x=13.8582&z=14" target="_blank">📍</a></h3>
@@ -908,6 +914,7 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:45.9417,lng:10.7167,title:"Lombardská jezera – lázně i adrenalin",slug:"archiv-lombardska-jezera-lazne-i-adrenalin",tags:"archiv, travel, vylety, italie, jezera, deti"},
 {lat:45.4642,lng:9.1900,title:"Miláno za jediný den",slug:"archiv-milano-za-jediny-den",tags:"archiv, travel, vylety, italie, mesto"},
 {lat:48.8069,lng:16.6378,title:"Výlet u Mikolova",slug:"archiv-vylet-u-mikolova",tags:"archiv, travel, vylety, morava, palava"},
+{lat:47.183,lng:14.283,title:"Rakousko — Lachtal (rodinné lyžování ve Štýrsku)",slug:"at-lachtal",tags:"travel, vylety, rakousko, lyze, rodina"},
 {lat:46.2823,lng:13.8582,title:"Bohinjské jezero — nejkrásnější jezero ve Slovinsku",slug:"bohinj",tags:"travel, vylety, slovinsko, jezero, hory, deti, priroda"},
 {lat:46.3370,lng:13.5520,title:"Bovec — adrenalin na smaragdové Soči",slug:"bovec",tags:"travel, vylety, slovinsko, hory, rafting, deti, aktivni"},
 {lat:49.2400,lng:16.5100,title:"Brno parník — lodí k hradu Veveří",slug:"brno-parnik",tags:"travel, vylety, brno, deti, lod"},
