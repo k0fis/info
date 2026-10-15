@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CZ — Jesenické wellness (parní, herbal, finská) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>CZ — Jesenické wellness (parní, herbal, finská)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">sauna</span> <span class="tag">jesenik</span> <span class="tag">wellness</span> </div>
+<div class="meta"><p class="meta-item">📍 Dukelská 15, Jeseník</p><p class="meta-item">🌐 <a href="https://jesenickewellness.cz" target="_blank">jesenickewellness.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.2293, 17.2047], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.2293, 17.2047]).addTo(dmap);
+</script>
+<div class="content"><h2>Jesenické wellness</h2>
+<p>Tři druhy saun v centru Jeseníku — parní, bylinná (herbal) a finská. Denní provoz včetně víkendů. Vstupné na hodinu se zvýhodněním pro děti a seniory. Jeseník je lázeňské město s bohatou tradicí.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Parní sauna, herbal sauna, finská sauna</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně 13:30–21:30h · Čt 18–20h pouze ženy</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>~180 Kč / 1h (dospělý), ~110 Kč (děti/senioři) <em>(ceny z ~2023)</em></td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.2293,17.2047">50.2293,17.2047</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ceny jsou orientační</strong> (zdroj: Olomoucký deník, ~2023). Ověřte aktuální ceník na webu provozovatele.</p>
+</blockquote>
+<h3>Tipy</h3>
+<ul>
+<li>Denní provoz — ideální při návštěvě Jeseníků</li>
+<li>Herbal sauna — příjemná pro začátečníky</li>
+<li>Zvýhodněné vstupné pro děti a seniory</li>
+<li>V okolí: Priessnitzovy lázně, přehrada</li>
+</ul>
+<hr>
+<p><em>Zdroj: <a href="https://olomoucky.denik.cz/zpravy-region/sauna-olomouc-prostejov-prerov-hranice-sumperk-jesenik-sauny-olomoucky-kraj/">Olomoucký deník — Sauny v Olomouckém kraji</a></em></p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABXElEQVR42tTUsa0kIQwG4H9EQAYNIG0bzmhpaWB2aGBoyRltjEQDO5kDND7tO2mTO+1zus4+IrDxj6+vqNo2uLNDVQwOcHvhFIgOkMV5tAspCo/L6FrZVRGz96hHAIyGq08CMr/v+9FRdS89lU7vfnw0gKUp4OXd4o8OXq8Ha+XsmhgcdQL+CF6c8n8cyF2PPu+5j7/z+sWLHKH0UdmnyBar1iun2GkuYnDAEYokEKcVBsO7rWgKwDR50RQ3HHdkrGQw6PUfEHvWJwxe5Fgqa1OMnSzWcV40H6JztXneS0/w7C4YHLLWjdwTlAobHDndQ04r+Pbznt8csqtNZ+mCIhZTihvdzu5fM/nXsetVeC6c9WSDX0c7tDK5HQb/7J+OxjJMfuVT8Igs7p1nH51H22mcXbWyzXthp9rTQ2yup6aQ/a2ZDLetea4eavIrv5+4NZbbBoO/q/4EAAD//wCUR0sd16vyAAAAAElFTkSuQmCC" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CZ — Villa Regenhart Jeseník (finská, solná, parní) — Tipy na výlety</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; max-width: 800px; margin: 0 auto; padding: 20px; }
+nav { margin-bottom: 20px; }
+nav a { color: #82c4e6; text-decoration: none; font-size: 0.9rem; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; margin-bottom: 12px; }
+.meta { margin-bottom: 16px; padding: 12px; background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; }
+.meta-item { margin: 4px 0; font-size: 0.9rem; }
+.meta-item a { color: #82c4e6; }
+.tags { margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; color: #7f8fa6; background: #2a3a4a; padding: 3px 8px; border-radius: 4px; }
+.content { line-height: 1.7; }
+.content h2 { color: #82c4e6; margin: 24px 0 8px; font-size: 1.2rem; }
+.content h3 { color: #6ec8e6; margin: 16px 0 6px; font-size: 1rem; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 0 0 12px 24px; }
+.content a { color: #82c4e6; }
+.content table { border-collapse: collapse; margin: 12px 0; width: 100%; }
+.content th, .content td { border: 1px solid #2a2a4a; padding: 6px 10px; text-align: left; }
+.content th { background: #16213e; }
+.content code { background: #2a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.85em; }
+.content pre { background: #16213e; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+.content blockquote { border-left: 3px solid #3a4a5a; padding-left: 12px; color: #aaa; margin: 12px 0; }
+.content img { max-width: 100%; border-radius: 6px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #2a2a4a; text-align: center; color: #555; font-size: 0.8rem; }
+@media print {
+  body { background: white; color: black; }
+  h1 { color: black; }
+  .meta { background: #f5f5f5; border-color: #ccc; }
+  .content h2, .content h3 { color: #333; }
+  .content a { color: #0066cc; }
+}
+</style>
+</head>
+<body>
+<nav><a href="../">← Zpět na přehled</a></nav>
+<h1>CZ — Villa Regenhart Jeseník (finská, solná, parní)</h1>
+<div class="tags"><span class="tag">travel</span> <span class="tag">vylety</span> <span class="tag">cz</span> <span class="tag">sauna</span> <span class="tag">jesenik</span> <span class="tag">wellness</span> <span class="tag">privatni</span> </div>
+<div class="meta"><p class="meta-item">📍 Josefa Hory 673, Jeseník</p><p class="meta-item">🌐 <a href="https://villaregenhart.cz" target="_blank">villaregenhart.cz</a></p></div>
+<div id="detail-map" style="height:250px;margin-bottom:16px"></div>
+<script>
+const dmap = L.map('detail-map').setView([50.2270, 17.2020], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+}).addTo(dmap);
+L.marker([50.2270, 17.2020]).addTo(dmap);
+</script>
+<div class="content"><h2>Villa Regenhart — sauna</h2>
+<p>Prémiová privátní sauna v historické vile v Jeseníku. Tři typy — finská, solná a parní — pro max. 6 osob. Provoz ve dvou blocích denně. Cena za celou saunu — pro skupinu vychází rozumně (~140 Kč/os. za 2h). Elegantní prostředí secesní vily.</p>
+<h3>Praktické informace</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Finská sauna, solná sauna, parní lázeň</td>
+</tr>
+<tr>
+<td><strong>Otevírací doba</strong></td>
+<td>Denně 15–18h a 18:30–21:30h (dva bloky)</td>
+</tr>
+<tr>
+<td><strong>Vstupné</strong></td>
+<td>~790 Kč / 1h, ~840 Kč / 2h (1–6 osob, celá sauna) <em>(ceny z ~2023)</em></td>
+</tr>
+<tr>
+<td><strong>Kapacita</strong></td>
+<td>1–6 osob</td>
+</tr>
+<tr>
+<td><strong>GPS</strong></td>
+<td><a href="https://maps.apple.com/?ll=50.2270,17.2020">50.2270,17.2020</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ceny jsou orientační</strong> (zdroj: Olomoucký deník, ~2023). Ověřte aktuální ceník na webu provozovatele.</p>
+</blockquote>
+<h3>Tipy</h3>
+<ul>
+<li>Pro 6 osob vychází ~140 Kč/os. za 2h — skvělá hodnota</li>
+<li>Dva časové bloky — rezervujte předem</li>
+<li>Solná sauna — výborná pro dýchací cesty</li>
+<li>Krásná historická vila</li>
+</ul>
+<hr>
+<p><em>Zdroj: <a href="https://olomoucky.denik.cz/zpravy-region/sauna-olomouc-prostejov-prerov-hranice-sumperk-jesenik-sauny-olomoucky-kraj/">Olomoucký deník — Sauny v Olomouckém kraji</a></em></p>
+</div>
+<footer>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///8AAABVwtN+AAABZElEQVR42tTUsc3sIAwHcEcUdLAAEmu4Y6VkgSQsACvRsQYSC4TORRQ/3X337klPny5uz92vAfPHMnx9WeYc2V9YmElgAyoB+kOXBihx6PvG51aoX0LnUfqu5Y6ZmyUUGlSMRV0B3v1+tGVOS3VLxXceH/04Ytb90P8i/mgT/BjPbNtCAkNwsyWfic7tN0/F50gOAvkhsa3nOpVmC7kZBJ6qyrtWsVZ/SGxC23LlhOimIrAtnABhRWw/9994KrBxaWvQbRWZ+7igLaz7JTHoZmY8l8r9mdedLatroQYhcC4CG33Cxv7S2KPEENRhiQeB2yS21dnIzhK1GQUG8GnVAIHcz3zdeGKYmJrR8JqP/2y0GgnVrgNHEvjRUq7MRGoUgZ/7qapM1HcQ2IDKuZ4GSXGROPR4aFiYX/917wTQJkb3d//d2hLvWM4VJAYVU/Cxsj9Q4Mf7D/CDqkog8HfVnwAAAP//PZ5h5xPMcZUAAAAASUVORK5CYII=" alt="QR" style="width:100px;height:100px;border-radius:4px;margin-bottom:8px">
+  <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:8px;">📄 PDF</button>
+  <p>Generováno z wiki</p>
+</footer>
+</body>
+</html>
