@@ -42,7 +42,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <body>
 <header>
   <h1>🗺️ Tipy na výlety</h1>
-  <span class="subtitle"><span id="visible-count">166 / 166</span> destinací</span>
+  <span class="subtitle"><span id="visible-count">174 / 174</span> destinací</span>
   <label style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#7f8fa6;cursor:pointer"><input type="checkbox" id="map-filter-toggle" checked style="accent-color:#82c4e6"> Filtrovat dle mapy</label>
   <button onclick="window.print()" style="background:#2a3a4a;border:1px solid #3a4a5a;color:#82c4e6;padding:6px 12px;border-radius:6px;cursor:pointer;">📄 PDF</button>
   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAABlBMVEX///8AAABVwtN+AAABM0lEQVR42uzVMcosMQgHcCFFLiXkWhYDClPkWoFcKoXwfzhvl2+nHbPdOt2vUdSJ9ItvhAJLSDEHNcDTJkQiohhlMBHnTZeIdidmbr7HKkzn9G2mHec2I5K69Kr5sy9P7ZqRyBEtuM3toUXUvg5q47ZHT00qAKvAxODmeRMhjRxlEL/ypKwC3eigaChT2rR3o2o6nela86RJ8KpOxdugvKmp1XVV/LcHCaO6hOrSUeYg5q+YxKfducSflDftABaVUTyy5M3URBfF3r/3KmVLYaTeZnSBN5hEntO5Yb7GlrK+tHdYbAEw0vbuQ4PfnpOn9v9u1dOL8w677pbC4g3iMvIWd0v0xAQw95iaOkfFZY9RteMa+fvdzdh1t+o5qAC3O/jMYkZRc/vYoIz9IhH/AgAA//8r2kv1KOuo9wAAAABJRU5ErkJggg==" alt="QR" style="width:32px;height:32px;border-radius:3px;cursor:pointer" onclick="this.style.width=this.style.width==='32px'?'150px':'32px';this.style.height=this.style.height==='32px'?'150px':'32px'" title="QR kód">
@@ -67,6 +67,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('cz')">cz</button>
 <button class="tag-btn" onclick="toggleFilter('deti')">deti</button>
 <button class="tag-btn" onclick="toggleFilter('dinosauri')">dinosauri</button>
+<button class="tag-btn" onclick="toggleFilter('fitness')">fitness</button>
 <button class="tag-btn" onclick="toggleFilter('gastronomie')">gastronomie</button>
 <button class="tag-btn" onclick="toggleFilter('geologie')">geologie</button>
 <button class="tag-btn" onclick="toggleFilter('hana')">hana</button>
@@ -76,6 +77,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('hrad')">hrad</button>
 <button class="tag-btn" onclick="toggleFilter('hrady')">hrady</button>
 <button class="tag-btn" onclick="toggleFilter('info')">info</button>
+<button class="tag-btn" onclick="toggleFilter('infra')">infra</button>
 <button class="tag-btn" onclick="toggleFilter('italie')">italie</button>
 <button class="tag-btn" onclick="toggleFilter('jeseniky')">jeseniky</button>
 <button class="tag-btn" onclick="toggleFilter('jeskyne')">jeskyne</button>
@@ -84,6 +86,7 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('kavarna')">kavarna</button>
 <button class="tag-btn" onclick="toggleFilter('klaster')">klaster</button>
 <button class="tag-btn" onclick="toggleFilter('kone')">kone</button>
+<button class="tag-btn" onclick="toggleFilter('kozlovice')">kozlovice</button>
 <button class="tag-btn" onclick="toggleFilter('lazne')">lazne</button>
 <button class="tag-btn" onclick="toggleFilter('lezeni')">lezeni</button>
 <button class="tag-btn" onclick="toggleFilter('litovel')">litovel</button>
@@ -103,10 +106,13 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
 <button class="tag-btn" onclick="toggleFilter('palava')">palava</button>
 <button class="tag-btn" onclick="toggleFilter('pamatky')">pamatky</button>
 <button class="tag-btn" onclick="toggleFilter('pamatnik')">pamatnik</button>
+<button class="tag-btn" onclick="toggleFilter('pivin')">pivin</button>
 <button class="tag-btn" onclick="toggleFilter('plaz')">plaz</button>
 <button class="tag-btn" onclick="toggleFilter('polsko')">polsko</button>
 <button class="tag-btn" onclick="toggleFilter('poutni-misto')">poutni-misto</button>
+<button class="tag-btn" onclick="toggleFilter('prerov')">prerov</button>
 <button class="tag-btn" onclick="toggleFilter('priroda')">priroda</button>
+<button class="tag-btn" onclick="toggleFilter('privatni')">privatni</button>
 <button class="tag-btn" onclick="toggleFilter('prostejov')">prostejov</button>
 <button class="tag-btn" onclick="toggleFilter('rafting')">rafting</button>
 <button class="tag-btn" onclick="toggleFilter('rakousko')">rakousko</button>
@@ -343,15 +349,35 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Sauna v Aquaparku Olomouc</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="olomouc">#olomouc</span> <span class="tag" data-tag="wellness">#wellness</span> </div>
 </div>
+<div class="card" data-tags="travel vylety cz sauna prostejov wellness privatni" data-lat="49.4680" data-lng="17.1050">
+  <h3><a href="cz-sauna-are-prostejov/">CZ — ARE-Sauny u jezírka Prostějov (privátní sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4680&x=17.1050&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Privátní saunový provoz s finskou a BIO saunou u jezírka. Ideální pro skupiny — rezervace předem, max. 12 osob. Možnost pronájmu celé sauny pro soukromou akci. Příjemné prostředí s je…</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prostejov">#prostejov</span> <span class="tag" data-tag="wellness">#wellness</span> <span class="tag" data-tag="privatni">#privatni</span> </div>
+</div>
 <div class="card" data-tags="travel vylety cz sauna bohunovice" data-lat="49.6319" data-lng="17.2853">
   <h3><a href="cz-sauna-bohunovice/">CZ — Sauna Centrum zdraví Bohuňovice</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.6319&x=17.2853&z=14" target="_blank">📍</a></h3>
   <p class="desc">Centrum zdraví Bohuňovice — sauna</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="bohunovice">#bohunovice</span> </div>
 </div>
+<div class="card" data-tags="travel vylety cz sauna prerov fitness" data-lat="49.4510" data-lng="17.4560">
+  <h3><a href="cz-sauna-fitklub-prerov/">CZ — Fitklub Přerov (finská + vario sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4510&x=17.4560&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Fitklub Přerov — sauna</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prerov">#prerov</span> <span class="tag" data-tag="fitness">#fitness</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cz sauna kozlovice" data-lat="49.4333" data-lng="17.3833">
+  <h3><a href="cz-sauna-kozlovice-prerov/">CZ — Areál sportu Kozlovice (finská sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4333&x=17.3833&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Areál sportu Kozlovice — sauna</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="kozlovice">#kozlovice</span> </div>
+</div>
 <div class="card" data-tags="travel vylety cz sauna olomouc lazne" data-lat="49.5940" data-lng="17.2720">
   <h3><a href="cz-sauna-lazne-flora-olomouc/">CZ — Balneo Lázně Flora Olomouc (sauna u Flory)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5940&x=17.2720&z=14" target="_blank">📍</a></h3>
   <p class="desc">Komorní sauna v rámci lázeňského provozu blízko parku u Výstaviště Flora. Kratší otevírací doba (14–19h), ale klidné prostředí. Pouze smíšený provoz. Ideální pro ty, kdo chtěj�…</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="olomouc">#olomouc</span> <span class="tag" data-tag="lazne">#lazne</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cz sauna pivin lazne" data-lat="49.4264" data-lng="17.1833">
+  <h3><a href="cz-sauna-lazne-skalka-pivin/">CZ — Lázně Skalka Pivín (komorní sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4264&x=17.1833&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Malé lázně v obci Pivín u Prostějova s komorní saunou pro max. 4 osoby. Cena se liší podle počtu návštěvníků — sólo vstup je dvojnásobný. Klidné místo mimo město, součástí jso…</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="pivin">#pivin</span> <span class="tag" data-tag="lazne">#lazne</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz sauna litovel" data-lat="49.7007" data-lng="17.0761">
   <h3><a href="cz-sauna-litovel/">CZ — Městská sauna Litovel</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.7007&x=17.0761&z=14" target="_blank">📍</a></h3>
@@ -368,15 +394,30 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <p class="desc">Městské lázně Prostějov</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prostejov">#prostejov</span> <span class="tag" data-tag="lazne">#lazne</span> </div>
 </div>
+<div class="card" data-tags="travel vylety cz sauna prostejov privatni wellness" data-lat="49.4750" data-lng="17.1180">
+  <h3><a href="cz-sauna-nirvana-prostejov/">CZ — Relaxační studio Nirvána Prostějov (privátní sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4750&x=17.1180&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Relaxační studio Nirvána</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prostejov">#prostejov</span> <span class="tag" data-tag="privatni">#privatni</span> <span class="tag" data-tag="wellness">#wellness</span> </div>
+</div>
 <div class="card" data-tags="travel vylety cz sauna olomouc wellness" data-lat="49.5928" data-lng="17.2625">
   <h3><a href="cz-sauna-omega-olomouc/">CZ — Omega centrum Olomouc (finská + bylinná sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5928&x=17.2625&z=14" target="_blank">📍</a></h3>
   <p class="desc">Omega centrum sportu a zdraví</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="olomouc">#olomouc</span> <span class="tag" data-tag="wellness">#wellness</span> </div>
 </div>
+<div class="card" data-tags="travel vylety cz sauna prerov" data-lat="49.4557" data-lng="17.4513">
+  <h3><a href="cz-sauna-plavecky-areal-prerov/">CZ — Sauna Plavecký areál Přerov</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4557&x=17.4513&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Sauna Plavecký areál Přerov</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prerov">#prerov</span> </div>
+</div>
 <div class="card" data-tags="travel vylety cz sauna olomouc" data-lat="49.5930" data-lng="17.2630">
   <h3><a href="cz-sauna-plavecky-stadion-olomouc/">CZ — Sauna Plavecký stadion Olomouc (finská sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.5930&x=17.2630&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sauna Plavecký stadion</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="olomouc">#olomouc</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cz sauna prerov infra" data-lat="49.4530" data-lng="17.4480">
+  <h3><a href="cz-sauna-sportovni-hala-prerov/">CZ — Sauna Sportovní hala Přerov (finská + infra)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4530&x=17.4480&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Sauna Sportovní hala Přerov</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prerov">#prerov</span> <span class="tag" data-tag="infra">#infra</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cz sauna sternberk" data-lat="49.7305" data-lng="17.2989">
   <h3><a href="cz-sauna-sternberk/">CZ — Sauna na koupališti Šternberk</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.7305&x=17.2989&z=14" target="_blank">📍</a></h3>
@@ -387,6 +428,11 @@ footer { padding: 20px 24px; text-align: center; color: #555; font-size: 0.8rem;
   <h3><a href="cz-sauna-unicov/">CZ — Sportcentrum Factory Uničov (sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.7710&x=17.1216&z=14" target="_blank">📍</a></h3>
   <p class="desc">Sportcentrum Factory Uničov — sauna</p>
   <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="unicov">#unicov</span> </div>
+</div>
+<div class="card" data-tags="travel vylety cz sauna prostejov wellness" data-lat="49.4650" data-lng="17.1200">
+  <h3><a href="cz-sauna-wellness-tc-prostejov/">CZ — Wellness Tennis Club Prostějov (finská sauna)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=49.4650&x=17.1200&z=14" target="_blank">📍</a></h3>
+  <p class="desc">Wellness Tennis Club Prostějov</p>
+  <div class="tags"><span class="tag" data-tag="cz">#cz</span> <span class="tag" data-tag="sauna">#sauna</span> <span class="tag" data-tag="prostejov">#prostejov</span> <span class="tag" data-tag="wellness">#wellness</span> </div>
 </div>
 <div class="card" data-tags="travel vylety cesko priroda hory turistika lyzovani chata" data-lat="50.1567" data-lng="17.1083">
   <h3><a href="cz-serak/">Česko — Šerák a Jiřího chata (kamenná horská chata v 1 323 m, lanovka z Ramzové)</a> <a class="geo-link" href="https://mapy.cz/zakladni?y=50.1567&x=17.1083&z=14" target="_blank">📍</a></h3>
@@ -1011,15 +1057,23 @@ const markers = [{lat:49.30247,lng:17.023542,title:"Air museum vyskov",slug:"air
 {lat:49.9323,lng:17.2714,title:"Česko — Rýmařov (historické město v podhůří Jeseníků)",slug:"cz-rymarov",tags:"travel, vylety, cz, mesto, historie, architektura, jeseniky"},
 {lat:49.5890,lng:17.2510,title:"CZ — Akademik Fitness Olomouc (sauna u Lazců)",slug:"cz-sauna-akademik-olomouc",tags:"travel, vylety, cz, sauna, olomouc"},
 {lat:49.5830,lng:17.2340,title:"CZ — Sauna Aquapark Olomouc (finská, bio, chromoterapie)",slug:"cz-sauna-aquapark-olomouc",tags:"travel, vylety, cz, sauna, olomouc, wellness"},
+{lat:49.4680,lng:17.1050,title:"CZ — ARE-Sauny u jezírka Prostějov (privátní sauna)",slug:"cz-sauna-are-prostejov",tags:"travel, vylety, cz, sauna, prostejov, wellness, privatni"},
 {lat:49.6319,lng:17.2853,title:"CZ — Sauna Centrum zdraví Bohuňovice",slug:"cz-sauna-bohunovice",tags:"travel, vylety, cz, sauna, bohunovice"},
+{lat:49.4510,lng:17.4560,title:"CZ — Fitklub Přerov (finská + vario sauna)",slug:"cz-sauna-fitklub-prerov",tags:"travel, vylety, cz, sauna, prerov, fitness"},
+{lat:49.4333,lng:17.3833,title:"CZ — Areál sportu Kozlovice (finská sauna)",slug:"cz-sauna-kozlovice-prerov",tags:"travel, vylety, cz, sauna, kozlovice"},
 {lat:49.5940,lng:17.2720,title:"CZ — Balneo Lázně Flora Olomouc (sauna u Flory)",slug:"cz-sauna-lazne-flora-olomouc",tags:"travel, vylety, cz, sauna, olomouc, lazne"},
+{lat:49.4264,lng:17.1833,title:"CZ — Lázně Skalka Pivín (komorní sauna)",slug:"cz-sauna-lazne-skalka-pivin",tags:"travel, vylety, cz, sauna, pivin, lazne"},
 {lat:49.7007,lng:17.0761,title:"CZ — Městská sauna Litovel",slug:"cz-sauna-litovel",tags:"travel, vylety, cz, sauna, litovel"},
 {lat:49.5242,lng:17.3125,title:"CZ — Obecní sauna Majetín",slug:"cz-sauna-majetin",tags:"travel, vylety, cz, sauna, majetin"},
 {lat:49.4722,lng:17.1111,title:"CZ — Městské lázně Prostějov (sauna, pára, infra)",slug:"cz-sauna-mestske-lazne-prostejov",tags:"travel, vylety, cz, sauna, prostejov, lazne"},
+{lat:49.4750,lng:17.1180,title:"CZ — Relaxační studio Nirvána Prostějov (privátní sauna)",slug:"cz-sauna-nirvana-prostejov",tags:"travel, vylety, cz, sauna, prostejov, privatni, wellness"},
 {lat:49.5928,lng:17.2625,title:"CZ — Omega centrum Olomouc (finská + bylinná sauna)",slug:"cz-sauna-omega-olomouc",tags:"travel, vylety, cz, sauna, olomouc, wellness"},
+{lat:49.4557,lng:17.4513,title:"CZ — Sauna Plavecký areál Přerov",slug:"cz-sauna-plavecky-areal-prerov",tags:"travel, vylety, cz, sauna, prerov"},
 {lat:49.5930,lng:17.2630,title:"CZ — Sauna Plavecký stadion Olomouc (finská sauna)",slug:"cz-sauna-plavecky-stadion-olomouc",tags:"travel, vylety, cz, sauna, olomouc"},
+{lat:49.4530,lng:17.4480,title:"CZ — Sauna Sportovní hala Přerov (finská + infra)",slug:"cz-sauna-sportovni-hala-prerov",tags:"travel, vylety, cz, sauna, prerov, infra"},
 {lat:49.7305,lng:17.2989,title:"CZ — Sauna na koupališti Šternberk",slug:"cz-sauna-sternberk",tags:"travel, vylety, cz, sauna, sternberk"},
 {lat:49.7710,lng:17.1216,title:"CZ — Sportcentrum Factory Uničov (sauna)",slug:"cz-sauna-unicov",tags:"travel, vylety, cz, sauna, unicov"},
+{lat:49.4650,lng:17.1200,title:"CZ — Wellness Tennis Club Prostějov (finská sauna)",slug:"cz-sauna-wellness-tc-prostejov",tags:"travel, vylety, cz, sauna, prostejov, wellness"},
 {lat:50.1567,lng:17.1083,title:"Česko — Šerák a Jiřího chata (kamenná horská chata v 1 323 m, lanovka z Ramzové)",slug:"cz-serak",tags:"travel, vylety, cesko, priroda, hory, turistika, lyzovani, chata"},
 {lat:49.1533,lng:16.8764,title:"Česko — Slavkov u Brna (barokní zámek, bitva tří císařů)",slug:"cz-slavkov",tags:"travel, vylety, cz, zamek, historie, mesto"},
 {lat:49.8903,lng:17.5814,title:"\"Slezská Harta — přehrada v Jeseníkách\"",slug:"cz-slezska-harta",tags:"travel, vylety, cz, priroda, jezera, cyklo"},
